@@ -8,12 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		4694C97820D5261D005C5F97 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4694C97720D5261D005C5F97 /* AppDelegate.swift */; };
-		4694C97A20D5261D005C5F97 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4694C97920D5261D005C5F97 /* ViewController.swift */; };
 		4694C97D20D5261D005C5F97 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4694C97B20D5261D005C5F97 /* Main.storyboard */; };
 		4694C97F20D5261E005C5F97 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4694C97E20D5261E005C5F97 /* Assets.xcassets */; };
 		4694C98220D5261E005C5F97 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4694C98020D5261E005C5F97 /* LaunchScreen.storyboard */; };
 		4694C98D20D5261E005C5F97 /* WeinbergAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4694C98C20D5261E005C5F97 /* WeinbergAppTests.swift */; };
 		4694C99820D5261E005C5F97 /* WeinbergAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4694C99720D5261E005C5F97 /* WeinbergAppUITests.swift */; };
+		4694C9A620D52641005C5F97 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4694C9A520D52641005C5F97 /* LoginViewController.swift */; };
+		46A0D72A20D6F55900B0BEDA /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A0D72920D6F55900B0BEDA /* MapViewController.swift */; };
+		46A0D72C20D6F59600B0BEDA /* CaptureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A0D72B20D6F59600B0BEDA /* CaptureViewController.swift */; };
+		46A0D72E20D6F5CB00B0BEDA /* AreasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A0D72D20D6F5CB00B0BEDA /* AreasViewController.swift */; };
+		46A0D73020D6F5DF00B0BEDA /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A0D72F20D6F5DF00B0BEDA /* MoreViewController.swift */; };
+		46A0D73220D6FF5600B0BEDA /* AddCaptureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A0D73120D6FF5600B0BEDA /* AddCaptureViewController.swift */; };
+		46A0D73420D7D65A00B0BEDA /* Entry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A0D73320D7D65A00B0BEDA /* Entry.swift */; };
+		46A0D73620D7EC6B00B0BEDA /* AddEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A0D73520D7EC6B00B0BEDA /* AddEntryViewController.swift */; };
+		46E50EED20D545FE00F93167 /* ShakeAnimationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E50EEC20D545FE00F93167 /* ShakeAnimationHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +44,6 @@
 /* Begin PBXFileReference section */
 		4694C97420D5261D005C5F97 /* WeinbergApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeinbergApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4694C97720D5261D005C5F97 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4694C97920D5261D005C5F97 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4694C97C20D5261D005C5F97 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4694C97E20D5261E005C5F97 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4694C98120D5261E005C5F97 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +54,15 @@
 		4694C99320D5261E005C5F97 /* WeinbergAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeinbergAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4694C99720D5261E005C5F97 /* WeinbergAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeinbergAppUITests.swift; sourceTree = "<group>"; };
 		4694C99920D5261E005C5F97 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4694C9A520D52641005C5F97 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		46A0D72920D6F55900B0BEDA /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		46A0D72B20D6F59600B0BEDA /* CaptureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptureViewController.swift; sourceTree = "<group>"; };
+		46A0D72D20D6F5CB00B0BEDA /* AreasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreasViewController.swift; sourceTree = "<group>"; };
+		46A0D72F20D6F5DF00B0BEDA /* MoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
+		46A0D73120D6FF5600B0BEDA /* AddCaptureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCaptureViewController.swift; sourceTree = "<group>"; };
+		46A0D73320D7D65A00B0BEDA /* Entry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entry.swift; sourceTree = "<group>"; };
+		46A0D73520D7EC6B00B0BEDA /* AddEntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEntryViewController.swift; sourceTree = "<group>"; };
+		46E50EEC20D545FE00F93167 /* ShakeAnimationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShakeAnimationHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,12 +113,20 @@
 		4694C97620D5261D005C5F97 /* WeinbergApp */ = {
 			isa = PBXGroup;
 			children = (
-				4694C97720D5261D005C5F97 /* AppDelegate.swift */,
-				4694C97920D5261D005C5F97 /* ViewController.swift */,
+				4694C9A520D52641005C5F97 /* LoginViewController.swift */,
+				46A0D72920D6F55900B0BEDA /* MapViewController.swift */,
+				46A0D72B20D6F59600B0BEDA /* CaptureViewController.swift */,
+				46A0D73120D6FF5600B0BEDA /* AddCaptureViewController.swift */,
+				46A0D73520D7EC6B00B0BEDA /* AddEntryViewController.swift */,
+				46A0D72D20D6F5CB00B0BEDA /* AreasViewController.swift */,
+				46A0D72F20D6F5DF00B0BEDA /* MoreViewController.swift */,
 				4694C97B20D5261D005C5F97 /* Main.storyboard */,
+				4694C97720D5261D005C5F97 /* AppDelegate.swift */,
 				4694C97E20D5261E005C5F97 /* Assets.xcassets */,
 				4694C98020D5261E005C5F97 /* LaunchScreen.storyboard */,
 				4694C98320D5261E005C5F97 /* Info.plist */,
+				46E50EEC20D545FE00F93167 /* ShakeAnimationHelper.swift */,
+				46A0D73320D7D65A00B0BEDA /* Entry.swift */,
 			);
 			path = WeinbergApp;
 			sourceTree = "<group>";
@@ -256,8 +280,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4694C97A20D5261D005C5F97 /* ViewController.swift in Sources */,
+				46A0D73020D6F5DF00B0BEDA /* MoreViewController.swift in Sources */,
+				4694C9A620D52641005C5F97 /* LoginViewController.swift in Sources */,
+				46E50EED20D545FE00F93167 /* ShakeAnimationHelper.swift in Sources */,
+				46A0D73620D7EC6B00B0BEDA /* AddEntryViewController.swift in Sources */,
 				4694C97820D5261D005C5F97 /* AppDelegate.swift in Sources */,
+				46A0D72E20D6F5CB00B0BEDA /* AreasViewController.swift in Sources */,
+				46A0D73220D6FF5600B0BEDA /* AddCaptureViewController.swift in Sources */,
+				46A0D73420D7D65A00B0BEDA /* Entry.swift in Sources */,
+				46A0D72A20D6F55900B0BEDA /* MapViewController.swift in Sources */,
+				46A0D72C20D6F59600B0BEDA /* CaptureViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

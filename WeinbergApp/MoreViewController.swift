@@ -1,21 +1,19 @@
 //
-//  ViewController.swift
+//  MoreViewController.swift
 //  WeinbergApp
 //
-//  Created by Elena Görgen on 16.06.18.
+//  Created by Elena Görgen on 17.06.18.
 //  Copyright © 2018 Christoph Tölkes. All rights reserved.
 //
 
+import Foundation
 import UIKit
 
-class ViewController: UIViewController {
-
+class MoreViewController: UIViewController {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+        
     }
-
-
-
+    
 }
-
