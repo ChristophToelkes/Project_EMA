@@ -13,13 +13,14 @@ class AddEntryViewController: UIViewController {
     var entry: Entry?
     var captureType: String?
     @IBOutlet weak var headCaptureLabel: UILabel!
+    @IBOutlet weak var traubenleseDurchfuehrungView: UIStackView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         headCaptureLabel.text = captureType
         
-        
-        
+        checkTraubenlese()
     }
     
     @IBAction func safeEntryBtn(_ sender: Any) {
@@ -30,5 +31,10 @@ class AddEntryViewController: UIViewController {
         
     }
     
-    
+    func checkTraubenlese() {
+        // Bei wiederholtem Aufrufen des + Button ist der CaptureType == nil (--> kein headCaptureLabel)
+        if captureType == "Traubenlese" {
+            traubenleseDurchfuehrungView.isHidden = false
+        }
+    }
 }
