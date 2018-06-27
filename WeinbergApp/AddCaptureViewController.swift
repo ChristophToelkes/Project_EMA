@@ -38,11 +38,25 @@ class AddCaptureViewController: UIViewController, UITableViewDataSource, UITable
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
-        performSegue(withIdentifier: "segueToAddEntryView", sender: self)
-        changeEntry = true
+        if(element == "Düngung"){
+            performSegue(withIdentifier: "segueToDuengungAddEntryView", sender: self)
+            changeEntry = true
+        } else {
+            performSegue(withIdentifier: "segueToAddEntryView", sender: self)
+            changeEntry = true
+        }
+        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if(element == "Düngung") {
+            prepareDuengung(for: segue, sender: sender)
+        } else {
+            prepareGeneral(for: segue, sender: sender)
+        }
+    }
+    
+    func prepareGeneral(for segue: UIStoryboardSegue, sender: Any?) {
         if let destination = segue.destination as? AddEntryViewController{
             if changeEntry {
                 destination.entry = entryList[(tableView.indexPathForSelectedRow?.row)!]
@@ -53,8 +67,23 @@ class AddCaptureViewController: UIViewController, UITableViewDataSource, UITable
         }
     }
     
+    func prepareDuengung(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? DuengungAddEntryViewController{
+            if changeEntry {
+                destination.entry = entryList[(tableView.indexPathForSelectedRow?.row)!]
+                changeEntry = false
+            } else {
+                destination.captureType = element
+            }
+        }
+    }
+    
     @IBAction func addEntryBtn(_ sender: Any) {
-        performSegue(withIdentifier: "segueToAddEntryView", sender: self)
+        if(element == "Düngung"){
+            performSegue(withIdentifier: "segueToDuengungAddEntryView", sender: self)
+        } else {
+            performSegue(withIdentifier: "segueToAddEntryView", sender: self)
+        }
     }
     
 }
