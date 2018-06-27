@@ -51,6 +51,8 @@ class AddCaptureViewController: UIViewController, UITableViewDataSource, UITable
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if(element == "Düngung") {
             prepareDuengung(for: segue, sender: sender)
+        } else if(element == "Pflanzenschutz") {
+            preparePflanzenschutz(for: segue, sender: sender)
         } else {
             prepareGeneral(for: segue, sender: sender)
         }
@@ -78,9 +80,22 @@ class AddCaptureViewController: UIViewController, UITableViewDataSource, UITable
         }
     }
     
+    func preparePflanzenschutz(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? PflanzenschutzAddEntryViewController{
+            if changeEntry {
+                destination.entry = entryList[(tableView.indexPathForSelectedRow?.row)!]
+                changeEntry = false
+            } else {
+                destination.captureType = element
+            }
+        }
+    }
+    
     @IBAction func addEntryBtn(_ sender: Any) {
         if(element == "Düngung"){
             performSegue(withIdentifier: "segueToDuengungAddEntryView", sender: self)
+        } else if (element == "Pflanzenschutz"){
+            performSegue(withIdentifier: "segueToPflanzenschutzAddEntryView", sender: self)
         } else {
             performSegue(withIdentifier: "segueToAddEntryView", sender: self)
         }

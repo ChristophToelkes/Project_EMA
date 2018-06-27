@@ -1,5 +1,5 @@
 //
-//  DuengungAddEntryViewController.swift
+//  PflanzenschutzAddEntryViewController.swift
 //  WeinbergApp
 //
 //  Created by ema on 27.06.18.
@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class DuengungAddEntryViewController: UIViewController {
+class PflanzenschutzAddEntryViewController: UIViewController {
     
     var entry: Entry?
     var captureType: String?
@@ -18,7 +18,7 @@ class DuengungAddEntryViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         headCaptureLabel.text = captureType
-
+        
     }
     
     @IBAction func safeEntryBtn(_ sender: Any) {
