@@ -11,7 +11,7 @@ import UIKit
 
 class CaptureViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var tableView: UITableView!
-    private let listElements = [String](arrayLiteral: "Entlaubel",
+    private let listElements = [String](arrayLiteral: "Entlauben",
                                                         "Düngung",
                                                         "Grubbern",
                                                         "Rebholz hächseln",

@@ -26,6 +26,9 @@ class AddEntryViewController: UIViewController {
     }
     
     @IBAction func backBtn(_ sender: Any) {
+        performSegue(withIdentifier: "segueToAddCaptureView", sender: self)
+        
     }
+    
     
 }
