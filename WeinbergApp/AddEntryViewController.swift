@@ -31,6 +31,12 @@ class AddEntryViewController: UIViewController {
         
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? AddCaptureViewController{
+            destination.element = captureType
+        }
+    }
+    
     func checkTraubenlese() {
         // Bei wiederholtem Aufrufen des + Button ist der CaptureType == nil (--> kein headCaptureLabel)
         if captureType == "Traubenlese" {
