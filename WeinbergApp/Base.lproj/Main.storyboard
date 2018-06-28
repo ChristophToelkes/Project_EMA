@@ -187,7 +187,7 @@
             </objects>
             <point key="canvasLocation" x="3698" y="2838"/>
         </scene>
-        <!--Erfassung-->
+        <!--Capture View Controller-->
         <scene sceneID="TCB-mf-gjW">
             <objects>
                 <viewController id="OVp-C6-5so" customClass="CaptureViewController" customModule="WeinbergApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -236,7 +236,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="P2Q-6W-azp"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Erfassung" id="qgm-sA-HYd">
+                    <tabBarItem key="tabBarItem" selectedImage="holz" systemItem="favorites" id="qgm-sA-HYd">
                         <color key="badgeColor" red="0.58081901069999997" green="0.088427625600000004" blue="0.31863921880000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBarItem>
                     <connections>
@@ -540,10 +540,11 @@
         </scene>
     </scenes>
     <resources>
+        <image name="holz" width="100" height="100"/>
         <image name="laub Kopie" width="65" height="65"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="n5A-dJ-Kxq"/>
+        <segue reference="uPz-Fn-yU9"/>
         <segue reference="5ee-cg-r0s"/>
     </inferredMetricsTieBreakers>
 </document>
