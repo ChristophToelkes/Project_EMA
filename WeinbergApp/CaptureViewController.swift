@@ -11,7 +11,7 @@ import UIKit
 
 class CaptureViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var tableView: UITableView!
-    private let listElements = [String](arrayLiteral: "Entlaubel",
+    private let listElements = [String](arrayLiteral: "Entlauben",
                                                         "Düngung",
                                                         "Grubbern",
                                                         "Rebholz hächseln",
@@ -53,7 +53,6 @@ class CaptureViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
         performSegue(withIdentifier: "segueToAddCaptureView", sender: self)
-        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

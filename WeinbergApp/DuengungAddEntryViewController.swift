@@ -1,26 +1,24 @@
 //
-//  AddEntryViewController.swift
+//  DuengungAddEntryViewController.swift
 //  WeinbergApp
 //
-//  Created by Elena Görgen on 18.06.18.
+//  Created by ema on 27.06.18.
 //  Copyright © 2018 Christoph Tölkes. All rights reserved.
 //
 
 import Foundation
 import UIKit
 
-class AddEntryViewController: UIViewController {
+class DuengungAddEntryViewController: UIViewController {
     
     var entry: Entry?
     var captureType: String?
     @IBOutlet weak var headCaptureLabel: UILabel!
-    @IBOutlet weak var traubenleseDurchfuehrungView: UIStackView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         headCaptureLabel.text = captureType
-        
-        checkTraubenlese()
+
     }
     
     @IBAction func safeEntryBtn(_ sender: Any) {
@@ -34,13 +32,6 @@ class AddEntryViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destination = segue.destination as? AddCaptureViewController{
             destination.element = captureType
-        }
-    }
-    
-    func checkTraubenlese() {
-        // Bei wiederholtem Aufrufen des + Button ist der CaptureType == nil (--> kein headCaptureLabel)
-        if captureType == "Traubenlese" {
-            traubenleseDurchfuehrungView.isHidden = false
         }
     }
     
