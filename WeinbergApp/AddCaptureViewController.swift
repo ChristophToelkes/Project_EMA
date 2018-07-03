@@ -22,6 +22,7 @@ class AddCaptureViewController: UIViewController, UITableViewDataSource, UITable
         super.viewDidLoad()
         tableView.dataSource = self
         tableView.delegate = self
+        loadEntries()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -32,7 +33,10 @@ class AddCaptureViewController: UIViewController, UITableViewDataSource, UITable
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell")
         
         cell?.textLabel?.text = entryList[indexPath.row].getCaptureType()
-        cell?.detailTextLabel?.text = entryList[indexPath.row].getDate()
+        let formatter = DateFormatter()
+        //formatter.dateFormat = "yyy-MM-dd HH:mm:ss"
+        let dateString = formatter.string(from: entryList[indexPath.row].getDate())
+        cell?.detailTextLabel?.text = dateString
         
         return cell!
     }
@@ -101,4 +105,10 @@ class AddCaptureViewController: UIViewController, UITableViewDataSource, UITable
         }
     }
     
+    func loadEntries(){
+        let db = RealmHelper()
+        if let captureType = element {
+            entryList = db.loadObjects(type: captureType)
+        }
+    }
 }

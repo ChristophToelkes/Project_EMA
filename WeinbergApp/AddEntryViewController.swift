@@ -15,6 +15,11 @@ class AddEntryViewController: UIViewController {
     var captureType: String?
     @IBOutlet weak var headCaptureLabel: UILabel!
     @IBOutlet weak var traubenleseDurchfuehrungView: UIStackView!
+    @IBOutlet weak var datePicker: UIDatePicker!
+    @IBOutlet weak var feldText: UITextField!
+    @IBOutlet weak var benutzerText: UITextField!
+    @IBOutlet weak var arbeitszeitText: UITextField!
+    @IBOutlet weak var durchfuehrungText: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +29,13 @@ class AddEntryViewController: UIViewController {
     }
     
     @IBAction func safeEntryBtn(_ sender: Any) {
+        let db = RealmHelper()
+        if captureType != nil && benutzerText.text != nil && arbeitszeitText != nil {
+            if let zeit = Double(arbeitszeitText.text!) {
+                db.addGeneral(captureType: captureType!, benutzer: benutzerText.text!, feld: feldText.text!, arbeitszeit: zeit, datum: datePicker.date)
+            }
+        }
+        
     }
     
     @IBAction func backBtn(_ sender: Any) {
@@ -38,7 +50,6 @@ class AddEntryViewController: UIViewController {
     }
     
     func checkTraubenlese() {
-        // Bei wiederholtem Aufrufen des + Button ist der CaptureType == nil (--> kein headCaptureLabel)
         if captureType == "Traubenlese" {
             traubenleseDurchfuehrungView.isHidden = false
         }

@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -519,6 +518,11 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="arbeitszeitText" destination="fsV-Av-in1" id="ST9-sr-oU0"/>
+                        <outlet property="benutzerText" destination="ahX-6I-0Nw" id="zr2-As-Fag"/>
+                        <outlet property="datePicker" destination="hON-y5-gcu" id="kcZ-Qd-UbR"/>
+                        <outlet property="durchfuehrungText" destination="irI-kJ-Z5c" id="ng4-c7-Bu7"/>
+                        <outlet property="feldText" destination="VP9-ro-oue" id="IY6-wB-aEl"/>
                         <outlet property="headCaptureLabel" destination="mwY-o0-ayS" id="YLA-EV-n3g"/>
                         <outlet property="traubenleseDurchfuehrungView" destination="9om-hq-yMP" id="CzY-n9-u9B"/>
                         <segue destination="OkD-cb-Ojc" kind="show" identifier="segueToAddCaptureView" id="cHW-Y0-2uo"/>
@@ -1101,12 +1105,7 @@ Akarizid</string>
         <image name="laub Kopie" width="65" height="65"/>
     </resources>
     <inferredMetricsTieBreakers>
-<<<<<<< HEAD
         <segue reference="uPz-Fn-yU9"/>
-        <segue reference="5ee-cg-r0s"/>
-=======
-        <segue reference="n5A-dJ-Kxq"/>
-        <segue reference="ym3-nN-BRJ"/>
->>>>>>> 3a63d1cc9781565632196d3e2b329dfc8140e619
+        <segue reference="cHW-Y0-2uo"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -8,20 +8,20 @@
 
 import UIKit
 
-struct Entry{
+public struct Entry{
 
-    private var user: String
-    private var date: String
-    private var field: String
-    private var hours: Double
-    private var captureType: String
+    var user: String
+    var date: Date
+    var field: String
+    var hours: Double
+    var captureType: String
    
-  
+    
     public func getUser() -> String{
         return self.user
     }
     
-    public func getDate() -> String {
+    public func getDate() -> Date {
         return self.date
     }
     
@@ -44,7 +44,7 @@ struct Entry{
         self.user = user
     }
     
-    public mutating func setDate(date: String) {
+    public mutating func setDate(date: Date) {
         self.date = date
     }
     
