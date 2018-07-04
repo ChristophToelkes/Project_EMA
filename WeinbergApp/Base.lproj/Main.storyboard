@@ -798,7 +798,13 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="arbeitszeitText" destination="gqU-Fg-IRe" id="XAS-UX-EgW"/>
+                        <outlet property="benutzerText" destination="mMp-4a-0tn" id="pEq-wQ-8Is"/>
+                        <outlet property="datePicker" destination="jdH-Gy-Eqc" id="zol-bh-u8U"/>
+                        <outlet property="duengemittelText" destination="2zp-5I-DeK" id="Sdf-vJ-bpP"/>
+                        <outlet property="feldText" destination="zVF-wh-v5i" id="c48-61-HHN"/>
                         <outlet property="headCaptureLabel" destination="oNG-e7-LJZ" id="xDe-IE-aDH"/>
+                        <outlet property="mengeDuengemittelText" destination="C3L-dI-wWQ" id="RQO-wi-rxO"/>
                         <segue destination="OkD-cb-Ojc" kind="show" identifier="segueToAddCaptureView" id="OvB-cJ-4ac"/>
                     </connections>
                 </viewController>
@@ -1091,7 +1097,16 @@ Akarizid</string>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="arbeitszeitText" destination="9ZK-SO-xLW" id="Zx9-8k-lmf"/>
+                        <outlet property="benutzerText" destination="vCP-sI-2uI" id="Sbm-CP-LGZ"/>
+                        <outlet property="datePicker" destination="e7S-MB-3IP" id="cYT-mL-Myq"/>
+                        <outlet property="feldText" destination="stc-kd-RVk" id="ccj-6l-2qI"/>
+                        <outlet property="gegenText" destination="kN0-EB-Vsc" id="1bY-yj-pEa"/>
                         <outlet property="headCaptureLabel" destination="Mpw-pi-Xvi" id="ZLq-I0-bO8"/>
+                        <outlet property="infoText" destination="Rxm-Xl-SIp" id="ZFb-PS-dq4"/>
+                        <outlet property="mengePflanzenschutzmittelText" destination="6FW-99-aat" id="kak-KD-296"/>
+                        <outlet property="mittelText" destination="rHX-Hx-gGo" id="0bu-26-WwX"/>
+                        <outlet property="terminText" destination="9Rx-8w-LOL" id="xpV-Wx-Hko"/>
                         <segue destination="OkD-cb-Ojc" kind="show" identifier="segueToAddCaptureView" id="ym3-nN-BRJ"/>
                     </connections>
                 </viewController>
@@ -1106,6 +1121,6 @@ Akarizid</string>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="n5A-dJ-Kxq"/>
-        <segue reference="5ee-cg-r0s"/>
+        <segue reference="ym3-nN-BRJ"/>
     </inferredMetricsTieBreakers>
 </document>

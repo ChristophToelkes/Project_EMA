@@ -26,6 +26,7 @@ class AddEntryViewController: UIViewController {
         headCaptureLabel.text = captureType
         
         if let entry = entry {
+            captureType = entry.getCaptureType()
             headCaptureLabel.text =  entry.getCaptureType()
             datePicker.date = entry.getDate()
             feldText.text = entry.getField()
@@ -34,18 +35,26 @@ class AddEntryViewController: UIViewController {
         }
         
         if checkTraubenlese() {
-            
+            durchfuehrungText.text = entry?.durchfuehrung
         }
     }
-    
+    //Es gibt bisher keine Fehlermeldung bei unvollständigem Ausfüllen
     @IBAction func safeEntryBtn(_ sender: Any) {
         let db = RealmHelper()
-        if captureType != nil && benutzerText.text != nil && arbeitszeitText != nil {
-            if let zeit = Double(arbeitszeitText.text!) {
-                db.addGeneral(captureType: captureType!, benutzer: benutzerText.text!, feld: feldText.text!, arbeitszeit: zeit, datum: datePicker.date)
+        
+        if captureType == "Traubenlese"{
+            if durchfuehrungText.text != nil && benutzerText.text != nil && arbeitszeitText.text != nil {
+                if let zeit = Double(arbeitszeitText.text!) {
+                    db.addTraubenlese(captureType: captureType!, benutzer: benutzerText.text!, feld: feldText.text!, arbeitszeit: zeit, datum: datePicker.date, durchfuehrung: durchfuehrungText.text!)
+                }
+            }
+        } else {
+            if captureType != nil && benutzerText.text != nil && arbeitszeitText != nil {
+                if let zeit = Double(arbeitszeitText.text!) {
+                    db.addGeneral(captureType: captureType!, benutzer: benutzerText.text!, feld: feldText.text!, arbeitszeit: zeit, datum: datePicker.date)
+                }
             }
         }
-        
     }
     
     @IBAction func backBtn(_ sender: Any) {
@@ -54,6 +63,7 @@ class AddEntryViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
         if let destination = segue.destination as? AddCaptureViewController{
             destination.element = captureType
         }
