@@ -29,7 +29,7 @@ class RealmHelper {
     func loadObjects (type: String) -> [Entry] {
         let realm = try! Realm()
         
-        let objects = realm.objects(GeneralEntry.self).filter("captureType = ", type)
+        let objects = realm.objects(GeneralEntry.self).filter("captureType = '" + type + "'")
         
         var entries: [Entry] = []
         

@@ -25,7 +25,17 @@ class AddEntryViewController: UIViewController {
         super.viewDidLoad()
         headCaptureLabel.text = captureType
         
-        checkTraubenlese()
+        if let entry = entry {
+            headCaptureLabel.text =  entry.getCaptureType()
+            datePicker.date = entry.getDate()
+            feldText.text = entry.getField()
+            benutzerText.text = entry.getUser()
+            arbeitszeitText.text = String(entry.getHours())
+        }
+        
+        if checkTraubenlese() {
+            
+        }
     }
     
     @IBAction func safeEntryBtn(_ sender: Any) {
@@ -49,9 +59,12 @@ class AddEntryViewController: UIViewController {
         }
     }
     
-    func checkTraubenlese() {
+    func checkTraubenlese()  -> Bool{
         if captureType == "Traubenlese" {
             traubenleseDurchfuehrungView.isHidden = false
+            return true;
+        } else {
+            return false;
         }
     }
     
