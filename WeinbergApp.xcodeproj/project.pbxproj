@@ -23,6 +23,11 @@
 		46A0D73420D7D65A00B0BEDA /* Entry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A0D73320D7D65A00B0BEDA /* Entry.swift */; };
 		46A0D73620D7EC6B00B0BEDA /* AddEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A0D73520D7EC6B00B0BEDA /* AddEntryViewController.swift */; };
 		46E50EED20D545FE00F93167 /* ShakeAnimationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E50EEC20D545FE00F93167 /* ShakeAnimationHelper.swift */; };
+		85168A0C20EBA6E800CB2AB5 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85168A0B20EBA6E800CB2AB5 /* Realm.framework */; };
+		85168A0D20EBA6E800CB2AB5 /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 85168A0B20EBA6E800CB2AB5 /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		85168A1020EBA6ED00CB2AB5 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85168A0F20EBA6ED00CB2AB5 /* RealmSwift.framework */; };
+		85168A1120EBA6ED00CB2AB5 /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 85168A0F20EBA6ED00CB2AB5 /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		85168A1A20EBA99F00CB2AB5 /* RealmHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85168A1920EBA99F00CB2AB5 /* RealmHelper.swift */; };
 		85AC848720E3ADA40080505A /* DuengungAddEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AC848620E3ADA40080505A /* DuengungAddEntryViewController.swift */; };
 		85AC848920E3B7DE0080505A /* PflanzenschutzAddEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AC848820E3B7DE0080505A /* PflanzenschutzAddEntryViewController.swift */; };
 /* End PBXBuildFile section */
@@ -43,6 +48,21 @@
 			remoteInfo = WeinbergApp;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		85168A0E20EBA6E800CB2AB5 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				85168A1120EBA6ED00CB2AB5 /* RealmSwift.framework in Embed Frameworks */,
+				85168A0D20EBA6E800CB2AB5 /* Realm.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		460E0EEB20E4F7B8007962EC /* ScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerViewController.swift; sourceTree = "<group>"; };
@@ -67,6 +87,11 @@
 		46A0D73320D7D65A00B0BEDA /* Entry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entry.swift; sourceTree = "<group>"; };
 		46A0D73520D7EC6B00B0BEDA /* AddEntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEntryViewController.swift; sourceTree = "<group>"; };
 		46E50EEC20D545FE00F93167 /* ShakeAnimationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShakeAnimationHelper.swift; sourceTree = "<group>"; };
+		85168A0B20EBA6E800CB2AB5 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
+		85168A0F20EBA6ED00CB2AB5 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = "<group>"; };
+		85168A1220EBA6FB00CB2AB5 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = "../../../Downloads/realm-swift-3.7.4/osx/swift-4.1/Realm.framework"; sourceTree = "<group>"; };
+		85168A1520EBA70000CB2AB5 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = "../../../Downloads/realm-swift-3.7.4/osx/swift-4.1/RealmSwift.framework"; sourceTree = "<group>"; };
+		85168A1920EBA99F00CB2AB5 /* RealmHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmHelper.swift; sourceTree = "<group>"; };
 		85AC848620E3ADA40080505A /* DuengungAddEntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DuengungAddEntryViewController.swift; sourceTree = "<group>"; };
 		85AC848820E3B7DE0080505A /* PflanzenschutzAddEntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PflanzenschutzAddEntryViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -76,6 +101,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85168A1020EBA6ED00CB2AB5 /* RealmSwift.framework in Frameworks */,
+				85168A0C20EBA6E800CB2AB5 /* Realm.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,6 +126,10 @@
 		4694C96B20D5261D005C5F97 = {
 			isa = PBXGroup;
 			children = (
+				85168A1520EBA70000CB2AB5 /* RealmSwift.framework */,
+				85168A1220EBA6FB00CB2AB5 /* Realm.framework */,
+				85168A0F20EBA6ED00CB2AB5 /* RealmSwift.framework */,
+				85168A0B20EBA6E800CB2AB5 /* Realm.framework */,
 				4694C97620D5261D005C5F97 /* WeinbergApp */,
 				4694C98B20D5261E005C5F97 /* WeinbergAppTests */,
 				4694C99620D5261E005C5F97 /* WeinbergAppUITests */,
@@ -135,7 +166,11 @@
 				4694C98320D5261E005C5F97 /* Info.plist */,
 				46E50EEC20D545FE00F93167 /* ShakeAnimationHelper.swift */,
 				46A0D73320D7D65A00B0BEDA /* Entry.swift */,
+<<<<<<< HEAD
 				460E0EEB20E4F7B8007962EC /* ScannerViewController.swift */,
+=======
+				85168A1920EBA99F00CB2AB5 /* RealmHelper.swift */,
+>>>>>>> 168dde316b3758b914466031e4b9f98ce3049e8d
 			);
 			path = WeinbergApp;
 			sourceTree = "<group>";
@@ -168,6 +203,8 @@
 				4694C97020D5261D005C5F97 /* Sources */,
 				4694C97120D5261D005C5F97 /* Frameworks */,
 				4694C97220D5261D005C5F97 /* Resources */,
+				85168A0E20EBA6E800CB2AB5 /* Embed Frameworks */,
+				85168A1820EBA88D00CB2AB5 /* Realm Script */,
 			);
 			buildRules = (
 			);
@@ -284,6 +321,23 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		85168A1820EBA88D00CB2AB5 /* Realm Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Realm Script";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "bash \"${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework/strip-frameworks.sh\"";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		4694C97020D5261D005C5F97 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -302,6 +356,7 @@
 				460E0EEC20E4F7B8007962EC /* ScannerViewController.swift in Sources */,
 				46A0D72A20D6F55900B0BEDA /* MapViewController.swift in Sources */,
 				46A0D72C20D6F59600B0BEDA /* CaptureViewController.swift in Sources */,
+				85168A1A20EBA99F00CB2AB5 /* RealmHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -475,6 +530,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				"FRAMEWORK_SEARCH_PATHS[arch=*]" = "/Users/ema/Downloads/realm-swift-3.7.4/ios/swift-4.1";
 				INFOPLIST_FILE = WeinbergApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -492,6 +552,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				"FRAMEWORK_SEARCH_PATHS[arch=*]" = "/Users/ema/Downloads/realm-swift-3.7.4/ios/swift-4.1";
 				INFOPLIST_FILE = WeinbergApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

@@ -73,7 +73,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate, AVCaptureMetad
         
         if(userName == testName){
             if(userPassword == testPassword){
-                
                 //---userPassword & userName correct---
                 return true
                 

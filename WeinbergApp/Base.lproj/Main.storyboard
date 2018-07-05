@@ -201,12 +201,12 @@
                     </tabBarItem>
                     <connections>
                         <outlet property="tableView" destination="wWb-Vl-Pzl" id="oK3-u3-dXj"/>
-                        <segue destination="OkD-cb-Ojc" kind="show" identifier="segueToAddCaptureView" id="5ee-cg-r0s"/>
+                        <segue destination="OkD-cb-Ojc" kind="show" identifier="segueToAddCaptureView" id="rNw-vJ-MG3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iKx-6k-IXA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1708" y="2838"/>
+            <point key="canvasLocation" x="1770" y="2838"/>
         </scene>
         <!--Add Capture View Controller-->
         <scene sceneID="fwo-Og-TdP">
@@ -292,6 +292,7 @@
                             <constraint firstItem="oTr-nN-P2y" firstAttribute="centerX" secondItem="rOd-Ta-aDx" secondAttribute="centerX" id="t9T-dj-a0u"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="tTb-6h-Y0u"/>
                     <connections>
                         <outlet property="searchBarView" destination="G6z-ME-mQx" id="hNM-kg-uco"/>
                         <outlet property="tableView" destination="rOd-Ta-aDx" id="Fvk-qT-bhs"/>
@@ -427,8 +428,8 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="redraw" semanticContentAttribute="forceLeftToRight" distribution="equalCentering" spacing="150" translatesAutoresizingMaskIntoConstraints="NO" id="IU0-mr-f9n">
-                                <rect key="frame" x="78" y="627" width="219" height="30"/>
+                            <stackView opaque="NO" contentMode="redraw" semanticContentAttribute="forceLeftToRight" distribution="equalCentering" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="IU0-mr-f9n">
+                                <rect key="frame" x="68" y="627" width="239.5" height="30"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wvn-5Q-3mD">
                                         <rect key="frame" x="0.0" y="0.0" width="47" height="30"/>
@@ -439,8 +440,16 @@
                                             <action selector="backBtn:" destination="mxH-RZ-U3P" eventType="touchUpInside" id="O95-l0-dfe"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XPt-Ed-6sz">
+                                        <rect key="frame" x="97" y="0.0" width="58" height="30"/>
+                                        <color key="tintColor" red="0.58081901069999997" green="0.088427625600000004" blue="0.31863921880000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Löschen"/>
+                                        <connections>
+                                            <action selector="PressDeleteButton:" destination="mxH-RZ-U3P" eventType="touchUpInside" id="hhu-xK-bMP"/>
+                                        </connections>
+                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FBx-xe-69S">
-                                        <rect key="frame" x="197" y="0.0" width="22" height="30"/>
+                                        <rect key="frame" x="217.5" y="0.0" width="22" height="30"/>
                                         <color key="tintColor" red="0.58081901069999997" green="0.088427625600000004" blue="0.31863921880000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal">
                                             <color key="titleColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -467,6 +476,11 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="arbeitszeitText" destination="fsV-Av-in1" id="ST9-sr-oU0"/>
+                        <outlet property="benutzerText" destination="ahX-6I-0Nw" id="zr2-As-Fag"/>
+                        <outlet property="datePicker" destination="hON-y5-gcu" id="kcZ-Qd-UbR"/>
+                        <outlet property="durchfuehrungText" destination="irI-kJ-Z5c" id="ng4-c7-Bu7"/>
+                        <outlet property="feldText" destination="VP9-ro-oue" id="IY6-wB-aEl"/>
                         <outlet property="headCaptureLabel" destination="mwY-o0-ayS" id="YLA-EV-n3g"/>
                         <outlet property="traubenleseDurchfuehrungView" destination="9om-hq-yMP" id="CzY-n9-u9B"/>
                         <segue destination="OkD-cb-Ojc" kind="show" identifier="segueToAddCaptureView" id="cHW-Y0-2uo"/>
@@ -745,8 +759,8 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="redraw" semanticContentAttribute="forceLeftToRight" distribution="equalCentering" spacing="150" translatesAutoresizingMaskIntoConstraints="NO" id="W1u-OD-rEe">
-                                <rect key="frame" x="78" y="627" width="219" height="30"/>
+                            <stackView opaque="NO" contentMode="redraw" semanticContentAttribute="forceLeftToRight" distribution="equalCentering" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="W1u-OD-rEe">
+                                <rect key="frame" x="68" y="627" width="239.5" height="30"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Zw-Hl-ebs">
                                         <rect key="frame" x="0.0" y="0.0" width="47" height="30"/>
@@ -757,8 +771,16 @@
                                             <action selector="backBtn:" destination="4br-4I-JOM" eventType="touchUpInside" id="Wej-Ia-WmX"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kwL-Cz-gbs">
+                                        <rect key="frame" x="97" y="0.0" width="58" height="30"/>
+                                        <color key="tintColor" red="0.58081901069999997" green="0.088427625600000004" blue="0.31863921880000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Löschen"/>
+                                        <connections>
+                                            <action selector="pressDeleteButton:" destination="4br-4I-JOM" eventType="touchUpInside" id="nF2-Sy-w2d"/>
+                                        </connections>
+                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X4X-lI-gT2">
-                                        <rect key="frame" x="197" y="0.0" width="22" height="30"/>
+                                        <rect key="frame" x="217.5" y="0.0" width="22" height="30"/>
                                         <color key="tintColor" red="0.58081901069999997" green="0.088427625600000004" blue="0.31863921880000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal">
                                             <color key="titleColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -785,7 +807,13 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="arbeitszeitText" destination="gqU-Fg-IRe" id="XAS-UX-EgW"/>
+                        <outlet property="benutzerText" destination="mMp-4a-0tn" id="pEq-wQ-8Is"/>
+                        <outlet property="datePicker" destination="jdH-Gy-Eqc" id="zol-bh-u8U"/>
+                        <outlet property="duengemittelText" destination="2zp-5I-DeK" id="Sdf-vJ-bpP"/>
+                        <outlet property="feldText" destination="zVF-wh-v5i" id="c48-61-HHN"/>
                         <outlet property="headCaptureLabel" destination="oNG-e7-LJZ" id="xDe-IE-aDH"/>
+                        <outlet property="mengeDuengemittelText" destination="C3L-dI-wWQ" id="RQO-wi-rxO"/>
                         <segue destination="OkD-cb-Ojc" kind="show" identifier="segueToAddCaptureView" id="OvB-cJ-4ac"/>
                     </connections>
                 </viewController>
@@ -806,7 +834,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wWr-Nb-Aq3">
-                                <rect key="frame" x="16" y="20" width="343" height="611"/>
+                                <rect key="frame" x="16" y="20" width="340" height="600"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" semanticContentAttribute="spatial" fixedFrame="YES" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="mjC-Mv-Zoh">
@@ -1042,8 +1070,8 @@ Akarizid</string>
                                     </stackView>
                                 </subviews>
                             </scrollView>
-                            <stackView opaque="NO" contentMode="redraw" semanticContentAttribute="forceLeftToRight" ambiguous="YES" distribution="equalCentering" spacing="150" translatesAutoresizingMaskIntoConstraints="NO" id="F2n-vf-AJG">
-                                <rect key="frame" x="78" y="627" width="219" height="30"/>
+                            <stackView opaque="NO" contentMode="redraw" semanticContentAttribute="forceLeftToRight" ambiguous="YES" distribution="equalCentering" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="F2n-vf-AJG">
+                                <rect key="frame" x="78" y="627" width="239.5" height="30"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h1h-KE-BgL">
                                         <rect key="frame" x="0.0" y="0.0" width="47" height="30"/>
@@ -1054,8 +1082,16 @@ Akarizid</string>
                                             <action selector="backBtn:" destination="xoh-O3-Jo7" eventType="touchUpInside" id="4e5-pl-fBV"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yd5-dE-PBG">
+                                        <rect key="frame" x="97" y="0.0" width="58" height="30"/>
+                                        <color key="tintColor" red="0.58081901069999997" green="0.088427625600000004" blue="0.31863921880000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Löschen"/>
+                                        <connections>
+                                            <action selector="pressDeleteButton:" destination="xoh-O3-Jo7" eventType="touchUpInside" id="k0Z-CV-gKm"/>
+                                        </connections>
+                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Gn-BA-Dsz">
-                                        <rect key="frame" x="197" y="0.0" width="22" height="30"/>
+                                        <rect key="frame" x="217.5" y="0.0" width="22" height="30"/>
                                         <color key="tintColor" red="0.58081901069999997" green="0.088427625600000004" blue="0.31863921880000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal">
                                             <color key="titleColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1078,7 +1114,17 @@ Akarizid</string>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="arbeitszeitText" destination="9ZK-SO-xLW" id="Zx9-8k-lmf"/>
+                        <outlet property="benutzerText" destination="vCP-sI-2uI" id="Sbm-CP-LGZ"/>
+                        <outlet property="datePicker" destination="e7S-MB-3IP" id="cYT-mL-Myq"/>
+                        <outlet property="feldText" destination="stc-kd-RVk" id="ccj-6l-2qI"/>
+                        <outlet property="gegenText" destination="kN0-EB-Vsc" id="1bY-yj-pEa"/>
                         <outlet property="headCaptureLabel" destination="Mpw-pi-Xvi" id="ZLq-I0-bO8"/>
+                        <outlet property="infoText" destination="Rxm-Xl-SIp" id="ZFb-PS-dq4"/>
+                        <outlet property="mengePflanzenschutzmittelText" destination="6FW-99-aat" id="kak-KD-296"/>
+                        <outlet property="mittelText" destination="rHX-Hx-gGo" id="0bu-26-WwX"/>
+                        <outlet property="scrollView" destination="wWr-Nb-Aq3" id="yco-xz-Mwn"/>
+                        <outlet property="terminText" destination="9Rx-8w-LOL" id="xpV-Wx-Hko"/>
                         <segue destination="OkD-cb-Ojc" kind="show" identifier="segueToAddCaptureView" id="ym3-nN-BRJ"/>
                     </connections>
                 </viewController>
@@ -1093,7 +1139,12 @@ Akarizid</string>
         <image name="work" width="24" height="24"/>
     </resources>
     <inferredMetricsTieBreakers>
+<<<<<<< HEAD
         <segue reference="uPz-Fn-yU9"/>
         <segue reference="5ee-cg-r0s"/>
+=======
+        <segue reference="n5A-dJ-Kxq"/>
+        <segue reference="rNw-vJ-MG3"/>
+>>>>>>> 168dde316b3758b914466031e4b9f98ce3049e8d
     </inferredMetricsTieBreakers>
 </document>

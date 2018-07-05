@@ -10,13 +10,24 @@ import UIKit
 
 struct Entry{
 
-    private var user: String
-    private var date: String
-    private var field: String
-    private var hours: Double
-    private var captureType: String
+    var user: String
+    var date: String
+    var field: String
+    var hours: String
+    var captureType: String
+    //speziell für Traubenlese
+    var durchfuehrung: String?
+    //speziell für Düngung
+    var duengemittel: String?
+    var mengeDuengemittel: String?
+    //speziell für Pflanzenschutz
+    var gegen: String?
+    var mittel: String?
+    var termin: String?
+    var info: String?
+    var mengePflanzenschutzmittel: String?
    
-  
+    
     public func getUser() -> String{
         return self.user
     }
@@ -29,7 +40,7 @@ struct Entry{
         return self.field
     }
     
-    public func getHours() -> Double {
+    public func getHours() -> String {
         return self.hours
     }
     
@@ -37,6 +48,69 @@ struct Entry{
         return self.captureType
     }
     
+    public func getDurchfuehrung() -> String {
+        if let returnValue = self.durchfuehrung {
+            return returnValue
+        } else {
+            return ""
+        }
+    }
+    
+    public func getDuengemittel() -> String {
+        if let returnValue = self.duengemittel {
+            return returnValue
+        } else {
+            return ""
+        }
+    }
+    
+    public func getMengeDuengemittel() -> String {
+        if let returnValue = self.mengeDuengemittel {
+            return returnValue
+        } else {
+            return ""
+        }
+    }
+    
+    public func getGegen() -> String {
+        if let returnValue = self.gegen {
+            return returnValue
+        } else {
+            return ""
+        }
+    }
+    
+    public func getMittel() -> String {
+        if let returnValue = self.mittel {
+            return returnValue
+        } else {
+            return ""
+        }
+    }
+    
+    public func getTermin() -> String {
+        if let returnValue = self.termin {
+            return returnValue
+        } else {
+            return ""
+        }
+    }
+    
+    public func getInfo() -> String {
+        if let returnValue = self.info {
+            return returnValue
+        } else {
+            return ""
+        }
+    }
+    
+    public func getMengePflanzenschutzmittel() -> String {
+        if let returnValue = self.mengePflanzenschutzmittel {
+            return returnValue
+        } else {
+            return ""
+        }
+    }
     
     
     
@@ -52,11 +126,43 @@ struct Entry{
         self.field = field
     }
     
-    public mutating func setHours(hours: Double) {
+    public mutating func setHours(hours: String) {
         self.hours = hours
     }
     
     public mutating func setCaptureType(captureType: String){
         self.captureType = captureType
+    }
+    
+    public mutating func setDurchfuehrung(durchfuehrung: String) {
+        self.durchfuehrung = durchfuehrung
+    }
+    
+    public mutating func setDuengemittel(duengemittel: String) {
+        self.duengemittel = duengemittel
+    }
+    
+    public mutating func setMengeDuengemittel(mengeDuengemittel: String) {
+        self.mengeDuengemittel = mengeDuengemittel
+    }
+    
+    public mutating func setGegen(gegen: String) {
+        self.gegen = gegen
+    }
+    
+    public mutating func setMittel(mittel: String) {
+        self.mittel = mittel
+    }
+    
+    public mutating func setTermin(termin: String) {
+        self.termin = termin
+    }
+    
+    public mutating func setInfo(info: String) {
+        self.info = info
+    }
+    
+    public mutating func setMengePflanzenschutzmittel(mengePflanzenschutzmittel: String) {
+        self.mengePflanzenschutzmittel = mengePflanzenschutzmittel
     }
 }

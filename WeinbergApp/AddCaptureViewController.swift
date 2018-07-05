@@ -22,6 +22,7 @@ class AddCaptureViewController: UIViewController, UITableViewDataSource, UITable
         super.viewDidLoad()
         tableView.dataSource = self
         tableView.delegate = self
+        loadEntries()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -39,16 +40,21 @@ class AddCaptureViewController: UIViewController, UITableViewDataSource, UITable
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
         if(element == "Düngung"){
+            changeEntry = true
             performSegue(withIdentifier: "segueToDuengungAddEntryView", sender: self)
+        } else if(element == "Pflanzenschutz") {
             changeEntry = true
+            performSegue(withIdentifier: "segueToPflanzenschutzAddEntryView", sender: self)
         } else {
-            performSegue(withIdentifier: "segueToAddEntryView", sender: self)
             changeEntry = true
+            performSegue(withIdentifier: "segueToAddEntryView", sender: self)
         }
         
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        
         if(element == "Düngung") {
             prepareDuengung(for: segue, sender: sender)
         } else if(element == "Pflanzenschutz") {
@@ -101,4 +107,10 @@ class AddCaptureViewController: UIViewController, UITableViewDataSource, UITable
         }
     }
     
+    func loadEntries(){
+        let db = RealmHelper()
+        if let captureType = element {
+            entryList = db.loadObjects(type: captureType)
+        }
+    }
 }
