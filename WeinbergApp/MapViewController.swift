@@ -12,7 +12,10 @@ import MapKit
 
 class MapViewController: UIViewController{
     @IBOutlet weak var mapView: MKMapView!
-    
+  
+    @IBAction func logoutBtn(_ sender: Any) {
+         performSegue(withIdentifier: "segueLogout", sender: self)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

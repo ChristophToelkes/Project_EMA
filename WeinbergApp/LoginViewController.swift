@@ -9,15 +9,20 @@
 
 
 
-
+import AVFoundation
 import UIKit
 
-class LoginViewController: UIViewController, UITextFieldDelegate {
+class LoginViewController: UIViewController, UITextFieldDelegate, AVCaptureMetadataOutputObjectsDelegate {
     @IBOutlet weak var userNameTextField: UITextField!
     @IBOutlet weak var userPasswordtextField: UITextField!
     private var showPassword : Bool!
    
     
+    
+    //---für QR Gedöns---
+    var captureSession:AVCaptureSession?
+    var videoPreviewLayer:AVCaptureVideoPreviewLayer?
+    var qrCodeFrameView:UIView?
     
     let testName = "hhh"
     let testPassword = "hhh"
@@ -50,7 +55,11 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     @IBAction func signinBtn(_ sender: Any) {
         //--- Neuen User in DB anlegen---
         //--- danach zur nächsten UI weiterleiten---
-        performSegue(withIdentifier: "segueToMapView", sender: self)
+        
+
+        
+        
+        performSegue(withIdentifier: "segueToScannerView", sender: self)
         print("registrieren")
       
     }

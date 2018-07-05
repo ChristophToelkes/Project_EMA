@@ -60,5 +60,6 @@ class CaptureViewController: UIViewController, UITableViewDelegate, UITableViewD
             destination.element = listElements[(tableView.indexPathForSelectedRow?.row)!]
         }
     }
+ 
     
 }

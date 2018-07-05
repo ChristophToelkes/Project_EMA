@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		460E0EEC20E4F7B8007962EC /* ScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460E0EEB20E4F7B8007962EC /* ScannerViewController.swift */; };
 		4694C97820D5261D005C5F97 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4694C97720D5261D005C5F97 /* AppDelegate.swift */; };
 		4694C97D20D5261D005C5F97 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4694C97B20D5261D005C5F97 /* Main.storyboard */; };
 		4694C97F20D5261E005C5F97 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4694C97E20D5261E005C5F97 /* Assets.xcassets */; };
@@ -44,6 +45,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		460E0EEB20E4F7B8007962EC /* ScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerViewController.swift; sourceTree = "<group>"; };
 		4694C97420D5261D005C5F97 /* WeinbergApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeinbergApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4694C97720D5261D005C5F97 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4694C97C20D5261D005C5F97 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -133,6 +135,7 @@
 				4694C98320D5261E005C5F97 /* Info.plist */,
 				46E50EEC20D545FE00F93167 /* ShakeAnimationHelper.swift */,
 				46A0D73320D7D65A00B0BEDA /* Entry.swift */,
+				460E0EEB20E4F7B8007962EC /* ScannerViewController.swift */,
 			);
 			path = WeinbergApp;
 			sourceTree = "<group>";
@@ -296,6 +299,7 @@
 				46A0D72E20D6F5CB00B0BEDA /* AreasViewController.swift in Sources */,
 				46A0D73220D6FF5600B0BEDA /* AddCaptureViewController.swift in Sources */,
 				46A0D73420D7D65A00B0BEDA /* Entry.swift in Sources */,
+				460E0EEC20E4F7B8007962EC /* ScannerViewController.swift in Sources */,
 				46A0D72A20D6F55900B0BEDA /* MapViewController.swift in Sources */,
 				46A0D72C20D6F59600B0BEDA /* CaptureViewController.swift in Sources */,
 			);
