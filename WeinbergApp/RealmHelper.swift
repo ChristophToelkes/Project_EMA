@@ -11,8 +11,9 @@ import RealmSwift
 
 class RealmHelper {
     
-    func addGeneral(captureType: String, benutzer: String, feld: String, arbeitszeit: Double, datum: Date ) {
-        let realm = try! Realm()
+    let realm = try! Realm()
+    
+    func addGeneral(captureType: String, benutzer: String, feld: String, arbeitszeit: String, datum: String ) {
         
         let newEntry = GeneralEntry()
         newEntry.captureType = captureType
@@ -26,8 +27,8 @@ class RealmHelper {
         }
     }
     
-    func addTraubenlese(captureType: String, benutzer: String, feld: String, arbeitszeit: Double, datum: Date, durchfuehrung: String) {
-        let realm = try! Realm()
+    func addTraubenlese(captureType: String, benutzer: String, feld: String, arbeitszeit: String, datum: String, durchfuehrung: String) {
+
         
         let newEntry = TraubenleseEntry()
         newEntry.captureType = captureType
@@ -35,15 +36,15 @@ class RealmHelper {
         newEntry.Feld = feld
         newEntry.Arbeitszeit = arbeitszeit
         newEntry.Datum = datum
-        newEntry.durchfuerung = durchfuehrung
+        newEntry.durchfuehrung = durchfuehrung
         
         try! realm.write {
             realm.add(newEntry)
         }
     }
     
-    func addDuengung(captureType: String, benutzer: String, feld: String, arbeitszeit: Double, datum: Date, duengemittel: String, mengeDuengemittel: Double) {
-        let realm = try! Realm()
+    func addDuengung(captureType: String, benutzer: String, feld: String, arbeitszeit: String, datum: String, duengemittel: String, mengeDuengemittel: String) {
+
         
         let newEntry = DuengungEntry()
         newEntry.captureType = captureType
@@ -59,8 +60,7 @@ class RealmHelper {
         }
     }
     
-    func addPflanzenschutz(captureType: String, benutzer: String, feld: String, arbeitszeit: Double, datum: Date, gegen: String, mittel: String, termin: String, info: String, mengePflanzenschutzmittel: Double) {
-        let realm = try! Realm()
+    func addPflanzenschutz(captureType: String, benutzer: String, feld: String, arbeitszeit: String, datum: String, gegen: String, mittel: String, termin: String, info: String, mengePflanzenschutzmittel: String) {
         
         let newEntry = PflanzenschutzEntry()
         newEntry.captureType = captureType
@@ -95,7 +95,6 @@ class RealmHelper {
     }
     
     func getTraubenleseObjects(type: String) -> Results<TraubenleseEntry> {
-        let realm = try! Realm()
         
         return realm.objects(TraubenleseEntry.self).filter("captureType = '" + type + "'")
     }
@@ -104,7 +103,7 @@ class RealmHelper {
         var entries: [Entry] = []
         
         for i in 0..<results.count {
-            let entry = Entry(user: results[i].Benutzer, date: results[i].Datum, field: results[i].Feld, hours: results[i].Arbeitszeit, captureType: results[i].captureType, durchfuehrung: results[i].durchfuerung, duengemittel: nil, mengeDuengemittel: nil, gegen: nil, mittel: nil, termin: nil, info: nil, mengePflanzenschutzmittel: nil)
+            let entry = Entry(user: results[i].Benutzer, date: results[i].Datum, field: results[i].Feld, hours: results[i].Arbeitszeit, captureType: results[i].captureType, durchfuehrung: results[i].durchfuehrung, duengemittel: nil, mengeDuengemittel: nil, gegen: nil, mittel: nil, termin: nil, info: nil, mengePflanzenschutzmittel: nil)
             entries.append(entry)
         }
         
@@ -112,7 +111,6 @@ class RealmHelper {
     }
     
     func getDuengungObjects(type: String) -> Results<DuengungEntry> {
-        let realm = try! Realm()
         
         return realm.objects(DuengungEntry.self).filter("captureType = '" + type + "'")
     }
@@ -129,7 +127,6 @@ class RealmHelper {
     }
     
     func getPflanzenschutzObjects(type: String) -> Results<PflanzenschutzEntry> {
-        let realm = try! Realm()
         
         return realm.objects(PflanzenschutzEntry.self).filter("captureType = '" + type + "'")
     }
@@ -146,7 +143,6 @@ class RealmHelper {
     }
     
     func getGeneralObjects(type: String) -> Results<GeneralEntry> {
-        let realm = try! Realm()
         
         return realm.objects(GeneralEntry.self).filter("captureType = '" + type + "'")
     }
@@ -161,44 +157,104 @@ class RealmHelper {
         
         return entries
     }
+    
+    func deleteGeneral(entry: Entry) {
+        let typeBenutzer = "captureType = '" + entry.getCaptureType() + "' AND Benutzer = '" + entry.getUser() + "'"
+        let feldArbeitszeit = "Feld = '" + entry.getField() + "' AND Arbeitszeit = '" + String(entry.getHours()) + "'"
+        var query = typeBenutzer + " AND " + feldArbeitszeit
+        query += " AND Datum = '" + entry.getDate() + "'"
+        
+        let objects = realm.objects(GeneralEntry.self).filter(query)
+        
+        let object = objects.first
+        try! realm.write {
+            realm.delete(object!)
+        }
+    }
+    
+    func deleteTraubenlese(entry: Entry) {
+        let typeBenutzer = "captureType = '" + entry.getCaptureType() + "' AND Benutzer = '" + entry.getUser() + "'"
+        let feldArbeitszeit = "Feld = '" + entry.getField() + "' AND Arbeitszeit = '" + String(entry.getHours()) + "'"
+        var query = typeBenutzer + " AND " + feldArbeitszeit
+        query += " AND Datum = '" + entry.getDate() + "' AND durchfuehrung = '" + entry.getDurchfuehrung() + "'"
+        
+        let objects = realm.objects(TraubenleseEntry.self).filter(query)
+        
+        let object = objects.first
+        try! realm.write {
+            realm.delete(object!)
+        }
+    }
+    
+    func deleteDuengung(entry: Entry) {
+        let typeBenutzer = "captureType = '" + entry.getCaptureType() + "' AND Benutzer = '" + entry.getUser() + "'"
+        let feldArbeitszeit = "Feld = '" + entry.getField() + "' AND Arbeitszeit = '" + String(entry.getHours()) + "'"
+        var query = typeBenutzer + " AND " + feldArbeitszeit
+        query += " AND Datum = '" + entry.getDate() + "'"
+        query += " AND duengemittel = '" + entry.getDuengemittel() + "' AND mengeDuengemittel = '" + entry.getMengeDuengemittel() + "'"
+        
+        let objects = realm.objects(DuengungEntry.self).filter(query)
+        
+        let object = objects.first
+        try! realm.write {
+            realm.delete(object!)
+        }
+    }
+    
+    func deletePflanzenschutz(entry: Entry) {
+        let typeBenutzer = "captureType = '" + entry.getCaptureType() + "' AND Benutzer = '" + entry.getUser() + "'"
+        let feldArbeitszeit = "Feld = '" + entry.getField() + "' AND Arbeitszeit = '" + String(entry.getHours()) + "'"
+        var query = typeBenutzer + " AND " + feldArbeitszeit
+        query += " AND Datum = '" + entry.getDate() + "'"
+        query += " AND gegen = '" + entry.getGegen() + "' AND mittel = '" + entry.getMittel() + "'"
+        query += " AND termin = '" + entry.getTermin() + "' AND info = '" + entry.getInfo() + "'"
+        query += " AND mengePflanzenschutzmittel = '" + entry.getMengePflanzenschutzmittel() + "'"
+        
+        let objects = realm.objects(PflanzenschutzEntry.self).filter(query)
+        
+        let object = objects.first
+        try! realm.write {
+            realm.delete(object!)
+        }
+    }
 }
 
 class GeneralEntry: Object{
     @objc dynamic var captureType = ""
     @objc dynamic var Benutzer = ""
     @objc dynamic var Feld = ""
-    @objc dynamic var Arbeitszeit: Double = 0.0
-    @objc dynamic var Datum = Date()
+    @objc dynamic var Arbeitszeit = ""
+    @objc dynamic var Datum = ""
 }
 
 class TraubenleseEntry: Object{
     @objc dynamic var captureType = ""
     @objc dynamic var Benutzer = ""
     @objc dynamic var Feld = ""
-    @objc dynamic var Arbeitszeit: Double = 0.0
-    @objc dynamic var Datum = Date()
-    @objc dynamic var durchfuerung = ""
+    @objc dynamic var Arbeitszeit = ""
+    @objc dynamic var Datum = ""
+    @objc dynamic var durchfuehrung = ""
 }
 
 class DuengungEntry: Object{
     @objc dynamic var captureType = ""
     @objc dynamic var Benutzer = ""
     @objc dynamic var Feld = ""
-    @objc dynamic var Arbeitszeit: Double = 0.0
-    @objc dynamic var Datum = Date()
+    @objc dynamic var Arbeitszeit = ""
+    @objc dynamic var Datum = ""
     @objc dynamic var duengemittel = ""
-    @objc dynamic var mengeDuengemittel: Double = 0.0
+    @objc dynamic var mengeDuengemittel = ""
 }
 
 class PflanzenschutzEntry: Object{
     @objc dynamic var captureType = ""
     @objc dynamic var Benutzer = ""
     @objc dynamic var Feld = ""
-    @objc dynamic var Arbeitszeit: Double = 0.0
-    @objc dynamic var Datum = Date()
+    @objc dynamic var Arbeitszeit = ""
+    @objc dynamic var Datum = ""
     @objc dynamic var gegen = ""
     @objc dynamic var mittel = ""
     @objc dynamic var termin = ""
     @objc dynamic var info = ""
-    @objc dynamic var mengePflanzenschutzmittel: Double = 0.0
+    @objc dynamic var mengePflanzenschutzmittel = ""
 }

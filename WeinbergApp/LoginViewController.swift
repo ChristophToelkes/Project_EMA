@@ -64,7 +64,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         
         if(userName == testName){
             if(userPassword == testPassword){
-                
                 //---userPassword & userName correct---
                 return true
                 

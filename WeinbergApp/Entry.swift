@@ -11,28 +11,28 @@ import UIKit
 struct Entry{
 
     var user: String
-    var date: Date
+    var date: String
     var field: String
-    var hours: Double
+    var hours: String
     var captureType: String
     //speziell für Traubenlese
     var durchfuehrung: String?
     //speziell für Düngung
     var duengemittel: String?
-    var mengeDuengemittel: Double?
+    var mengeDuengemittel: String?
     //speziell für Pflanzenschutz
     var gegen: String?
     var mittel: String?
     var termin: String?
     var info: String?
-    var mengePflanzenschutzmittel: Double?
+    var mengePflanzenschutzmittel: String?
    
     
     public func getUser() -> String{
         return self.user
     }
     
-    public func getDate() -> Date {
+    public func getDate() -> String {
         return self.date
     }
     
@@ -40,7 +40,7 @@ struct Entry{
         return self.field
     }
     
-    public func getHours() -> Double {
+    public func getHours() -> String {
         return self.hours
     }
     
@@ -64,11 +64,11 @@ struct Entry{
         }
     }
     
-    public func getMengeDuengemittel() -> Double {
+    public func getMengeDuengemittel() -> String {
         if let returnValue = self.mengeDuengemittel {
             return returnValue
         } else {
-            return -1
+            return ""
         }
     }
     
@@ -104,11 +104,11 @@ struct Entry{
         }
     }
     
-    public func getMengePflanzenschutzmittel() -> Double {
+    public func getMengePflanzenschutzmittel() -> String {
         if let returnValue = self.mengePflanzenschutzmittel {
             return returnValue
         } else {
-            return -1
+            return ""
         }
     }
     
@@ -118,7 +118,7 @@ struct Entry{
         self.user = user
     }
     
-    public mutating func setDate(date: Date) {
+    public mutating func setDate(date: String) {
         self.date = date
     }
     
@@ -126,7 +126,7 @@ struct Entry{
         self.field = field
     }
     
-    public mutating func setHours(hours: Double) {
+    public mutating func setHours(hours: String) {
         self.hours = hours
     }
     
@@ -142,7 +142,7 @@ struct Entry{
         self.duengemittel = duengemittel
     }
     
-    public mutating func setMengeDuengemittel(mengeDuengemittel: Double) {
+    public mutating func setMengeDuengemittel(mengeDuengemittel: String) {
         self.mengeDuengemittel = mengeDuengemittel
     }
     
@@ -162,7 +162,7 @@ struct Entry{
         self.info = info
     }
     
-    public mutating func setMengePflanzenschutzmittel(mengePflanzenschutzmittel: Double) {
+    public mutating func setMengePflanzenschutzmittel(mengePflanzenschutzmittel: String) {
         self.mengePflanzenschutzmittel = mengePflanzenschutzmittel
     }
 }

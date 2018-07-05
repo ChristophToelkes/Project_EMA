@@ -28,10 +28,16 @@ class AddEntryViewController: UIViewController {
         if let entry = entry {
             captureType = entry.getCaptureType()
             headCaptureLabel.text =  entry.getCaptureType()
-            datePicker.date = entry.getDate()
+            
             feldText.text = entry.getField()
             benutzerText.text = entry.getUser()
             arbeitszeitText.text = String(entry.getHours())
+            
+            let formatter = DateFormatter()
+            formatter.dateFormat = "yyyy-MM-dd"
+            if let date = formatter.date(from: entry.getDate()){
+                datePicker.date = date
+            }
         }
         
         if checkTraubenlese() {
@@ -41,24 +47,49 @@ class AddEntryViewController: UIViewController {
     //Es gibt bisher keine Fehlermeldung bei unvollständigem Ausfüllen
     @IBAction func safeEntryBtn(_ sender: Any) {
         let db = RealmHelper()
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd"
+        let date = formatter.string(from: datePicker.date)
         
         if captureType == "Traubenlese"{
-            if durchfuehrungText.text != nil && benutzerText.text != nil && arbeitszeitText.text != nil {
-                if let zeit = Double(arbeitszeitText.text!) {
-                    db.addTraubenlese(captureType: captureType!, benutzer: benutzerText.text!, feld: feldText.text!, arbeitszeit: zeit, datum: datePicker.date, durchfuehrung: durchfuehrungText.text!)
-                }
+            if durchfuehrungText.text != nil && benutzerText.text != nil && arbeitszeitText.text != nil && arbeitszeitText.text != nil{
+                db.addTraubenlese(captureType: captureType!, benutzer: benutzerText.text!, feld: feldText.text!, arbeitszeit: arbeitszeitText.text!, datum: date, durchfuehrung: durchfuehrungText.text!)
             }
         } else {
-            if captureType != nil && benutzerText.text != nil && arbeitszeitText != nil {
-                if let zeit = Double(arbeitszeitText.text!) {
-                    db.addGeneral(captureType: captureType!, benutzer: benutzerText.text!, feld: feldText.text!, arbeitszeit: zeit, datum: datePicker.date)
-                }
+            if captureType != nil && benutzerText.text != nil && arbeitszeitText != nil && arbeitszeitText.text != nil{
+                db.addGeneral(captureType: captureType!, benutzer: benutzerText.text!, feld: feldText.text!, arbeitszeit: arbeitszeitText.text!, datum: date)
             }
         }
     }
     
     @IBAction func backBtn(_ sender: Any) {
         performSegue(withIdentifier: "segueToAddCaptureView", sender: self)
+        
+    }
+    
+    @IBAction func PressDeleteButton(_ sender: Any) {
+        let alert = UIAlertController(title: "Eintrag löschen", message: "Möchten Sie diesen Eintrag wirklich löschen?", preferredStyle: .alert)
+        
+        alert.addAction(UIAlertAction(title: "Ja", style: .default, handler: { (nil) in
+            self.deleteEntry()
+        }))
+        alert.addAction(UIAlertAction(title: "Nein", style: .default, handler: nil))
+        self.present(alert, animated: true)
+    }
+    
+    func deleteEntry() {
+        let db = RealmHelper()
+        if let entry = entry {
+            if captureType == "Traubenlese" {
+                db.deleteTraubenlese(entry: entry)
+            } else {
+            db.deleteGeneral(entry: entry)
+            }
+            performSegue(withIdentifier: "segueToAddCaptureView", sender: self)
+        } else {
+            _ = UIAlertController(title: "Eintrag löschen", message: "Löschen fehlgeschlagen", preferredStyle: .alert)
+            
+        }
         
     }
     

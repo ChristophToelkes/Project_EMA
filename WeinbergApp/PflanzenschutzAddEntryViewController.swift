@@ -23,38 +23,68 @@ class PflanzenschutzAddEntryViewController: UIViewController {
     @IBOutlet weak var terminText: UITextField!
     @IBOutlet weak var infoText: UITextField!
     @IBOutlet weak var mengePflanzenschutzmittelText: UITextField!
+    @IBOutlet weak var scrollView: UIScrollView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        scrollView.isScrollEnabled = true
+        scrollView.contentSize = CGSize(width: 340, height: 600)
         headCaptureLabel.text = captureType
         
         if let entry = entry {
             captureType = entry.getCaptureType()
             headCaptureLabel.text =  entry.getCaptureType()
-            datePicker.date = entry.getDate()
             feldText.text = entry.getField()
             benutzerText.text = entry.getUser()
-            arbeitszeitText.text = String(entry.getHours())
+            arbeitszeitText.text = entry.getHours()
             gegenText.text = entry.getGegen()
             mittelText.text = entry.getMittel()
             terminText.text = entry.getTermin()
             infoText.text = entry.getInfo()
-            mengePflanzenschutzmittelText.text = String(entry.getMengePflanzenschutzmittel())
+            mengePflanzenschutzmittelText.text = entry.getMengePflanzenschutzmittel()
+            
+            let formatter = DateFormatter()
+            formatter.dateFormat = "yyyy-MM-dd"
+            if let date = formatter.date(from: entry.getDate()){
+                datePicker.date = date
+            }
         }
     }
     
     @IBAction func safeEntryBtn(_ sender: Any) {
         let db = RealmHelper()
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd"
+        let date = formatter.string(from: datePicker.date)
         
-        if captureType != nil && benutzerText.text != nil && arbeitszeitText.text != nil && gegenText.text != nil && mittelText.text != nil && terminText.text != nil && infoText.text != nil && mengePflanzenschutzmittelText.text != nil{
-            if let zeit = Double(arbeitszeitText.text!), let mengePflanzenschutzmittel = Double(mengePflanzenschutzmittelText.text!) {
-                db.addPflanzenschutz(captureType: captureType!, benutzer: benutzerText.text!, feld: feldText.text!, arbeitszeit: zeit, datum: datePicker.date, gegen: gegenText.text!, mittel: mittelText.text!, termin: terminText.text!, info: infoText.text!, mengePflanzenschutzmittel: mengePflanzenschutzmittel)
-            }
+        if captureType != nil && benutzerText.text != nil && arbeitszeitText.text != nil && gegenText.text != nil && mittelText.text != nil && terminText.text != nil && infoText.text != nil && mengePflanzenschutzmittelText.text != nil && arbeitszeitText.text != nil && mengePflanzenschutzmittelText.text != nil{
+                db.addPflanzenschutz(captureType: captureType!, benutzer: benutzerText.text!, feld: feldText.text!, arbeitszeit: arbeitszeitText.text!, datum: date, gegen: gegenText.text!, mittel: mittelText.text!, termin: terminText.text!, info: infoText.text!, mengePflanzenschutzmittel: mengePflanzenschutzmittelText.text!)
         }
     }
     
     @IBAction func backBtn(_ sender: Any) {
         performSegue(withIdentifier: "segueToAddCaptureView", sender: self)
+        
+    }
+    @IBAction func pressDeleteButton(_ sender: Any) {
+        let alert = UIAlertController(title: "Eintrag löschen", message: "Möchten Sie diesen Eintrag wirklich löschen?", preferredStyle: .alert)
+        
+        alert.addAction(UIAlertAction(title: "Ja", style: .default, handler: { (nil) in
+            self.deleteEntry()
+        }))
+        alert.addAction(UIAlertAction(title: "Nein", style: .default, handler: nil))
+        self.present(alert, animated: true)
+    }
+    
+    func deleteEntry() {
+        let db = RealmHelper()
+        if let entry = entry {
+            db.deletePflanzenschutz(entry: entry)
+            performSegue(withIdentifier: "segueToAddCaptureView", sender: self)
+        } else {
+            _ = UIAlertController(title: "Eintrag löschen", message: "Löschen fehlgeschlagen", preferredStyle: .alert)
+            
+        }
         
     }
     

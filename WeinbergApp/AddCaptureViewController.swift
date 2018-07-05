@@ -33,10 +33,7 @@ class AddCaptureViewController: UIViewController, UITableViewDataSource, UITable
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell")
         
         cell?.textLabel?.text = entryList[indexPath.row].getCaptureType()
-        let formatter = DateFormatter()
-        formatter.dateFormat = "dd.MM.yyyy"
-        let dateString = formatter.string(from: entryList[indexPath.row].getDate())
-        cell?.detailTextLabel?.text = dateString
+        cell?.detailTextLabel?.text = entryList[indexPath.row].getDate()
         
         return cell!
     }
