@@ -1,0 +1,6 @@
+framework module Pods_WeinbergApp {
+  umbrella header "Pods-WeinbergApp-umbrella.h"
+
+  export *
+  module * { export * }
+}

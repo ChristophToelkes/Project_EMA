@@ -951,7 +951,7 @@
                                                         <rect key="frame" x="180" y="0.0" width="70" height="30"/>
                                                         <state key="normal">
                                                             <string key="title">Insektizid/
-Akarizid</string>
+                                                                Akarizid</string>
                                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                                         </state>
                                                     </button>
@@ -1139,12 +1139,12 @@ Akarizid</string>
         <image name="work" width="24" height="24"/>
     </resources>
     <inferredMetricsTieBreakers>
-<<<<<<< HEAD
+        
         <segue reference="uPz-Fn-yU9"/>
-        <segue reference="5ee-cg-r0s"/>
-=======
+        
+        
         <segue reference="n5A-dJ-Kxq"/>
         <segue reference="rNw-vJ-MG3"/>
->>>>>>> 168dde316b3758b914466031e4b9f98ce3049e8d
+    
     </inferredMetricsTieBreakers>
 </document>

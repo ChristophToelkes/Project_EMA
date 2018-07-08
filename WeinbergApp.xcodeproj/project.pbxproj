@@ -7,7 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		39560AEA78172287F393228B /* Pods_WeinbergAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78DE4BF54729DF01B7554F41 /* Pods_WeinbergAppUITests.framework */; };
 		460E0EEC20E4F7B8007962EC /* ScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460E0EEB20E4F7B8007962EC /* ScannerViewController.swift */; };
+		46842A0E20F2551D00510AD6 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46842A0C20F2551D00510AD6 /* Realm.framework */; };
+		46842A0F20F2551D00510AD6 /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 46842A0C20F2551D00510AD6 /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		46842A1020F2551D00510AD6 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46842A0D20F2551D00510AD6 /* RealmSwift.framework */; };
+		46842A1120F2551D00510AD6 /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 46842A0D20F2551D00510AD6 /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4694C97820D5261D005C5F97 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4694C97720D5261D005C5F97 /* AppDelegate.swift */; };
 		4694C97D20D5261D005C5F97 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4694C97B20D5261D005C5F97 /* Main.storyboard */; };
 		4694C97F20D5261E005C5F97 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4694C97E20D5261E005C5F97 /* Assets.xcassets */; };
@@ -23,13 +28,10 @@
 		46A0D73420D7D65A00B0BEDA /* Entry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A0D73320D7D65A00B0BEDA /* Entry.swift */; };
 		46A0D73620D7EC6B00B0BEDA /* AddEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A0D73520D7EC6B00B0BEDA /* AddEntryViewController.swift */; };
 		46E50EED20D545FE00F93167 /* ShakeAnimationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E50EEC20D545FE00F93167 /* ShakeAnimationHelper.swift */; };
-		85168A0C20EBA6E800CB2AB5 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85168A0B20EBA6E800CB2AB5 /* Realm.framework */; };
-		85168A0D20EBA6E800CB2AB5 /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 85168A0B20EBA6E800CB2AB5 /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		85168A1020EBA6ED00CB2AB5 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85168A0F20EBA6ED00CB2AB5 /* RealmSwift.framework */; };
-		85168A1120EBA6ED00CB2AB5 /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 85168A0F20EBA6ED00CB2AB5 /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		85168A1A20EBA99F00CB2AB5 /* RealmHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85168A1920EBA99F00CB2AB5 /* RealmHelper.swift */; };
 		85AC848720E3ADA40080505A /* DuengungAddEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AC848620E3ADA40080505A /* DuengungAddEntryViewController.swift */; };
 		85AC848920E3B7DE0080505A /* PflanzenschutzAddEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AC848820E3B7DE0080505A /* PflanzenschutzAddEntryViewController.swift */; };
+		8C7C9055FA951290DE9C4BC7 /* Pods_WeinbergAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 828CD16D962216C8070E3347 /* Pods_WeinbergAppTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,14 +52,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		85168A0E20EBA6E800CB2AB5 /* Embed Frameworks */ = {
+		46842A1220F2551D00510AD6 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				85168A1120EBA6ED00CB2AB5 /* RealmSwift.framework in Embed Frameworks */,
-				85168A0D20EBA6E800CB2AB5 /* Realm.framework in Embed Frameworks */,
+				46842A1120F2551D00510AD6 /* RealmSwift.framework in Embed Frameworks */,
+				46842A0F20F2551D00510AD6 /* Realm.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -65,7 +67,17 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0B100E2D25F626F8A1834B33 /* Pods_WeinbergApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WeinbergApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		13EC386D60B9B77DAE212E98 /* Pods-WeinbergApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeinbergApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WeinbergApp/Pods-WeinbergApp.debug.xcconfig"; sourceTree = "<group>"; };
+		22F85F1D752867D440BB9F93 /* Pods-WeinbergAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeinbergAppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WeinbergAppTests/Pods-WeinbergAppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		268A4CEB2612CA762BAF512D /* Pods-WeinbergApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeinbergApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-WeinbergApp/Pods-WeinbergApp.release.xcconfig"; sourceTree = "<group>"; };
 		460E0EEB20E4F7B8007962EC /* ScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerViewController.swift; sourceTree = "<group>"; };
+		468429F920F249BB00510AD6 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = "../../Downloads/realm-swift-3.7.4/ios/swift-4.1/Realm.framework"; sourceTree = "<group>"; };
+		468429FA20F249BB00510AD6 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = "../../Downloads/realm-swift-3.7.4/ios/swift-4.1/RealmSwift.framework"; sourceTree = "<group>"; };
+		46842A0520F254DC00510AD6 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
+		46842A0620F254DC00510AD6 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = "<group>"; };
+		46842A0C20F2551D00510AD6 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = "../../Downloads/realm-swift-3.7.4/ios/swift-4.1/Realm.framework"; sourceTree = "<group>"; };
+		46842A0D20F2551D00510AD6 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = "../../Downloads/realm-swift-3.7.4/ios/swift-4.1/RealmSwift.framework"; sourceTree = "<group>"; };
 		4694C97420D5261D005C5F97 /* WeinbergApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeinbergApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4694C97720D5261D005C5F97 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4694C97C20D5261D005C5F97 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -87,13 +99,14 @@
 		46A0D73320D7D65A00B0BEDA /* Entry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entry.swift; sourceTree = "<group>"; };
 		46A0D73520D7EC6B00B0BEDA /* AddEntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEntryViewController.swift; sourceTree = "<group>"; };
 		46E50EEC20D545FE00F93167 /* ShakeAnimationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShakeAnimationHelper.swift; sourceTree = "<group>"; };
-		85168A0B20EBA6E800CB2AB5 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
-		85168A0F20EBA6ED00CB2AB5 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = "<group>"; };
-		85168A1220EBA6FB00CB2AB5 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = "../../../Downloads/realm-swift-3.7.4/osx/swift-4.1/Realm.framework"; sourceTree = "<group>"; };
-		85168A1520EBA70000CB2AB5 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = "../../../Downloads/realm-swift-3.7.4/osx/swift-4.1/RealmSwift.framework"; sourceTree = "<group>"; };
+		6A76EDDF866D79142C8FACC3 /* Pods-WeinbergAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeinbergAppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WeinbergAppTests/Pods-WeinbergAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		78DE4BF54729DF01B7554F41 /* Pods_WeinbergAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WeinbergAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		828CD16D962216C8070E3347 /* Pods_WeinbergAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WeinbergAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		85168A1920EBA99F00CB2AB5 /* RealmHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmHelper.swift; sourceTree = "<group>"; };
 		85AC848620E3ADA40080505A /* DuengungAddEntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DuengungAddEntryViewController.swift; sourceTree = "<group>"; };
 		85AC848820E3B7DE0080505A /* PflanzenschutzAddEntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PflanzenschutzAddEntryViewController.swift; sourceTree = "<group>"; };
+		8DF04B9B348772324FB4A4E6 /* Pods-WeinbergAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeinbergAppUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WeinbergAppUITests/Pods-WeinbergAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		9DC8632A0C28BABF514E96EC /* Pods-WeinbergAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeinbergAppUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WeinbergAppUITests/Pods-WeinbergAppUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,8 +114,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				85168A1020EBA6ED00CB2AB5 /* RealmSwift.framework in Frameworks */,
-				85168A0C20EBA6E800CB2AB5 /* Realm.framework in Frameworks */,
+				46842A1020F2551D00510AD6 /* RealmSwift.framework in Frameworks */,
+				46842A0E20F2551D00510AD6 /* Realm.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -110,6 +123,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C7C9055FA951290DE9C4BC7 /* Pods_WeinbergAppTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -117,6 +131,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39560AEA78172287F393228B /* Pods_WeinbergAppUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -126,14 +141,18 @@
 		4694C96B20D5261D005C5F97 = {
 			isa = PBXGroup;
 			children = (
-				85168A1520EBA70000CB2AB5 /* RealmSwift.framework */,
-				85168A1220EBA6FB00CB2AB5 /* Realm.framework */,
-				85168A0F20EBA6ED00CB2AB5 /* RealmSwift.framework */,
-				85168A0B20EBA6E800CB2AB5 /* Realm.framework */,
+				468429F920F249BB00510AD6 /* Realm.framework */,
+				468429FA20F249BB00510AD6 /* RealmSwift.framework */,
+				46842A0520F254DC00510AD6 /* Realm.framework */,
+				46842A0620F254DC00510AD6 /* RealmSwift.framework */,
+				46842A0C20F2551D00510AD6 /* Realm.framework */,
+				46842A0D20F2551D00510AD6 /* RealmSwift.framework */,
 				4694C97620D5261D005C5F97 /* WeinbergApp */,
 				4694C98B20D5261E005C5F97 /* WeinbergAppTests */,
 				4694C99620D5261E005C5F97 /* WeinbergAppUITests */,
 				4694C97520D5261D005C5F97 /* Products */,
+				E247522370E12A786DCFC7F8 /* Pods */,
+				A978EA52CEE2B90609A3EAF6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -166,11 +185,8 @@
 				4694C98320D5261E005C5F97 /* Info.plist */,
 				46E50EEC20D545FE00F93167 /* ShakeAnimationHelper.swift */,
 				46A0D73320D7D65A00B0BEDA /* Entry.swift */,
-<<<<<<< HEAD
 				460E0EEB20E4F7B8007962EC /* ScannerViewController.swift */,
-=======
 				85168A1920EBA99F00CB2AB5 /* RealmHelper.swift */,
->>>>>>> 168dde316b3758b914466031e4b9f98ce3049e8d
 			);
 			path = WeinbergApp;
 			sourceTree = "<group>";
@@ -193,6 +209,29 @@
 			path = WeinbergAppUITests;
 			sourceTree = "<group>";
 		};
+		A978EA52CEE2B90609A3EAF6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0B100E2D25F626F8A1834B33 /* Pods_WeinbergApp.framework */,
+				828CD16D962216C8070E3347 /* Pods_WeinbergAppTests.framework */,
+				78DE4BF54729DF01B7554F41 /* Pods_WeinbergAppUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E247522370E12A786DCFC7F8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				13EC386D60B9B77DAE212E98 /* Pods-WeinbergApp.debug.xcconfig */,
+				268A4CEB2612CA762BAF512D /* Pods-WeinbergApp.release.xcconfig */,
+				22F85F1D752867D440BB9F93 /* Pods-WeinbergAppTests.debug.xcconfig */,
+				6A76EDDF866D79142C8FACC3 /* Pods-WeinbergAppTests.release.xcconfig */,
+				8DF04B9B348772324FB4A4E6 /* Pods-WeinbergAppUITests.debug.xcconfig */,
+				9DC8632A0C28BABF514E96EC /* Pods-WeinbergAppUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -200,11 +239,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4694C99C20D5261E005C5F97 /* Build configuration list for PBXNativeTarget "WeinbergApp" */;
 			buildPhases = (
+				95513BB8CA31DEEDC94F4E78 /* [CP] Check Pods Manifest.lock */,
 				4694C97020D5261D005C5F97 /* Sources */,
 				4694C97120D5261D005C5F97 /* Frameworks */,
 				4694C97220D5261D005C5F97 /* Resources */,
-				85168A0E20EBA6E800CB2AB5 /* Embed Frameworks */,
-				85168A1820EBA88D00CB2AB5 /* Realm Script */,
+				0C213F21E7D336BE3F89E957 /* [CP] Embed Pods Frameworks */,
+				46842A1220F2551D00510AD6 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -219,9 +259,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4694C99F20D5261E005C5F97 /* Build configuration list for PBXNativeTarget "WeinbergAppTests" */;
 			buildPhases = (
+				900537DFEDFF8D6F2BA70D6F /* [CP] Check Pods Manifest.lock */,
 				4694C98420D5261E005C5F97 /* Sources */,
 				4694C98520D5261E005C5F97 /* Frameworks */,
 				4694C98620D5261E005C5F97 /* Resources */,
+				3CA283F8D1C0A966E3775FAC /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -237,9 +279,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4694C9A220D5261E005C5F97 /* Build configuration list for PBXNativeTarget "WeinbergAppUITests" */;
 			buildPhases = (
+				FBFD581B472DCF2CCD7A7035 /* [CP] Check Pods Manifest.lock */,
 				4694C98F20D5261E005C5F97 /* Sources */,
 				4694C99020D5261E005C5F97 /* Frameworks */,
 				4694C99120D5261E005C5F97 /* Resources */,
+				B3F37326D51F863A929A7CA5 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -322,19 +366,119 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		85168A1820EBA88D00CB2AB5 /* Realm Script */ = {
+		0C213F21E7D336BE3F89E957 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-WeinbergApp/Pods-WeinbergApp-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 			);
-			name = "Realm Script";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "bash \"${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework/strip-frameworks.sh\"";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WeinbergApp/Pods-WeinbergApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3CA283F8D1C0A966E3775FAC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-WeinbergAppTests/Pods-WeinbergAppTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WeinbergAppTests/Pods-WeinbergAppTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		900537DFEDFF8D6F2BA70D6F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WeinbergAppTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		95513BB8CA31DEEDC94F4E78 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WeinbergApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B3F37326D51F863A929A7CA5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-WeinbergAppUITests/Pods-WeinbergAppUITests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WeinbergAppUITests/Pods-WeinbergAppUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FBFD581B472DCF2CCD7A7035 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WeinbergAppUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -527,6 +671,7 @@
 		};
 		4694C99D20D5261E005C5F97 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 13EC386D60B9B77DAE212E98 /* Pods-WeinbergApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -534,12 +679,13 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
-				"FRAMEWORK_SEARCH_PATHS[arch=*]" = "/Users/ema/Downloads/realm-swift-3.7.4/ios/swift-4.1";
+				"FRAMEWORK_SEARCH_PATHS[arch=*]" = "$(PROJECT_DIR)";
 				INFOPLIST_FILE = WeinbergApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				NEW_SETTING = "";
 				PRODUCT_BUNDLE_IDENTIFIER = chistopToelkes.WeinbergApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -549,6 +695,7 @@
 		};
 		4694C99E20D5261E005C5F97 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 268A4CEB2612CA762BAF512D /* Pods-WeinbergApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -556,12 +703,13 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
-				"FRAMEWORK_SEARCH_PATHS[arch=*]" = "/Users/ema/Downloads/realm-swift-3.7.4/ios/swift-4.1";
+				"FRAMEWORK_SEARCH_PATHS[arch=*]" = "$(PROJECT_DIR)";
 				INFOPLIST_FILE = WeinbergApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				NEW_SETTING = "";
 				PRODUCT_BUNDLE_IDENTIFIER = chistopToelkes.WeinbergApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -571,6 +719,7 @@
 		};
 		4694C9A020D5261E005C5F97 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 22F85F1D752867D440BB9F93 /* Pods-WeinbergAppTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -591,6 +740,7 @@
 		};
 		4694C9A120D5261E005C5F97 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6A76EDDF866D79142C8FACC3 /* Pods-WeinbergAppTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -611,15 +761,12 @@
 		};
 		4694C9A320D5261E005C5F97 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8DF04B9B348772324FB4A4E6 /* Pods-WeinbergAppUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = WeinbergAppUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) ";
 				PRODUCT_BUNDLE_IDENTIFIER = chistopToelkes.WeinbergAppUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -630,15 +777,12 @@
 		};
 		4694C9A420D5261E005C5F97 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9DC8632A0C28BABF514E96EC /* Pods-WeinbergAppUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = WeinbergAppUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = chistopToelkes.WeinbergAppUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
