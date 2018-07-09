@@ -522,6 +522,10 @@
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="sTK-S1-bqP">
                                 <rect key="frame" x="0.0" y="60" width="375" height="558"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="56e-Gf-sAH" appends="YES" id="hzp-bG-gb8"/>
+                                </connections>
                             </mapView>
                             <stackView opaque="NO" contentMode="left" distribution="fillProportionally" alignment="center" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="j1O-dc-gQn">
                                 <rect key="frame" x="0.0" y="10" width="375" height="50"/>
@@ -529,6 +533,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zHW-zL-Kpj">
                                         <rect key="frame" x="0.0" y="10" width="171.5" height="30"/>
                                         <state key="normal" title="+ Fläche"/>
+                                        <connections>
+                                            <action selector="addArea:" destination="rps-0n-scs" eventType="touchUpInside" id="Rw0-Od-5WY"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GFT-fo-HdT">
                                         <rect key="frame" x="173.5" y="10" width="201.5" height="30"/>
@@ -543,6 +550,30 @@
                                     <constraint firstAttribute="height" constant="50" id="hA5-ng-Z8j"/>
                                 </constraints>
                             </stackView>
+                            <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="9zm-x8-wSB">
+                                <rect key="frame" x="10" y="70" width="60" height="100"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jap-3A-EJJ">
+                                        <rect key="frame" x="0.0" y="0.0" width="60" height="38.5"/>
+                                        <state key="normal" image="undo"/>
+                                        <connections>
+                                            <action selector="undoPoint:" destination="rps-0n-scs" eventType="touchUpInside" id="0lG-Bn-WOd"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OQT-Qx-cEW">
+                                        <rect key="frame" x="0.0" y="52.5" width="60" height="47.5"/>
+                                        <state key="normal" image="check"/>
+                                        <connections>
+                                            <action selector="saveNewArea:" destination="rps-0n-scs" eventType="touchUpInside" id="lOm-LU-L1M"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="Cdd-tb-nku"/>
+                                    <constraint firstAttribute="width" constant="60" id="Rqg-em-n8g"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -550,8 +581,10 @@
                             <constraint firstAttribute="trailing" secondItem="sTK-S1-bqP" secondAttribute="trailing" id="3Yp-xI-9pa"/>
                             <constraint firstItem="j1O-dc-gQn" firstAttribute="top" secondItem="uHe-hT-rBm" secondAttribute="top" constant="10" id="Apq-aM-8el"/>
                             <constraint firstItem="j1O-dc-gQn" firstAttribute="leading" secondItem="uHe-hT-rBm" secondAttribute="leading" id="EMk-n2-8Fj"/>
+                            <constraint firstItem="9zm-x8-wSB" firstAttribute="top" secondItem="j1O-dc-gQn" secondAttribute="bottom" constant="10" id="VNU-Lj-RdM"/>
                             <constraint firstItem="4S5-It-d1l" firstAttribute="top" secondItem="sTK-S1-bqP" secondAttribute="bottom" id="liv-lV-GX6"/>
                             <constraint firstItem="sTK-S1-bqP" firstAttribute="top" secondItem="0I9-tq-sgG" secondAttribute="bottom" constant="40" id="noU-44-L7y"/>
+                            <constraint firstItem="9zm-x8-wSB" firstAttribute="leading" secondItem="uHe-hT-rBm" secondAttribute="leading" constant="10" id="qD3-cm-Qlx"/>
                             <constraint firstAttribute="trailing" secondItem="j1O-dc-gQn" secondAttribute="trailing" id="s1r-Z4-hB0"/>
                             <constraint firstItem="sTK-S1-bqP" firstAttribute="leading" secondItem="uHe-hT-rBm" secondAttribute="leading" id="wk1-Ay-3Vo"/>
                         </constraints>
@@ -560,11 +593,18 @@
                         <color key="badgeColor" red="0.75406885150000003" green="0.75408679249999999" blue="0.75407713649999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBarItem>
                     <connections>
+                        <outlet property="addAreaOptionsStackView" destination="9zm-x8-wSB" id="ogE-9E-qea"/>
+                        <outlet property="addNewArea" destination="OQT-Qx-cEW" id="RUo-ey-DGl"/>
                         <outlet property="mapView" destination="sTK-S1-bqP" id="HoD-xo-Hgg"/>
                         <segue destination="e3E-UC-7yd" kind="presentation" identifier="segueLogout" modalTransitionStyle="crossDissolve" id="vVE-hR-lil"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mh4-9p-qEY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.20000000000000001" id="56e-Gf-sAH">
+                    <connections>
+                        <action selector="longPressGesture:" destination="rps-0n-scs" id="gH6-y5-Gml"/>
+                    </connections>
+                </pongPressGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="700" y="2838"/>
         </scene>
@@ -1134,17 +1174,14 @@
         </scene>
     </scenes>
     <resources>
+        <image name="check" width="24" height="24"/>
         <image name="laub Kopie" width="40" height="40"/>
         <image name="map" width="24" height="24"/>
+        <image name="undo" width="24" height="24"/>
         <image name="work" width="24" height="24"/>
     </resources>
     <inferredMetricsTieBreakers>
-        
-        <segue reference="uPz-Fn-yU9"/>
-        
-        
         <segue reference="n5A-dJ-Kxq"/>
-        <segue reference="rNw-vJ-MG3"/>
-    
+        <segue reference="OvB-cJ-4ac"/>
     </inferredMetricsTieBreakers>
 </document>
