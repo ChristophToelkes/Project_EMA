@@ -22,8 +22,6 @@
 		4694C9A620D52641005C5F97 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4694C9A520D52641005C5F97 /* LoginViewController.swift */; };
 		46A0D72A20D6F55900B0BEDA /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A0D72920D6F55900B0BEDA /* MapViewController.swift */; };
 		46A0D72C20D6F59600B0BEDA /* CaptureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A0D72B20D6F59600B0BEDA /* CaptureViewController.swift */; };
-		46A0D72E20D6F5CB00B0BEDA /* AreasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A0D72D20D6F5CB00B0BEDA /* AreasViewController.swift */; };
-		46A0D73020D6F5DF00B0BEDA /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A0D72F20D6F5DF00B0BEDA /* MoreViewController.swift */; };
 		46A0D73220D6FF5600B0BEDA /* AddCaptureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A0D73120D6FF5600B0BEDA /* AddCaptureViewController.swift */; };
 		46A0D73420D7D65A00B0BEDA /* Entry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A0D73320D7D65A00B0BEDA /* Entry.swift */; };
 		46A0D73620D7EC6B00B0BEDA /* AddEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A0D73520D7EC6B00B0BEDA /* AddEntryViewController.swift */; };
@@ -93,8 +91,6 @@
 		4694C9A520D52641005C5F97 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		46A0D72920D6F55900B0BEDA /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		46A0D72B20D6F59600B0BEDA /* CaptureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptureViewController.swift; sourceTree = "<group>"; };
-		46A0D72D20D6F5CB00B0BEDA /* AreasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreasViewController.swift; sourceTree = "<group>"; };
-		46A0D72F20D6F5DF00B0BEDA /* MoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
 		46A0D73120D6FF5600B0BEDA /* AddCaptureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCaptureViewController.swift; sourceTree = "<group>"; };
 		46A0D73320D7D65A00B0BEDA /* Entry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entry.swift; sourceTree = "<group>"; };
 		46A0D73520D7EC6B00B0BEDA /* AddEntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEntryViewController.swift; sourceTree = "<group>"; };
@@ -176,8 +172,6 @@
 				46A0D73520D7EC6B00B0BEDA /* AddEntryViewController.swift */,
 				85AC848620E3ADA40080505A /* DuengungAddEntryViewController.swift */,
 				85AC848820E3B7DE0080505A /* PflanzenschutzAddEntryViewController.swift */,
-				46A0D72D20D6F5CB00B0BEDA /* AreasViewController.swift */,
-				46A0D72F20D6F5DF00B0BEDA /* MoreViewController.swift */,
 				4694C97B20D5261D005C5F97 /* Main.storyboard */,
 				4694C97720D5261D005C5F97 /* AppDelegate.swift */,
 				4694C97E20D5261E005C5F97 /* Assets.xcassets */,
@@ -487,14 +481,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				46A0D73020D6F5DF00B0BEDA /* MoreViewController.swift in Sources */,
 				4694C9A620D52641005C5F97 /* LoginViewController.swift in Sources */,
 				46E50EED20D545FE00F93167 /* ShakeAnimationHelper.swift in Sources */,
 				46A0D73620D7EC6B00B0BEDA /* AddEntryViewController.swift in Sources */,
 				85AC848720E3ADA40080505A /* DuengungAddEntryViewController.swift in Sources */,
 				4694C97820D5261D005C5F97 /* AppDelegate.swift in Sources */,
 				85AC848920E3B7DE0080505A /* PflanzenschutzAddEntryViewController.swift in Sources */,
-				46A0D72E20D6F5CB00B0BEDA /* AreasViewController.swift in Sources */,
 				46A0D73220D6FF5600B0BEDA /* AddCaptureViewController.swift in Sources */,
 				46A0D73420D7D65A00B0BEDA /* Entry.swift in Sources */,
 				460E0EEC20E4F7B8007962EC /* ScannerViewController.swift in Sources */,
