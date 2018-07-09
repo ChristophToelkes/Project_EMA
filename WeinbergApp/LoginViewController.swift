@@ -71,6 +71,9 @@ class LoginViewController: UIViewController, UITextFieldDelegate, AVCaptureMetad
         
         //---hier muss später die Überprüfung der Daten mit der Datenbank(lokal) stattfinden---
         
+     
+        
+        
         if(userName == testName){
             if(userPassword == testPassword){
                 //---userPassword & userName correct---
