@@ -18,6 +18,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate, AVCaptureMetad
     private var showPassword : Bool!
    
     
+    @IBOutlet weak var backgroundImage: UIImageView!
     
     //---für QR Gedöns---
     var captureSession:AVCaptureSession?
@@ -31,6 +32,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate, AVCaptureMetad
     override func viewDidLoad() {
         super.viewDidLoad()
         showPassword = false
+        view .sendSubview(toBack: backgroundImage)
     }
     
     private func checkTextFields() -> Bool{

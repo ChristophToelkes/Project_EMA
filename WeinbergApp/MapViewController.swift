@@ -13,6 +13,9 @@ import MapKit
 class MapViewController: UIViewController, MKMapViewDelegate {
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var addAreaOptionsStackView: UIStackView!
+    @IBOutlet weak var addAreaOptionsStackView2: UIStackView!
+    
+    @IBOutlet weak var addAreaTextField: UITextField!
     @IBOutlet weak var addNewArea: UIButton!
     private let regionRadius: CLLocationDistance = 3000
     private let location = CLLocation(latitude: 49.9667396, longitude: 7.9045959999999695)
@@ -49,6 +52,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
 
     @IBAction func addArea(_ sender: Any) {
         addAreaOptionsStackView.isHidden = false
+        addAreaOptionsStackView2.isHidden = false
         addPoinsEnabled = true
     }
     
@@ -76,9 +80,27 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         mapView.removeAnnotations(mapView.annotations)
         
         
-        // mit alert noch den Namen des Feldes eintragen lassen
-        // inhalt von points[] und namen des Feldes  in datenbank abspeichern
+
+      
         
+        let alert = UIAlertController(title: "Neues Feld speichern?", message: "", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "speichern", style: .default, handler: { (nil) in
+            
+       
+            
+              // inhalt von points[] und namen des Feldes  in datenbank abspeichern
+            
+            self.addAreaOptionsStackView.isHidden = true
+            self.addAreaOptionsStackView2.isHidden = true
+            self.addPoinsEnabled = false
+            
+        }))
+        alert.addAction(UIAlertAction(title: "zurück", style: .default, handler: nil))
+        self.present(alert, animated: true)
+        
+        
+        points2D = []
+        points = []
         
     
     }
