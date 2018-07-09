@@ -25,7 +25,10 @@ class CaptureViewController: UIViewController, UITableViewDelegate, UITableViewD
     
   
     
-   
+    @IBAction func logoutBtn(_ sender: Any) {
+        performSegue(withIdentifier: "segueLogout", sender: self)
+    }
+    
     
     
     override func viewDidLoad() {

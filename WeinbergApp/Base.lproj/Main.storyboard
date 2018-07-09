@@ -96,7 +96,7 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="26" id="FjC-fQ-rhQ"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                         <state key="normal" title="Passwort anzeigen">
                                             <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
@@ -167,7 +167,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="80" estimatedRowHeight="80" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wWb-Vl-Pzl">
-                                <rect key="frame" x="0.0" y="20" width="375" height="598"/>
+                                <rect key="frame" x="0.0" y="60" width="375" height="607"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <inset key="scrollIndicatorInsets" minX="10" minY="10" maxX="10" maxY="10"/>
                                 <color key="sectionIndexColor" red="0.58081901069999997" green="0.088427625600000004" blue="0.31863921880000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -198,13 +198,41 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <stackView opaque="NO" contentMode="left" distribution="fillEqually" alignment="top" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="VjU-Am-AmY">
+                                <rect key="frame" x="16" y="20" width="343" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hd9-2n-ohc">
+                                        <rect key="frame" x="0.0" y="0.0" width="162" height="30"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <state key="normal">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fba-Wa-QK2">
+                                        <rect key="frame" x="181" y="0.0" width="162" height="30"/>
+                                        <state key="normal" title="abmelden">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="logoutBtn:" destination="OVp-C6-5so" eventType="touchUpInside" id="68a-ko-FhM"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="1XF-ku-EJs"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="0.58081901069999997" green="0.088427625600000004" blue="0.31863921880000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="wWb-Vl-Pzl" firstAttribute="leading" secondItem="70m-In-SDW" secondAttribute="leading" id="5fe-fT-xlM"/>
-                            <constraint firstAttribute="trailing" secondItem="wWb-Vl-Pzl" secondAttribute="trailing" id="Nm9-qq-lrh"/>
-                            <constraint firstItem="wWb-Vl-Pzl" firstAttribute="top" secondItem="shg-Fh-f9I" secondAttribute="bottom" id="jcy-At-pVo"/>
-                            <constraint firstItem="tpn-pZ-qm9" firstAttribute="top" secondItem="wWb-Vl-Pzl" secondAttribute="bottom" id="pEW-I9-7Tb"/>
+                            <constraint firstItem="wWb-Vl-Pzl" firstAttribute="top" secondItem="shg-Fh-f9I" secondAttribute="bottom" constant="40" id="8e0-K0-cI3"/>
+                            <constraint firstItem="wWb-Vl-Pzl" firstAttribute="leading" secondItem="70m-In-SDW" secondAttribute="leading" id="8uT-da-xgT"/>
+                            <constraint firstItem="VjU-Am-AmY" firstAttribute="top" secondItem="shg-Fh-f9I" secondAttribute="bottom" id="U2C-Tz-fqj"/>
+                            <constraint firstItem="VjU-Am-AmY" firstAttribute="leading" secondItem="70m-In-SDW" secondAttribute="leadingMargin" id="UkO-0P-eZv"/>
+                            <constraint firstAttribute="bottom" secondItem="wWb-Vl-Pzl" secondAttribute="bottom" id="XuI-jW-8IZ"/>
+                            <constraint firstAttribute="trailing" secondItem="wWb-Vl-Pzl" secondAttribute="trailing" id="km4-dt-58m"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="VjU-Am-AmY" secondAttribute="trailing" id="tHu-lE-kK4"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Erfassung" image="work" id="qgm-sA-HYd">
@@ -217,7 +245,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iKx-6k-IXA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1770" y="2838"/>
+            <point key="canvasLocation" x="1768.8" y="2837.6311844077964"/>
         </scene>
         <!--Add Capture View Controller-->
         <scene sceneID="fwo-Og-TdP">
@@ -266,20 +294,24 @@
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
                             <stackView opaque="NO" contentMode="redraw" semanticContentAttribute="forceLeftToRight" distribution="equalCentering" spacing="150" translatesAutoresizingMaskIntoConstraints="NO" id="oTr-nN-P2y">
-                                <rect key="frame" x="78" y="627" width="219" height="30"/>
+                                <rect key="frame" x="77" y="627" width="221" height="30"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ecL-rL-fDS">
-                                        <rect key="frame" x="0.0" y="0.0" width="47" height="30"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="49" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                         <state key="normal" title="zurück">
-                                            <color key="titleColor" red="0.58081901069999997" green="0.088427625600000004" blue="0.31863921880000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
                                             <segue destination="xwy-yK-xEL" kind="show" id="n5A-dJ-Kxq"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qix-ZK-E6P">
-                                        <rect key="frame" x="197" y="0.0" width="22" height="30"/>
-                                        <color key="tintColor" red="0.58081901069999997" green="0.088427625600000004" blue="0.31863921880000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <rect key="frame" x="199" y="0.0" width="22" height="30"/>
+                                        <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal">
+                                            <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
                                         <connections>
                                             <action selector="addEntryBtn:" destination="OkD-cb-Ojc" eventType="touchUpInside" id="shk-bI-FFU"/>
                                         </connections>
@@ -1228,7 +1260,7 @@
         <image name="work" width="24" height="24"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="uPz-Fn-yU9"/>
-        <segue reference="rNw-vJ-MG3"/>
+        <segue reference="n5A-dJ-Kxq"/>
+        <segue reference="cHW-Y0-2uo"/>
     </inferredMetricsTieBreakers>
 </document>
