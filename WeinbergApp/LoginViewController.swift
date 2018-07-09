@@ -24,8 +24,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate, AVCaptureMetad
     var videoPreviewLayer:AVCaptureVideoPreviewLayer?
     var qrCodeFrameView:UIView?
     
-    let testName = "hhh"
-    let testPassword = "hhh"
+    let testName = "Max M"
+    let testPassword = "1234"
 
     
     override func viewDidLoad() {

@@ -32,10 +32,7 @@ class CaptureViewController: UIViewController, UITableViewDelegate, UITableViewD
         super.viewDidLoad()
         tableView.dataSource = self
         tableView.delegate = self
-   
-        
-  
-        //test
+
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
