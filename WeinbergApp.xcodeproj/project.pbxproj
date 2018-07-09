@@ -14,6 +14,7 @@
 		46842A1020F2551D00510AD6 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46842A0D20F2551D00510AD6 /* RealmSwift.framework */; };
 		46842A1120F2551D00510AD6 /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 46842A0D20F2551D00510AD6 /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4685F86E20F3716F0007BBEF /* UIInputChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4685F86D20F3716F0007BBEF /* UIInputChecker.swift */; };
+		4685F87020F3F6EE0007BBEF /* ViewFader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4685F86F20F3F6EE0007BBEF /* ViewFader.swift */; };
 		4694C97820D5261D005C5F97 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4694C97720D5261D005C5F97 /* AppDelegate.swift */; };
 		4694C97D20D5261D005C5F97 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4694C97B20D5261D005C5F97 /* Main.storyboard */; };
 		4694C97F20D5261E005C5F97 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4694C97E20D5261E005C5F97 /* Assets.xcassets */; };
@@ -78,6 +79,7 @@
 		46842A0C20F2551D00510AD6 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = "../../Downloads/realm-swift-3.7.4/ios/swift-4.1/Realm.framework"; sourceTree = "<group>"; };
 		46842A0D20F2551D00510AD6 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = "../../Downloads/realm-swift-3.7.4/ios/swift-4.1/RealmSwift.framework"; sourceTree = "<group>"; };
 		4685F86D20F3716F0007BBEF /* UIInputChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIInputChecker.swift; sourceTree = "<group>"; };
+		4685F86F20F3F6EE0007BBEF /* ViewFader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewFader.swift; sourceTree = "<group>"; };
 		4694C97420D5261D005C5F97 /* WeinbergApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeinbergApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4694C97720D5261D005C5F97 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4694C97C20D5261D005C5F97 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -184,6 +186,7 @@
 				460E0EEB20E4F7B8007962EC /* ScannerViewController.swift */,
 				85168A1920EBA99F00CB2AB5 /* RealmHelper.swift */,
 				4685F86D20F3716F0007BBEF /* UIInputChecker.swift */,
+				4685F86F20F3F6EE0007BBEF /* ViewFader.swift */,
 			);
 			path = WeinbergApp;
 			sourceTree = "<group>";
@@ -489,6 +492,7 @@
 				4685F86E20F3716F0007BBEF /* UIInputChecker.swift in Sources */,
 				46A0D73620D7EC6B00B0BEDA /* AddEntryViewController.swift in Sources */,
 				85AC848720E3ADA40080505A /* DuengungAddEntryViewController.swift in Sources */,
+				4685F87020F3F6EE0007BBEF /* ViewFader.swift in Sources */,
 				4694C97820D5261D005C5F97 /* AppDelegate.swift in Sources */,
 				85AC848920E3B7DE0080505A /* PflanzenschutzAddEntryViewController.swift in Sources */,
 				46A0D73220D6FF5600B0BEDA /* AddCaptureViewController.swift in Sources */,

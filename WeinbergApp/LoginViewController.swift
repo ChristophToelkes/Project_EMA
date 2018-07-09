@@ -33,6 +33,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate, AVCaptureMetad
         super.viewDidLoad()
         showPassword = false
         view .sendSubview(toBack: backgroundImage)
+                         
     }
     
     private func checkTextFields() -> Bool{

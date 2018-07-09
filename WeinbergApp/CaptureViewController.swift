@@ -26,7 +26,7 @@ class CaptureViewController: UIViewController, UITableViewDelegate, UITableViewD
   
     
     @IBAction func logoutBtn(_ sender: Any) {
-        performSegue(withIdentifier: "segueLogout", sender: self)
+        performSegue(withIdentifier: "segueLogout2", sender: self)
     }
     
     

@@ -22,6 +22,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
     private var addPoinsEnabled = false
     private var points = [MKPointAnnotation]()
     private var points2D = [CLLocationCoordinate2D]()
+    private let fader = ViewFader.init()
     
     @IBAction func logoutBtn(_ sender: Any) {
          performSegue(withIdentifier: "segueLogout", sender: self)
@@ -51,9 +52,15 @@ class MapViewController: UIViewController, MKMapViewDelegate {
     }
 
     @IBAction func addArea(_ sender: Any) {
-        addAreaOptionsStackView.isHidden = false
-        addAreaOptionsStackView2.isHidden = false
-        addPoinsEnabled = true
+        if(!addPoinsEnabled){
+            fader.fade(mode: ViewFader.FadeMode.IN, view: self.addAreaOptionsStackView)
+            fader.fade(mode: ViewFader.FadeMode.IN, view: self.addAreaOptionsStackView2)
+            addPoinsEnabled = true
+        } else {
+            fader.fade(mode: ViewFader.FadeMode.OUT, view: self.addAreaOptionsStackView)
+            fader.fade(mode: ViewFader.FadeMode.OUT, view: self.addAreaOptionsStackView2)
+            addPoinsEnabled = false
+        }
     }
     
     @IBAction func undoPoint(_ sender: Any) {
@@ -105,6 +112,9 @@ class MapViewController: UIViewController, MKMapViewDelegate {
     
     }
     
+    @IBAction func showAllFAreasBtn(_ sender: Any) {
+        // Alert mit allen Feldern?!
+    }
     
     func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
       
