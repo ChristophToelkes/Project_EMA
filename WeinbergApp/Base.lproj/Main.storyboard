@@ -361,16 +361,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" semanticContentAttribute="spatial" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="gJa-KC-Jlx">
-                                <rect key="frame" x="20" y="40" width="335" height="396.5"/>
+                                <rect key="frame" x="0.0" y="40" width="375" height="396.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mwY-o0-ayS">
-                                        <rect key="frame" x="140" y="0.0" width="55" height="26.5"/>
+                                        <rect key="frame" x="160" y="0.0" width="55" height="26.5"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="9Ap-2R-n9N">
-                                        <rect key="frame" x="42.5" y="46.5" width="250" height="200"/>
+                                        <rect key="frame" x="62.5" y="46.5" width="250" height="200"/>
                                         <subviews>
                                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="hON-y5-gcu">
                                                 <rect key="frame" x="0.0" y="0.0" width="250" height="200"/>
@@ -386,7 +386,7 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="qLu-La-NDR">
-                                        <rect key="frame" x="42.5" y="266.5" width="250" height="30"/>
+                                        <rect key="frame" x="62.5" y="266.5" width="250" height="30"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Feld" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YWc-ku-3Rw">
                                                 <rect key="frame" x="0.0" y="0.0" width="115" height="30"/>
@@ -407,7 +407,7 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="nMA-5v-he9">
-                                        <rect key="frame" x="42.5" y="316.5" width="250" height="30"/>
+                                        <rect key="frame" x="62.5" y="316.5" width="250" height="30"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Benutzer" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mBF-lj-Nsm">
                                                 <rect key="frame" x="0.0" y="0.0" width="115" height="30"/>
@@ -428,7 +428,7 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="29G-CC-0LW">
-                                        <rect key="frame" x="42.5" y="366.5" width="250" height="30"/>
+                                        <rect key="frame" x="62.5" y="366.5" width="250" height="30"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Arbeitszeit" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Mt-YI-5GE">
                                                 <rect key="frame" x="0.0" y="0.0" width="115" height="30"/>
@@ -449,7 +449,7 @@
                                         </constraints>
                                     </stackView>
                                     <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="9om-hq-yMP">
-                                        <rect key="frame" x="42.5" y="396.5" width="250" height="30"/>
+                                        <rect key="frame" x="62.5" y="396.5" width="250" height="30"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Durchführung" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h4G-no-Nnx">
                                                 <rect key="frame" x="0.0" y="0.0" width="115" height="30"/>
@@ -471,11 +471,11 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="redraw" semanticContentAttribute="forceLeftToRight" distribution="equalCentering" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="IU0-mr-f9n">
-                                <rect key="frame" x="68" y="627" width="239.5" height="30"/>
+                            <stackView opaque="NO" contentMode="redraw" semanticContentAttribute="forceLeftToRight" preservesSuperviewLayoutMargins="YES" distribution="fillEqually" spacing="35" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IU0-mr-f9n">
+                                <rect key="frame" x="16" y="627" width="343" height="40"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wvn-5Q-3mD">
-                                        <rect key="frame" x="0.0" y="0.0" width="47" height="30"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="91" height="40"/>
                                         <state key="normal" title="zurück">
                                             <color key="titleColor" red="0.58081901069999997" green="0.088427625600000004" blue="0.31863921880000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
@@ -484,7 +484,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XPt-Ed-6sz">
-                                        <rect key="frame" x="97" y="0.0" width="58" height="30"/>
+                                        <rect key="frame" x="126" y="0.0" width="91" height="40"/>
                                         <color key="tintColor" red="0.58081901069999997" green="0.088427625600000004" blue="0.31863921880000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Löschen"/>
                                         <connections>
@@ -492,7 +492,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FBx-xe-69S">
-                                        <rect key="frame" x="217.5" y="0.0" width="22" height="30"/>
+                                        <rect key="frame" x="252" y="0.0" width="91" height="40"/>
                                         <color key="tintColor" red="0.58081901069999997" green="0.088427625600000004" blue="0.31863921880000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal">
                                             <color key="titleColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -503,19 +503,20 @@
                                         </connections>
                                     </button>
                                 </subviews>
+                                <color key="backgroundColor" red="0.58081901069999997" green="0.088427625600000004" blue="0.31863921880000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="rUw-5A-Uw4"/>
+                                    <constraint firstAttribute="height" constant="40" id="FLX-l6-8VP"/>
                                 </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="gJa-KC-Jlx" firstAttribute="leading" secondItem="c6w-Ss-rq9" secondAttribute="leading" constant="20" id="H4X-V9-sNK"/>
-                            <constraint firstItem="Bgm-Dg-dx1" firstAttribute="top" secondItem="IU0-mr-f9n" secondAttribute="bottom" constant="10" id="PBC-z0-CKT"/>
-                            <constraint firstAttribute="trailing" secondItem="gJa-KC-Jlx" secondAttribute="trailing" constant="20" id="ce2-AS-HYd"/>
+                            <constraint firstItem="gJa-KC-Jlx" firstAttribute="leading" secondItem="c6w-Ss-rq9" secondAttribute="leading" id="H4X-V9-sNK"/>
+                            <constraint firstItem="IU0-mr-f9n" firstAttribute="leading" secondItem="c6w-Ss-rq9" secondAttribute="leadingMargin" id="XFD-ma-C8W"/>
+                            <constraint firstAttribute="trailing" secondItem="gJa-KC-Jlx" secondAttribute="trailing" id="ce2-AS-HYd"/>
                             <constraint firstItem="gJa-KC-Jlx" firstAttribute="top" secondItem="aB0-9F-x3v" secondAttribute="bottom" constant="20" id="dt5-qU-LfT"/>
-                            <constraint firstItem="Bgm-Dg-dx1" firstAttribute="top" secondItem="IU0-mr-f9n" secondAttribute="bottom" constant="10" id="okh-GV-62B"/>
-                            <constraint firstItem="IU0-mr-f9n" firstAttribute="centerX" secondItem="gJa-KC-Jlx" secondAttribute="centerX" id="sNg-zA-6R8"/>
+                            <constraint firstItem="Bgm-Dg-dx1" firstAttribute="top" secondItem="IU0-mr-f9n" secondAttribute="bottom" id="eOp-Ch-xW8"/>
+                            <constraint firstItem="IU0-mr-f9n" firstAttribute="trailing" secondItem="c6w-Ss-rq9" secondAttribute="trailingMargin" id="fd4-aM-A3P"/>
                         </constraints>
                     </view>
                     <connections>
@@ -877,11 +878,11 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="redraw" semanticContentAttribute="forceLeftToRight" distribution="equalCentering" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="W1u-OD-rEe">
-                                <rect key="frame" x="68" y="627" width="239.5" height="30"/>
+                            <stackView opaque="NO" contentMode="redraw" semanticContentAttribute="forceLeftToRight" distribution="fillEqually" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="W1u-OD-rEe">
+                                <rect key="frame" x="16" y="627" width="343.5" height="40"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Zw-Hl-ebs">
-                                        <rect key="frame" x="0.0" y="0.0" width="47" height="30"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="81" height="40"/>
                                         <state key="normal" title="zurück">
                                             <color key="titleColor" red="0.58081901069999997" green="0.088427625600000004" blue="0.31863921880000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
@@ -890,7 +891,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kwL-Cz-gbs">
-                                        <rect key="frame" x="97" y="0.0" width="58" height="30"/>
+                                        <rect key="frame" x="131" y="0.0" width="81.5" height="40"/>
                                         <color key="tintColor" red="0.58081901069999997" green="0.088427625600000004" blue="0.31863921880000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Löschen"/>
                                         <connections>
@@ -898,7 +899,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X4X-lI-gT2">
-                                        <rect key="frame" x="217.5" y="0.0" width="22" height="30"/>
+                                        <rect key="frame" x="262.5" y="0.0" width="81" height="40"/>
                                         <color key="tintColor" red="0.58081901069999997" green="0.088427625600000004" blue="0.31863921880000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal">
                                             <color key="titleColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -910,18 +911,19 @@
                                     </button>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="4lW-qS-CwM"/>
+                                    <constraint firstAttribute="height" constant="40" id="Of6-wL-Ggy"/>
                                 </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="zxw-FX-00K" firstAttribute="top" secondItem="W1u-OD-rEe" secondAttribute="bottom" constant="10" id="9DN-uh-dWW"/>
+                            <constraint firstItem="W1u-OD-rEe" firstAttribute="leading" secondItem="Bvp-8w-LRd" secondAttribute="leadingMargin" id="06k-WR-Sbr"/>
                             <constraint firstAttribute="trailing" secondItem="cWh-3w-Rhs" secondAttribute="trailing" constant="20" id="9Z8-oA-Q6a"/>
                             <constraint firstItem="cWh-3w-Rhs" firstAttribute="leading" secondItem="Bvp-8w-LRd" secondAttribute="leading" constant="20" id="F1o-lC-hdh"/>
+                            <constraint firstItem="zxw-FX-00K" firstAttribute="top" secondItem="W1u-OD-rEe" secondAttribute="bottom" id="PUA-s5-czi"/>
                             <constraint firstItem="cWh-3w-Rhs" firstAttribute="top" secondItem="Pnf-G6-bLV" secondAttribute="bottom" constant="20" id="SRM-d1-d8g"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="W1u-OD-rEe" secondAttribute="trailing" id="ape-K4-qdK"/>
                             <constraint firstItem="W1u-OD-rEe" firstAttribute="centerX" secondItem="cWh-3w-Rhs" secondAttribute="centerX" id="n4i-eh-Qgt"/>
-                            <constraint firstItem="zxw-FX-00K" firstAttribute="top" secondItem="W1u-OD-rEe" secondAttribute="bottom" constant="10" id="yN2-QJ-K2j"/>
                         </constraints>
                     </view>
                     <connections>
@@ -1188,11 +1190,11 @@
                                     </stackView>
                                 </subviews>
                             </scrollView>
-                            <stackView opaque="NO" contentMode="redraw" semanticContentAttribute="forceLeftToRight" ambiguous="YES" distribution="equalCentering" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="F2n-vf-AJG">
-                                <rect key="frame" x="78" y="627" width="239.5" height="30"/>
+                            <stackView opaque="NO" contentMode="redraw" semanticContentAttribute="forceLeftToRight" distribution="fillEqually" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="F2n-vf-AJG">
+                                <rect key="frame" x="16" y="627" width="343" height="40"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h1h-KE-BgL">
-                                        <rect key="frame" x="0.0" y="0.0" width="47" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h1h-KE-BgL">
+                                        <rect key="frame" x="0.0" y="0.0" width="81" height="40"/>
                                         <state key="normal" title="zurück">
                                             <color key="titleColor" red="0.58081901069999997" green="0.088427625600000004" blue="0.31863921880000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
@@ -1200,16 +1202,16 @@
                                             <action selector="backBtn:" destination="xoh-O3-Jo7" eventType="touchUpInside" id="4e5-pl-fBV"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yd5-dE-PBG">
-                                        <rect key="frame" x="97" y="0.0" width="58" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yd5-dE-PBG">
+                                        <rect key="frame" x="131" y="0.0" width="81" height="40"/>
                                         <color key="tintColor" red="0.58081901069999997" green="0.088427625600000004" blue="0.31863921880000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Löschen"/>
                                         <connections>
                                             <action selector="pressDeleteButton:" destination="xoh-O3-Jo7" eventType="touchUpInside" id="k0Z-CV-gKm"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Gn-BA-Dsz">
-                                        <rect key="frame" x="217.5" y="0.0" width="22" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Gn-BA-Dsz">
+                                        <rect key="frame" x="262" y="0.0" width="81" height="40"/>
                                         <color key="tintColor" red="0.58081901069999997" green="0.088427625600000004" blue="0.31863921880000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal">
                                             <color key="titleColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1221,14 +1223,15 @@
                                     </button>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="N95-m2-1EB"/>
+                                    <constraint firstAttribute="height" constant="40" id="0XZ-7L-iVh"/>
                                 </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="u0V-Kn-veG" firstAttribute="top" secondItem="F2n-vf-AJG" secondAttribute="bottom" constant="10" id="AX0-6s-uMu"/>
-                            <constraint firstItem="u0V-Kn-veG" firstAttribute="top" secondItem="F2n-vf-AJG" secondAttribute="bottom" constant="10" id="BAs-Ty-Oq3"/>
+                            <constraint firstItem="F2n-vf-AJG" firstAttribute="leading" secondItem="Jhr-b3-bvn" secondAttribute="leadingMargin" id="QBM-Tm-d56"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="F2n-vf-AJG" secondAttribute="trailing" id="dCp-Az-PK3"/>
+                            <constraint firstItem="u0V-Kn-veG" firstAttribute="top" secondItem="F2n-vf-AJG" secondAttribute="bottom" id="zW2-u3-fh4"/>
                         </constraints>
                     </view>
                     <connections>
@@ -1261,6 +1264,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="n5A-dJ-Kxq"/>
-        <segue reference="cHW-Y0-2uo"/>
+        <segue reference="ym3-nN-BRJ"/>
     </inferredMetricsTieBreakers>
 </document>
