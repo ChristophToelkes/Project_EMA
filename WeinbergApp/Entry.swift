@@ -7,14 +7,20 @@
 //
 
 import UIKit
+import MapKit
 
 struct Entry{
+    
+    //Erfassung von Feldern
+    var areaName: String?
+    var points: [CLLocationCoordinate2D]?
 
-    var user: String
-    var date: String
-    var field: String
-    var hours: String
-    var captureType: String
+    //Erfassung von Arbeiten
+    var user: String?
+    var date: String?
+    var field: String?
+    var hours: String?
+    var captureType: String?
     //speziell für Traubenlese
     var durchfuehrung: String?
     //speziell für Düngung
@@ -27,25 +33,60 @@ struct Entry{
     var info: String?
     var mengePflanzenschutzmittel: String?
    
+    public func getAreaName() -> String{
+        if let returnValue = self.areaName {
+            return returnValue
+        } else {
+            return ""
+        }
+    }
+    
+    public func getAreaPoints() -> [CLLocationCoordinate2D] {
+        if let returnValue = self.points {
+            return returnValue
+        } else {
+            return []
+        }
+    }
     
     public func getUser() -> String{
-        return self.user
+        if let returnValue = self.user {
+            return returnValue
+        } else {
+            return ""
+        }
     }
     
     public func getDate() -> String {
-        return self.date
+        if let returnValue = self.date {
+            return returnValue
+        } else {
+            return ""
+        }
     }
     
     public func getField() -> String {
-        return self.field
+        if let returnValue = self.field{
+            return returnValue
+        } else {
+            return ""
+        }
     }
     
     public func getHours() -> String {
-        return self.hours
+        if let returnValue = self.hours {
+            return returnValue
+        } else {
+            return ""
+        }
     }
     
     public func getCaptureType() -> String {
-        return self.captureType
+        if let returnValue = self.captureType{
+            return returnValue
+        } else {
+            return ""
+        }
     }
     
     public func getDurchfuehrung() -> String {
@@ -113,6 +154,13 @@ struct Entry{
     }
     
     
+    public mutating func setAreaName(areaName: String) {
+        self.areaName = areaName
+    }
+    
+    public mutating func setAreaPoints(points: [CLLocationCoordinate2D]) {
+        self.points = points
+    }
     
     public mutating func setUser(user: String) {
         self.user = user

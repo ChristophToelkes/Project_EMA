@@ -19,7 +19,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, UITableViewDelegat
     @IBOutlet weak var tableViewAreas: UITableView!
     @IBOutlet weak var addAreaTextField: UITextField!
     @IBOutlet weak var addNewArea: UIButton!
-    private let regionRadius: CLLocationDistance = 3000
+
     private let location = CLLocation(latitude: 49.9667396, longitude: 7.9045959999999695)
     private var addPoinsEnabled = false
     private var points = [MKPointAnnotation]()
@@ -27,6 +27,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, UITableViewDelegat
     private var areas = [Area]()
     private let fader = ViewFader.init()
     private var showTableView = false
+    private var entryList = [Entry]()
     
     @IBAction func logoutBtn(_ sender: Any) {
          performSegue(withIdentifier: "segueLogout", sender: self)
@@ -34,7 +35,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, UITableViewDelegat
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        centerMapOnLocation(location: location)
+        centerMapOnLocation(location: location, dist: 2000)
         tableViewAreas.delegate = self
         tableViewAreas.dataSource = self
         
@@ -113,6 +114,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, UITableViewDelegat
             self.addAreaOptionsStackView.isHidden = true
             self.addAreaOptionsStackView2.isHidden = true
             self.addPoinsEnabled = false
+            self.addNewArea.isEnabled = false
             self.points2D = []
             self.points = []
         }))
@@ -155,9 +157,9 @@ class MapViewController: UIViewController, MKMapViewDelegate, UITableViewDelegat
         return MKOverlayRenderer()
     }
     
-    private func centerMapOnLocation(location: CLLocation) {
+    private func centerMapOnLocation(location: CLLocation, dist: CLLocationDistance) {
         let coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate,
-                                                                  regionRadius, regionRadius)
+                                                                  dist, dist)
         mapView.setRegion(coordinateRegion, animated: true)
     }
     
@@ -179,7 +181,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, UITableViewDelegat
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
         print("nur kurz")
         guard let areaFirstPoint = areas[indexPath.row].points.first else {return}
-        centerMapOnLocation(location: CLLocation.init(latitude: areaFirstPoint.latitude, longitude: areaFirstPoint.longitude))
+        centerMapOnLocation(location: CLLocation.init(latitude: areaFirstPoint.latitude, longitude: areaFirstPoint.longitude), dist: 500)
        
        
     }

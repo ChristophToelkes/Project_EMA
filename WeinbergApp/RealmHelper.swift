@@ -8,6 +8,7 @@
 
 import Foundation
 import RealmSwift
+import MapKit
 
 class RealmHelper {
     
@@ -22,6 +23,16 @@ class RealmHelper {
         newEntry.Arbeitszeit = arbeitszeit
         newEntry.Datum = datum
         
+        try! realm.write {
+            realm.add(newEntry)
+        }
+    }
+    
+    func addArea(areaName: String, points: [CLLocationCoordinate2D]) {
+        
+        let newEntry = AreaEntry()
+        newEntry.areaName = areaName
+        newEntry.points = points
         try! realm.write {
             realm.add(newEntry)
         }
@@ -83,13 +94,15 @@ class RealmHelper {
         var entries: [Entry] = []
         switch type {
         case "Traubenlese":
-               entries = getTraubenleseEntries(results: getTraubenleseObjects(type: type))
+            entries = getTraubenleseEntries(results: getTraubenleseObjects(type: type))
         case "Düngung":
-                entries = getDuengungEntries(results: getDuengungObjects(type: type))
+            entries = getDuengungEntries(results: getDuengungObjects(type: type))
         case "Pflanzenschutz":
-                entries = getPflanzenschutzEntries(results: getPflanzenschutzObjects(type: type))
+            entries = getPflanzenschutzEntries(results: getPflanzenschutzObjects(type: type))
+        case "Feld":
+            entries = getPflanzenschutzEntries(results: getPflanzenschutzObjects(type: type))
         default:
-            entries = getGeneralEntries(results: getGeneralObjects(type: type))
+            entries = getAreaEntries(results: getAreaObjects(type: type))
         }
         return entries
     }
@@ -103,7 +116,23 @@ class RealmHelper {
         var entries: [Entry] = []
         
         for i in 0..<results.count {
-            let entry = Entry(user: results[i].Benutzer, date: results[i].Datum, field: results[i].Feld, hours: results[i].Arbeitszeit, captureType: results[i].captureType, durchfuehrung: results[i].durchfuehrung, duengemittel: nil, mengeDuengemittel: nil, gegen: nil, mittel: nil, termin: nil, info: nil, mengePflanzenschutzmittel: nil)
+            let entry = Entry(areaName: nil, points: [], user: results[i].Benutzer, date: results[i].Datum, field: results[i].Feld, hours: results[i].Arbeitszeit, captureType: results[i].captureType, durchfuehrung: results[i].durchfuehrung, duengemittel: nil, mengeDuengemittel: nil, gegen: nil, mittel: nil, termin: nil, info: nil, mengePflanzenschutzmittel: nil)
+            entries.append(entry)
+        }
+        
+        return entries
+    }
+    
+    func getAreaObjects(type: String) -> Results<AreaEntry> {
+        
+        return realm.objects(AreaEntry.self).filter("captureType = '" + type + "'")
+    }
+    
+    func getAreaEntries(results: Results<AreaEntry>) -> [Entry] {
+        var entries: [Entry] = []
+        
+        for i in 0..<results.count {
+            let entry = Entry(areaName: results[i].areaName, points: results[i].points, user: nil, date: nil, field: nil, hours: nil, captureType: nil, durchfuehrung: nil, duengemittel: nil, mengeDuengemittel: nil, gegen: nil, mittel: nil, termin: nil, info: nil, mengePflanzenschutzmittel: nil)
             entries.append(entry)
         }
         
@@ -119,7 +148,7 @@ class RealmHelper {
         var entries: [Entry] = []
         
         for i in 0..<results.count {
-            let entry = Entry(user: results[i].Benutzer, date: results[i].Datum, field: results[i].Feld, hours: results[i].Arbeitszeit, captureType: results[i].captureType, durchfuehrung: nil, duengemittel: results[i].duengemittel, mengeDuengemittel: results[i].mengeDuengemittel, gegen: nil, mittel: nil, termin: nil, info: nil, mengePflanzenschutzmittel: nil)
+            let entry = Entry(areaName: nil, points: [], user: results[i].Benutzer, date: results[i].Datum, field: results[i].Feld, hours: results[i].Arbeitszeit, captureType: results[i].captureType, durchfuehrung: nil, duengemittel: results[i].duengemittel, mengeDuengemittel: results[i].mengeDuengemittel, gegen: nil, mittel: nil, termin: nil, info: nil, mengePflanzenschutzmittel: nil)
             entries.append(entry)
         }
         
@@ -135,7 +164,7 @@ class RealmHelper {
         var entries: [Entry] = []
         
         for i in 0..<results.count {
-            let entry = Entry(user: results[i].Benutzer, date: results[i].Datum, field: results[i].Feld, hours: results[i].Arbeitszeit, captureType: results[i].captureType, durchfuehrung: nil, duengemittel: nil, mengeDuengemittel: nil, gegen: results[i].gegen, mittel: results[i].mittel, termin: results[i].termin, info: results[i].info, mengePflanzenschutzmittel: results[i].mengePflanzenschutzmittel)
+            let entry = Entry(areaName: nil, points: [], user: results[i].Benutzer, date: results[i].Datum, field: results[i].Feld, hours: results[i].Arbeitszeit, captureType: results[i].captureType, durchfuehrung: nil, duengemittel: nil, mengeDuengemittel: nil, gegen: results[i].gegen, mittel: results[i].mittel, termin: results[i].termin, info: results[i].info, mengePflanzenschutzmittel: results[i].mengePflanzenschutzmittel)
             entries.append(entry)
         }
         
@@ -151,7 +180,7 @@ class RealmHelper {
         var entries: [Entry] = []
         
         for i in 0..<results.count {
-            let entry = Entry(user: results[i].Benutzer, date: results[i].Datum, field: results[i].Feld, hours: results[i].Arbeitszeit, captureType: results[i].captureType, durchfuehrung: nil, duengemittel: nil, mengeDuengemittel: nil, gegen: nil, mittel: nil, termin: nil, info: nil, mengePflanzenschutzmittel: nil)
+            let entry = Entry(areaName: nil, points: [], user: results[i].Benutzer, date: results[i].Datum, field: results[i].Feld, hours: results[i].Arbeitszeit, captureType: results[i].captureType, durchfuehrung: nil, duengemittel: nil, mengeDuengemittel: nil, gegen: nil, mittel: nil, termin: nil, info: nil, mengePflanzenschutzmittel: nil)
             entries.append(entry)
         }
         
@@ -217,6 +246,11 @@ class RealmHelper {
             realm.delete(object!)
         }
     }
+}
+
+class AreaEntry: Object{
+    @objc dynamic var areaName = ""
+    @objc dynamic var points = [CLLocationCoordinate2D]()
 }
 
 class GeneralEntry: Object{
