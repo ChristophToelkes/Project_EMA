@@ -10,11 +10,13 @@ import Foundation
 import UIKit
 import MapKit
 
-class MapViewController: UIViewController, MKMapViewDelegate {
+class MapViewController: UIViewController, MKMapViewDelegate, UITableViewDelegate, UITableViewDataSource {
+   
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var addAreaOptionsStackView: UIStackView!
     @IBOutlet weak var addAreaOptionsStackView2: UIStackView!
     
+    @IBOutlet weak var tableViewAreas: UITableView!
     @IBOutlet weak var addAreaTextField: UITextField!
     @IBOutlet weak var addNewArea: UIButton!
     private let regionRadius: CLLocationDistance = 3000
@@ -22,7 +24,9 @@ class MapViewController: UIViewController, MKMapViewDelegate {
     private var addPoinsEnabled = false
     private var points = [MKPointAnnotation]()
     private var points2D = [CLLocationCoordinate2D]()
+    private var areas = [Area]()
     private let fader = ViewFader.init()
+    private var showTableView = false
     
     @IBAction func logoutBtn(_ sender: Any) {
          performSegue(withIdentifier: "segueLogout", sender: self)
@@ -31,6 +35,10 @@ class MapViewController: UIViewController, MKMapViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         centerMapOnLocation(location: location)
+        tableViewAreas.delegate = self
+        tableViewAreas.dataSource = self
+        
+        
    
     }
     
@@ -97,23 +105,35 @@ class MapViewController: UIViewController, MKMapViewDelegate {
             
               // inhalt von points[] und namen des Feldes  in datenbank abspeichern
             
+            self.areas.append(Area.init(name: self.addAreaTextField.text!, points: self.points2D))
+            self.tableViewAreas.reloadData()
+            
+            
+            
             self.addAreaOptionsStackView.isHidden = true
             self.addAreaOptionsStackView2.isHidden = true
             self.addPoinsEnabled = false
-            
+            self.points2D = []
+            self.points = []
         }))
         alert.addAction(UIAlertAction(title: "zurück", style: .default, handler: nil))
         self.present(alert, animated: true)
         
         
-        points2D = []
-        points = []
+  
         
     
     }
     
     @IBAction func showAllFAreasBtn(_ sender: Any) {
-        // Alert mit allen Feldern?!
+        if(!showTableView){
+            fader.fade(mode: ViewFader.FadeMode.IN, view: tableViewAreas)
+            showTableView = true
+        } else {
+            fader.fade(mode: ViewFader.FadeMode.OUT, view: tableViewAreas)
+            showTableView = false
+        }
+        
     }
     
     func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
@@ -135,16 +155,60 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         return MKOverlayRenderer()
     }
     
-    
-    
     private func centerMapOnLocation(location: CLLocation) {
         let coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate,
                                                                   regionRadius, regionRadius)
         mapView.setRegion(coordinateRegion, animated: true)
     }
     
-
+    
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return areas.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell")
+        cell?.textLabel?.text = areas[indexPath.row].name
+ 
+        cell?.contentView.sizeToFit()
+        
+        return cell!
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
+        print("nur kurz")
+        guard let areaFirstPoint = areas[indexPath.row].points.first else {return}
+        centerMapOnLocation(location: CLLocation.init(latitude: areaFirstPoint.latitude, longitude: areaFirstPoint.longitude))
+       
+       
+    }
+    
+ 
+    
+    
+    
+    @IBAction func longPressDeleteArea(_ sender: UILongPressGestureRecognizer) {
+        if sender.state == UIGestureRecognizerState.began {
+              print("lange")
+            
+            let touchPoint = sender.location(in: self.tableViewAreas)
+            if let indexPath = tableViewAreas.indexPathForRow(at: touchPoint) {
+              
+                areas.remove(at: indexPath.row)
+                print(indexPath.row)
+                self.tableViewAreas.reloadData()
+                
+            }
+            
+            
+                
+            
+    }
+    
+    
     
 }
 
 
+}

@@ -7,6 +7,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -201,7 +202,7 @@
                                 </prototypes>
                             </tableView>
                             <stackView opaque="NO" contentMode="left" distribution="fillEqually" alignment="top" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="VjU-Am-AmY">
-                                <rect key="frame" x="16" y="20" width="343" height="50"/>
+                                <rect key="frame" x="16" y="25" width="343" height="50"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hd9-2n-ohc">
                                         <rect key="frame" x="0.0" y="0.0" width="162" height="30"/>
@@ -231,7 +232,7 @@
                         <constraints>
                             <constraint firstItem="wWb-Vl-Pzl" firstAttribute="top" secondItem="shg-Fh-f9I" secondAttribute="bottom" constant="40" id="8e0-K0-cI3"/>
                             <constraint firstItem="wWb-Vl-Pzl" firstAttribute="leading" secondItem="70m-In-SDW" secondAttribute="leading" id="8uT-da-xgT"/>
-                            <constraint firstItem="VjU-Am-AmY" firstAttribute="top" secondItem="shg-Fh-f9I" secondAttribute="bottom" id="U2C-Tz-fqj"/>
+                            <constraint firstItem="VjU-Am-AmY" firstAttribute="top" secondItem="shg-Fh-f9I" secondAttribute="bottom" constant="5" id="U2C-Tz-fqj"/>
                             <constraint firstItem="VjU-Am-AmY" firstAttribute="leading" secondItem="70m-In-SDW" secondAttribute="leadingMargin" id="UkO-0P-eZv"/>
                             <constraint firstAttribute="bottom" secondItem="wWb-Vl-Pzl" secondAttribute="bottom" id="XuI-jW-8IZ"/>
                             <constraint firstAttribute="trailing" secondItem="wWb-Vl-Pzl" secondAttribute="trailing" id="km4-dt-58m"/>
@@ -576,7 +577,7 @@
                                 </connections>
                             </mapView>
                             <stackView opaque="NO" contentMode="left" distribution="fillProportionally" alignment="center" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="j1O-dc-gQn">
-                                <rect key="frame" x="0.0" y="10" width="375" height="50"/>
+                                <rect key="frame" x="0.0" y="15" width="375" height="50"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zHW-zL-Kpj">
                                         <rect key="frame" x="0.0" y="10" width="169.5" height="30"/>
@@ -646,10 +647,10 @@
                                 </constraints>
                             </stackView>
                             <stackView hidden="YES" opaque="NO" tag="8" contentMode="top" semanticContentAttribute="forceLeftToRight" axis="vertical" distribution="fillProportionally" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="9zm-x8-wSB">
-                                <rect key="frame" x="15" y="75" width="345" height="44"/>
+                                <rect key="frame" x="15" y="75" width="342" height="44"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Name Feld" borderStyle="roundedRect" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="e4I-ub-4De">
-                                        <rect key="frame" x="0.0" y="0.0" width="345" height="44"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="342" height="44"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
@@ -661,18 +662,59 @@
                                     <constraint firstAttribute="height" constant="44" id="Cdd-tb-nku"/>
                                 </constraints>
                             </stackView>
+                            <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="50" estimatedRowHeight="50" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="aPh-2L-0LB">
+                                <rect key="frame" x="0.0" y="289" width="375" height="329"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="55" id="3xh-HY-GZV">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="55"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3xh-HY-GZV" id="oDU-k2-EiN">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="54.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="gBn-2R-f3g">
+                                                    <rect key="frame" x="10" y="0.0" width="355" height="54.5"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aTU-1S-wPl">
+                                                            <rect key="frame" x="0.0" y="2.5" width="355" height="50"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <gestureRecognizers/>
+                                                    <connections>
+                                                        <outletCollection property="gestureRecognizers" destination="d1W-IM-ydf" appends="YES" id="ZF4-Ag-nGk"/>
+                                                    </connections>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="gBn-2R-f3g" secondAttribute="trailing" constant="10" id="91W-AJ-bhB"/>
+                                                <constraint firstAttribute="bottom" secondItem="gBn-2R-f3g" secondAttribute="bottom" id="aAI-Tq-wTe"/>
+                                                <constraint firstItem="gBn-2R-f3g" firstAttribute="leading" secondItem="oDU-k2-EiN" secondAttribute="leading" constant="10" id="cxa-M6-PXe"/>
+                                                <constraint firstItem="gBn-2R-f3g" firstAttribute="top" secondItem="oDU-k2-EiN" secondAttribute="top" id="yqz-2d-vHF"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" red="0.58081901069999997" green="0.088427625600000004" blue="0.31863921880000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="j1O-dc-gQn" secondAttribute="trailing" id="0x2-Yx-NbY"/>
                             <constraint firstAttribute="trailing" secondItem="sTK-S1-bqP" secondAttribute="trailing" id="3Yp-xI-9pa"/>
                             <constraint firstAttribute="trailingMargin" secondItem="oPw-LG-q6N" secondAttribute="trailing" id="9L8-oF-IrP"/>
-                            <constraint firstItem="j1O-dc-gQn" firstAttribute="top" secondItem="uHe-hT-rBm" secondAttribute="top" constant="10" id="Apq-aM-8el"/>
+                            <constraint firstAttribute="trailing" secondItem="aPh-2L-0LB" secondAttribute="trailing" id="AB5-TA-Sej"/>
+                            <constraint firstItem="j1O-dc-gQn" firstAttribute="top" secondItem="uHe-hT-rBm" secondAttribute="top" constant="15" id="Apq-aM-8el"/>
                             <constraint firstItem="j1O-dc-gQn" firstAttribute="leading" secondItem="uHe-hT-rBm" secondAttribute="leading" id="EMk-n2-8Fj"/>
-                            <constraint firstAttribute="trailing" secondItem="9zm-x8-wSB" secondAttribute="trailing" constant="15" id="IMH-qc-Ztm"/>
-                            <constraint firstItem="9zm-x8-wSB" firstAttribute="top" secondItem="j1O-dc-gQn" secondAttribute="bottom" constant="15" id="UPT-Ac-V7x"/>
+                            <constraint firstAttribute="trailing" secondItem="9zm-x8-wSB" secondAttribute="trailing" constant="18" id="IMH-qc-Ztm"/>
+                            <constraint firstItem="9zm-x8-wSB" firstAttribute="top" secondItem="j1O-dc-gQn" secondAttribute="bottom" constant="10" id="UPT-Ac-V7x"/>
                             <constraint firstItem="oPw-LG-q6N" firstAttribute="top" secondItem="9zm-x8-wSB" secondAttribute="bottom" constant="10" id="Z6C-d4-o6Q"/>
+                            <constraint firstItem="aPh-2L-0LB" firstAttribute="leading" secondItem="uHe-hT-rBm" secondAttribute="leading" id="aU1-xB-ERa"/>
+                            <constraint firstItem="4S5-It-d1l" firstAttribute="top" secondItem="aPh-2L-0LB" secondAttribute="bottom" id="fgz-Fb-msP"/>
                             <constraint firstItem="4S5-It-d1l" firstAttribute="top" secondItem="sTK-S1-bqP" secondAttribute="bottom" constant="-50" id="liv-lV-GX6"/>
+                            <constraint firstItem="aPh-2L-0LB" firstAttribute="top" secondItem="oPw-LG-q6N" secondAttribute="bottom" constant="10" id="mCK-y6-IXr"/>
                             <constraint firstItem="sTK-S1-bqP" firstAttribute="top" secondItem="0I9-tq-sgG" secondAttribute="bottom" constant="40" id="noU-44-L7y"/>
                             <constraint firstItem="9zm-x8-wSB" firstAttribute="leading" secondItem="uHe-hT-rBm" secondAttribute="leading" constant="15" id="qD3-cm-Qlx"/>
                             <constraint firstAttribute="trailing" secondItem="j1O-dc-gQn" secondAttribute="trailing" id="s1r-Z4-hB0"/>
@@ -688,6 +730,7 @@
                         <outlet property="addAreaTextField" destination="e4I-ub-4De" id="Byg-3m-Uvt"/>
                         <outlet property="addNewArea" destination="OQT-Qx-cEW" id="RUo-ey-DGl"/>
                         <outlet property="mapView" destination="sTK-S1-bqP" id="HoD-xo-Hgg"/>
+                        <outlet property="tableViewAreas" destination="aPh-2L-0LB" id="sfG-e6-sOl"/>
                         <segue destination="e3E-UC-7yd" kind="presentation" identifier="segueLogout" modalTransitionStyle="crossDissolve" id="vVE-hR-lil"/>
                     </connections>
                 </viewController>
@@ -697,8 +740,13 @@
                         <action selector="longPressGesture:" destination="rps-0n-scs" id="gH6-y5-Gml"/>
                     </connections>
                 </pongPressGestureRecognizer>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="d1W-IM-ydf">
+                    <connections>
+                        <action selector="longPressDeleteArea:" destination="rps-0n-scs" id="VSs-bh-8Dc"/>
+                    </connections>
+                </pongPressGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="700" y="2838"/>
+            <point key="canvasLocation" x="700" y="2837.6311844077964"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="duH-91-S6j">
