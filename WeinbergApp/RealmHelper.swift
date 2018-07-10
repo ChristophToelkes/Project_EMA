@@ -28,11 +28,13 @@ class RealmHelper {
         }
     }
     
-    func addArea(areaName: String, points: [CLLocationCoordinate2D]) {
+    func addArea(areaName: String, points: String, captureType: String) {
         
         let newEntry = AreaEntry()
+        newEntry.captureType = captureType
         newEntry.areaName = areaName
         newEntry.points = points
+        
         try! realm.write {
             realm.add(newEntry)
         }
@@ -99,10 +101,10 @@ class RealmHelper {
             entries = getDuengungEntries(results: getDuengungObjects(type: type))
         case "Pflanzenschutz":
             entries = getPflanzenschutzEntries(results: getPflanzenschutzObjects(type: type))
-        case "Feld":
-            entries = getPflanzenschutzEntries(results: getPflanzenschutzObjects(type: type))
-        default:
+        case "Area":
             entries = getAreaEntries(results: getAreaObjects(type: type))
+        default:
+            entries = []
         }
         return entries
     }
@@ -116,7 +118,7 @@ class RealmHelper {
         var entries: [Entry] = []
         
         for i in 0..<results.count {
-            let entry = Entry(areaName: nil, points: [], user: results[i].Benutzer, date: results[i].Datum, field: results[i].Feld, hours: results[i].Arbeitszeit, captureType: results[i].captureType, durchfuehrung: results[i].durchfuehrung, duengemittel: nil, mengeDuengemittel: nil, gegen: nil, mittel: nil, termin: nil, info: nil, mengePflanzenschutzmittel: nil)
+            let entry = Entry(areaName: nil, points:nil, user: results[i].Benutzer, date: results[i].Datum, field: results[i].Feld, hours: results[i].Arbeitszeit, captureType: results[i].captureType, durchfuehrung: results[i].durchfuehrung, duengemittel: nil, mengeDuengemittel: nil, gegen: nil, mittel: nil, termin: nil, info: nil, mengePflanzenschutzmittel: nil)
             entries.append(entry)
         }
         
@@ -132,7 +134,7 @@ class RealmHelper {
         var entries: [Entry] = []
         
         for i in 0..<results.count {
-            let entry = Entry(areaName: results[i].areaName, points: results[i].points, user: nil, date: nil, field: nil, hours: nil, captureType: nil, durchfuehrung: nil, duengemittel: nil, mengeDuengemittel: nil, gegen: nil, mittel: nil, termin: nil, info: nil, mengePflanzenschutzmittel: nil)
+            let entry = Entry(areaName: results[i].areaName, points: results[i].points, user: nil, date: nil, field: nil, hours: nil, captureType: results[i].captureType, durchfuehrung: nil, duengemittel: nil, mengeDuengemittel: nil, gegen: nil, mittel: nil, termin: nil, info: nil, mengePflanzenschutzmittel: nil)
             entries.append(entry)
         }
         
@@ -148,7 +150,7 @@ class RealmHelper {
         var entries: [Entry] = []
         
         for i in 0..<results.count {
-            let entry = Entry(areaName: nil, points: [], user: results[i].Benutzer, date: results[i].Datum, field: results[i].Feld, hours: results[i].Arbeitszeit, captureType: results[i].captureType, durchfuehrung: nil, duengemittel: results[i].duengemittel, mengeDuengemittel: results[i].mengeDuengemittel, gegen: nil, mittel: nil, termin: nil, info: nil, mengePflanzenschutzmittel: nil)
+            let entry = Entry(areaName: nil, points: nil, user: results[i].Benutzer, date: results[i].Datum, field: results[i].Feld, hours: results[i].Arbeitszeit, captureType: results[i].captureType, durchfuehrung: nil, duengemittel: results[i].duengemittel, mengeDuengemittel: results[i].mengeDuengemittel, gegen: nil, mittel: nil, termin: nil, info: nil, mengePflanzenschutzmittel: nil)
             entries.append(entry)
         }
         
@@ -164,7 +166,7 @@ class RealmHelper {
         var entries: [Entry] = []
         
         for i in 0..<results.count {
-            let entry = Entry(areaName: nil, points: [], user: results[i].Benutzer, date: results[i].Datum, field: results[i].Feld, hours: results[i].Arbeitszeit, captureType: results[i].captureType, durchfuehrung: nil, duengemittel: nil, mengeDuengemittel: nil, gegen: results[i].gegen, mittel: results[i].mittel, termin: results[i].termin, info: results[i].info, mengePflanzenschutzmittel: results[i].mengePflanzenschutzmittel)
+            let entry = Entry(areaName: nil, points: nil, user: results[i].Benutzer, date: results[i].Datum, field: results[i].Feld, hours: results[i].Arbeitszeit, captureType: results[i].captureType, durchfuehrung: nil, duengemittel: nil, mengeDuengemittel: nil, gegen: results[i].gegen, mittel: results[i].mittel, termin: results[i].termin, info: results[i].info, mengePflanzenschutzmittel: results[i].mengePflanzenschutzmittel)
             entries.append(entry)
         }
         
@@ -180,7 +182,7 @@ class RealmHelper {
         var entries: [Entry] = []
         
         for i in 0..<results.count {
-            let entry = Entry(areaName: nil, points: [], user: results[i].Benutzer, date: results[i].Datum, field: results[i].Feld, hours: results[i].Arbeitszeit, captureType: results[i].captureType, durchfuehrung: nil, duengemittel: nil, mengeDuengemittel: nil, gegen: nil, mittel: nil, termin: nil, info: nil, mengePflanzenschutzmittel: nil)
+            let entry = Entry(areaName: nil, points: nil, user: results[i].Benutzer, date: results[i].Datum, field: results[i].Feld, hours: results[i].Arbeitszeit, captureType: results[i].captureType, durchfuehrung: nil, duengemittel: nil, mengeDuengemittel: nil, gegen: nil, mittel: nil, termin: nil, info: nil, mengePflanzenschutzmittel: nil)
             entries.append(entry)
         }
         
@@ -230,6 +232,19 @@ class RealmHelper {
         }
     }
     
+    func deleteArea(entry: Entry) {
+        let typeName = "captureType = '" + entry.getCaptureType() + "' AND areaName = '" + entry.getAreaName() + "'"
+        let points = "points = '" + entry.getAreaPoints() + "'"
+        let query = typeName + " AND " + points
+   
+        let objects = realm.objects(AreaEntry.self).filter(query)
+        
+        let object = objects.first
+        try! realm.write {
+            realm.delete(object!)
+        }
+    }
+    
     func deletePflanzenschutz(entry: Entry) {
         let typeBenutzer = "captureType = '" + entry.getCaptureType() + "' AND Benutzer = '" + entry.getUser() + "'"
         let feldArbeitszeit = "Feld = '" + entry.getField() + "' AND Arbeitszeit = '" + String(entry.getHours()) + "'"
@@ -249,8 +264,9 @@ class RealmHelper {
 }
 
 class AreaEntry: Object{
+    @objc dynamic var captureType = ""
     @objc dynamic var areaName = ""
-    @objc dynamic var points = [CLLocationCoordinate2D]()
+    @objc dynamic var points = ""
 }
 
 class GeneralEntry: Object{

@@ -7,13 +7,13 @@
 //
 
 import UIKit
-import MapKit
+
 
 struct Entry{
     
     //Erfassung von Feldern
     var areaName: String?
-    var points: [CLLocationCoordinate2D]?
+    var points: String?
 
     //Erfassung von Arbeiten
     var user: String?
@@ -41,11 +41,11 @@ struct Entry{
         }
     }
     
-    public func getAreaPoints() -> [CLLocationCoordinate2D] {
+    public func getAreaPoints() -> String {
         if let returnValue = self.points {
             return returnValue
         } else {
-            return []
+            return ""
         }
     }
     
@@ -158,7 +158,7 @@ struct Entry{
         self.areaName = areaName
     }
     
-    public mutating func setAreaPoints(points: [CLLocationCoordinate2D]) {
+    public mutating func setAreaPoints(points: String) {
         self.points = points
     }
     

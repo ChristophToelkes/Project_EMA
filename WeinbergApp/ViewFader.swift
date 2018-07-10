@@ -19,11 +19,11 @@ class ViewFader {
         if(mode == FadeMode.IN){
             view.alpha = 0
             view.isHidden = false
-            UIView.animate(withDuration: 0.3) {
+            UIView.animate(withDuration: 0.5) {
                 view.alpha = 1
             }
         } else {
-            UIView.animate(withDuration: 0.3, animations: {
+            UIView.animate(withDuration: 0.5, animations: {
                 view.alpha = 0
             }) { (finished) in
                 view.isHidden = finished
