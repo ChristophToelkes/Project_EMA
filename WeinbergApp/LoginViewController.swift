@@ -32,7 +32,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate, AVCaptureMetad
     override func viewDidLoad() {
         super.viewDidLoad()
         showPassword = false
-        view .sendSubview(toBack: backgroundImage)
+        view.sendSubview(toBack: backgroundImage)
                          
     }
     

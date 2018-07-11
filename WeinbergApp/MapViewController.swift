@@ -20,20 +20,21 @@ class MapViewController: UIViewController, MKMapViewDelegate, UITableViewDelegat
     @IBOutlet weak var tableViewAreas: UITableView!
     @IBOutlet weak var addAreaTextField: UITextField!
     @IBOutlet weak var addNewArea: UIButton!
-
+    @IBOutlet weak var showAllAreasBtn: UIButton!
+    @IBOutlet weak var removerPinBtn: UIButton!
+    
     private let location = CLLocation(latitude: 49.9667396, longitude: 7.9045959999999695)
-    private var addPoinsEnabled = false
     private var points = [MKPointAnnotation]()
     private var points2D = [CLLocationCoordinate2D]()
     private var areas = [Area]()
     private let fader = ViewFader.init()
-    private var showTableView = false
     private var entryList = [Entry]()
+    private var addPoinsEnabled = false
+    private var showTableView = false
     private var mapLoaded = false
+    private let borderColor = UIColor.lightGray.cgColor
+
     
-    @IBAction func logoutBtn(_ sender: Any) {
-         performSegue(withIdentifier: "segueLogout", sender: self)
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,28 +42,42 @@ class MapViewController: UIViewController, MKMapViewDelegate, UITableViewDelegat
         tableViewAreas.delegate = self
         tableViewAreas.dataSource = self
         mapView.delegate = self
+        addAreaTextField.layer.borderColor = borderColor
+        addNewArea.layer.borderColor = borderColor
+        showAllAreasBtn.layer.borderColor = UIColor.white.withAlphaComponent(0).cgColor
+        removerPinBtn.layer.borderColor = borderColor
+        
+        addAreaTextField.layer.borderWidth = 1
+        addNewArea.layer.borderWidth = 1
+        showAllAreasBtn.layer.borderWidth = 2
+        removerPinBtn.layer.borderWidth = 1
+        
+     
+        addAreaOptionsStackView2.sendSubview(toBack: addAreaOptionsStackView)
         if(mapLoaded){
             loadAreasFromRealm()
         }
-        
-        
     }
     
-   
+    @IBAction func logoutBtn(_ sender: Any) {
+        performSegue(withIdentifier: "segueLogout", sender: self)
+    }
+    
     @IBAction func longPressGesture(_ sender: UILongPressGestureRecognizer) {
         if(addPoinsEnabled && sender.state == UIGestureRecognizerState.began){
             let location = sender.location(in: self.mapView)
             let coordinate = self.mapView.convert(location, toCoordinateFrom: self.mapView)
             let annotation = MKPointAnnotation()
             
+            
             annotation.coordinate = coordinate
+           
             self.mapView.addAnnotation(annotation)
             points.append(annotation)
             points2D.append(coordinate)
             if(points.count > 2){
                 addNewArea.isEnabled = true
             }
-            
         }
     }
 
@@ -74,7 +89,10 @@ class MapViewController: UIViewController, MKMapViewDelegate, UITableViewDelegat
         } else {
             fader.fade(mode: ViewFader.FadeMode.OUT, view: self.addAreaOptionsStackView)
             fader.fade(mode: ViewFader.FadeMode.OUT, view: self.addAreaOptionsStackView2)
+            fader.fade(mode: ViewFader.FadeMode.OUT, view: self.tableViewAreas)
             addPoinsEnabled = false
+            showTableView = false
+            
         }
     }
     
@@ -132,7 +150,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, UITableViewDelegat
            
             var pointsString = ""
             self.points2D.forEach({ (e) in
-                let coordinate: String = e.latitude.description+":"+e.longitude.description+" "
+                let coordinate: String = e.latitude.description+":"+e.longitude.description+" " // Punkte werden in Form "lat1:long1 lat2:long2 "... 
                 pointsString.append(coordinate)
             })
             
@@ -208,10 +226,17 @@ class MapViewController: UIViewController, MKMapViewDelegate, UITableViewDelegat
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
-        guard let areaFirstPoint = entryList[indexPath.row].points else {return}
-        let lat = areaFirstPoint.split(separator: " ")[0].split(separator: ":")[0]
-        let long = areaFirstPoint.split(separator: " ")[0].split(separator: ":")[1]
-        centerMapOnLocation(location: CLLocation.init(latitude: (lat as NSString).doubleValue, longitude: (long as NSString).doubleValue), dist: 500)
+        guard let areaPoints = entryList[indexPath.row].points else {return}
+        let latFirstPoint = areaPoints.split(separator: " ")[0].split(separator: ":")[0]
+        let longFirstPoint = areaPoints.split(separator: " ")[0].split(separator: ":")[1]
+        
+        let latThirdPoint = areaPoints.split(separator: " ")[2].split(separator: ":")[0]
+        let longThirdPoint = areaPoints.split(separator: " ")[2].split(separator: ":")[1]
+        
+        let areaCenterLat = ((latFirstPoint as NSString).doubleValue + (latThirdPoint as NSString).doubleValue) / 2
+        let areaCenterLong = ((longFirstPoint as NSString).doubleValue + (longThirdPoint as NSString).doubleValue) / 2
+        
+        centerMapOnLocation(location: CLLocation.init(latitude: areaCenterLat-0.00045, longitude: areaCenterLong), dist: 500) // -0.00045 : um das gewählte Feld über die TabelView zu heben
     }
 
     @IBAction func longPressDeleteArea(_ sender: UILongPressGestureRecognizer) {
@@ -220,18 +245,16 @@ class MapViewController: UIViewController, MKMapViewDelegate, UITableViewDelegat
             
             let touchPoint = sender.location(in: self.tableViewAreas)
             if let indexPath = tableViewAreas.indexPathForRow(at: touchPoint) {
-    
-                
-            
                 guard let area = entryList[indexPath.row].areaName else {return}
+                
                 let alert = UIAlertController(title: "Feld "+area + " löschen?", message: "", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "löschen", style: .default, handler: { (nil) in
-                let db = RealmHelper()
-                db.deleteArea(entry: self.entryList[indexPath.row])
-                self.loadAreasFromRealm()
-            }))
-            alert.addAction(UIAlertAction(title: "zurück", style: .default, handler: nil))
-            self.present(alert, animated: true)
+                alert.addAction(UIAlertAction(title: "löschen", style: .default, handler: { (nil) in
+                    let db = RealmHelper()
+                    db.deleteArea(entry: self.entryList[indexPath.row])
+                    self.loadAreasFromRealm()
+                }))
+                alert.addAction(UIAlertAction(title: "zurück", style: .default, handler: nil))
+                self.present(alert, animated: true)
             
             }
             

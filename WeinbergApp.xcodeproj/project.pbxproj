@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		39560AEA78172287F393228B /* Pods_WeinbergAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78DE4BF54729DF01B7554F41 /* Pods_WeinbergAppUITests.framework */; };
 		460E0EEC20E4F7B8007962EC /* ScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460E0EEB20E4F7B8007962EC /* ScannerViewController.swift */; };
+		464BF45020F63185006700EF /* CustomPin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464BF44F20F63185006700EF /* CustomPin.swift */; };
 		4662C90520F4A4190049F73A /* Area.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4662C90420F4A4190049F73A /* Area.swift */; };
 		46842A0E20F2551D00510AD6 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46842A0C20F2551D00510AD6 /* Realm.framework */; };
 		46842A0F20F2551D00510AD6 /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 46842A0C20F2551D00510AD6 /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -73,6 +74,7 @@
 		22F85F1D752867D440BB9F93 /* Pods-WeinbergAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeinbergAppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WeinbergAppTests/Pods-WeinbergAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		268A4CEB2612CA762BAF512D /* Pods-WeinbergApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeinbergApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-WeinbergApp/Pods-WeinbergApp.release.xcconfig"; sourceTree = "<group>"; };
 		460E0EEB20E4F7B8007962EC /* ScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerViewController.swift; sourceTree = "<group>"; };
+		464BF44F20F63185006700EF /* CustomPin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPin.swift; sourceTree = "<group>"; };
 		4662C90420F4A4190049F73A /* Area.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Area.swift; sourceTree = "<group>"; };
 		468429F920F249BB00510AD6 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = "../../Downloads/realm-swift-3.7.4/ios/swift-4.1/Realm.framework"; sourceTree = "<group>"; };
 		468429FA20F249BB00510AD6 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = "../../Downloads/realm-swift-3.7.4/ios/swift-4.1/RealmSwift.framework"; sourceTree = "<group>"; };
@@ -190,6 +192,7 @@
 				4685F86D20F3716F0007BBEF /* UIInputChecker.swift */,
 				4685F86F20F3F6EE0007BBEF /* ViewFader.swift */,
 				4662C90420F4A4190049F73A /* Area.swift */,
+				464BF44F20F63185006700EF /* CustomPin.swift */,
 			);
 			path = WeinbergApp;
 			sourceTree = "<group>";
@@ -502,6 +505,7 @@
 				46A0D73420D7D65A00B0BEDA /* Entry.swift in Sources */,
 				4662C90520F4A4190049F73A /* Area.swift in Sources */,
 				460E0EEC20E4F7B8007962EC /* ScannerViewController.swift in Sources */,
+				464BF45020F63185006700EF /* CustomPin.swift in Sources */,
 				46A0D72A20D6F55900B0BEDA /* MapViewController.swift in Sources */,
 				46A0D72C20D6F59600B0BEDA /* CaptureViewController.swift in Sources */,
 				85168A1A20EBA99F00CB2AB5 /* RealmHelper.swift in Sources */,
@@ -610,7 +614,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -664,7 +668,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -678,13 +682,16 @@
 			baseConfigurationReference = 13EC386D60B9B77DAE212E98 /* Pods-WeinbergApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
 				"FRAMEWORK_SEARCH_PATHS[arch=*]" = "$(PROJECT_DIR)";
 				INFOPLIST_FILE = WeinbergApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -692,6 +699,7 @@
 				NEW_SETTING = "";
 				PRODUCT_BUNDLE_IDENTIFIER = chistopToelkes.WeinbergApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -702,13 +710,16 @@
 			baseConfigurationReference = 268A4CEB2612CA762BAF512D /* Pods-WeinbergApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
 				"FRAMEWORK_SEARCH_PATHS[arch=*]" = "$(PROJECT_DIR)";
 				INFOPLIST_FILE = WeinbergApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -716,6 +727,7 @@
 				NEW_SETTING = "";
 				PRODUCT_BUNDLE_IDENTIFIER = chistopToelkes.WeinbergApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
