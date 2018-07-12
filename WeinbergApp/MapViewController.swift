@@ -162,7 +162,6 @@ class MapViewController: UIViewController, MKMapViewDelegate, UITableViewDelegat
             self.tableViewAreas.reloadData()
             self.loadAreasFromRealm()
             
-            
             self.addAreaOptionsStackView.isHidden = true
             self.addAreaOptionsStackView2.isHidden = true
             self.addPoinsEnabled = false
@@ -170,13 +169,15 @@ class MapViewController: UIViewController, MKMapViewDelegate, UITableViewDelegat
             self.points2D = []
             self.points = []
         }))
-        alert.addAction(UIAlertAction(title: "zurück", style: .default, handler: nil))
+        alert.addAction(UIAlertAction(title: "zurück", style: .default, handler: { (nil) in
+        
+            self.tableViewAreas.reloadData()
+            self.loadAreasFromRealm()
+            self.addNewArea.isEnabled = false
+            self.points2D = []
+            self.points = []
+        }))
         self.present(alert, animated: true)
-        
-        
-  
-        
-    
     }
     
     @IBAction func showAllFAreasBtn(_ sender: Any) {
@@ -212,8 +213,6 @@ class MapViewController: UIViewController, MKMapViewDelegate, UITableViewDelegat
         mapView.setRegion(coordinateRegion, animated: true)
     }
     
-    
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return entryList.count
     }
@@ -238,15 +237,14 @@ class MapViewController: UIViewController, MKMapViewDelegate, UITableViewDelegat
         
         centerMapOnLocation(location: CLLocation.init(latitude: areaCenterLat-0.00045, longitude: areaCenterLong), dist: 500) // -0.00045 : um das gewählte Feld über die TabelView zu heben
     }
-
-    @IBAction func longPressDeleteArea(_ sender: UILongPressGestureRecognizer) {
+    @IBAction func deleteAreaLongPress(_ sender: UILongPressGestureRecognizer) {
         if sender.state == UIGestureRecognizerState.began {
-
             
+            print("dvewvw")
             let touchPoint = sender.location(in: self.tableViewAreas)
             if let indexPath = tableViewAreas.indexPathForRow(at: touchPoint) {
                 guard let area = entryList[indexPath.row].areaName else {return}
-                
+                print("dvewvw")
                 let alert = UIAlertController(title: "Feld "+area + " löschen?", message: "", preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "löschen", style: .default, handler: { (nil) in
                     let db = RealmHelper()
@@ -255,16 +253,24 @@ class MapViewController: UIViewController, MKMapViewDelegate, UITableViewDelegat
                 }))
                 alert.addAction(UIAlertAction(title: "zurück", style: .default, handler: nil))
                 self.present(alert, animated: true)
-            
             }
-            
-                
-            
+        }
+
+    }
+    
+    @IBAction func tapOnMapView(_ sender: UITapGestureRecognizer) {
+        if(showTableView){
+            fader.fade(mode: ViewFader.FadeMode.OUT, view: self.tableViewAreas)
+            showTableView = false
+            return
+        }
+        if(points2D.count == 0){
+            fader.fade(mode: ViewFader.FadeMode.OUT, view: self.addAreaOptionsStackView)
+            fader.fade(mode: ViewFader.FadeMode.OUT, view: self.addAreaOptionsStackView2)
+            addPoinsEnabled = false
+        }
     }
     
     
     
-}
-
-
 }

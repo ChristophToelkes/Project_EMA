@@ -251,6 +251,7 @@
 				4694C97220D5261D005C5F97 /* Resources */,
 				0C213F21E7D336BE3F89E957 /* [CP] Embed Pods Frameworks */,
 				46842A1220F2551D00510AD6 /* Embed Frameworks */,
+				464BF45120F77750006700EF /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -411,6 +412,19 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WeinbergAppTests/Pods-WeinbergAppTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		464BF45120F77750006700EF /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "";
 		};
 		900537DFEDFF8D6F2BA70D6F /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
