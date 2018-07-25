@@ -20,7 +20,7 @@ class CaptureViewController: UIViewController, UITableViewDelegate, UITableViewD
                                                         "Pflanzenschutz",
                                                         "Traubenlese",
                                                         "Tresterausbringung",
-                                                        "Sonstiges"],["Thermische Aufwände", "Elektrische Aufwände", "Stoffströme"])
+                                                        "Sonstiges"],["Thermischer Aufwand", "Elektrischer Aufwand", "Stoffströme"])
     private let listIcons = [[UIImage]](arrayLiteral: [#imageLiteral(resourceName: "laub Kopie"), #imageLiteral(resourceName: "duengen Kopie"), #imageLiteral(resourceName: "feld Kopie"), #imageLiteral(resourceName: "holz Kopie"), #imageLiteral(resourceName: "pflanze2 Kopie"), #imageLiteral(resourceName: "feld Kopie"), #imageLiteral(resourceName: "pflanzenschutz Kopie"), #imageLiteral(resourceName: "trauben Kopie"), #imageLiteral(resourceName: "pflanze Kopie"), #imageLiteral(resourceName: "fass Kopie")], [#imageLiteral(resourceName: "stone-oven"), #imageLiteral(resourceName: "lightning-electric-energy"), #imageLiteral(resourceName: "oil")])
     private let sectionTitle = ["Arbeitsgänge", "Aufwände"]
     
@@ -62,7 +62,7 @@ class CaptureViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destination = segue.destination as? AddCaptureViewController{
-            destination.element = listElements[0][(tableView.indexPathForSelectedRow?.row)!]
+            destination.element = listElements[(tableView.indexPathForSelectedRow?.section)!][(tableView.indexPathForSelectedRow?.row)!]
         }
     }
     

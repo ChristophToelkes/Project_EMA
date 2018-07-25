@@ -45,6 +45,15 @@ class AddCaptureViewController: UIViewController, UITableViewDataSource, UITable
         } else if(element == "Pflanzenschutz") {
             changeEntry = true
             performSegue(withIdentifier: "segueToPflanzenschutzAddEntryView", sender: self)
+            
+        } else if(element == "Thermischer Aufwand" || element == "Stoffströme") {
+            changeEntry = true
+            performSegue(withIdentifier: "segueToMaterialFlowViewController", sender: self)
+            
+        } else if(element == "Elektrischer Aufwand") {
+            changeEntry = true
+            performSegue(withIdentifier: "segueToAddElectricalEquipmentViewController", sender: self)
+            
         } else {
             changeEntry = true
             performSegue(withIdentifier: "segueToAddEntryView", sender: self)
@@ -59,6 +68,10 @@ class AddCaptureViewController: UIViewController, UITableViewDataSource, UITable
             prepareDuengung(for: segue, sender: sender)
         } else if(element == "Pflanzenschutz") {
             preparePflanzenschutz(for: segue, sender: sender)
+        } else if(element == "Thermischer Aufwand" || element == "Stoffströme") {
+           prepareMaterialFlows(for: segue, sender: sender)
+        } else if(element == "Elektrischer Aufwand") {
+            prepareElectricalEquipment(for: segue, sender: sender)
         } else {
             prepareGeneral(for: segue, sender: sender)
         }
@@ -66,6 +79,28 @@ class AddCaptureViewController: UIViewController, UITableViewDataSource, UITable
     
     func prepareGeneral(for segue: UIStoryboardSegue, sender: Any?) {
         if let destination = segue.destination as? AddEntryViewController{
+            if changeEntry {
+                destination.entry = entryList[(tableView.indexPathForSelectedRow?.row)!]
+                changeEntry = false
+            } else {
+                destination.captureType = element
+            }
+        }
+    }
+    
+    func prepareElectricalEquipment(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? AddElectricalEquipmentViewController{
+            if changeEntry {
+                destination.entry = entryList[(tableView.indexPathForSelectedRow?.row)!]
+                changeEntry = false
+            } else {
+                destination.captureType = element
+            }
+        }
+    }
+    
+    func prepareMaterialFlows(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? AddMaterialFlowsORThermalViewController{
             if changeEntry {
                 destination.entry = entryList[(tableView.indexPathForSelectedRow?.row)!]
                 changeEntry = false
@@ -102,6 +137,10 @@ class AddCaptureViewController: UIViewController, UITableViewDataSource, UITable
             performSegue(withIdentifier: "segueToDuengungAddEntryView", sender: self)
         } else if (element == "Pflanzenschutz"){
             performSegue(withIdentifier: "segueToPflanzenschutzAddEntryView", sender: self)
+        } else if(element == "Thermischer Aufwand" || element == "Stoffströme") {
+            performSegue(withIdentifier: "segueToMaterialFlowViewController", sender: self)
+        } else if(element == "Elektrischer Aufwand") {
+            performSegue(withIdentifier: "segueToAddElectricalEquipmentViewController", sender: self)
         } else {
             performSegue(withIdentifier: "segueToAddEntryView", sender: self)
         }

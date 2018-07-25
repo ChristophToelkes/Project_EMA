@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		39560AEA78172287F393228B /* Pods_WeinbergAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78DE4BF54729DF01B7554F41 /* Pods_WeinbergAppUITests.framework */; };
 		460E0EEC20E4F7B8007962EC /* ScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460E0EEB20E4F7B8007962EC /* ScannerViewController.swift */; };
+		462BB81E2108A0970017678A /* AddElectricalEquipmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462BB81D2108A0970017678A /* AddElectricalEquipmentViewController.swift */; };
+		462BB8202108A1020017678A /* AddMaterialFlowsORThermalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462BB81F2108A1020017678A /* AddMaterialFlowsORThermalViewController.swift */; };
 		464BF45020F63185006700EF /* CustomPin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464BF44F20F63185006700EF /* CustomPin.swift */; };
 		4662C90520F4A4190049F73A /* Area.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4662C90420F4A4190049F73A /* Area.swift */; };
 		46842A0E20F2551D00510AD6 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46842A0C20F2551D00510AD6 /* Realm.framework */; };
@@ -74,6 +76,8 @@
 		22F85F1D752867D440BB9F93 /* Pods-WeinbergAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeinbergAppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WeinbergAppTests/Pods-WeinbergAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		268A4CEB2612CA762BAF512D /* Pods-WeinbergApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeinbergApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-WeinbergApp/Pods-WeinbergApp.release.xcconfig"; sourceTree = "<group>"; };
 		460E0EEB20E4F7B8007962EC /* ScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerViewController.swift; sourceTree = "<group>"; };
+		462BB81D2108A0970017678A /* AddElectricalEquipmentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddElectricalEquipmentViewController.swift; sourceTree = "<group>"; };
+		462BB81F2108A1020017678A /* AddMaterialFlowsORThermalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMaterialFlowsORThermalViewController.swift; sourceTree = "<group>"; };
 		464BF44F20F63185006700EF /* CustomPin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPin.swift; sourceTree = "<group>"; };
 		4662C90420F4A4190049F73A /* Area.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Area.swift; sourceTree = "<group>"; };
 		468429F920F249BB00510AD6 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = "../../Downloads/realm-swift-3.7.4/ios/swift-4.1/Realm.framework"; sourceTree = "<group>"; };
@@ -193,6 +197,8 @@
 				4685F86F20F3F6EE0007BBEF /* ViewFader.swift */,
 				4662C90420F4A4190049F73A /* Area.swift */,
 				464BF44F20F63185006700EF /* CustomPin.swift */,
+				462BB81D2108A0970017678A /* AddElectricalEquipmentViewController.swift */,
+				462BB81F2108A1020017678A /* AddMaterialFlowsORThermalViewController.swift */,
 			);
 			path = WeinbergApp;
 			sourceTree = "<group>";
@@ -511,6 +517,7 @@
 				46E50EED20D545FE00F93167 /* ShakeAnimationHelper.swift in Sources */,
 				4685F86E20F3716F0007BBEF /* UIInputChecker.swift in Sources */,
 				46A0D73620D7EC6B00B0BEDA /* AddEntryViewController.swift in Sources */,
+				462BB8202108A1020017678A /* AddMaterialFlowsORThermalViewController.swift in Sources */,
 				85AC848720E3ADA40080505A /* DuengungAddEntryViewController.swift in Sources */,
 				4685F87020F3F6EE0007BBEF /* ViewFader.swift in Sources */,
 				4694C97820D5261D005C5F97 /* AppDelegate.swift in Sources */,
@@ -521,6 +528,7 @@
 				460E0EEC20E4F7B8007962EC /* ScannerViewController.swift in Sources */,
 				464BF45020F63185006700EF /* CustomPin.swift in Sources */,
 				46A0D72A20D6F55900B0BEDA /* MapViewController.swift in Sources */,
+				462BB81E2108A0970017678A /* AddElectricalEquipmentViewController.swift in Sources */,
 				46A0D72C20D6F59600B0BEDA /* CaptureViewController.swift in Sources */,
 				85168A1A20EBA99F00CB2AB5 /* RealmHelper.swift in Sources */,
 			);
