@@ -40,6 +40,56 @@ class RealmHelper {
         }
     }
     
+    func addThermal(jahr: String, beschreibung: String, Verbrauch: String, captureType: String) {
+        
+        let newEntry = ThermalEntry()
+        newEntry.captureType = captureType
+        newEntry.Jahr = jahr
+        newEntry.Beschreibung = beschreibung
+        newEntry.Verbrauch = Verbrauch
+        
+        
+        try! realm.write {
+            realm.add(newEntry)
+        }
+    }
+    
+    func addMaterial(jahr: String, beschreibung: String, Verbrauch: String, captureType: String) {
+        
+        let newEntry = MaterialEntry()
+        newEntry.captureType = captureType
+        newEntry.Jahr = jahr
+        newEntry.Beschreibung = beschreibung
+        newEntry.Verbrauch = Verbrauch
+        
+        
+        try! realm.write {
+            realm.add(newEntry)
+        }
+    }
+    
+    
+    func addEnergy(jahr: String, beschreibung: String, Verbraucher: String, aspekt: String, captureType: String, kwh: String, leistung: String, laufzeit: String) {
+        
+        let newEntry = EnergyEntry()
+        newEntry.captureType = captureType
+        newEntry.Jahr = jahr
+        newEntry.Aspekt = aspekt
+        newEntry.Verbraucher = Verbraucher
+        newEntry.kwh = kwh
+        newEntry.Leistung = leistung
+        newEntry.Laufzeit = laufzeit
+        
+        
+        
+        try! realm.write {
+            realm.add(newEntry)
+        }
+    }
+    
+    
+    
+    
     func addTraubenlese(captureType: String, benutzer: String, feld: String, arbeitszeit: String, datum: String, durchfuehrung: String) {
 
         
@@ -103,22 +153,169 @@ class RealmHelper {
             entries = getPflanzenschutzEntries(results: getPflanzenschutzObjects(type: type))
         case "Area":
             entries = getAreaEntries(results: getAreaObjects(type: type))
+        case "Stoffstöme":
+            entries = getMaterialEntries(results: getMaterialObjects(type: type))
+        case "Elektrischer Aufwand":
+            entries = getEnergyEntries(results: getEnergyObjects(type: type))
+        case "Thermischer Aufwand":
+            entries = getThermalEntries(results: getThermalObjects(type: type))
         default:
             entries = []
         }
         return entries
     }
     
+    func getMaterialObjects(type: String) -> Results<MaterialEntry> {
+        
+        return realm.objects(MaterialEntry.self).filter("captureType = '" + type + "'")
+    }
+    
+    func getMaterialEntries(results: Results<MaterialEntry>) -> [Entry] {
+        var entries: [Entry] = []
+        
+        for i in 0..<results.count {
+            let entry = Entry(areaName: nil,
+                              points:nil,
+                              verbraucher: nil,
+                              verbrauch: results[i].Verbrauch,
+                              jahr: results[i].Jahr,
+                              aspekt: nil,
+                              kwh: nil,
+                              leistung: nil,
+                              laufzeit: nil,
+                              beschreibung: results[i].Beschreibung,
+                              user: nil,
+                              date: nil,
+                              field: nil,
+                              hours: nil,
+                              captureType: nil,
+                              durchfuehrung: nil,
+                              duengemittel: nil,
+                              mengeDuengemittel: nil,
+                              gegen: nil,
+                              mittel: nil,
+                              termin: nil,
+                              info: nil,
+                              mengePflanzenschutzmittel: nil)
+            entries.append(entry)
+        }
+        
+        return entries
+    }
+    
+    func getThermalObjects(type: String) -> Results<ThermalEntry> {
+        
+        return realm.objects(ThermalEntry.self).filter("captureType = '" + type + "'")
+    }
+    
+    func getThermalEntries(results: Results<ThermalEntry>) -> [Entry] {
+        var entries: [Entry] = []
+        
+        for i in 0..<results.count {
+            let entry = Entry(areaName: nil,
+                              points:nil,
+                              verbraucher: nil,
+                              verbrauch: results[i].Verbrauch,
+                              jahr: results[i].Jahr,
+                              aspekt: nil,
+                              kwh: nil,
+                              leistung: nil,
+                              laufzeit: nil,
+                              beschreibung: results[i].Beschreibung,
+                              user: nil,
+                              date: nil,
+                              field: nil,
+                              hours: nil,
+                              captureType: nil,
+                              durchfuehrung: nil,
+                              duengemittel: nil,
+                              mengeDuengemittel: nil,
+                              gegen: nil,
+                              mittel: nil,
+                              termin: nil,
+                              info: nil,
+                              mengePflanzenschutzmittel: nil)
+            entries.append(entry)
+        }
+        
+        return entries
+    }
+    
+    func getEnergyObjects(type: String) -> Results<EnergyEntry> {
+        
+        return realm.objects(EnergyEntry.self).filter("captureType = '" + type + "'")
+    }
+    
+    func getEnergyEntries(results: Results<EnergyEntry>) -> [Entry] {
+        var entries: [Entry] = []
+        
+        for i in 0..<results.count {
+            let entry = Entry(areaName: nil,
+                              points:nil,
+                              verbraucher: results[i].Verbraucher,
+                              verbrauch: nil,
+                              jahr: results[1].Jahr,
+                              aspekt: results[1].Aspekt,
+                              kwh: results[i].kwh,
+                              leistung: results[i].Leistung,
+                              laufzeit: results[i].Laufzeit,
+                              beschreibung: nil,
+                              user: nil,
+                              date: nil,
+                              field: nil,
+                              hours: nil,
+                              captureType: nil,
+                              durchfuehrung: nil,
+                              duengemittel: nil,
+                              mengeDuengemittel: nil,
+                              gegen: nil,
+                              mittel: nil,
+                              termin: nil,
+                              info: nil,
+                              mengePflanzenschutzmittel: nil)
+            entries.append(entry)
+        }
+        
+        return entries
+    }
+    
+    
+    
+    
+    
     func getTraubenleseObjects(type: String) -> Results<TraubenleseEntry> {
         
         return realm.objects(TraubenleseEntry.self).filter("captureType = '" + type + "'")
     }
     
+    
     func getTraubenleseEntries(results: Results<TraubenleseEntry>) -> [Entry] {
         var entries: [Entry] = []
         
         for i in 0..<results.count {
-            let entry = Entry(areaName: nil, points:nil, user: results[i].Benutzer, date: results[i].Datum, field: results[i].Feld, hours: results[i].Arbeitszeit, captureType: results[i].captureType, durchfuehrung: results[i].durchfuehrung, duengemittel: nil, mengeDuengemittel: nil, gegen: nil, mittel: nil, termin: nil, info: nil, mengePflanzenschutzmittel: nil)
+            let entry = Entry(areaName: nil,
+                              points:nil,
+                              verbraucher: nil,
+                              verbrauch: nil,
+                              jahr: nil,
+                              aspekt: nil,
+                              kwh: nil,
+                              leistung: nil,
+                              laufzeit: nil,
+                              beschreibung: nil,
+                              user: results[i].Benutzer,
+                              date: results[i].Datum,
+                              field: results[i].Feld,
+                              hours: results[i].Arbeitszeit,
+                              captureType: results[i].captureType,
+                              durchfuehrung: results[i].durchfuehrung,
+                              duengemittel: nil,
+                              mengeDuengemittel: nil,
+                              gegen: nil,
+                              mittel: nil,
+                              termin: nil,
+                              info: nil,
+                              mengePflanzenschutzmittel: nil)
             entries.append(entry)
         }
         
@@ -134,7 +331,29 @@ class RealmHelper {
         var entries: [Entry] = []
         
         for i in 0..<results.count {
-            let entry = Entry(areaName: results[i].areaName, points: results[i].points, user: nil, date: nil, field: nil, hours: nil, captureType: results[i].captureType, durchfuehrung: nil, duengemittel: nil, mengeDuengemittel: nil, gegen: nil, mittel: nil, termin: nil, info: nil, mengePflanzenschutzmittel: nil)
+            let entry = Entry(areaName: results[i].areaName,
+                              points: results[i].points,
+                              verbraucher: nil,
+                              verbrauch: nil,
+                              jahr: nil,
+                              aspekt: nil,
+                              kwh: nil,
+                              leistung: nil,
+                              laufzeit: nil,
+                              beschreibung: nil,
+                              user: nil,
+                              date: nil,
+                              field: nil,
+                              hours: nil,
+                              captureType: results[i].captureType,
+                              durchfuehrung: nil,
+                              duengemittel: nil,
+                              mengeDuengemittel: nil,
+                              gegen: nil,
+                              mittel: nil,
+                              termin: nil,
+                              info: nil,
+                              mengePflanzenschutzmittel: nil)
             entries.append(entry)
         }
         
@@ -150,7 +369,29 @@ class RealmHelper {
         var entries: [Entry] = []
         
         for i in 0..<results.count {
-            let entry = Entry(areaName: nil, points: nil, user: results[i].Benutzer, date: results[i].Datum, field: results[i].Feld, hours: results[i].Arbeitszeit, captureType: results[i].captureType, durchfuehrung: nil, duengemittel: results[i].duengemittel, mengeDuengemittel: results[i].mengeDuengemittel, gegen: nil, mittel: nil, termin: nil, info: nil, mengePflanzenschutzmittel: nil)
+            let entry = Entry(areaName: nil,
+                              points: nil,
+                              verbraucher: nil,
+                              verbrauch: nil,
+                              jahr: nil,
+                              aspekt: nil,
+                              kwh: nil,
+                              leistung: nil,
+                              laufzeit: nil,
+                              beschreibung: nil,
+                              user: results[i].Benutzer,
+                              date: results[i].Datum,
+                              field: results[i].Feld,
+                              hours: results[i].Arbeitszeit,
+                              captureType: results[i].captureType,
+                              durchfuehrung: nil,
+                              duengemittel: results[i].duengemittel,
+                              mengeDuengemittel: results[i].mengeDuengemittel,
+                              gegen: nil,
+                              mittel: nil,
+                              termin: nil,
+                              info: nil,
+                              mengePflanzenschutzmittel: nil)
             entries.append(entry)
         }
         
@@ -166,7 +407,29 @@ class RealmHelper {
         var entries: [Entry] = []
         
         for i in 0..<results.count {
-            let entry = Entry(areaName: nil, points: nil, user: results[i].Benutzer, date: results[i].Datum, field: results[i].Feld, hours: results[i].Arbeitszeit, captureType: results[i].captureType, durchfuehrung: nil, duengemittel: nil, mengeDuengemittel: nil, gegen: results[i].gegen, mittel: results[i].mittel, termin: results[i].termin, info: results[i].info, mengePflanzenschutzmittel: results[i].mengePflanzenschutzmittel)
+            let entry = Entry(areaName: nil,
+                              points: nil,
+                              verbraucher: nil,
+                              verbrauch: nil,
+                              jahr: nil,
+                              aspekt: nil,
+                              kwh: nil,
+                              leistung: nil,
+                              laufzeit: nil,
+                              beschreibung: nil,
+                              user: results[i].Benutzer,
+                              date: results[i].Datum,
+                              field: results[i].Feld,
+                              hours: results[i].Arbeitszeit,
+                              captureType: results[i].captureType,
+                              durchfuehrung: nil,
+                              duengemittel: nil,
+                              mengeDuengemittel: nil,
+                              gegen: results[i].gegen,
+                              mittel: results[i].mittel,
+                              termin: results[i].termin,
+                              info: results[i].info,
+                              mengePflanzenschutzmittel: results[i].mengePflanzenschutzmittel)
             entries.append(entry)
         }
         
@@ -182,7 +445,29 @@ class RealmHelper {
         var entries: [Entry] = []
         
         for i in 0..<results.count {
-            let entry = Entry(areaName: nil, points: nil, user: results[i].Benutzer, date: results[i].Datum, field: results[i].Feld, hours: results[i].Arbeitszeit, captureType: results[i].captureType, durchfuehrung: nil, duengemittel: nil, mengeDuengemittel: nil, gegen: nil, mittel: nil, termin: nil, info: nil, mengePflanzenschutzmittel: nil)
+            let entry = Entry(areaName: nil,
+                              points: nil,
+                              verbraucher: nil,
+                              verbrauch: nil,
+                              jahr: nil,
+                              aspekt: nil,
+                              kwh: nil,
+                              leistung: nil,
+                              laufzeit: nil,
+                              beschreibung: nil,
+                              user: results[i].Benutzer,
+                              date: results[i].Datum,
+                              field: results[i].Feld,
+                              hours: results[i].Arbeitszeit,
+                              captureType: results[i].captureType,
+                              durchfuehrung: nil,
+                              duengemittel: nil,
+                              mengeDuengemittel: nil,
+                              gegen: nil,
+                              mittel: nil,
+                              termin: nil,
+                              info: nil,
+                              mengePflanzenschutzmittel: nil)
             entries.append(entry)
         }
         
@@ -194,6 +479,49 @@ class RealmHelper {
         let feldArbeitszeit = "Feld = '" + entry.getField() + "' AND Arbeitszeit = '" + String(entry.getHours()) + "'"
         var query = typeBenutzer + " AND " + feldArbeitszeit
         query += " AND Datum = '" + entry.getDate() + "'"
+        
+        let objects = realm.objects(GeneralEntry.self).filter(query)
+        
+        let object = objects.first
+        try! realm.write {
+            realm.delete(object!)
+        }
+    }
+    
+    func deleteThermal(entry: Entry) {
+        let typeBenutzer = "captureType = '" + entry.getCaptureType() + "' AND Jahr = '" + entry.getJahr() + "'"
+        let feldArbeitszeit = "Beschreibung = '" + entry.getBeschreibung() + "' AND Verbrauch = '" + entry.getVerbrauch() + "'"
+        let query = typeBenutzer + " AND " + feldArbeitszeit
+     
+        
+        let objects = realm.objects(ThermalEntry.self).filter(query)
+        
+        let object = objects.first
+        try! realm.write {
+            realm.delete(object!)
+        }
+    }
+    
+    func deleteMaterial(entry: Entry) {
+        let typeBenutzer = "captureType = '" + entry.getCaptureType() + "' AND Jahr = '" + entry.getJahr() + "'"
+        let feldArbeitszeit = "Beschreibung = '" + entry.getBeschreibung() + "' AND Verbrauch = '" + entry.getVerbrauch() + "'"
+        let query = typeBenutzer + " AND " + feldArbeitszeit
+        
+        
+        let objects = realm.objects(MaterialEntry.self).filter(query)
+        
+        let object = objects.first
+        try! realm.write {
+            realm.delete(object!)
+        }
+    }
+    
+    func deleteEnergy(entry: Entry) {
+        let typeBenutzer = "captureType = '" + entry.getCaptureType() + "' AND Jahr = '" + entry.getJahr() + "'"
+        let feldArbeitszeit = "Verbraucher = '" + entry.getVerbraucher() + "' AND Aspekt = '" + entry.getAspekt() + "'"
+        var query = typeBenutzer + " AND " + feldArbeitszeit
+        query += " AND kwh = '" + entry.getkwh() + " AND Leistung = " + entry.getLeistung() + "'"
+        query += " AND Laufzeit = '" + entry.getLaufzeit()
         
         let objects = realm.objects(GeneralEntry.self).filter(query)
         
@@ -261,6 +589,30 @@ class RealmHelper {
             realm.delete(object!)
         }
     }
+}
+
+class MaterialEntry: Object{
+    @objc dynamic var captureType = ""
+    @objc dynamic var Jahr = ""
+    @objc dynamic var Verbrauch = ""
+    @objc dynamic var Beschreibung = ""
+}
+
+class ThermalEntry: Object{
+    @objc dynamic var captureType = ""
+    @objc dynamic var Jahr = ""
+    @objc dynamic var Verbrauch = ""
+    @objc dynamic var Beschreibung = ""
+}
+
+class EnergyEntry: Object{
+    @objc dynamic var captureType = ""
+    @objc dynamic var Jahr = ""
+    @objc dynamic var Verbraucher = ""
+    @objc dynamic var Aspekt = ""
+    @objc dynamic var kwh = ""
+    @objc dynamic var Leistung = ""
+    @objc dynamic var Laufzeit = ""
 }
 
 class AreaEntry: Object{

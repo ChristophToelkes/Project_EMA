@@ -14,6 +14,16 @@ struct Entry{
     //Erfassung von Feldern
     var areaName: String?
     var points: String?
+    
+    //Thermale und Stoffströme
+    var verbraucher: String?
+    var verbrauch: String?
+    var jahr: String?
+    var aspekt: String?
+    var kwh: String?
+    var leistung: String?
+    var laufzeit: String?
+    var beschreibung: String?
 
     //Erfassung von Arbeiten
     var user: String?
@@ -32,7 +42,71 @@ struct Entry{
     var termin: String?
     var info: String?
     var mengePflanzenschutzmittel: String?
-   
+    
+    public func getVerbraucher() -> String{
+        if let returnValue = self.verbraucher {
+            return returnValue
+        } else {
+            return ""
+        }
+    }
+    
+    public func getVerbrauch() -> String{
+        if let returnValue = self.verbrauch {
+            return returnValue
+        } else {
+            return ""
+        }
+    }
+    
+    public func getJahr() -> String{
+        if let returnValue = self.jahr {
+            return returnValue
+        } else {
+            return ""
+        }
+    }
+    
+    public func getkwh() -> String{
+        if let returnValue = self.kwh {
+            return returnValue
+        } else {
+            return ""
+        }
+    }
+    
+    public func getLeistung() -> String{
+        if let returnValue = self.leistung {
+            return returnValue
+        } else {
+            return ""
+        }
+    }
+    
+    public func getLaufzeit() -> String{
+        if let returnValue = self.laufzeit {
+            return returnValue
+        } else {
+            return ""
+        }
+    }
+    
+    public func getAspekt() -> String{
+        if let returnValue = self.aspekt {
+            return returnValue
+        } else {
+            return ""
+        }
+    }
+    
+    public func getBeschreibung() -> String{
+        if let returnValue = self.beschreibung {
+            return returnValue
+        } else {
+            return ""
+        }
+    }
+    
     public func getAreaName() -> String{
         if let returnValue = self.areaName {
             return returnValue
@@ -153,6 +227,37 @@ struct Entry{
         }
     }
     
+    public mutating func setLeistung(leistung: String) {
+        self.leistung = leistung
+    }
+    
+    public mutating func setLaufzeit(laufzeit: String) {
+        self.laufzeit = laufzeit
+    }
+    
+    public mutating func setVerbraucher(verbraucher: String) {
+        self.verbraucher = verbraucher
+    }
+    
+    public mutating func setVerbrauch(verbrauch: String) {
+        self.verbrauch = verbrauch
+    }
+    
+    public mutating func setJahr(jahr: String) {
+        self.jahr = jahr
+    }
+    
+    public mutating func setKwf(kwh: String) {
+        self.kwh = kwh
+    }
+    
+    public mutating func setBeschreibung(beschreibung: String) {
+        self.beschreibung = beschreibung
+    }
+    
+    public mutating func setAspekt(aspekt: String) {
+        self.aspekt = aspekt
+    }
     
     public mutating func setAreaName(areaName: String) {
         self.areaName = areaName

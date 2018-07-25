@@ -184,6 +184,8 @@
 				46A0D73520D7EC6B00B0BEDA /* AddEntryViewController.swift */,
 				85AC848620E3ADA40080505A /* DuengungAddEntryViewController.swift */,
 				85AC848820E3B7DE0080505A /* PflanzenschutzAddEntryViewController.swift */,
+				462BB81D2108A0970017678A /* AddElectricalEquipmentViewController.swift */,
+				462BB81F2108A1020017678A /* AddMaterialFlowsORThermalViewController.swift */,
 				4694C97B20D5261D005C5F97 /* Main.storyboard */,
 				4694C97720D5261D005C5F97 /* AppDelegate.swift */,
 				4694C97E20D5261E005C5F97 /* Assets.xcassets */,
@@ -197,8 +199,6 @@
 				4685F86F20F3F6EE0007BBEF /* ViewFader.swift */,
 				4662C90420F4A4190049F73A /* Area.swift */,
 				464BF44F20F63185006700EF /* CustomPin.swift */,
-				462BB81D2108A0970017678A /* AddElectricalEquipmentViewController.swift */,
-				462BB81F2108A1020017678A /* AddMaterialFlowsORThermalViewController.swift */,
 			);
 			path = WeinbergApp;
 			sourceTree = "<group>";

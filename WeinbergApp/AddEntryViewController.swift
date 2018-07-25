@@ -35,7 +35,7 @@ class AddEntryViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
             captureType = entry.getCaptureType()
             headCaptureLabel.text =  entry.getCaptureType()
             
-            areas[areaPicker.selectedRow(inComponent: 0)] = entry.getField()
+    
             benutzerText.text = entry.getUser()
             arbeitszeitText.text = String(entry.getHours())
             
@@ -43,6 +43,10 @@ class AddEntryViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
             formatter.dateFormat = "yyyy-MM-dd"
             if let date = formatter.date(from: entry.getDate()){
                 datePicker.date = date
+            }
+            if (entry.getField().characters.count > 0){
+                areaPicker.selectRow(areas.index(of: entry.getField())!, inComponent: 0, animated: true)
+                
             }
         }
         

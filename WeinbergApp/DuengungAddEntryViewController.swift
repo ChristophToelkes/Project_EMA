@@ -35,7 +35,6 @@ class DuengungAddEntryViewController: UIViewController, UIPickerViewDelegate, UI
         if let entry = entry {
             captureType = entry.getCaptureType()
             headCaptureLabel.text =  entry.getCaptureType()
-            areas[areaPicker.selectedRow(inComponent: 0)] = entry.getField()
             benutzerText.text = entry.getUser()
             arbeitszeitText.text = String(entry.getHours())
             duengemittelText.text = entry.getDuengemittel()
@@ -46,6 +45,10 @@ class DuengungAddEntryViewController: UIViewController, UIPickerViewDelegate, UI
             if let date = formatter.date(from: entry.getDate()){
                 datePicker.date = date
             }
+            if (entry.getField().characters.count > 0){
+                areaPicker.selectRow(areas.index(of: entry.getField())!, inComponent: 0, animated: false)
+                
+            }
         }
     }
     
@@ -55,7 +58,7 @@ class DuengungAddEntryViewController: UIViewController, UIPickerViewDelegate, UI
         formatter.dateFormat = "yyyy-MM-dd"
         let date = formatter.string(from: datePicker.date)
         
-        if captureType != nil && benutzerText.text != nil && arbeitszeitText.text != nil && duengemittelText.text != nil && mengeDuengemittelText.text != nil && arbeitszeitText.text != nil && mengeDuengemittelText.text != nil{
+        if captureType != nil && benutzerText.text != nil && arbeitszeitText.text != nil && duengemittelText.text != nil && mengeDuengemittelText.text != nil && arbeitszeitText.text != nil && mengeDuengemittelText.text != nil && areas[areaPicker.selectedRow(inComponent: 0)].characters.count > 0{
             db.addDuengung(captureType: captureType!, benutzer: benutzerText.text!, feld: areas[areaPicker.selectedRow(inComponent: 0)], arbeitszeit: arbeitszeitText.text!, datum: date, duengemittel: duengemittelText.text!, mengeDuengemittel: mengeDuengemittelText.text!)
 
         }

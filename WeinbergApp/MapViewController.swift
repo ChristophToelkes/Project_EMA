@@ -60,6 +60,10 @@ class MapViewController: UIViewController, MKMapViewDelegate, UITableViewDelegat
         }
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        loadAreasFromRealm()
+    }
+    
     @IBAction func logoutBtn(_ sender: Any) {
         performSegue(withIdentifier: "segueLogout", sender: self)
     }

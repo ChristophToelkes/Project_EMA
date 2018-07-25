@@ -43,7 +43,7 @@ class PflanzenschutzAddEntryViewController: UIViewController, UIPickerViewDelega
         if let entry = entry {
             captureType = entry.getCaptureType()
             headCaptureLabel.text =  entry.getCaptureType()
-            areas[areaPicker.selectedRow(inComponent: 0)] = entry.getField()
+        
             benutzerText.text = entry.getUser()
             arbeitszeitText.text = entry.getHours()
             gegenText.text = entry.getGegen()
@@ -56,6 +56,10 @@ class PflanzenschutzAddEntryViewController: UIViewController, UIPickerViewDelega
             formatter.dateFormat = "yyyy-MM-dd"
             if let date = formatter.date(from: entry.getDate()){
                 datePicker.date = date
+            }
+            if (entry.getField().characters.count > 0){
+                areaPicker.selectRow(areas.index(of: entry.getField())!, inComponent: 0, animated: true)
+                
             }
         }
     }
