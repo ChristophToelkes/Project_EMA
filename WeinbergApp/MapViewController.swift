@@ -42,15 +42,16 @@ class MapViewController: UIViewController, MKMapViewDelegate, UITableViewDelegat
         tableViewAreas.delegate = self
         tableViewAreas.dataSource = self
         mapView.delegate = self
+        
         addAreaTextField.layer.borderColor = borderColor
         addNewArea.layer.borderColor = borderColor
-        showAllAreasBtn.layer.borderColor = UIColor.white.withAlphaComponent(0).cgColor
         removerPinBtn.layer.borderColor = borderColor
         
         addAreaTextField.layer.borderWidth = 1
         addNewArea.layer.borderWidth = 1
-        showAllAreasBtn.layer.borderWidth = 2
         removerPinBtn.layer.borderWidth = 1
+        
+       
         
      
         addAreaOptionsStackView2.sendSubview(toBack: addAreaOptionsStackView)

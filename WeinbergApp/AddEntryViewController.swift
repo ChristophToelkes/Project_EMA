@@ -9,14 +9,17 @@
 import Foundation
 import UIKit
 
-class AddEntryViewController: UIViewController {
+class AddEntryViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+  
     
     var entry: Entry?
     var captureType: String?
+    var areas = [String]()
     @IBOutlet weak var headCaptureLabel: UILabel!
     @IBOutlet weak var traubenleseDurchfuehrungView: UIStackView!
     @IBOutlet weak var datePicker: UIDatePicker!
-    @IBOutlet weak var feldText: UITextField!
+    
+    @IBOutlet weak var areaPicker: UIPickerView!
     @IBOutlet weak var benutzerText: UITextField!
     @IBOutlet weak var arbeitszeitText: UITextField!
     @IBOutlet weak var durchfuehrungText: UITextField!
@@ -24,12 +27,15 @@ class AddEntryViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         headCaptureLabel.text = captureType
+        loadAreasFromRealm()
+        self.areaPicker.delegate = self
+        self.areaPicker.dataSource = self
         
         if let entry = entry {
             captureType = entry.getCaptureType()
             headCaptureLabel.text =  entry.getCaptureType()
             
-            feldText.text = entry.getField()
+            areas[areaPicker.selectedRow(inComponent: 0)] = entry.getField()
             benutzerText.text = entry.getUser()
             arbeitszeitText.text = String(entry.getHours())
             
@@ -53,11 +59,11 @@ class AddEntryViewController: UIViewController {
         
         if captureType == "Traubenlese"{
             if durchfuehrungText.text != nil && benutzerText.text != nil && arbeitszeitText.text != nil && arbeitszeitText.text != nil{
-                db.addTraubenlese(captureType: captureType!, benutzer: benutzerText.text!, feld: feldText.text!, arbeitszeit: arbeitszeitText.text!, datum: date, durchfuehrung: durchfuehrungText.text!)
+                db.addTraubenlese(captureType: captureType!, benutzer: benutzerText.text!, feld: areas[areaPicker.selectedRow(inComponent: 0)], arbeitszeit: arbeitszeitText.text!, datum: date, durchfuehrung: durchfuehrungText.text!)
             }
         } else {
             if captureType != nil && benutzerText.text != nil && arbeitszeitText != nil && arbeitszeitText.text != nil{
-                db.addGeneral(captureType: captureType!, benutzer: benutzerText.text!, feld: feldText.text!, arbeitszeit: arbeitszeitText.text!, datum: date)
+                db.addGeneral(captureType: captureType!, benutzer: benutzerText.text!, feld: areas[areaPicker.selectedRow(inComponent: 0)], arbeitszeit: arbeitszeitText.text!, datum: date)
             }
         }
     }
@@ -108,5 +114,31 @@ class AddEntryViewController: UIViewController {
             return false;
         }
     }
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return areas.count
+    }
+  
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return areas[row]
+    }
+    
+    private func loadAreasFromRealm(){
+        var entryList = [Entry]()
+        let db = RealmHelper()
+        entryList = db.loadObjects(type: "Area")
+        
+        
+        entryList.forEach { (entry) in
+            areas.append(entry.areaName!)
+        }
+        areaPicker.reloadAllComponents()
+    }
+    
+    
     
 }

@@ -9,13 +9,15 @@
 import Foundation
 import UIKit
 
-class DuengungAddEntryViewController: UIViewController {
+class DuengungAddEntryViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     
     var entry: Entry?
     var captureType: String?
+    var areas = [String]()
     @IBOutlet weak var headCaptureLabel: UILabel!
     @IBOutlet weak var datePicker: UIDatePicker!
-    @IBOutlet weak var feldText: UITextField!
+
+    @IBOutlet weak var areaPicker: UIPickerView!
     @IBOutlet weak var benutzerText: UITextField!
     @IBOutlet weak var arbeitszeitText: UITextField!
     @IBOutlet weak var duengemittelText: UITextField!
@@ -25,10 +27,15 @@ class DuengungAddEntryViewController: UIViewController {
         super.viewDidLoad()
         headCaptureLabel.text = captureType
 
+
+        self.areaPicker.delegate = self
+        self.areaPicker.dataSource = self
+        loadAreasFromRealm()
+        
         if let entry = entry {
             captureType = entry.getCaptureType()
             headCaptureLabel.text =  entry.getCaptureType()
-            feldText.text = entry.getField()
+            areas[areaPicker.selectedRow(inComponent: 0)] = entry.getField()
             benutzerText.text = entry.getUser()
             arbeitszeitText.text = String(entry.getHours())
             duengemittelText.text = entry.getDuengemittel()
@@ -49,7 +56,7 @@ class DuengungAddEntryViewController: UIViewController {
         let date = formatter.string(from: datePicker.date)
         
         if captureType != nil && benutzerText.text != nil && arbeitszeitText.text != nil && duengemittelText.text != nil && mengeDuengemittelText.text != nil && arbeitszeitText.text != nil && mengeDuengemittelText.text != nil{
-            db.addDuengung(captureType: captureType!, benutzer: benutzerText.text!, feld: feldText.text!, arbeitszeit: arbeitszeitText.text!, datum: date, duengemittel: duengemittelText.text!, mengeDuengemittel: mengeDuengemittelText.text!)
+            db.addDuengung(captureType: captureType!, benutzer: benutzerText.text!, feld: areas[areaPicker.selectedRow(inComponent: 0)], arbeitszeit: arbeitszeitText.text!, datum: date, duengemittel: duengemittelText.text!, mengeDuengemittel: mengeDuengemittelText.text!)
 
         }
     }
@@ -86,5 +93,31 @@ class DuengungAddEntryViewController: UIViewController {
             destination.element = captureType
         }
     }
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return areas.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return areas[row]
+    }
+    
+    private func loadAreasFromRealm(){
+        var entryList = [Entry]()
+        let db = RealmHelper()
+        entryList = db.loadObjects(type: "Area")
+        
+        
+        entryList.forEach { (entry) in
+            areas.append(entry.areaName!)
+        }
+        areaPicker.reloadAllComponents()
+    }
+    
+    
     
 }

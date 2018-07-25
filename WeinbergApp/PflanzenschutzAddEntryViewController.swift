@@ -9,13 +9,15 @@
 import Foundation
 import UIKit
 
-class PflanzenschutzAddEntryViewController: UIViewController {
+class PflanzenschutzAddEntryViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     
     var entry: Entry?
     var captureType: String?
+    var areas = [String]()
     @IBOutlet weak var headCaptureLabel: UILabel!
     @IBOutlet weak var datePicker: UIDatePicker!
-    @IBOutlet weak var feldText: UITextField!
+ 
+    @IBOutlet weak var areaPicker: UIPickerView!
     @IBOutlet weak var benutzerText: UITextField!
     @IBOutlet weak var arbeitszeitText: UITextField!
     @IBOutlet weak var gegenText: UITextField!
@@ -27,14 +29,18 @@ class PflanzenschutzAddEntryViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.areaPicker.delegate = self
+        self.areaPicker.dataSource = self
+        
         scrollView.isScrollEnabled = true
         scrollView.contentSize = CGSize(width: 340, height: 600)
         headCaptureLabel.text = captureType
-        
+        loadAreasFromRealm()
         if let entry = entry {
             captureType = entry.getCaptureType()
             headCaptureLabel.text =  entry.getCaptureType()
-            feldText.text = entry.getField()
+            areas[areaPicker.selectedRow(inComponent: 0)] = entry.getField()
             benutzerText.text = entry.getUser()
             arbeitszeitText.text = entry.getHours()
             gegenText.text = entry.getGegen()
@@ -58,7 +64,7 @@ class PflanzenschutzAddEntryViewController: UIViewController {
         let date = formatter.string(from: datePicker.date)
         
         if captureType != nil && benutzerText.text != nil && arbeitszeitText.text != nil && gegenText.text != nil && mittelText.text != nil && terminText.text != nil && infoText.text != nil && mengePflanzenschutzmittelText.text != nil && arbeitszeitText.text != nil && mengePflanzenschutzmittelText.text != nil{
-                db.addPflanzenschutz(captureType: captureType!, benutzer: benutzerText.text!, feld: feldText.text!, arbeitszeit: arbeitszeitText.text!, datum: date, gegen: gegenText.text!, mittel: mittelText.text!, termin: terminText.text!, info: infoText.text!, mengePflanzenschutzmittel: mengePflanzenschutzmittelText.text!)
+                db.addPflanzenschutz(captureType: captureType!, benutzer: benutzerText.text!, feld: areas[areaPicker.selectedRow(inComponent: 0)], arbeitszeit: arbeitszeitText.text!, datum: date, gegen: gegenText.text!, mittel: mittelText.text!, termin: terminText.text!, info: infoText.text!, mengePflanzenschutzmittel: mengePflanzenschutzmittelText.text!)
         }
     }
     
@@ -93,5 +99,31 @@ class PflanzenschutzAddEntryViewController: UIViewController {
             destination.element = captureType
         }
     }
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return areas.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return areas[row]
+    }
+    
+    private func loadAreasFromRealm(){
+        var entryList = [Entry]()
+        let db = RealmHelper()
+        entryList = db.loadObjects(type: "Area")
+        
+        
+        entryList.forEach { (entry) in
+            areas.append(entry.areaName!)
+        }
+        areaPicker.reloadAllComponents()
+    }
+    
+    
     
 }
