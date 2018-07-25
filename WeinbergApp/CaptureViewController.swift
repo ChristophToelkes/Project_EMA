@@ -11,7 +11,7 @@ import UIKit
 
 class CaptureViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var tableView: UITableView!
-    private let listElements = [String](arrayLiteral: "Entlauben",
+    private let listElements = [[String]](arrayLiteral: ["Entlauben",
                                                         "Düngung",
                                                         "Grubbern",
                                                         "Rebholz hächseln",
@@ -20,8 +20,9 @@ class CaptureViewController: UIViewController, UITableViewDelegate, UITableViewD
                                                         "Pflanzenschutz",
                                                         "Traubenlese",
                                                         "Tresterausbringung",
-                                                        "Sonstiges")
-    private var listIcons = [UIImage](arrayLiteral: #imageLiteral(resourceName: "laub Kopie"), #imageLiteral(resourceName: "duengen Kopie"), #imageLiteral(resourceName: "feld Kopie"), #imageLiteral(resourceName: "holz Kopie"), #imageLiteral(resourceName: "pflanze2 Kopie"), #imageLiteral(resourceName: "feld Kopie"), #imageLiteral(resourceName: "pflanzenschutz Kopie"), #imageLiteral(resourceName: "trauben Kopie"), #imageLiteral(resourceName: "pflanze Kopie"), #imageLiteral(resourceName: "fass Kopie"))
+                                                        "Sonstiges"],["Thermische Aufwände", "Elektrische Aufwände", "Stoffströme"])
+    private let listIcons = [[UIImage]](arrayLiteral: [#imageLiteral(resourceName: "laub Kopie"), #imageLiteral(resourceName: "duengen Kopie"), #imageLiteral(resourceName: "feld Kopie"), #imageLiteral(resourceName: "holz Kopie"), #imageLiteral(resourceName: "pflanze2 Kopie"), #imageLiteral(resourceName: "feld Kopie"), #imageLiteral(resourceName: "pflanzenschutz Kopie"), #imageLiteral(resourceName: "trauben Kopie"), #imageLiteral(resourceName: "pflanze Kopie"), #imageLiteral(resourceName: "fass Kopie")], [#imageLiteral(resourceName: "stone-oven"), #imageLiteral(resourceName: "lightning-electric-energy"), #imageLiteral(resourceName: "oil")])
+    private let sectionTitle = ["Arbeitsgänge", "Aufwände"]
     
   
     
@@ -39,13 +40,17 @@ class CaptureViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return listElements.count
+        return listElements[section].count
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 2
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell")
-        cell?.textLabel?.text = listElements[indexPath.row]
-        cell?.imageView?.image = listIcons[indexPath.row]
+        cell?.textLabel?.text = listElements[indexPath.section][indexPath.row]
+        cell?.imageView?.image = listIcons[indexPath.section][indexPath.row]
         cell?.contentView.sizeToFit()
       
         return cell!
@@ -57,8 +62,13 @@ class CaptureViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destination = segue.destination as? AddCaptureViewController{
-            destination.element = listElements[(tableView.indexPathForSelectedRow?.row)!]
+            destination.element = listElements[0][(tableView.indexPathForSelectedRow?.row)!]
         }
+    }
+    
+
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return sectionTitle[section]
     }
  
     

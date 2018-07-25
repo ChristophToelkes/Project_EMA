@@ -17,6 +17,8 @@ class PflanzenschutzAddEntryViewController: UIViewController, UIPickerViewDelega
     @IBOutlet weak var headCaptureLabel: UILabel!
     @IBOutlet weak var datePicker: UIDatePicker!
  
+    @IBOutlet weak var contentView: UIView!
+ 
     @IBOutlet weak var areaPicker: UIPickerView!
     @IBOutlet weak var benutzerText: UITextField!
     @IBOutlet weak var arbeitszeitText: UITextField!
@@ -32,9 +34,10 @@ class PflanzenschutzAddEntryViewController: UIViewController, UIPickerViewDelega
         
         self.areaPicker.delegate = self
         self.areaPicker.dataSource = self
+      
         
         scrollView.isScrollEnabled = true
-        scrollView.contentSize = CGSize(width: 340, height: 600)
+        scrollView.contentSize = CGSize(width: 340, height: 2000)
         headCaptureLabel.text = captureType
         loadAreasFromRealm()
         if let entry = entry {
