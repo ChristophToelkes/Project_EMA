@@ -12,8 +12,10 @@ import UIKit
 class AddMaterialFlowsORThermalViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
    
     
+    @IBOutlet weak var dateTextField: UITextField!
     @IBOutlet weak var optionPicker: UIPickerView!
     
+    @IBOutlet weak var amountTextField: UITextField!
     @IBOutlet weak var titleLabel: UILabel!
     private var option = 0
     var entry: Entry?
@@ -47,6 +49,58 @@ class AddMaterialFlowsORThermalViewController: UIViewController, UIPickerViewDel
     }
     
     
+    
+    
+    @IBAction func deleteBtn(_ sender: Any) {
+        let alert = UIAlertController(title: "Eintrag löschen", message: "Möchten Sie diesen Eintrag wirklich löschen?", preferredStyle: .alert)
+        
+        alert.addAction(UIAlertAction(title: "Ja", style: .default, handler: { (nil) in
+            self.deleteEntry()
+        }))
+        alert.addAction(UIAlertAction(title: "Nein", style: .default, handler: nil))
+        self.present(alert, animated: true)
+    }
+    
+    func deleteEntry() {
+        let db = RealmHelper()
+        if let entry = entry {
+            if(option == 1){
+                 db.deleteThermal(entry: entry)
+            } else {
+                 db.deleteMaterial(entry: entry)
+            }
+           
+            performSegue(withIdentifier: "segueToAddCaptureView", sender: self)
+        } else {
+            _ = UIAlertController(title: "Eintrag löschen", message: "Löschen fehlgeschlagen", preferredStyle: .alert)
+            
+        }
+        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? AddCaptureViewController{
+            destination.element = captureType
+        }
+    }
+    
+
+    @IBAction func addBtn(_ sender: Any) {
+        let db = RealmHelper()
+       
+   
+        if (captureType == "Thermischer Aufwand") {
+            db.addThermal(jahr: dateTextField.text!, beschreibung: optionsMaterial[option][optionPicker.selectedRow(inComponent: 0)], Verbrauch: amountTextField.text!, captureType: captureType!)
+     
+            
+        } else if (captureType == "Stoffströme"){
+            db.addMaterial(jahr: dateTextField.text!, beschreibung: optionsMaterial[option][optionPicker.selectedRow(inComponent: 0)], Verbrauch: amountTextField.text!, captureType: captureType!)
+        
+        }
+    }
+    
+    
+    
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
        
@@ -59,4 +113,7 @@ class AddMaterialFlowsORThermalViewController: UIViewController, UIPickerViewDel
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
          return optionsMaterial[option][row]
     }
+    
+    
+
 }

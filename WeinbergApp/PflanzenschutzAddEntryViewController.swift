@@ -70,7 +70,7 @@ class PflanzenschutzAddEntryViewController: UIViewController, UIPickerViewDelega
         formatter.dateFormat = "yyyy-MM-dd"
         let date = formatter.string(from: datePicker.date)
         
-        if captureType != nil && benutzerText.text != nil && arbeitszeitText.text != nil && gegenText.text != nil && mittelText.text != nil && terminText.text != nil && infoText.text != nil && mengePflanzenschutzmittelText.text != nil && arbeitszeitText.text != nil && mengePflanzenschutzmittelText.text != nil{
+        if captureType != nil && areas.count > 0 && benutzerText.text != nil && arbeitszeitText.text != nil && gegenText.text != nil && mittelText.text != nil && terminText.text != nil && infoText.text != nil && mengePflanzenschutzmittelText.text != nil && arbeitszeitText.text != nil && mengePflanzenschutzmittelText.text != nil{
                 db.addPflanzenschutz(captureType: captureType!, benutzer: benutzerText.text!, feld: areas[areaPicker.selectedRow(inComponent: 0)], arbeitszeit: arbeitszeitText.text!, datum: date, gegen: gegenText.text!, mittel: mittelText.text!, termin: terminText.text!, info: infoText.text!, mengePflanzenschutzmittel: mengePflanzenschutzmittelText.text!)
         }
     }

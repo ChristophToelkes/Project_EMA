@@ -58,7 +58,7 @@ class DuengungAddEntryViewController: UIViewController, UIPickerViewDelegate, UI
         formatter.dateFormat = "yyyy-MM-dd"
         let date = formatter.string(from: datePicker.date)
         
-        if captureType != nil && benutzerText.text != nil && arbeitszeitText.text != nil && duengemittelText.text != nil && mengeDuengemittelText.text != nil && arbeitszeitText.text != nil && mengeDuengemittelText.text != nil && areas[areaPicker.selectedRow(inComponent: 0)].characters.count > 0{
+        if captureType != nil && benutzerText.text != nil && arbeitszeitText.text != nil && duengemittelText.text != nil && mengeDuengemittelText.text != nil && arbeitszeitText.text != nil && mengeDuengemittelText.text != nil && areas.count > 0{
             db.addDuengung(captureType: captureType!, benutzer: benutzerText.text!, feld: areas[areaPicker.selectedRow(inComponent: 0)], arbeitszeit: arbeitszeitText.text!, datum: date, duengemittel: duengemittelText.text!, mengeDuengemittel: mengeDuengemittelText.text!)
 
         }

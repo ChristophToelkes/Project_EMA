@@ -66,7 +66,7 @@ class AddEntryViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
                 db.addTraubenlese(captureType: captureType!, benutzer: benutzerText.text!, feld: areas[areaPicker.selectedRow(inComponent: 0)], arbeitszeit: arbeitszeitText.text!, datum: date, durchfuehrung: durchfuehrungText.text!)
             }
         } else {
-            if captureType != nil && benutzerText.text != nil && arbeitszeitText != nil && arbeitszeitText.text != nil{
+            if captureType != nil && benutzerText.text != nil && arbeitszeitText != nil && arbeitszeitText.text != nil && areas.count > 0{
                 db.addGeneral(captureType: captureType!, benutzer: benutzerText.text!, feld: areas[areaPicker.selectedRow(inComponent: 0)], arbeitszeit: arbeitszeitText.text!, datum: date)
             }
         }

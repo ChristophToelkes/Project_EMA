@@ -48,7 +48,6 @@ class RealmHelper {
         newEntry.Beschreibung = beschreibung
         newEntry.Verbrauch = Verbrauch
         
-        
         try! realm.write {
             realm.add(newEntry)
         }
@@ -68,8 +67,7 @@ class RealmHelper {
         }
     }
     
-    
-    func addEnergy(jahr: String, beschreibung: String, Verbraucher: String, aspekt: String, captureType: String, kwh: String, leistung: String, laufzeit: String) {
+    func addEnergy(jahr: String, Verbraucher: String, aspekt: String, captureType: String, kwh: String, leistung: String, laufzeit: String) {
         
         let newEntry = EnergyEntry()
         newEntry.captureType = captureType
@@ -80,15 +78,10 @@ class RealmHelper {
         newEntry.Leistung = leistung
         newEntry.Laufzeit = laufzeit
         
-        
-        
         try! realm.write {
             realm.add(newEntry)
         }
     }
-    
-    
-    
     
     func addTraubenlese(captureType: String, benutzer: String, feld: String, arbeitszeit: String, datum: String, durchfuehrung: String) {
 
@@ -153,7 +146,7 @@ class RealmHelper {
             entries = getPflanzenschutzEntries(results: getPflanzenschutzObjects(type: type))
         case "Area":
             entries = getAreaEntries(results: getAreaObjects(type: type))
-        case "Stoffstöme":
+        case "Stoffströme":
             entries = getMaterialEntries(results: getMaterialObjects(type: type))
         case "Elektrischer Aufwand":
             entries = getEnergyEntries(results: getEnergyObjects(type: type))
@@ -188,7 +181,7 @@ class RealmHelper {
                               date: nil,
                               field: nil,
                               hours: nil,
-                              captureType: nil,
+                              captureType: results[i].captureType,
                               durchfuehrung: nil,
                               duengemittel: nil,
                               mengeDuengemittel: nil,
@@ -226,7 +219,7 @@ class RealmHelper {
                               date: nil,
                               field: nil,
                               hours: nil,
-                              captureType: nil,
+                              captureType: results[i].captureType,
                               durchfuehrung: nil,
                               duengemittel: nil,
                               mengeDuengemittel: nil,
@@ -254,8 +247,8 @@ class RealmHelper {
                               points:nil,
                               verbraucher: results[i].Verbraucher,
                               verbrauch: nil,
-                              jahr: results[1].Jahr,
-                              aspekt: results[1].Aspekt,
+                              jahr: results[i].Jahr,
+                              aspekt: results[i].Aspekt,
                               kwh: results[i].kwh,
                               leistung: results[i].Leistung,
                               laufzeit: results[i].Laufzeit,
@@ -264,7 +257,7 @@ class RealmHelper {
                               date: nil,
                               field: nil,
                               hours: nil,
-                              captureType: nil,
+                              captureType: results[i].captureType,
                               durchfuehrung: nil,
                               duengemittel: nil,
                               mengeDuengemittel: nil,
@@ -279,15 +272,10 @@ class RealmHelper {
         return entries
     }
     
-    
-    
-    
-    
     func getTraubenleseObjects(type: String) -> Results<TraubenleseEntry> {
         
         return realm.objects(TraubenleseEntry.self).filter("captureType = '" + type + "'")
     }
-    
     
     func getTraubenleseEntries(results: Results<TraubenleseEntry>) -> [Entry] {
         var entries: [Entry] = []

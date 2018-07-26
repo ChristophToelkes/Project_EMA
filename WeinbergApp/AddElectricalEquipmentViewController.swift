@@ -39,6 +39,17 @@ class AddElectricalEquipmentViewController: UIViewController, UIPickerViewDataSo
         titleLabel.text = captureType
         optionPicker.delegate = self
         optionPicker.dataSource = self
+        
+        if let entry = entry {
+            captureType = entry.getCaptureType()
+            titleLabel.text =  entry.getCaptureType()
+            jearTestField.text = entry.getJahr()
+            kwhTestField.text = entry.getkwh()
+            powerTestField.text = entry.getLeistung()
+            timeTestField.text = entry.getLaufzeit()
+            optionPicker.selectRow(options.index(of: entry.getAspekt())!, inComponent: 0, animated: true)
+        
+        }
     }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -72,5 +83,48 @@ class AddElectricalEquipmentViewController: UIViewController, UIPickerViewDataSo
         }
     }
     
+    @IBAction func addBtn(_ sender: Any) {
+        let db = RealmHelper()
    
+        if(inputKWH){
+            db.addEnergy(jahr: jearTestField.text!, Verbraucher: consumerTextField.text!, aspekt: options[optionPicker.selectedRow(inComponent: 0)], captureType: captureType!, kwh: kwhTestField.text!, leistung: "", laufzeit: "")
+        } else {
+            db.addEnergy(jahr: jearTestField.text!, Verbraucher: consumerTextField.text!, aspekt: options[optionPicker.selectedRow(inComponent: 0)], captureType: captureType!, kwh: "", leistung: powerTestField.text!, laufzeit: timeTestField.text!)
+        }
+     
+   
+    }
+    
+    @IBAction func deleteEntryBtn(_ sender: Any) {
+        let alert = UIAlertController(title: "Eintrag löschen", message: "Möchten Sie diesen Eintrag wirklich löschen?", preferredStyle: .alert)
+        
+        alert.addAction(UIAlertAction(title: "Ja", style: .default, handler: { (nil) in
+            self.deleteEntry()
+        }))
+        alert.addAction(UIAlertAction(title: "Nein", style: .default, handler: nil))
+        self.present(alert, animated: true)
+    }
+    
+    func deleteEntry() {
+        let db = RealmHelper()
+        if let entry = entry {
+           
+            db.deleteEnergy(entry: entry)
+            
+            
+            performSegue(withIdentifier: "segueToAddCaptureView", sender: self)
+        } else {
+            _ = UIAlertController(title: "Eintrag löschen", message: "Löschen fehlgeschlagen", preferredStyle: .alert)
+            
+        }
+        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? AddCaptureViewController{
+            destination.element = captureType
+        }
+    }
+
+    
 }

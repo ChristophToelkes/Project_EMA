@@ -450,8 +450,7 @@
                                             <color key="titleColor" red="0.58081901069999997" green="0.088427625600000004" blue="0.31863921880000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="backBtn:" destination="mxH-RZ-U3P" eventType="touchUpInside" id="cZb-UF-6zG"/>
-                                            <segue destination="OkD-cb-Ojc" kind="show" id="Ph4-md-d3c"/>
+                                            <segue destination="OkD-cb-Ojc" kind="show" identifier="segueToAddCaptureView" id="Ph4-md-d3c"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WyY-LP-v6S">
@@ -459,7 +458,7 @@
                                         <color key="tintColor" red="0.58081901069999997" green="0.088427625600000004" blue="0.31863921880000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Löschen"/>
                                         <connections>
-                                            <action selector="PressDeleteButton:" destination="mxH-RZ-U3P" eventType="touchUpInside" id="kGJ-vS-rZH"/>
+                                            <action selector="deleteEntryBtn:" destination="Gjg-4t-c4H" eventType="touchUpInside" id="21W-md-jro"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="72E-c4-ahb">
@@ -470,7 +469,7 @@
                                             <color key="titleShadowColor" red="0.58081901069999997" green="0.088427625600000004" blue="0.31863921880000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="safeEntryBtn:" destination="mxH-RZ-U3P" eventType="touchUpInside" id="o28-6r-zTa"/>
+                                            <action selector="addBtn:" destination="Gjg-4t-c4H" eventType="touchUpInside" id="2xZ-xh-TCV"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -701,8 +700,7 @@
                                             <color key="titleColor" red="0.58081901069999997" green="0.088427625600000004" blue="0.31863921880000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="backBtn:" destination="mxH-RZ-U3P" eventType="touchUpInside" id="1iZ-OP-mik"/>
-                                            <segue destination="OkD-cb-Ojc" kind="show" id="bYh-WT-kak"/>
+                                            <segue destination="OkD-cb-Ojc" kind="show" identifier="segueToAddCaptureView" id="bYh-WT-kak"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4H8-TO-aaF">
@@ -710,7 +708,7 @@
                                         <color key="tintColor" red="0.58081901069999997" green="0.088427625600000004" blue="0.31863921880000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Löschen"/>
                                         <connections>
-                                            <action selector="PressDeleteButton:" destination="mxH-RZ-U3P" eventType="touchUpInside" id="HLq-9U-qz4"/>
+                                            <action selector="deleteBtn:" destination="2PI-yo-o1E" eventType="touchUpInside" id="Nnv-oK-glu"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lei-Ke-w0x">
@@ -721,7 +719,7 @@
                                             <color key="titleShadowColor" red="0.58081901069999997" green="0.088427625600000004" blue="0.31863921880000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="safeEntryBtn:" destination="mxH-RZ-U3P" eventType="touchUpInside" id="Jqn-uD-O2x"/>
+                                            <action selector="addBtn:" destination="2PI-yo-o1E" eventType="touchUpInside" id="TGh-i6-QfX"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -742,6 +740,8 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="amountTextField" destination="iBU-nd-iye" id="rWL-Yj-Dcz"/>
+                        <outlet property="dateTextField" destination="CEE-ay-BY3" id="9fs-L1-5py"/>
                         <outlet property="optionPicker" destination="qaF-6t-Jyg" id="0gQ-jc-qhl"/>
                         <outlet property="titleLabel" destination="yOW-8f-Vkq" id="Wiw-5a-DKC"/>
                     </connections>
@@ -1781,7 +1781,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="n5A-dJ-Kxq"/>
-        <segue reference="bYh-WT-kak"/>
+        <segue reference="Ph4-md-d3c"/>
         <segue reference="RGd-5a-Pau"/>
     </inferredMetricsTieBreakers>
 </document>
