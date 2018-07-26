@@ -12,7 +12,7 @@ import UIKit
 class AddElectricalEquipmentViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
     @IBOutlet weak var optionPicker: UIPickerView!
     @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var jearTestField: UITextField!
+    @IBOutlet weak var yearTestField: UITextField!
     @IBOutlet weak var kwhLabel: UILabel!
     @IBOutlet weak var kwhTestField: UITextField!
     @IBOutlet weak var consumerTextField: UITextField!
@@ -43,7 +43,7 @@ class AddElectricalEquipmentViewController: UIViewController, UIPickerViewDataSo
         if let entry = entry {
             captureType = entry.getCaptureType()
             titleLabel.text =  entry.getCaptureType()
-            jearTestField.text = entry.getJahr()
+            yearTestField.text = entry.getYear()
             kwhTestField.text = entry.getkwh()
             powerTestField.text = entry.getLeistung()
             timeTestField.text = entry.getLaufzeit()
@@ -87,9 +87,9 @@ class AddElectricalEquipmentViewController: UIViewController, UIPickerViewDataSo
         let db = RealmHelper()
    
         if(inputKWH){
-            db.addEnergy(jahr: jearTestField.text!, Verbraucher: consumerTextField.text!, aspekt: options[optionPicker.selectedRow(inComponent: 0)], captureType: captureType!, kwh: kwhTestField.text!, leistung: "", laufzeit: "")
+            db.addEnergy(year: yearTestField.text!, Consumptioner: consumerTextField.text!, aspekt: options[optionPicker.selectedRow(inComponent: 0)], captureType: captureType!, kwh: kwhTestField.text!, power: "", runtime: "")
         } else {
-            db.addEnergy(jahr: jearTestField.text!, Verbraucher: consumerTextField.text!, aspekt: options[optionPicker.selectedRow(inComponent: 0)], captureType: captureType!, kwh: "", leistung: powerTestField.text!, laufzeit: timeTestField.text!)
+            db.addEnergy(year: yearTestField.text!, Consumptioner: consumerTextField.text!, aspekt: options[optionPicker.selectedRow(inComponent: 0)], captureType: captureType!, kwh: "", power: powerTestField.text!, runtime: timeTestField.text!)
         }
      
    

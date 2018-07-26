@@ -16,14 +16,14 @@ struct Entry{
     var points: String?
     
     //Thermale und Stoffströme
-    var verbraucher: String?
-    var verbrauch: String?
-    var jahr: String?
+    var consumer: String?
+    var consumption: String?
+    var year: String?
     var aspekt: String?
     var kwh: String?
-    var leistung: String?
-    var laufzeit: String?
-    var beschreibung: String?
+    var power: String?
+    var runtime: String?
+    var description: String?
 
     //Erfassung von Arbeiten
     var user: String?
@@ -43,24 +43,24 @@ struct Entry{
     var info: String?
     var mengePflanzenschutzmittel: String?
     
-    public func getVerbraucher() -> String{
-        if let returnValue = self.verbraucher {
+    public func getConsumptioner() -> String{
+        if let returnValue = self.consumer {
             return returnValue
         } else {
             return ""
         }
     }
     
-    public func getVerbrauch() -> String{
-        if let returnValue = self.verbrauch {
+    public func getConsumption() -> String{
+        if let returnValue = self.consumption {
             return returnValue
         } else {
             return ""
         }
     }
     
-    public func getJahr() -> String{
-        if let returnValue = self.jahr {
+    public func getYear() -> String{
+        if let returnValue = self.year {
             return returnValue
         } else {
             return ""
@@ -76,7 +76,7 @@ struct Entry{
     }
     
     public func getLeistung() -> String{
-        if let returnValue = self.leistung {
+        if let returnValue = self.power {
             return returnValue
         } else {
             return ""
@@ -84,7 +84,7 @@ struct Entry{
     }
     
     public func getLaufzeit() -> String{
-        if let returnValue = self.laufzeit {
+        if let returnValue = self.runtime {
             return returnValue
         } else {
             return ""
@@ -99,8 +99,8 @@ struct Entry{
         }
     }
     
-    public func getBeschreibung() -> String{
-        if let returnValue = self.beschreibung {
+    public func getDescription() -> String{
+        if let returnValue = self.description {
             return returnValue
         } else {
             return ""
@@ -227,32 +227,32 @@ struct Entry{
         }
     }
     
-    public mutating func setLeistung(leistung: String) {
-        self.leistung = leistung
+    public mutating func setLeistung(power: String) {
+        self.power = power
     }
     
-    public mutating func setLaufzeit(laufzeit: String) {
-        self.laufzeit = laufzeit
+    public mutating func setLaufzeit(runtime: String) {
+        self.runtime = runtime
     }
     
-    public mutating func setVerbraucher(verbraucher: String) {
-        self.verbraucher = verbraucher
+    public mutating func setConsumptioner(consumer: String) {
+        self.consumer = consumer
     }
     
-    public mutating func setVerbrauch(verbrauch: String) {
-        self.verbrauch = verbrauch
+    public mutating func setConsumption(consumption: String) {
+        self.consumption = consumption
     }
     
-    public mutating func setJahr(jahr: String) {
-        self.jahr = jahr
+    public mutating func setYear(year: String) {
+        self.year = year
     }
     
     public mutating func setKwf(kwh: String) {
         self.kwh = kwh
     }
     
-    public mutating func setBeschreibung(beschreibung: String) {
-        self.beschreibung = beschreibung
+    public mutating func setDescription(description: String) {
+        self.description = description
     }
     
     public mutating func setAspekt(aspekt: String) {

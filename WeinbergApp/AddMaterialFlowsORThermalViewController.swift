@@ -90,11 +90,11 @@ class AddMaterialFlowsORThermalViewController: UIViewController, UIPickerViewDel
        
    
         if (captureType == "Thermischer Aufwand") {
-            db.addThermal(jahr: dateTextField.text!, beschreibung: optionsMaterial[option][optionPicker.selectedRow(inComponent: 0)], Verbrauch: amountTextField.text!, captureType: captureType!)
+            db.addThermal(year: dateTextField.text!, description: optionsMaterial[option][optionPicker.selectedRow(inComponent: 0)], Consumption: amountTextField.text!, captureType: captureType!)
      
             
         } else if (captureType == "Stoffströme"){
-            db.addMaterial(jahr: dateTextField.text!, beschreibung: optionsMaterial[option][optionPicker.selectedRow(inComponent: 0)], Verbrauch: amountTextField.text!, captureType: captureType!)
+            db.addMaterial(year: dateTextField.text!, description: optionsMaterial[option][optionPicker.selectedRow(inComponent: 0)], Consumption: amountTextField.text!, captureType: captureType!)
         
         }
     }

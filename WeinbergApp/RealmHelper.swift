@@ -40,26 +40,26 @@ class RealmHelper {
         }
     }
     
-    func addThermal(jahr: String, beschreibung: String, Verbrauch: String, captureType: String) {
+    func addThermal(year: String, description: String, Consumption: String, captureType: String) {
         
         let newEntry = ThermalEntry()
         newEntry.captureType = captureType
-        newEntry.Jahr = jahr
-        newEntry.Beschreibung = beschreibung
-        newEntry.Verbrauch = Verbrauch
+        newEntry.Year = year
+        newEntry.Description = description
+        newEntry.Consumption = Consumption
         
         try! realm.write {
             realm.add(newEntry)
         }
     }
     
-    func addMaterial(jahr: String, beschreibung: String, Verbrauch: String, captureType: String) {
+    func addMaterial(year: String, description: String, Consumption: String, captureType: String) {
         
         let newEntry = MaterialEntry()
         newEntry.captureType = captureType
-        newEntry.Jahr = jahr
-        newEntry.Beschreibung = beschreibung
-        newEntry.Verbrauch = Verbrauch
+        newEntry.Year = year
+        newEntry.Description = description
+        newEntry.Consumption = Consumption
         
         
         try! realm.write {
@@ -67,16 +67,16 @@ class RealmHelper {
         }
     }
     
-    func addEnergy(jahr: String, Verbraucher: String, aspekt: String, captureType: String, kwh: String, leistung: String, laufzeit: String) {
+    func addEnergy(year: String, Consumptioner: String, aspekt: String, captureType: String, kwh: String, power: String, runtime: String) {
         
         let newEntry = EnergyEntry()
         newEntry.captureType = captureType
-        newEntry.Jahr = jahr
+        newEntry.Year = year
         newEntry.Aspekt = aspekt
-        newEntry.Verbraucher = Verbraucher
+        newEntry.Consumptioner = Consumptioner
         newEntry.kwh = kwh
-        newEntry.Leistung = leistung
-        newEntry.Laufzeit = laufzeit
+        newEntry.Leistung = power
+        newEntry.Laufzeit = runtime
         
         try! realm.write {
             realm.add(newEntry)
@@ -169,14 +169,14 @@ class RealmHelper {
         for i in 0..<results.count {
             let entry = Entry(areaName: nil,
                               points:nil,
-                              verbraucher: nil,
-                              verbrauch: results[i].Verbrauch,
-                              jahr: results[i].Jahr,
+                              consumer: nil,
+                              consumption: results[i].Consumption,
+                              year: results[i].Year,
                               aspekt: nil,
                               kwh: nil,
-                              leistung: nil,
-                              laufzeit: nil,
-                              beschreibung: results[i].Beschreibung,
+                              power: nil,
+                              runtime: nil,
+                              description: results[i].Description,
                               user: nil,
                               date: nil,
                               field: nil,
@@ -207,14 +207,14 @@ class RealmHelper {
         for i in 0..<results.count {
             let entry = Entry(areaName: nil,
                               points:nil,
-                              verbraucher: nil,
-                              verbrauch: results[i].Verbrauch,
-                              jahr: results[i].Jahr,
+                              consumer: nil,
+                              consumption: results[i].Consumption,
+                              year: results[i].Year,
                               aspekt: nil,
                               kwh: nil,
-                              leistung: nil,
-                              laufzeit: nil,
-                              beschreibung: results[i].Beschreibung,
+                              power: nil,
+                              runtime: nil,
+                              description: results[i].Description,
                               user: nil,
                               date: nil,
                               field: nil,
@@ -245,14 +245,14 @@ class RealmHelper {
         for i in 0..<results.count {
             let entry = Entry(areaName: nil,
                               points:nil,
-                              verbraucher: results[i].Verbraucher,
-                              verbrauch: nil,
-                              jahr: results[i].Jahr,
+                              consumer: results[i].Consumptioner,
+                              consumption: nil,
+                              year: results[i].Year,
                               aspekt: results[i].Aspekt,
                               kwh: results[i].kwh,
-                              leistung: results[i].Leistung,
-                              laufzeit: results[i].Laufzeit,
-                              beschreibung: nil,
+                              power: results[i].Leistung,
+                              runtime: results[i].Laufzeit,
+                              description: nil,
                               user: nil,
                               date: nil,
                               field: nil,
@@ -283,14 +283,14 @@ class RealmHelper {
         for i in 0..<results.count {
             let entry = Entry(areaName: nil,
                               points:nil,
-                              verbraucher: nil,
-                              verbrauch: nil,
-                              jahr: nil,
+                              consumer: nil,
+                              consumption: nil,
+                              year: nil,
                               aspekt: nil,
                               kwh: nil,
-                              leistung: nil,
-                              laufzeit: nil,
-                              beschreibung: nil,
+                              power: nil,
+                              runtime: nil,
+                              description: nil,
                               user: results[i].Benutzer,
                               date: results[i].Datum,
                               field: results[i].Feld,
@@ -321,14 +321,14 @@ class RealmHelper {
         for i in 0..<results.count {
             let entry = Entry(areaName: results[i].areaName,
                               points: results[i].points,
-                              verbraucher: nil,
-                              verbrauch: nil,
-                              jahr: nil,
+                              consumer: nil,
+                              consumption: nil,
+                              year: nil,
                               aspekt: nil,
                               kwh: nil,
-                              leistung: nil,
-                              laufzeit: nil,
-                              beschreibung: nil,
+                              power: nil,
+                              runtime: nil,
+                              description: nil,
                               user: nil,
                               date: nil,
                               field: nil,
@@ -359,14 +359,14 @@ class RealmHelper {
         for i in 0..<results.count {
             let entry = Entry(areaName: nil,
                               points: nil,
-                              verbraucher: nil,
-                              verbrauch: nil,
-                              jahr: nil,
+                              consumer: nil,
+                              consumption: nil,
+                              year: nil,
                               aspekt: nil,
                               kwh: nil,
-                              leistung: nil,
-                              laufzeit: nil,
-                              beschreibung: nil,
+                              power: nil,
+                              runtime: nil,
+                              description: nil,
                               user: results[i].Benutzer,
                               date: results[i].Datum,
                               field: results[i].Feld,
@@ -397,14 +397,14 @@ class RealmHelper {
         for i in 0..<results.count {
             let entry = Entry(areaName: nil,
                               points: nil,
-                              verbraucher: nil,
-                              verbrauch: nil,
-                              jahr: nil,
+                              consumer: nil,
+                              consumption: nil,
+                              year: nil,
                               aspekt: nil,
                               kwh: nil,
-                              leistung: nil,
-                              laufzeit: nil,
-                              beschreibung: nil,
+                              power: nil,
+                              runtime: nil,
+                              description: nil,
                               user: results[i].Benutzer,
                               date: results[i].Datum,
                               field: results[i].Feld,
@@ -435,14 +435,14 @@ class RealmHelper {
         for i in 0..<results.count {
             let entry = Entry(areaName: nil,
                               points: nil,
-                              verbraucher: nil,
-                              verbrauch: nil,
-                              jahr: nil,
+                              consumer: nil,
+                              consumption: nil,
+                              year: nil,
                               aspekt: nil,
                               kwh: nil,
-                              leistung: nil,
-                              laufzeit: nil,
-                              beschreibung: nil,
+                              power: nil,
+                              runtime: nil,
+                              description: nil,
                               user: results[i].Benutzer,
                               date: results[i].Datum,
                               field: results[i].Feld,
@@ -477,8 +477,8 @@ class RealmHelper {
     }
     
     func deleteThermal(entry: Entry) {
-        let typeBenutzer = "captureType = '" + entry.getCaptureType() + "' AND Jahr = '" + entry.getJahr() + "'"
-        let feldArbeitszeit = "Beschreibung = '" + entry.getBeschreibung() + "' AND Verbrauch = '" + entry.getVerbrauch() + "'"
+        let typeBenutzer = "captureType = '" + entry.getCaptureType() + "' AND Year = '" + entry.getYear() + "'"
+        let feldArbeitszeit = "Description = '" + entry.getDescription() + "' AND Consumption = '" + entry.getConsumption() + "'"
         let query = typeBenutzer + " AND " + feldArbeitszeit
      
         
@@ -491,8 +491,8 @@ class RealmHelper {
     }
     
     func deleteMaterial(entry: Entry) {
-        let typeBenutzer = "captureType = '" + entry.getCaptureType() + "' AND Jahr = '" + entry.getJahr() + "'"
-        let feldArbeitszeit = "Beschreibung = '" + entry.getBeschreibung() + "' AND Verbrauch = '" + entry.getVerbrauch() + "'"
+        let typeBenutzer = "captureType = '" + entry.getCaptureType() + "' AND Year = '" + entry.getYear() + "'"
+        let feldArbeitszeit = "Description = '" + entry.getDescription() + "' AND Consumption = '" + entry.getConsumption() + "'"
         let query = typeBenutzer + " AND " + feldArbeitszeit
         
         
@@ -505,8 +505,8 @@ class RealmHelper {
     }
     
     func deleteEnergy(entry: Entry) {
-        let typeBenutzer = "captureType = '" + entry.getCaptureType() + "' AND Jahr = '" + entry.getJahr() + "'"
-        let feldArbeitszeit = "Verbraucher = '" + entry.getVerbraucher() + "' AND Aspekt = '" + entry.getAspekt() + "'"
+        let typeBenutzer = "captureType = '" + entry.getCaptureType() + "' AND Year = '" + entry.getYear() + "'"
+        let feldArbeitszeit = "Consumptioner = '" + entry.getConsumptioner() + "' AND Aspekt = '" + entry.getAspekt() + "'"
         var query = typeBenutzer + " AND " + feldArbeitszeit
         query += " AND kwh = '" + entry.getkwh() + " AND Leistung = " + entry.getLeistung() + "'"
         query += " AND Laufzeit = '" + entry.getLaufzeit()
@@ -581,22 +581,22 @@ class RealmHelper {
 
 class MaterialEntry: Object{
     @objc dynamic var captureType = ""
-    @objc dynamic var Jahr = ""
-    @objc dynamic var Verbrauch = ""
-    @objc dynamic var Beschreibung = ""
+    @objc dynamic var Year = ""
+    @objc dynamic var Consumption = ""
+    @objc dynamic var Description = ""
 }
 
 class ThermalEntry: Object{
     @objc dynamic var captureType = ""
-    @objc dynamic var Jahr = ""
-    @objc dynamic var Verbrauch = ""
-    @objc dynamic var Beschreibung = ""
+    @objc dynamic var Year = ""
+    @objc dynamic var Consumption = ""
+    @objc dynamic var Description = ""
 }
 
 class EnergyEntry: Object{
     @objc dynamic var captureType = ""
-    @objc dynamic var Jahr = ""
-    @objc dynamic var Verbraucher = ""
+    @objc dynamic var Year = ""
+    @objc dynamic var Consumptioner = ""
     @objc dynamic var Aspekt = ""
     @objc dynamic var kwh = ""
     @objc dynamic var Leistung = ""
