@@ -10,8 +10,9 @@ import Foundation
 import UIKit
 import MapKit
 import RealmSwift
+import CoreLocation
 
-class MapViewController: UIViewController, MKMapViewDelegate, UITableViewDelegate, UITableViewDataSource {
+class MapViewController: UIViewController, MKMapViewDelegate, UITableViewDelegate, UITableViewDataSource, CLLocationManagerDelegate {
    
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var addAreaOptionsStackView: UIStackView!
@@ -35,12 +36,13 @@ class MapViewController: UIViewController, MKMapViewDelegate, UITableViewDelegat
     private var showTableView = false
     private var mapLoaded = false
     private let borderColor = UIColor.lightGray.cgColor
+    private let locationManager = CLLocationManager()
 
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        centerMapOnLocation(location: location, dist: 2000)
+        
         tableViewAreas.delegate = self
         tableViewAreas.dataSource = self
         mapView.delegate = self
@@ -53,14 +55,27 @@ class MapViewController: UIViewController, MKMapViewDelegate, UITableViewDelegat
         addNewArea.layer.borderWidth = 1
         removerPinBtn.layer.borderWidth = 1
         
-       
         
+        self.locationManager.requestAlwaysAuthorization()
+        self.locationManager.requestWhenInUseAuthorization()
+        if CLLocationManager.locationServicesEnabled() {
+            locationManager.delegate = self
+            locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
+            locationManager.startUpdatingLocation()
+        }
      
         addAreaOptionsStackView2.sendSubview(toBack: addAreaOptionsStackView)
         if(mapLoaded){
             loadAreasFromRealm()
         }
     }
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        guard let locValue: CLLocationCoordinate2D = manager.location?.coordinate else { return }
+        centerMapOnLocation(location: CLLocation(latitude: locValue.latitude, longitude: locValue.longitude), dist: 1000)
+    }
+    
+    
     
     override func viewWillAppear(_ animated: Bool) {
         loadAreasFromRealm()
@@ -290,11 +305,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, UITableViewDelegat
             points2[i].latitude = points2[i].latitude * (Double.pi * 6378137 / 180)
             points2[i].longitude = points2[i].longitude * (Double.pi * 6378137 / 180)
         }
-        
-        
-        
-        
-        
+       
         for i in 0...points2.count-2 {
             temp += points2[i].latitude * points2[i+1].longitude
         }
