@@ -28,12 +28,13 @@ class RealmHelper {
         }
     }
     
-    func addArea(areaName: String, points: String, captureType: String) {
+    func addArea(areaName: String, points: String, captureType: String, size: String) {
         
         let newEntry = AreaEntry()
         newEntry.captureType = captureType
         newEntry.areaName = areaName
         newEntry.points = points
+        newEntry.areaSize = size
         
         try! realm.write {
             realm.add(newEntry)
@@ -169,6 +170,7 @@ class RealmHelper {
         for i in 0..<results.count {
             let entry = Entry(areaName: nil,
                               points:nil,
+                              areaSize: nil,
                               consumer: nil,
                               consumption: results[i].Consumption,
                               year: results[i].Year,
@@ -207,6 +209,7 @@ class RealmHelper {
         for i in 0..<results.count {
             let entry = Entry(areaName: nil,
                               points:nil,
+                              areaSize: nil,
                               consumer: nil,
                               consumption: results[i].Consumption,
                               year: results[i].Year,
@@ -245,6 +248,7 @@ class RealmHelper {
         for i in 0..<results.count {
             let entry = Entry(areaName: nil,
                               points:nil,
+                              areaSize: nil,
                               consumer: results[i].Consumptioner,
                               consumption: nil,
                               year: results[i].Year,
@@ -283,6 +287,7 @@ class RealmHelper {
         for i in 0..<results.count {
             let entry = Entry(areaName: nil,
                               points:nil,
+                              areaSize: nil,
                               consumer: nil,
                               consumption: nil,
                               year: nil,
@@ -321,6 +326,7 @@ class RealmHelper {
         for i in 0..<results.count {
             let entry = Entry(areaName: results[i].areaName,
                               points: results[i].points,
+                              areaSize: results[i].areaSize,
                               consumer: nil,
                               consumption: nil,
                               year: nil,
@@ -359,6 +365,7 @@ class RealmHelper {
         for i in 0..<results.count {
             let entry = Entry(areaName: nil,
                               points: nil,
+                              areaSize: nil,
                               consumer: nil,
                               consumption: nil,
                               year: nil,
@@ -397,6 +404,7 @@ class RealmHelper {
         for i in 0..<results.count {
             let entry = Entry(areaName: nil,
                               points: nil,
+                              areaSize: nil,
                               consumer: nil,
                               consumption: nil,
                               year: nil,
@@ -435,6 +443,7 @@ class RealmHelper {
         for i in 0..<results.count {
             let entry = Entry(areaName: nil,
                               points: nil,
+                              areaSize: nil,
                               consumer: nil,
                               consumption: nil,
                               year: nil,
@@ -607,6 +616,7 @@ class AreaEntry: Object{
     @objc dynamic var captureType = ""
     @objc dynamic var areaName = ""
     @objc dynamic var points = ""
+    @objc dynamic var areaSize = ""
 }
 
 class GeneralEntry: Object{

@@ -14,6 +14,7 @@ struct Entry{
     //Erfassung von Feldern
     var areaName: String?
     var points: String?
+    var areaSize: String?
     
     //Thermale und Stoffströme
     var consumer: String?

@@ -22,6 +22,8 @@ class MapViewController: UIViewController, MKMapViewDelegate, UITableViewDelegat
     @IBOutlet weak var addNewArea: UIButton!
     @IBOutlet weak var showAllAreasBtn: UIButton!
     @IBOutlet weak var removerPinBtn: UIButton!
+   
+    @IBOutlet weak var sizeAreaTextField: UILabel!
     
     private let location = CLLocation(latitude: 49.9667396, longitude: 7.9045959999999695)
     private var points = [MKPointAnnotation]()
@@ -160,7 +162,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, UITableViewDelegat
             })
             
             let db = RealmHelper()
-            db.addArea(areaName: self.addAreaTextField.text!, points: pointsString, captureType: "Area")
+            db.addArea(areaName: self.addAreaTextField.text!, points: pointsString, captureType: "Area", size: "\(self.areaSize(points: self.points2D))")
           
             
            
@@ -224,7 +226,8 @@ class MapViewController: UIViewController, MKMapViewDelegate, UITableViewDelegat
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell")
-        cell?.textLabel?.text = entryList[indexPath.row].areaName
+
+        cell?.textLabel?.text = entryList[indexPath.row].areaName! + " " + entryList[indexPath.row].areaSize! + "qm"
         cell?.contentView.sizeToFit()
         return cell!
     }
@@ -274,6 +277,35 @@ class MapViewController: UIViewController, MKMapViewDelegate, UITableViewDelegat
             fader.fade(mode: ViewFader.FadeMode.OUT, view: self.addAreaOptionsStackView2)
             addPoinsEnabled = false
         }
+    }
+    
+    private func areaSize(points: [CLLocationCoordinate2D]) -> Int{
+        var temp: Double = 0
+        var temp2: Double = 0
+        var result: Double = 0
+        var points2 = points
+        
+        
+        for i in 0...points.count-1 {
+            points2[i].latitude = points2[i].latitude * (Double.pi * 6378137 / 180)
+            points2[i].longitude = points2[i].longitude * (Double.pi * 6378137 / 180)
+        }
+        
+        
+        
+        
+        
+        for i in 0...points2.count-2 {
+            temp += points2[i].latitude * points2[i+1].longitude
+        }
+        temp += points2[points2.count-1].latitude * points2[0].longitude
+        for i in 0...points2.count-2 {
+            temp2 += points2[i].longitude * points2[i+1].latitude
+        }
+        temp2 += points2[points2.count-1].longitude * points2[0].latitude
+        result = temp - temp2
+     
+        return abs(Int(result / 2))
     }
     
     
