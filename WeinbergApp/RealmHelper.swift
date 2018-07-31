@@ -517,10 +517,10 @@ class RealmHelper {
         let typeBenutzer = "captureType = '" + entry.getCaptureType() + "' AND Year = '" + entry.getYear() + "'"
         let feldArbeitszeit = "Consumptioner = '" + entry.getConsumptioner() + "' AND Aspekt = '" + entry.getAspekt() + "'"
         var query = typeBenutzer + " AND " + feldArbeitszeit
-        query += " AND kwh = '" + entry.getkwh() + " AND Leistung = " + entry.getLeistung() + "'"
-        query += " AND Laufzeit = '" + entry.getLaufzeit()
+        query += " AND kwh = '" + entry.getkwh() + "' AND Leistung = '" + entry.getLeistung() + "'"
+        query += " AND Laufzeit = '" + entry.getLaufzeit() + "'"
         
-        let objects = realm.objects(GeneralEntry.self).filter(query)
+        let objects = realm.objects(EnergyEntry.self).filter(query)
         
         let object = objects.first
         try! realm.write {
