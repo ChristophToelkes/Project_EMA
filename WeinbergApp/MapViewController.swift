@@ -40,6 +40,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, UITableViewDelegat
 
     
     
+    /// Setzt Constraints und fordert die gespeicherten Areale an.
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -70,6 +71,11 @@ class MapViewController: UIViewController, MKMapViewDelegate, UITableViewDelegat
         }
     }
     
+    /// Zentralisiert die MapView auf einem angegebenen Punkt.
+    ///
+    /// - Parameters:
+    ///   - manager: Der LocationManager
+    ///   - locations: Der Punkt, auf dem zentralisiert wird
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard let locValue: CLLocationCoordinate2D = manager.location?.coordinate else { return }
         centerMapOnLocation(location: CLLocation(latitude: locValue.latitude, longitude: locValue.longitude), dist: 1000)
@@ -77,14 +83,23 @@ class MapViewController: UIViewController, MKMapViewDelegate, UITableViewDelegat
     
     
     
+    /// Fordert die gespeicherten Areale an.
+    ///
+    /// - Parameter animated: <#animated description#>
     override func viewWillAppear(_ animated: Bool) {
         loadAreasFromRealm()
     }
     
+    /// Leitet den Nutzer zum LogIn Bildschirm
+    ///
+    /// - Parameter sender: Der gedrückte Button
     @IBAction func logoutBtn(_ sender: Any) {
         performSegue(withIdentifier: "segueLogout", sender: self)
     }
     
+    /// Fügt Eckpunkte für die Arealmarkierung auf der Karte ein.
+    /// Ermöglicht das Speichern eines Areals ab 3 Punkten.
+    /// - Parameter sender: Der auf der Karte gedrückte Punkt
     @IBAction func longPressGesture(_ sender: UILongPressGestureRecognizer) {
         if(addPoinsEnabled && sender.state == UIGestureRecognizerState.began){
             let location = sender.location(in: self.mapView)
@@ -103,6 +118,9 @@ class MapViewController: UIViewController, MKMapViewDelegate, UITableViewDelegat
         }
     }
 
+    /// Zeigt ein Areal an oder blendet es aus.
+    ///
+    /// - Parameter sender: Der gedrückte Button
     @IBAction func addArea(_ sender: Any) {
         if(!addPoinsEnabled){
             fader.fade(mode: ViewFader.FadeMode.IN, view: self.addAreaOptionsStackView)
@@ -118,6 +136,9 @@ class MapViewController: UIViewController, MKMapViewDelegate, UITableViewDelegat
         }
     }
     
+    /// Entfernt einen Eckpunkt von der Karte.
+    /// Deaktiviert das Speichern eines Areals, bei weniger als 3 Eckpunkten.
+    /// - Parameter sender: Der gedrückte Punkt
     @IBAction func undoPoint(_ sender: Any) {
         guard let p = points.popLast() else {
             return
@@ -129,11 +150,15 @@ class MapViewController: UIViewController, MKMapViewDelegate, UITableViewDelegat
         }
     }
     
+    /// Fordert Areale an und setzt das mapLoaded Flag.
+    ///
+    /// - Parameter mapView: Die angezeigte MapView
     func mapViewDidFinishLoadingMap(_ mapView: MKMapView) {
         loadAreasFromRealm()
         mapLoaded = true
     }
     
+    /// Lädt die gespeicherten Areale aus der Datenbank.
     private func loadAreasFromRealm(){
         entryList = []
         let db = RealmHelper()
@@ -161,6 +186,9 @@ class MapViewController: UIViewController, MKMapViewDelegate, UITableViewDelegat
     }
  
     
+    /// Ermöglicht die Speicherung eines eingezeichneten Areals in der Datenbank.
+    ///
+    /// - Parameter sender: Der gedrückte Button
     @IBAction func saveNewArea(_ sender: Any) {
         
         let polygon =  self.points2D.map{_ in MKPolygon(coordinates: self.points2D, count: self.points2D.count)}
@@ -202,6 +230,9 @@ class MapViewController: UIViewController, MKMapViewDelegate, UITableViewDelegat
         self.present(alert, animated: true)
     }
     
+    /// Zeigt alle gespeicherten Areale an oder blendet sie aus.
+    ///
+    /// - Parameter sender: Der gedrückte Button
     @IBAction func showAllFAreasBtn(_ sender: Any) {
         if(!showTableView){
             self.tableViewAreas.reloadData()
@@ -214,6 +245,12 @@ class MapViewController: UIViewController, MKMapViewDelegate, UITableViewDelegat
         
     }
     
+    /// Gibt den entsprechenden Renderer zurück, zum zeichnen der Areale.
+    ///
+    /// - Parameters:
+    ///   - mapView: Die MapView, auf der gezeichnet wird
+    ///   - overlay: Die Art, was gezeichnet werden soll
+    /// - Returns: Der Renderer
     func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
         if overlay is MKPolyline {
             let renderer = MKPolylineRenderer(overlay: overlay)
@@ -230,6 +267,11 @@ class MapViewController: UIViewController, MKMapViewDelegate, UITableViewDelegat
         return MKOverlayRenderer()
     }
     
+    /// Positioniert die Map auf einem Punkt.
+    ///
+    /// - Parameters:
+    ///   - location: Der Punkt, auf dem positioniert werden soll.
+    ///   - dist: Die Zoomstufe
     private func centerMapOnLocation(location: CLLocation, dist: CLLocationDistance) {
         let coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate, dist, dist)
         mapView.setRegion(coordinateRegion, animated: true)
@@ -260,6 +302,9 @@ class MapViewController: UIViewController, MKMapViewDelegate, UITableViewDelegat
         
         centerMapOnLocation(location: CLLocation.init(latitude: areaCenterLat-0.00045, longitude: areaCenterLong), dist: 500) // -0.00045 : um das gewählte Feld über die TabelView zu heben
     }
+    /// Entfernt ein Areal aus der Datenbank.
+    ///
+    /// - Parameter sender: Der gedrückte Button.
     @IBAction func deleteAreaLongPress(_ sender: UILongPressGestureRecognizer) {
         if sender.state == UIGestureRecognizerState.began {
             
