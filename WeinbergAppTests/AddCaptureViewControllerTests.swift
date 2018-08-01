@@ -23,11 +23,12 @@ class AddCaptureViewControllerTests: XCTestCase {
     
     func testAddCaptureViewController() {
         //given
-        let sut = MockAddCaptureViewController()
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let sut = storyboard.instantiateViewController(withIdentifier: "AddCaptureViewControllerID") as! AddCaptureViewController
         //when
-        sut.viewDidLoad()
+        _ = sut.view
         //then
-        XCTAssertEqual(sut.loadEntriesCounter, 1)
+        XCTAssert(sut.tableView.numberOfSections == 1)
     }
     
     func testPerformanceExample() {

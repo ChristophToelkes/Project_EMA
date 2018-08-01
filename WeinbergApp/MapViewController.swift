@@ -34,7 +34,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, UITableViewDelegat
     private var entryList = [Entry]()
     private var addPoinsEnabled = false
     private var showTableView = false
-    private var mapLoaded = false
+    public var mapLoaded = false
     private let borderColor = UIColor.lightGray.cgColor
     private let locationManager = CLLocationManager()
 

@@ -32,8 +32,8 @@
 		85554A702111B7D600C8ADEE /* ScannerViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85554A6F2111B7D600C8ADEE /* ScannerViewControllerTests.swift */; };
 		85554A722111B81100C8ADEE /* MockScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85554A712111B81100C8ADEE /* MockScannerViewController.swift */; };
 		85AA53F92111D079007A49AC /* AddCaptureViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AA53F82111D079007A49AC /* AddCaptureViewControllerTests.swift */; };
-		85AA53FD2111D11F007A49AC /* MockAddCaptureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AA53FC2111D11F007A49AC /* MockAddCaptureViewController.swift */; };
 		85AA53FF2111D27D007A49AC /* CaptureViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AA53FE2111D27D007A49AC /* CaptureViewControllerTests.swift */; };
+		85AA54032111D4B1007A49AC /* MapViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AA54022111D4B1007A49AC /* MapViewControllerTests.swift */; };
 		85AC848720E3ADA40080505A /* DuengungAddEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AC848620E3ADA40080505A /* DuengungAddEntryViewController.swift */; };
 		85AC848920E3B7DE0080505A /* PflanzenschutzAddEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AC848820E3B7DE0080505A /* PflanzenschutzAddEntryViewController.swift */; };
 		85CCB7C92110824F00469922 /* RealmHelperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85CCB7C82110824F00469922 /* RealmHelperTests.swift */; };
@@ -111,8 +111,8 @@
 		85554A6F2111B7D600C8ADEE /* ScannerViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerViewControllerTests.swift; sourceTree = "<group>"; };
 		85554A712111B81100C8ADEE /* MockScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockScannerViewController.swift; sourceTree = "<group>"; };
 		85AA53F82111D079007A49AC /* AddCaptureViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCaptureViewControllerTests.swift; sourceTree = "<group>"; };
-		85AA53FC2111D11F007A49AC /* MockAddCaptureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAddCaptureViewController.swift; sourceTree = "<group>"; };
 		85AA53FE2111D27D007A49AC /* CaptureViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptureViewControllerTests.swift; sourceTree = "<group>"; };
+		85AA54022111D4B1007A49AC /* MapViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewControllerTests.swift; sourceTree = "<group>"; };
 		85AC848620E3ADA40080505A /* DuengungAddEntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DuengungAddEntryViewController.swift; sourceTree = "<group>"; };
 		85AC848820E3B7DE0080505A /* PflanzenschutzAddEntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PflanzenschutzAddEntryViewController.swift; sourceTree = "<group>"; };
 		85CCB7C82110824F00469922 /* RealmHelperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmHelperTests.swift; sourceTree = "<group>"; };
@@ -210,8 +210,8 @@
 				85554A6F2111B7D600C8ADEE /* ScannerViewControllerTests.swift */,
 				85554A712111B81100C8ADEE /* MockScannerViewController.swift */,
 				85AA53F82111D079007A49AC /* AddCaptureViewControllerTests.swift */,
-				85AA53FC2111D11F007A49AC /* MockAddCaptureViewController.swift */,
 				85AA53FE2111D27D007A49AC /* CaptureViewControllerTests.swift */,
+				85AA54022111D4B1007A49AC /* MapViewControllerTests.swift */,
 			);
 			path = WeinbergAppTests;
 			sourceTree = "<group>";
@@ -544,9 +544,9 @@
 			files = (
 				85AA53F92111D079007A49AC /* AddCaptureViewControllerTests.swift in Sources */,
 				85AA53FF2111D27D007A49AC /* CaptureViewControllerTests.swift in Sources */,
-				85AA53FD2111D11F007A49AC /* MockAddCaptureViewController.swift in Sources */,
 				4694C98D20D5261E005C5F97 /* WeinbergAppTests.swift in Sources */,
 				85554A722111B81100C8ADEE /* MockScannerViewController.swift in Sources */,
+				85AA54032111D4B1007A49AC /* MapViewControllerTests.swift in Sources */,
 				85CCB7C92110824F00469922 /* RealmHelperTests.swift in Sources */,
 				85554A702111B7D600C8ADEE /* ScannerViewControllerTests.swift in Sources */,
 			);
