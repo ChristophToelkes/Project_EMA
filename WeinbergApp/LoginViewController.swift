@@ -36,12 +36,20 @@ class LoginViewController: UIViewController, UITextFieldDelegate, AVCaptureMetad
                          
     }
     
+    
+    
+    /// Prüft, ob Benutzername- und Passworttextfeld ausgefüllt sind
+    ///
+    /// - Returns: true, falls beide Felder ausgefüllt; false sonst
     private func checkTextFields() -> Bool{
         guard userNameTextField.text != "" else {return false}
         guard userPasswordtextField.text != "" else {return false}
         return true
     }
 
+    /// Leitet den Nutzer zur MapView, bei erfolgreichen LogIn Prüfungen
+    ///
+    /// - Parameter sender: Der gedrückte Button
     @IBAction func loginBtn(_ sender: Any) {
         if(checkTextFields()){
             if(checkLoginValuesDB()){
@@ -55,6 +63,9 @@ class LoginViewController: UIViewController, UITextFieldDelegate, AVCaptureMetad
        
     }
     
+    /// Leitet den Nutzer zum QR Code Scanner, für die Registrierung
+    ///
+    /// - Parameter sender: Der gedrückte Button
     @IBAction func signinBtn(_ sender: Any) {
         //--- Neuen User in DB anlegen---
         //--- danach zur nächsten UI weiterleiten---
@@ -67,6 +78,9 @@ class LoginViewController: UIViewController, UITextFieldDelegate, AVCaptureMetad
       
     }
     
+    /// Prüft die LogIn-Daten auf Korrektheit.
+    /// Gibt, bei falschen Daten, die Möglichkeit, sich zu registrieren
+    /// - Returns: true, bei korrekten LogIn Daten; false sonst
     private func checkLoginValuesDB() -> Bool {
         guard let userName = userNameTextField.text else {return false}
         guard let userPassword = userPasswordtextField.text else {return false}
@@ -100,6 +114,9 @@ class LoginViewController: UIViewController, UITextFieldDelegate, AVCaptureMetad
         
     }
     
+    /// Negiert den Klartextstatus des eingegebenen Passworts im Passworttextfeld.
+    ///
+    /// - Parameter sender: Der gedrückte button
     @IBAction func showPasswordBtn(_ sender: Any) {
         if(showPassword == false) {
             userPasswordtextField.isSecureTextEntry = false

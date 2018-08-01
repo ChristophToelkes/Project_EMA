@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="e3E-UC-7yd">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="e3E-UC-7yd">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -14,7 +14,7 @@
         <!--Login View Controller-->
         <scene sceneID="iYk-lE-TLS">
             <objects>
-                <viewController id="e3E-UC-7yd" customClass="LoginViewController" customModule="WeinbergApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewControllerID" id="e3E-UC-7yd" customClass="LoginViewController" customModule="WeinbergApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="6uf-UO-aGU"/>
                         <viewControllerLayoutGuide type="bottom" id="PqV-eH-baQ"/>
@@ -170,7 +170,7 @@
         <!--Erfassung-->
         <scene sceneID="TCB-mf-gjW">
             <objects>
-                <viewController id="OVp-C6-5so" customClass="CaptureViewController" customModule="WeinbergApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CaptureViewControllerID" id="OVp-C6-5so" customClass="CaptureViewController" customModule="WeinbergApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="shg-Fh-f9I"/>
                         <viewControllerLayoutGuide type="bottom" id="tpn-pZ-qm9"/>
@@ -265,7 +265,7 @@
         <!--Add Electrical Equipment View Controller-->
         <scene sceneID="Px0-JK-MXz">
             <objects>
-                <viewController id="Gjg-4t-c4H" customClass="AddElectricalEquipmentViewController" customModule="WeinbergApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AddElectricalEquipmentViewControllerID" id="Gjg-4t-c4H" customClass="AddElectricalEquipmentViewController" customModule="WeinbergApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="a8h-Nf-p6H"/>
                         <viewControllerLayoutGuide type="bottom" id="cOy-q3-v0J"/>
@@ -509,7 +509,7 @@
         <!--Add Capture View Controller-->
         <scene sceneID="fwo-Og-TdP">
             <objects>
-                <viewController id="OkD-cb-Ojc" customClass="AddCaptureViewController" customModule="WeinbergApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AddCaptureViewControllerID" id="OkD-cb-Ojc" customClass="AddCaptureViewController" customModule="WeinbergApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="KOg-Zk-AyF"/>
                         <viewControllerLayoutGuide type="bottom" id="knm-wk-uU8"/>
@@ -612,7 +612,7 @@
         <!--Add Material FlowsOR Thermal View Controller-->
         <scene sceneID="Y9L-zH-gUq">
             <objects>
-                <viewController id="2PI-yo-o1E" customClass="AddMaterialFlowsORThermalViewController" customModule="WeinbergApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AddMaterialFlowsORThermalViewControllerID" id="2PI-yo-o1E" customClass="AddMaterialFlowsORThermalViewController" customModule="WeinbergApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="GUb-n7-6e7"/>
                         <viewControllerLayoutGuide type="bottom" id="RA1-3A-lOF"/>
@@ -753,7 +753,7 @@
         <!--Add Entry View Controller-->
         <scene sceneID="TdU-iL-g3M">
             <objects>
-                <viewController id="mxH-RZ-U3P" customClass="AddEntryViewController" customModule="WeinbergApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AddEntryViewControllerID" id="mxH-RZ-U3P" customClass="AddEntryViewController" customModule="WeinbergApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="aB0-9F-x3v"/>
                         <viewControllerLayoutGuide type="bottom" id="Bgm-Dg-dx1"/>
@@ -937,7 +937,7 @@
         <!--Scanner View Controller-->
         <scene sceneID="p5i-ul-mDB">
             <objects>
-                <viewController id="gA1-tA-BRg" customClass="ScannerViewController" customModule="WeinbergApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ScannerViewControllerID" id="gA1-tA-BRg" customClass="ScannerViewController" customModule="WeinbergApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="3Ry-cA-pwW"/>
                         <viewControllerLayoutGuide type="bottom" id="GXA-pv-RIN"/>
@@ -955,7 +955,7 @@
         <!--Karte-->
         <scene sceneID="rzC-65-R6q">
             <objects>
-                <viewController id="rps-0n-scs" customClass="MapViewController" customModule="WeinbergApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MapViewControllerID" id="rps-0n-scs" customClass="MapViewController" customModule="WeinbergApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="0I9-tq-sgG"/>
                         <viewControllerLayoutGuide type="bottom" id="4S5-It-d1l"/>
@@ -1202,7 +1202,7 @@
         <!--Duengung Add Entry View Controller-->
         <scene sceneID="iuX-jp-tSw">
             <objects>
-                <viewController id="4br-4I-JOM" customClass="DuengungAddEntryViewController" customModule="WeinbergApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DuengungAddEntryViewControllerID" id="4br-4I-JOM" customClass="DuengungAddEntryViewController" customModule="WeinbergApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Pnf-G6-bLV"/>
                         <viewControllerLayoutGuide type="bottom" id="zxw-FX-00K"/>
@@ -1433,7 +1433,7 @@
         <!--Pflanzenschutz Add Entry View Controller-->
         <scene sceneID="Lbn-AJ-nNx">
             <objects>
-                <viewController id="xoh-O3-Jo7" customClass="PflanzenschutzAddEntryViewController" customModule="WeinbergApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PflanzenschutzAddEntryViewControllerID" id="xoh-O3-Jo7" customClass="PflanzenschutzAddEntryViewController" customModule="WeinbergApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="9SM-YY-3wV"/>
                         <viewControllerLayoutGuide type="bottom" id="u0V-Kn-veG"/>
@@ -1781,7 +1781,12 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="n5A-dJ-Kxq"/>
+<<<<<<< HEAD
         <segue reference="bYh-WT-kak"/>
         <segue reference="vVE-hR-lil"/>
+=======
+        <segue reference="ym3-nN-BRJ"/>
+        <segue reference="RGd-5a-Pau"/>
+>>>>>>> 14f34c6af1f900c4eb5528bc7029c420dd13feb7
     </inferredMetricsTieBreakers>
 </document>

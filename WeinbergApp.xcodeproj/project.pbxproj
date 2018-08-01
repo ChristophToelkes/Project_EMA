@@ -13,10 +13,6 @@
 		462BB8202108A1020017678A /* AddMaterialFlowsORThermalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462BB81F2108A1020017678A /* AddMaterialFlowsORThermalViewController.swift */; };
 		464BF45020F63185006700EF /* CustomPin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464BF44F20F63185006700EF /* CustomPin.swift */; };
 		4662C90520F4A4190049F73A /* Area.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4662C90420F4A4190049F73A /* Area.swift */; };
-		46842A0E20F2551D00510AD6 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46842A0C20F2551D00510AD6 /* Realm.framework */; };
-		46842A0F20F2551D00510AD6 /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 46842A0C20F2551D00510AD6 /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		46842A1020F2551D00510AD6 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46842A0D20F2551D00510AD6 /* RealmSwift.framework */; };
-		46842A1120F2551D00510AD6 /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 46842A0D20F2551D00510AD6 /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4685F86E20F3716F0007BBEF /* UIInputChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4685F86D20F3716F0007BBEF /* UIInputChecker.swift */; };
 		4685F87020F3F6EE0007BBEF /* ViewFader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4685F86F20F3F6EE0007BBEF /* ViewFader.swift */; };
 		4694C97820D5261D005C5F97 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4694C97720D5261D005C5F97 /* AppDelegate.swift */; };
@@ -33,9 +29,16 @@
 		46A0D73620D7EC6B00B0BEDA /* AddEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A0D73520D7EC6B00B0BEDA /* AddEntryViewController.swift */; };
 		46E50EED20D545FE00F93167 /* ShakeAnimationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E50EEC20D545FE00F93167 /* ShakeAnimationHelper.swift */; };
 		85168A1A20EBA99F00CB2AB5 /* RealmHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85168A1920EBA99F00CB2AB5 /* RealmHelper.swift */; };
+		85554A702111B7D600C8ADEE /* ScannerViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85554A6F2111B7D600C8ADEE /* ScannerViewControllerTests.swift */; };
+		85554A722111B81100C8ADEE /* MockScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85554A712111B81100C8ADEE /* MockScannerViewController.swift */; };
+		85AA53F92111D079007A49AC /* AddCaptureViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AA53F82111D079007A49AC /* AddCaptureViewControllerTests.swift */; };
+		85AA53FF2111D27D007A49AC /* CaptureViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AA53FE2111D27D007A49AC /* CaptureViewControllerTests.swift */; };
+		85AA54032111D4B1007A49AC /* MapViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AA54022111D4B1007A49AC /* MapViewControllerTests.swift */; };
 		85AC848720E3ADA40080505A /* DuengungAddEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AC848620E3ADA40080505A /* DuengungAddEntryViewController.swift */; };
 		85AC848920E3B7DE0080505A /* PflanzenschutzAddEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AC848820E3B7DE0080505A /* PflanzenschutzAddEntryViewController.swift */; };
+		85CCB7C92110824F00469922 /* RealmHelperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85CCB7C82110824F00469922 /* RealmHelperTests.swift */; };
 		8C7C9055FA951290DE9C4BC7 /* Pods_WeinbergAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 828CD16D962216C8070E3347 /* Pods_WeinbergAppTests.framework */; };
+		BA48E1C4ABA8A812220D6FEF /* Pods_WeinbergApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B100E2D25F626F8A1834B33 /* Pods_WeinbergApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,8 +65,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				46842A1120F2551D00510AD6 /* RealmSwift.framework in Embed Frameworks */,
-				46842A0F20F2551D00510AD6 /* Realm.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -80,12 +81,8 @@
 		462BB81F2108A1020017678A /* AddMaterialFlowsORThermalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMaterialFlowsORThermalViewController.swift; sourceTree = "<group>"; };
 		464BF44F20F63185006700EF /* CustomPin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPin.swift; sourceTree = "<group>"; };
 		4662C90420F4A4190049F73A /* Area.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Area.swift; sourceTree = "<group>"; };
-		468429F920F249BB00510AD6 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = "../../Downloads/realm-swift-3.7.4/ios/swift-4.1/Realm.framework"; sourceTree = "<group>"; };
-		468429FA20F249BB00510AD6 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = "../../Downloads/realm-swift-3.7.4/ios/swift-4.1/RealmSwift.framework"; sourceTree = "<group>"; };
 		46842A0520F254DC00510AD6 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
 		46842A0620F254DC00510AD6 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = "<group>"; };
-		46842A0C20F2551D00510AD6 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = "../../Downloads/realm-swift-3.7.4/ios/swift-4.1/Realm.framework"; sourceTree = "<group>"; };
-		46842A0D20F2551D00510AD6 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = "../../Downloads/realm-swift-3.7.4/ios/swift-4.1/RealmSwift.framework"; sourceTree = "<group>"; };
 		4685F86D20F3716F0007BBEF /* UIInputChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIInputChecker.swift; sourceTree = "<group>"; };
 		4685F86F20F3F6EE0007BBEF /* ViewFader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewFader.swift; sourceTree = "<group>"; };
 		4694C97420D5261D005C5F97 /* WeinbergApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeinbergApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -111,8 +108,14 @@
 		78DE4BF54729DF01B7554F41 /* Pods_WeinbergAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WeinbergAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		828CD16D962216C8070E3347 /* Pods_WeinbergAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WeinbergAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		85168A1920EBA99F00CB2AB5 /* RealmHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmHelper.swift; sourceTree = "<group>"; };
+		85554A6F2111B7D600C8ADEE /* ScannerViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerViewControllerTests.swift; sourceTree = "<group>"; };
+		85554A712111B81100C8ADEE /* MockScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockScannerViewController.swift; sourceTree = "<group>"; };
+		85AA53F82111D079007A49AC /* AddCaptureViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCaptureViewControllerTests.swift; sourceTree = "<group>"; };
+		85AA53FE2111D27D007A49AC /* CaptureViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptureViewControllerTests.swift; sourceTree = "<group>"; };
+		85AA54022111D4B1007A49AC /* MapViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewControllerTests.swift; sourceTree = "<group>"; };
 		85AC848620E3ADA40080505A /* DuengungAddEntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DuengungAddEntryViewController.swift; sourceTree = "<group>"; };
 		85AC848820E3B7DE0080505A /* PflanzenschutzAddEntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PflanzenschutzAddEntryViewController.swift; sourceTree = "<group>"; };
+		85CCB7C82110824F00469922 /* RealmHelperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmHelperTests.swift; sourceTree = "<group>"; };
 		8DF04B9B348772324FB4A4E6 /* Pods-WeinbergAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeinbergAppUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WeinbergAppUITests/Pods-WeinbergAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		9DC8632A0C28BABF514E96EC /* Pods-WeinbergAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeinbergAppUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WeinbergAppUITests/Pods-WeinbergAppUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -122,8 +125,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				46842A1020F2551D00510AD6 /* RealmSwift.framework in Frameworks */,
-				46842A0E20F2551D00510AD6 /* Realm.framework in Frameworks */,
+				BA48E1C4ABA8A812220D6FEF /* Pods_WeinbergApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -149,12 +151,8 @@
 		4694C96B20D5261D005C5F97 = {
 			isa = PBXGroup;
 			children = (
-				468429F920F249BB00510AD6 /* Realm.framework */,
-				468429FA20F249BB00510AD6 /* RealmSwift.framework */,
 				46842A0520F254DC00510AD6 /* Realm.framework */,
 				46842A0620F254DC00510AD6 /* RealmSwift.framework */,
-				46842A0C20F2551D00510AD6 /* Realm.framework */,
-				46842A0D20F2551D00510AD6 /* RealmSwift.framework */,
 				4694C97620D5261D005C5F97 /* WeinbergApp */,
 				4694C98B20D5261E005C5F97 /* WeinbergAppTests */,
 				4694C99620D5261E005C5F97 /* WeinbergAppUITests */,
@@ -208,6 +206,12 @@
 			children = (
 				4694C98C20D5261E005C5F97 /* WeinbergAppTests.swift */,
 				4694C98E20D5261E005C5F97 /* Info.plist */,
+				85CCB7C82110824F00469922 /* RealmHelperTests.swift */,
+				85554A6F2111B7D600C8ADEE /* ScannerViewControllerTests.swift */,
+				85554A712111B81100C8ADEE /* MockScannerViewController.swift */,
+				85AA53F82111D079007A49AC /* AddCaptureViewControllerTests.swift */,
+				85AA53FE2111D27D007A49AC /* CaptureViewControllerTests.swift */,
+				85AA54022111D4B1007A49AC /* MapViewControllerTests.swift */,
 			);
 			path = WeinbergAppTests;
 			sourceTree = "<group>";
@@ -538,7 +542,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85AA53F92111D079007A49AC /* AddCaptureViewControllerTests.swift in Sources */,
+				85AA53FF2111D27D007A49AC /* CaptureViewControllerTests.swift in Sources */,
 				4694C98D20D5261E005C5F97 /* WeinbergAppTests.swift in Sources */,
+				85554A722111B81100C8ADEE /* MockScannerViewController.swift in Sources */,
+				85AA54032111D4B1007A49AC /* MapViewControllerTests.swift in Sources */,
+				85CCB7C92110824F00469922 /* RealmHelperTests.swift in Sources */,
+				85554A702111B7D600C8ADEE /* ScannerViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -804,7 +814,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = WeinbergAppUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) ";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited)  ";
 				PRODUCT_BUNDLE_IDENTIFIER = chistopToelkes.WeinbergAppUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

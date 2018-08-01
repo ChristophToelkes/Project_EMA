@@ -28,15 +28,16 @@
 	<array>
 		<string>armv7</string>
 	</array>
-    <key>NSLocationWhenInUseUsageDescription</key>
-    <string>This application requires location services to work</string>
-    
-    <key>NSLocationAlwaysUsageDescription</key>
-    <string>This application requires location services to work</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>This application requires location services to work</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>This application requires location services to work</string>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
 	</array>
+	<key>NSCameraUsageDescription</key>
+	<string>Allow us to scan images for QRCode.</string>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
