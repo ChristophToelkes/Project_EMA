@@ -326,6 +326,9 @@ class MapViewController: UIViewController, MKMapViewDelegate, UITableViewDelegat
 
     }
     
+    /// Schließt die Anzeige der gespeicherten Felder, falls geöffnet.
+    /// Beendet sonst die Möglichkeit ein Feld zu speichern, falls keine Punkte auf der Karte markiert sind.
+    /// - Parameter sender: Der Druckpunkt auf der Karte
     @IBAction func tapOnMapView(_ sender: UITapGestureRecognizer) {
         if(showTableView){
             fader.fade(mode: ViewFader.FadeMode.OUT, view: self.tableViewAreas)
@@ -339,6 +342,10 @@ class MapViewController: UIViewController, MKMapViewDelegate, UITableViewDelegat
         }
     }
     
+    /// Berechnet die Größe eines Areals.
+    ///
+    /// - Parameter points: Die Eckpunkte des Areals
+    /// - Returns: Die Größe des Areals
     private func areaSize(points: [CLLocationCoordinate2D]) -> Int{
         var temp: Double = 0
         var temp2: Double = 0
