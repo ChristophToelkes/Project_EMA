@@ -37,6 +37,7 @@
 		85AA54032111D4B1007A49AC /* MapViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AA54022111D4B1007A49AC /* MapViewControllerTests.swift */; };
 		85AC848720E3ADA40080505A /* DuengungAddEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AC848620E3ADA40080505A /* DuengungAddEntryViewController.swift */; };
 		85AC848920E3B7DE0080505A /* PflanzenschutzAddEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AC848820E3B7DE0080505A /* PflanzenschutzAddEntryViewController.swift */; };
+		85C5A07D21133A34006C0E81 /* MapViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C5A07C21133A34006C0E81 /* MapViewControllerTests.swift */; };
 		85CCB7C92110824F00469922 /* RealmHelperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85CCB7C82110824F00469922 /* RealmHelperTests.swift */; };
 		8C7C9055FA951290DE9C4BC7 /* Pods_WeinbergAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 828CD16D962216C8070E3347 /* Pods_WeinbergAppTests.framework */; };
 		BA48E1C4ABA8A812220D6FEF /* Pods_WeinbergApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B100E2D25F626F8A1834B33 /* Pods_WeinbergApp.framework */; };
@@ -117,6 +118,7 @@
 		85AA54022111D4B1007A49AC /* MapViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewControllerTests.swift; sourceTree = "<group>"; };
 		85AC848620E3ADA40080505A /* DuengungAddEntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DuengungAddEntryViewController.swift; sourceTree = "<group>"; };
 		85AC848820E3B7DE0080505A /* PflanzenschutzAddEntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PflanzenschutzAddEntryViewController.swift; sourceTree = "<group>"; };
+		85C5A07C21133A34006C0E81 /* MapViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewControllerTests.swift; sourceTree = "<group>"; };
 		85CCB7C82110824F00469922 /* RealmHelperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmHelperTests.swift; sourceTree = "<group>"; };
 		8DF04B9B348772324FB4A4E6 /* Pods-WeinbergAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeinbergAppUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WeinbergAppUITests/Pods-WeinbergAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		9DC8632A0C28BABF514E96EC /* Pods-WeinbergAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeinbergAppUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WeinbergAppUITests/Pods-WeinbergAppUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -224,6 +226,7 @@
 				4694C99720D5261E005C5F97 /* WeinbergAppUITests.swift */,
 				4694C99920D5261E005C5F97 /* Info.plist */,
 				8546333021130557007F8704 /* LoginViewControllerTests.swift */,
+				85C5A07C21133A34006C0E81 /* MapViewControllerTests.swift */,
 			);
 			path = WeinbergAppUITests;
 			sourceTree = "<group>";
@@ -559,6 +562,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85C5A07D21133A34006C0E81 /* MapViewControllerTests.swift in Sources */,
 				8546333121130557007F8704 /* LoginViewControllerTests.swift in Sources */,
 				4694C99820D5261E005C5F97 /* WeinbergAppUITests.swift in Sources */,
 			);

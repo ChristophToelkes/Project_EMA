@@ -145,6 +145,9 @@
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="tintColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <accessibility key="accessibilityConfiguration" identifier="LoginView">
+                            <bool key="isElement" value="NO"/>
+                        </accessibility>
                         <constraints>
                             <constraint firstItem="y8w-dP-0yg" firstAttribute="top" secondItem="6uf-UO-aGU" secondAttribute="bottom" constant="106" id="0sT-LV-lNU"/>
                             <constraint firstItem="d5M-3b-WET" firstAttribute="leading" secondItem="ub3-mU-Lh5" secondAttribute="leading" id="FNH-5q-cIf"/>
@@ -239,6 +242,9 @@
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" red="0.58081901069999997" green="0.088427625600000004" blue="0.31863921880000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <accessibility key="accessibilityConfiguration" identifier="CaptureView">
+                            <bool key="isElement" value="NO"/>
+                        </accessibility>
                         <constraints>
                             <constraint firstItem="wWb-Vl-Pzl" firstAttribute="top" secondItem="shg-Fh-f9I" secondAttribute="bottom" constant="40" id="8e0-K0-cI3"/>
                             <constraint firstItem="wWb-Vl-Pzl" firstAttribute="leading" secondItem="70m-In-SDW" secondAttribute="leading" id="8uT-da-xgT"/>
@@ -480,6 +486,9 @@
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <accessibility key="accessibilityConfiguration" identifier="AddElectricalView">
+                            <bool key="isElement" value="NO"/>
+                        </accessibility>
                         <constraints>
                             <constraint firstItem="5aB-mu-Ap8" firstAttribute="top" secondItem="a8h-Nf-p6H" secondAttribute="bottom" constant="20" id="1FW-sG-2kN"/>
                             <constraint firstAttribute="trailingMargin" secondItem="5aB-mu-Ap8" secondAttribute="trailing" id="7EO-Wr-IrN"/>
@@ -582,6 +591,9 @@
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" red="0.58081901069999997" green="0.088427625600000004" blue="0.31863921880000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <accessibility key="accessibilityConfiguration" identifier="AddCaptureView">
+                            <bool key="isElement" value="NO"/>
+                        </accessibility>
                         <constraints>
                             <constraint firstItem="knm-wk-uU8" firstAttribute="top" secondItem="rOd-Ta-aDx" secondAttribute="bottom" constant="60" id="ITX-3W-hba"/>
                             <constraint firstItem="oTr-nN-P2y" firstAttribute="centerX" secondItem="G6z-ME-mQx" secondAttribute="centerX" id="JVU-Xi-NzR"/>
@@ -730,6 +742,9 @@
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <accessibility key="accessibilityConfiguration" identifier="AddMaterialView">
+                            <bool key="isElement" value="NO"/>
+                        </accessibility>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="hmt-wb-RiI" secondAttribute="trailing" id="0HW-rS-xHg"/>
                             <constraint firstItem="hmt-wb-RiI" firstAttribute="top" secondItem="GUb-n7-6e7" secondAttribute="bottom" constant="20" id="OT4-RW-Uxr"/>
@@ -909,6 +924,9 @@
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <accessibility key="accessibilityConfiguration" identifier="AddEntryView">
+                            <bool key="isElement" value="NO"/>
+                        </accessibility>
                         <constraints>
                             <constraint firstItem="gJa-KC-Jlx" firstAttribute="leading" secondItem="c6w-Ss-rq9" secondAttribute="leading" id="H4X-V9-sNK"/>
                             <constraint firstItem="IU0-mr-f9n" firstAttribute="leading" secondItem="c6w-Ss-rq9" secondAttribute="leadingMargin" id="XFD-ma-C8W"/>
@@ -946,6 +964,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <accessibility key="accessibilityConfiguration" identifier="ScannerView">
+                            <bool key="isElement" value="NO"/>
+                        </accessibility>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AyM-4e-RbH" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -977,6 +998,9 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zHW-zL-Kpj">
                                         <rect key="frame" x="0.0" y="10" width="169.5" height="30"/>
+                                        <accessibility key="accessibilityConfiguration">
+                                            <bool key="isElement" value="NO"/>
+                                        </accessibility>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                         <state key="normal" title="+ Fläche">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -987,6 +1011,9 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GFT-fo-HdT">
                                         <rect key="frame" x="171.5" y="10" width="203.5" height="30"/>
+                                        <accessibility key="accessibilityConfiguration">
+                                            <bool key="isElement" value="NO"/>
+                                        </accessibility>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                         <state key="normal" title="abmelden">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1007,6 +1034,9 @@
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="   Feld Name" textAlignment="justified" adjustsFontForContentSizeCategory="YES" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="e4I-ub-4De">
                                         <rect key="frame" x="0.0" y="0.0" width="359" height="47"/>
                                         <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <accessibility key="accessibilityConfiguration">
+                                            <bool key="isElement" value="NO"/>
+                                        </accessibility>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -1125,6 +1155,9 @@
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" red="0.58081901069999997" green="0.088427625600000004" blue="0.31863921880000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <accessibility key="accessibilityConfiguration" identifier="MapView">
+                            <bool key="isElement" value="NO"/>
+                        </accessibility>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="j1O-dc-gQn" secondAttribute="trailing" id="0x2-Yx-NbY"/>
                             <constraint firstItem="aPh-2L-0LB" firstAttribute="top" secondItem="oPw-LG-q6N" secondAttribute="bottom" constant="160" id="2EW-hc-ZyT"/>
@@ -1310,12 +1343,18 @@
                                                 <state key="normal" title="Mineralisch">
                                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="pressMineral:" destination="4br-4I-JOM" eventType="touchUpInside" id="Qd5-eu-eZZ"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f8F-kw-zMv">
                                                 <rect key="frame" x="135" y="0.0" width="115" height="30"/>
                                                 <state key="normal" title="Organisch">
                                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="pressOrganic:" destination="4br-4I-JOM" eventType="touchUpInside" id="JP6-br-x9l"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -1405,6 +1444,9 @@
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <accessibility key="accessibilityConfiguration" identifier="DuengungView">
+                            <bool key="isElement" value="NO"/>
+                        </accessibility>
                         <constraints>
                             <constraint firstItem="W1u-OD-rEe" firstAttribute="leading" secondItem="Bvp-8w-LRd" secondAttribute="leadingMargin" id="06k-WR-Sbr"/>
                             <constraint firstAttribute="trailing" secondItem="cWh-3w-Rhs" secondAttribute="trailing" constant="20" id="9Z8-oA-Q6a"/>
@@ -1423,6 +1465,8 @@
                         <outlet property="duengemittelText" destination="2zp-5I-DeK" id="Sdf-vJ-bpP"/>
                         <outlet property="headCaptureLabel" destination="oNG-e7-LJZ" id="xDe-IE-aDH"/>
                         <outlet property="mengeDuengemittelText" destination="C3L-dI-wWQ" id="RQO-wi-rxO"/>
+                        <outlet property="mineralButton" destination="cVK-rv-7yw" id="FBm-Pa-SLM"/>
+                        <outlet property="organicButton" destination="f8F-kw-zMv" id="uJ7-Xw-aog"/>
                         <segue destination="OkD-cb-Ojc" kind="show" identifier="segueToAddCaptureView" id="OvB-cJ-4ac"/>
                     </connections>
                 </viewController>
@@ -1553,20 +1597,27 @@
                                                                 <state key="normal" title="Fungizid">
                                                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                                                 </state>
+                                                                <connections>
+                                                                    <action selector="pressFungicide:" destination="xoh-O3-Jo7" eventType="touchUpInside" id="cXQ-7i-heT"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jpd-ei-o5D">
                                                                 <rect key="frame" x="90" y="0.0" width="70" height="30"/>
                                                                 <state key="normal" title="Herbizid">
                                                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                                                 </state>
+                                                                <connections>
+                                                                    <action selector="pressHerbicide:" destination="xoh-O3-Jo7" eventType="touchUpInside" id="EJd-es-u8p"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="q3l-1z-mdV">
                                                                 <rect key="frame" x="180" y="0.0" width="70" height="30"/>
-                                                                <state key="normal">
-                                                                    <string key="title">Insektizid/
-                                                                Akarizid</string>
+                                                                <state key="normal" title="Insektizid/Akarizid">
                                                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                                                 </state>
+                                                                <connections>
+                                                                    <action selector="pressInsecticide:" destination="xoh-O3-Jo7" eventType="touchUpInside" id="8He-dJ-E76"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                         <constraints>
@@ -1740,6 +1791,9 @@
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <accessibility key="accessibilityConfiguration" identifier="PflanzenschutzView">
+                            <bool key="isElement" value="NO"/>
+                        </accessibility>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="wWr-Nb-Aq3" secondAttribute="bottom" constant="40" id="Rb4-3F-Cai"/>
                             <constraint firstItem="wWr-Nb-Aq3" firstAttribute="trailing" secondItem="F2n-vf-AJG" secondAttribute="trailing" id="S6G-Dq-Cki"/>
@@ -1755,9 +1809,12 @@
                         <outlet property="benutzerText" destination="vCP-sI-2uI" id="Sbm-CP-LGZ"/>
                         <outlet property="contentView" destination="wlI-4p-kib" id="F6X-0u-lUd"/>
                         <outlet property="datePicker" destination="e7S-MB-3IP" id="cYT-mL-Myq"/>
+                        <outlet property="fungicideButton" destination="hnt-fI-7Lf" id="gAf-86-uST"/>
                         <outlet property="gegenText" destination="kN0-EB-Vsc" id="1bY-yj-pEa"/>
                         <outlet property="headCaptureLabel" destination="Mpw-pi-Xvi" id="ZLq-I0-bO8"/>
+                        <outlet property="herbicideButton" destination="Jpd-ei-o5D" id="Eyh-vs-aZu"/>
                         <outlet property="infoText" destination="Rxm-Xl-SIp" id="ZFb-PS-dq4"/>
+                        <outlet property="insecticideButton" destination="q3l-1z-mdV" id="PRg-DW-G9l"/>
                         <outlet property="mengePflanzenschutzmittelText" destination="6FW-99-aat" id="kak-KD-296"/>
                         <outlet property="mittelText" destination="rHX-Hx-gGo" id="0bu-26-WwX"/>
                         <outlet property="scrollView" destination="wWr-Nb-Aq3" id="yco-xz-Mwn"/>
@@ -1780,8 +1837,8 @@
         <image name="work" width="24" height="24"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="n5A-dJ-Kxq"/>
+        <segue reference="uPz-Fn-yU9"/>
         <segue reference="ym3-nN-BRJ"/>
-        <segue reference="RGd-5a-Pau"/>
+        <segue reference="vVE-hR-lil"/>
     </inferredMetricsTieBreakers>
 </document>

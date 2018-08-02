@@ -100,7 +100,7 @@ class RealmHelper {
         }
     }
     
-    func addDuengung(captureType: String, benutzer: String, feld: String, arbeitszeit: String, datum: String, duengemittel: String, mengeDuengemittel: String) {
+    func addDuengung(captureType: String, benutzer: String, feld: String, arbeitszeit: String, datum: String, duengemittel: String, mengeDuengemittel: String, category: String) {
 
         
         let newEntry = DuengungEntry()
@@ -111,13 +111,14 @@ class RealmHelper {
         newEntry.Datum = datum
         newEntry.duengemittel = duengemittel
         newEntry.mengeDuengemittel = mengeDuengemittel
+        newEntry.category = category
         
         try! realm.write {
             realm.add(newEntry)
         }
     }
     
-    func addPflanzenschutz(captureType: String, benutzer: String, feld: String, arbeitszeit: String, datum: String, gegen: String, mittel: String, termin: String, info: String, mengePflanzenschutzmittel: String) {
+    func addPflanzenschutz(captureType: String, benutzer: String, feld: String, arbeitszeit: String, datum: String, gegen: String, mittel: String, termin: String, info: String, mengePflanzenschutzmittel: String, category: String) {
         
         let newEntry = PflanzenschutzEntry()
         newEntry.captureType = captureType
@@ -130,6 +131,7 @@ class RealmHelper {
         newEntry.termin = termin
         newEntry.info = info
         newEntry.mengePflanzenschutzmittel = mengePflanzenschutzmittel
+        newEntry.category = category
         
         try! realm.write {
             realm.add(newEntry)
@@ -187,6 +189,7 @@ class RealmHelper {
                               durchfuehrung: nil,
                               duengemittel: nil,
                               mengeDuengemittel: nil,
+                              category: nil,
                               gegen: nil,
                               mittel: nil,
                               termin: nil,
@@ -226,6 +229,7 @@ class RealmHelper {
                               durchfuehrung: nil,
                               duengemittel: nil,
                               mengeDuengemittel: nil,
+                              category: nil,
                               gegen: nil,
                               mittel: nil,
                               termin: nil,
@@ -265,6 +269,7 @@ class RealmHelper {
                               durchfuehrung: nil,
                               duengemittel: nil,
                               mengeDuengemittel: nil,
+                              category: nil,
                               gegen: nil,
                               mittel: nil,
                               termin: nil,
@@ -304,6 +309,7 @@ class RealmHelper {
                               durchfuehrung: results[i].durchfuehrung,
                               duengemittel: nil,
                               mengeDuengemittel: nil,
+                              category: nil,
                               gegen: nil,
                               mittel: nil,
                               termin: nil,
@@ -343,6 +349,7 @@ class RealmHelper {
                               durchfuehrung: nil,
                               duengemittel: nil,
                               mengeDuengemittel: nil,
+                              category: nil,
                               gegen: nil,
                               mittel: nil,
                               termin: nil,
@@ -382,6 +389,7 @@ class RealmHelper {
                               durchfuehrung: nil,
                               duengemittel: results[i].duengemittel,
                               mengeDuengemittel: results[i].mengeDuengemittel,
+                              category: results[i].category,
                               gegen: nil,
                               mittel: nil,
                               termin: nil,
@@ -421,6 +429,7 @@ class RealmHelper {
                               durchfuehrung: nil,
                               duengemittel: nil,
                               mengeDuengemittel: nil,
+                              category: results[i].category,
                               gegen: results[i].gegen,
                               mittel: results[i].mittel,
                               termin: results[i].termin,
@@ -460,6 +469,7 @@ class RealmHelper {
                               durchfuehrung: nil,
                               duengemittel: nil,
                               mengeDuengemittel: nil,
+                              category: nil,
                               gegen: nil,
                               mittel: nil,
                               termin: nil,
@@ -546,7 +556,7 @@ class RealmHelper {
         let typeBenutzer = "captureType = '" + entry.getCaptureType() + "' AND Benutzer = '" + entry.getUser() + "'"
         let feldArbeitszeit = "Feld = '" + entry.getField() + "' AND Arbeitszeit = '" + String(entry.getHours()) + "'"
         var query = typeBenutzer + " AND " + feldArbeitszeit
-        query += " AND Datum = '" + entry.getDate() + "'"
+        query += " AND Datum = '" + entry.getDate() + "' AND category = '" + entry.getCategory() + "'"
         query += " AND duengemittel = '" + entry.getDuengemittel() + "' AND mengeDuengemittel = '" + entry.getMengeDuengemittel() + "'"
         
         let objects = realm.objects(DuengungEntry.self).filter(query)
@@ -577,7 +587,7 @@ class RealmHelper {
         query += " AND Datum = '" + entry.getDate() + "'"
         query += " AND gegen = '" + entry.getGegen() + "' AND mittel = '" + entry.getMittel() + "'"
         query += " AND termin = '" + entry.getTermin() + "' AND info = '" + entry.getInfo() + "'"
-        query += " AND mengePflanzenschutzmittel = '" + entry.getMengePflanzenschutzmittel() + "'"
+        query += " AND mengePflanzenschutzmittel = '" + entry.getMengePflanzenschutzmittel() + "' AND category = '" + entry.getCategory() + "'"
         
         let objects = realm.objects(PflanzenschutzEntry.self).filter(query)
         
@@ -644,6 +654,7 @@ class DuengungEntry: Object{
     @objc dynamic var Datum = ""
     @objc dynamic var duengemittel = ""
     @objc dynamic var mengeDuengemittel = ""
+    @objc dynamic var category = ""
 }
 
 class PflanzenschutzEntry: Object{
@@ -657,4 +668,5 @@ class PflanzenschutzEntry: Object{
     @objc dynamic var termin = ""
     @objc dynamic var info = ""
     @objc dynamic var mengePflanzenschutzmittel = ""
+    @objc dynamic var category = ""
 }

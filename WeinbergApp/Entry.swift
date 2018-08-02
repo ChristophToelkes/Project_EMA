@@ -37,6 +37,7 @@ struct Entry{
     //speziell für Düngung
     var duengemittel: String?
     var mengeDuengemittel: String?
+    var category: String?
     //speziell für Pflanzenschutz
     var gegen: String?
     var mittel: String?
@@ -188,6 +189,14 @@ struct Entry{
         }
     }
     
+    public func getCategory() -> String {
+        if let returnValue = self.category {
+            return returnValue
+        } else {
+            return ""
+        }
+    }
+    
     public func getGegen() -> String {
         if let returnValue = self.gegen {
             return returnValue
@@ -298,6 +307,10 @@ struct Entry{
     
     public mutating func setMengeDuengemittel(mengeDuengemittel: String) {
         self.mengeDuengemittel = mengeDuengemittel
+    }
+    
+    public mutating func setCategory(category: String) {
+        self.category = category
     }
     
     public mutating func setGegen(gegen: String) {
