@@ -15,6 +15,11 @@ class ViewFader {
         case OUT
     }
 
+    /// Lässt eine View Ein- oder Ausfaden
+    ///
+    /// - Parameters:
+    ///   - mode: Entscheider, ob Ein- oder Ausgefadet wird
+    ///   - view: Die zu fadende View
     public func fade(mode: FadeMode, view: UIView){
         if(mode == FadeMode.IN){
             view.alpha = 0

@@ -35,7 +35,7 @@ class AddMaterialFlowsORThermalViewController: UIViewController, UIPickerViewDel
                                     "Papier",
                                     "Kunststoff"])
     
-   
+   /// Zeigt den zuvor gewählten Eintrag an oder legt einen neuen Eintrag an.
     override func viewDidLoad() {
         super.viewDidLoad()
         optionPicker.delegate = self
@@ -50,7 +50,9 @@ class AddMaterialFlowsORThermalViewController: UIViewController, UIPickerViewDel
     
     
     
-    
+    /// Fragt den Nutzer, ob der angezeigt Eintrag gelöscht werden soll.
+    ///
+    /// - Parameter sender: Der gedrückte Button
     @IBAction func deleteBtn(_ sender: Any) {
         let alert = UIAlertController(title: "Eintrag löschen", message: "Möchten Sie diesen Eintrag wirklich löschen?", preferredStyle: .alert)
         
@@ -61,6 +63,7 @@ class AddMaterialFlowsORThermalViewController: UIViewController, UIPickerViewDel
         self.present(alert, animated: true)
     }
     
+    /// Löscht den angezeigten Eintrag aus der Datenbank.
     func deleteEntry() {
         let db = RealmHelper()
         if let entry = entry {
@@ -78,13 +81,20 @@ class AddMaterialFlowsORThermalViewController: UIViewController, UIPickerViewDel
         
     }
     
+    /// Bereitet die Weiterleitung des Nutzers zur Übersicht über die gespeicherten Arbeitsvorgänge oder Aufwände vor.
+    ///
+    /// - Parameters:
+    ///   - segue: Der Segue, der zur Übersicht der Einträge weiterleitet.
+    ///   - sender: Der gedrückte button.
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destination = segue.destination as? AddCaptureViewController{
             destination.element = captureType
         }
     }
     
-
+    /// Speichert den Eintrag in der Datenbank.
+    ///
+    /// - Parameter sender: Der gedrückte Button
     @IBAction func addBtn(_ sender: Any) {
         let db = RealmHelper()
        
@@ -100,16 +110,32 @@ class AddMaterialFlowsORThermalViewController: UIViewController, UIPickerViewDel
     }
     
     
-    
+    /// Gibt die Anzahl der zu wählenden Elemente der PcikerView zurück.
+    ///
+    /// - Parameter pickerView: Die betreffende PickerView
+    /// - Returns: Die Anzahl der zu wählenden Elemente der PickerView
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
        
     }
     
+    /// Gibt die Anzahl der Elemente der PickerView zurück, aus denen ausgewählt werden kann.
+    ///
+    /// - Parameters:
+    ///   - pickerView: Die betreffende PickerView
+    ///   - component: Anzahl der Elemente, die gleichzeitig gewählt werden können
+    /// - Returns: Anzahl der Elemente, aus denen gewählt werden kann
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
          return optionsMaterial[option].count
     }
     
+    /// Gibt die Bezeichnungen der Einträge der PickerView zurück.
+    ///
+    /// - Parameters:
+    ///   - pickerView: Die betreffende PickerView
+    ///   - row: Die Zeile des Eintrags der PickerView
+    ///   - component: Das Element der PickerView
+    /// - Returns: Die Bezeichnung des Eintrags der Zeile
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
          return optionsMaterial[option][row]
     }

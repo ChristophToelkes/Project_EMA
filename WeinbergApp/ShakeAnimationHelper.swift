@@ -12,6 +12,13 @@ class ShakeAnimationHelper{
 
  
     
+    /// Lässt ein beliebiges Objekt wackeln.
+    ///
+    /// - Parameters:
+    ///   - centerOfControl: Koordinaten des Objekts
+    ///   - intensity: Intensität des Wackelns
+    ///   - duration: Dauer des Wackelns
+    /// - Returns: Die Wackelanimation
     public func shake(centerOfControl: CGPoint, intensity: Double? = nil,duration: Double? = nil) -> CABasicAnimation {
         
         

@@ -24,6 +24,7 @@ class AddEntryViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     @IBOutlet weak var arbeitszeitText: UITextField!
     @IBOutlet weak var durchfuehrungText: UITextField!
     
+    /// Zeigt den zuvor gewählten Eintrag an oder legt einen neuen Eintrag an.
     override func viewDidLoad() {
         super.viewDidLoad()
         headCaptureLabel.text = captureType
@@ -54,7 +55,11 @@ class AddEntryViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
             durchfuehrungText.text = entry?.durchfuehrung
         }
     }
+    
     //Es gibt bisher keine Fehlermeldung bei unvollständigem Ausfüllen
+    /// Speichert den Eintrag in der Datenbank, falls sämtliche Felder ausgefüllt sind.
+    ///
+    /// - Parameter sender: Der gedrückte Button
     @IBAction func safeEntryBtn(_ sender: Any) {
         let db = RealmHelper()
         let formatter = DateFormatter()
@@ -72,11 +77,17 @@ class AddEntryViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         }
     }
     
+    /// Leitet den Nutzer zur Übersicht über die gespeicherten Einträge des Arbeitsvorgangs oder Aufwands weiter.
+    ///
+    /// - Parameter sender: Der gedrückte Button
     @IBAction func backBtn(_ sender: Any) {
         performSegue(withIdentifier: "segueToAddCaptureView", sender: self)
         
     }
     
+    /// Fragt den Nutzer, ob der angezeigt Eintrag gelöscht werden soll.
+    ///
+    /// - Parameter sender: Der gedrückte Button
     @IBAction func PressDeleteButton(_ sender: Any) {
         let alert = UIAlertController(title: "Eintrag löschen", message: "Möchten Sie diesen Eintrag wirklich löschen?", preferredStyle: .alert)
         
@@ -87,6 +98,7 @@ class AddEntryViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         self.present(alert, animated: true)
     }
     
+    /// Löscht den angezeigten Eintrag aus der Datenbank.
     func deleteEntry() {
         let db = RealmHelper()
         if let entry = entry {
@@ -103,6 +115,11 @@ class AddEntryViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         
     }
     
+    /// Bereitet die Weiterleitung des Nutzers zur Übersicht über die gespeicherten Arbeitsvorgänge oder Aufwände vor.
+    ///
+    /// - Parameters:
+    ///   - segue: Der Segue, der zur Übersicht der Einträge weiterleitet.
+    ///   - sender: Der gedrückte button.
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         super.prepare(for: segue, sender: sender)
         if let destination = segue.destination as? AddCaptureViewController{
@@ -110,6 +127,9 @@ class AddEntryViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         }
     }
     
+    /// Prüft, ob es sich um einen Eintrag des Arbeitsvorgangs "Traubenlese" handelt.
+    ///
+    /// - Returns: true, falls "Traubenlese"; false, sonst
     func checkTraubenlese()  -> Bool{
         if captureType == "Traubenlese" {
             traubenleseDurchfuehrungView.isHidden = false
@@ -119,18 +139,36 @@ class AddEntryViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         }
     }
     
+    /// Gibt die Anzahl der zu wählenden Elemente der PcikerView zurück.
+    ///
+    /// - Parameter pickerView: Die betreffende PickerView
+    /// - Returns: Die Anzahl der zu wählenden Elemente der PickerView
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
     
+    /// Gibt die Anzahl der Elemente der PickerView zurück, aus denen ausgewählt werden kann.
+    ///
+    /// - Parameters:
+    ///   - pickerView: Die betreffende PickerView
+    ///   - component: Anzahl der Elemente, die gleichzeitig gewählt werden können
+    /// - Returns: Anzahl der Elemente, aus denen gewählt werden kann
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return areas.count
     }
   
+    /// Gibt die Bezeichnungen der Einträge der PickerView zurück.
+    ///
+    /// - Parameters:
+    ///   - pickerView: Die betreffende PickerView
+    ///   - row: Die Zeile des Eintrags der PickerView
+    ///   - component: Das Element der PickerView
+    /// - Returns: Die Bezeichnung des Eintrags der Zeile
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return areas[row]
     }
     
+    /// Lädt die Felder aus der Datenbank.
     private func loadAreasFromRealm(){
         var entryList = [Entry]()
         let db = RealmHelper()

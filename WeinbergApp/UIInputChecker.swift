@@ -19,6 +19,12 @@ class UIInputChecker{
         
     }
    
+    /// Prüft eine Eingabe auf Buchstaben oder Ziffern
+    ///
+    /// - Parameters:
+    ///   - input: Die zu prüfende Zeichenkette
+    ///   - type: Gibt an, ob auf Buchstaben oder Ziffern geprüft werden soll
+    /// - Returns: true, falls sämtliche Zeichen der Zeichenkette mit dem Prüftypen übereinstimmen; false sonst
     public func check(input: String, type: UIInputType) -> Bool{
         switch type {
         case UIInputType.text:

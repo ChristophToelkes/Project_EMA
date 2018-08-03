@@ -26,6 +26,7 @@ class DuengungAddEntryViewController: UIViewController, UIPickerViewDelegate, UI
     @IBOutlet weak var duengemittelText: UITextField!
     @IBOutlet weak var mengeDuengemittelText: UITextField!
     
+    /// Zeigt den zuvor gewählten Eintrag an oder legt einen neuen Eintrag an.
     override func viewDidLoad() {
         super.viewDidLoad()
         headCaptureLabel.text = captureType
@@ -65,6 +66,9 @@ class DuengungAddEntryViewController: UIViewController, UIPickerViewDelegate, UI
         }
     }
     
+    /// Speichert den Eintrag in der Datenbank, falls sämtliche Felder ausgefüllt sind.
+    ///
+    /// - Parameter sender: Der gedrückte Button
     @IBAction func safeEntryBtn(_ sender: Any) {
         let db = RealmHelper()
         let formatter = DateFormatter()
@@ -77,11 +81,17 @@ class DuengungAddEntryViewController: UIViewController, UIPickerViewDelegate, UI
         }
     }
     
+    /// Leitet den Nutzer zur Übersicht über die gespeicherten Einträge des Arbeitsvorgangs oder Aufwands weiter.
+    ///
+    /// - Parameter sender: Der gedrückte Button
     @IBAction func backBtn(_ sender: Any) {
         performSegue(withIdentifier: "segueToAddCaptureView", sender: self)
         
     }
     
+    /// Fragt den Nutzer, ob der angezeigt Eintrag gelöscht werden soll.
+    ///
+    /// - Parameter sender: Der gedrückte Button
     @IBAction func pressDeleteButton(_ sender: Any) {
         let alert = UIAlertController(title: "Eintrag löschen", message: "Möchten Sie diesen Eintrag wirklich löschen?", preferredStyle: .alert)
         
@@ -92,6 +102,9 @@ class DuengungAddEntryViewController: UIViewController, UIPickerViewDelegate, UI
         self.present(alert, animated: true)
     }
     
+    /// Ändert die Düngemittel-Kategorie zu "Mineralisch" und hebt den entsprechenden Button hervor.
+    ///
+    /// - Parameter sender: Der gedrückte Button
     @IBAction func pressMineral(_ sender: Any) {
         if category != "Mineralisch" {
             category = "Mineralisch"
@@ -100,6 +113,9 @@ class DuengungAddEntryViewController: UIViewController, UIPickerViewDelegate, UI
         }
     }
     
+    /// Ändert die Düngemittel-Kategorie zu "Organisch" und hebt den entsprechenden Button hervor.
+    ///
+    /// - Parameter sender: Der gedrückte Button
     @IBAction func pressOrganic(_ sender: Any) {
         if category != "Organisch" {
             category = "Organisch"
@@ -108,6 +124,7 @@ class DuengungAddEntryViewController: UIViewController, UIPickerViewDelegate, UI
         }
     }
     
+    /// Löscht den angezeigten Eintrag aus der Datenbank.
     func deleteEntry() {
         let db = RealmHelper()
         if let entry = entry {
@@ -120,24 +137,47 @@ class DuengungAddEntryViewController: UIViewController, UIPickerViewDelegate, UI
         
     }
     
+    /// Bereitet die Weiterleitung des Nutzers zur Übersicht über die gespeicherten Arbeitsvorgänge oder Aufwände vor.
+    ///
+    /// - Parameters:
+    ///   - segue: Der Segue, der zur Übersicht der Einträge weiterleitet.
+    ///   - sender: Der gedrückte button.
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destination = segue.destination as? AddCaptureViewController{
             destination.element = captureType
         }
     }
     
+    /// Gibt die Anzahl der zu wählenden Elemente der PcikerView zurück.
+    ///
+    /// - Parameter pickerView: Die betreffende PickerView
+    /// - Returns: Die Anzahl der zu wählenden Elemente der PickerView
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
     
+    /// Gibt die Anzahl der Elemente der PickerView zurück, aus denen ausgewählt werden kann.
+    ///
+    /// - Parameters:
+    ///   - pickerView: Die betreffende PickerView
+    ///   - component: Anzahl der Elemente, die gleichzeitig gewählt werden können
+    /// - Returns: Anzahl der Elemente, aus denen gewählt werden kann
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return areas.count
     }
     
+    /// Gibt die Bezeichnungen der Einträge der PickerView zurück.
+    ///
+    /// - Parameters:
+    ///   - pickerView: Die betreffende PickerView
+    ///   - row: Die Zeile des Eintrags der PickerView
+    ///   - component: Das Element der PickerView
+    /// - Returns: Die Bezeichnung des Eintrags der Zeile
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return areas[row]
     }
     
+    /// Lädt die Felder aus der Datenbank.
     private func loadAreasFromRealm(){
         var entryList = [Entry]()
         let db = RealmHelper()

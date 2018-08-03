@@ -14,6 +14,14 @@ class RealmHelper {
     
     let realm = try! Realm()
     
+    /// Fügt der Datenbank einen generellen Eintrag hinzu.
+    ///
+    /// - Parameters:
+    ///   - captureType: Der CaptureType des Eintrags
+    ///   - benutzer: Der zugewiesene Benutzer des Eintrags
+    ///   - feld: Das zugewiesene Feld des Eintrags
+    ///   - arbeitszeit: Die Dauer des Eintrags
+    ///   - datum: Das Datum des Eintrags
     func addGeneral(captureType: String, benutzer: String, feld: String, arbeitszeit: String, datum: String ) {
         
         let newEntry = GeneralEntry()
@@ -28,6 +36,13 @@ class RealmHelper {
         }
     }
     
+    /// Fügt der Datenbank ein neues Feld hinzu.
+    ///
+    /// - Parameters:
+    ///   - areaName: Der Name des Feldes
+    ///   - points: Die Koordinaten des Feldes
+    ///   - captureType: Der CaptureType des Feldes
+    ///   - size: Die Größe des Feldes
     func addArea(areaName: String, points: String, captureType: String, size: String) {
         
         let newEntry = AreaEntry()
@@ -41,6 +56,13 @@ class RealmHelper {
         }
     }
     
+    /// Fügt der Datenbank einen neuen Eintrag für Thermischen Aufwand hinzu
+    ///
+    /// - Parameters:
+    ///   - year: Das zugewiesene Jahr des Eintrags
+    ///   - description: Die Beschreibung des Eintrags
+    ///   - Consumption: Der zugewiesene Verbrauch des Eintrags
+    ///   - captureType: Der CaptureType des Eintrags
     func addThermal(year: String, description: String, Consumption: String, captureType: String) {
         
         let newEntry = ThermalEntry()
@@ -54,6 +76,13 @@ class RealmHelper {
         }
     }
     
+    /// Fügt der Datenbank einen neuen Eintrag für Stoffströme hinzu.
+    ///
+    /// - Parameters:
+    ///   - year: Das zugewiesene Jahr des Eintrags
+    ///   - description: Die Beschreibung des Eintrags
+    ///   - Consumption: Der zugewiesene Verbrauch des Eintrags
+    ///   - captureType: Der CaptureType des Eintrags
     func addMaterial(year: String, description: String, Consumption: String, captureType: String) {
         
         let newEntry = MaterialEntry()
@@ -68,6 +97,16 @@ class RealmHelper {
         }
     }
     
+    /// Fügt der Datenbank einen neuen Eintrag für elektrischen Aufwand hinzu.
+    ///
+    /// - Parameters:
+    ///   - year: Das zugewiesene Jahr des Eintrags
+    ///   - Consumptioner: Der zugewiesene Verbraucher des Eintrags
+    ///   - aspekt: Der zugewiesene Energieverbrauchsgrund des Eintrags
+    ///   - captureType: Der CaptureType des Eintrags
+    ///   - kwh: Der zugewiesene Verbrauch des Eintrags in kwh
+    ///   - power: Die zugewiesene Leistung des Eintrags in PS
+    ///   - runtime: Die zugewiesene Laufzeit des Eintrags in h
     func addEnergy(year: String, Consumptioner: String, aspekt: String, captureType: String, kwh: String, power: String, runtime: String) {
         
         let newEntry = EnergyEntry()
@@ -84,6 +123,15 @@ class RealmHelper {
         }
     }
     
+    /// Fügt der Datenbank einen neuen Eintrag für Traubenlese hinzu.
+    ///
+    /// - Parameters:
+    ///   - captureType: Der zugewiesene CaptureType des Eintrags
+    ///   - benutzer: Der zugewiesene Benutzer des Eintrags
+    ///   - feld: Das zugewiesene Feld es Eintrags
+    ///   - arbeitszeit: Die Dauer des Eintrags in h
+    ///   - datum: Das zugewiesene Datum des Arbeitsvorgangs
+    ///   - durchfuehrung: Die beschriebene Durchführung des Arbeitsvorgangs
     func addTraubenlese(captureType: String, benutzer: String, feld: String, arbeitszeit: String, datum: String, durchfuehrung: String) {
 
         
@@ -100,6 +148,17 @@ class RealmHelper {
         }
     }
     
+    /// Fügt der Datenbank einen neuen Eintrag für Düngung hinzu.
+    ///
+    /// - Parameters:
+    ///   - captureType: Der CaptureType des Eintrags
+    ///   - benutzer: Der zugewiesene Benutzer des Eintrags
+    ///   - feld: Das zu düngende Feld
+    ///   - arbeitszeit: Die Dauer des Vorgangs
+    ///   - datum: Das zugewiesene Datum des Arbeitsvorgangs
+    ///   - duengemittel: Das gewählte Düngemittel
+    ///   - mengeDuengemittel: Die Menge des gewählten Düngemittels in kg/ha
+    ///   - category: Die Kategorie des Düngemittels
     func addDuengung(captureType: String, benutzer: String, feld: String, arbeitszeit: String, datum: String, duengemittel: String, mengeDuengemittel: String, category: String) {
 
         
@@ -118,6 +177,20 @@ class RealmHelper {
         }
     }
     
+    /// Fügt der Datenbank einen neuen Eintrag für Pflanzenschutz hinzu.
+    ///
+    /// - Parameters:
+    ///   - captureType: Der CaptureType des Eintrags
+    ///   - benutzer: Der zugewiesene benutzer des Eintrags
+    ///   - feld: das zugewiesene Feld des Eintrags
+    ///   - arbeitszeit: Die Dauer des Arbeitsvorgangs
+    ///   - datum: Das Datum des Arbeitsvorgangs
+    ///   - gegen: Der Schädling, gegen den die Pflanzen geschützt werden sollen
+    ///   - mittel: Das Mittel, mit dem die Pflanzen geschützt werden sollen
+    ///   - termin: Der Termin, an dem das Mittel ausgetragen werden soll
+    ///   - info: Informationen zum Vorgang
+    ///   - mengePflanzenschutzmittel: Die Menge des Pflanzenschutzmittels in kg/ha
+    ///   - category: Die Kategorie des Pflanzenschutzmittels
     func addPflanzenschutz(captureType: String, benutzer: String, feld: String, arbeitszeit: String, datum: String, gegen: String, mittel: String, termin: String, info: String, mengePflanzenschutzmittel: String, category: String) {
         
         let newEntry = PflanzenschutzEntry()
@@ -138,6 +211,10 @@ class RealmHelper {
         }
     }
     
+    /// Fordert die, in der Datenbank gespeicherten, Einträge in Abhängigkeit des CaptureTypes an.
+    ///
+    /// - Parameter type: Der CaptureType der Einträge
+    /// - Returns: Ein Array von Einträgen
     func loadObjects (type: String) -> [Entry] {
         var entries: [Entry] = []
         switch type {
@@ -161,11 +238,19 @@ class RealmHelper {
         return entries
     }
     
+    /// Fordert die Einträge der Stoffströme aus der Datenbank an.
+    ///
+    /// - Parameter type: Der angeforderte CaptureType
+    /// - Returns: Ein ResultSet von Stoffströmen
     func getMaterialObjects(type: String) -> Results<MaterialEntry> {
         
         return realm.objects(MaterialEntry.self).filter("captureType = '" + type + "'")
     }
     
+    /// Erstellt die Einträge der Stoffströme und gibt diese zurück.
+    ///
+    /// - Parameter results: Das ResultSet der Stoffströme aus der Datenbank
+    /// - Returns: Das Array der Einträge der Stoffströme
     func getMaterialEntries(results: Results<MaterialEntry>) -> [Entry] {
         var entries: [Entry] = []
         
@@ -201,11 +286,19 @@ class RealmHelper {
         return entries
     }
     
+    /// Fordert die Einträge der Thermischen Aufwände aus der Datenbank an.
+    ///
+    /// - Parameter type: Der angeforderte CaptureType
+    /// - Returns: Ein ResultSet von Thermischen Aufwänden
     func getThermalObjects(type: String) -> Results<ThermalEntry> {
         
         return realm.objects(ThermalEntry.self).filter("captureType = '" + type + "'")
     }
     
+    /// Erstellt die Einträge der Thermischen Aufwände und gibt diese zurück.
+    ///
+    /// - Parameter results: Das ResultSet der Thermischen Aufwände aus der Datenbank
+    /// - Returns: Das Array der Einträge der Thermischen Aufwände
     func getThermalEntries(results: Results<ThermalEntry>) -> [Entry] {
         var entries: [Entry] = []
         
@@ -241,11 +334,19 @@ class RealmHelper {
         return entries
     }
     
+    /// Fordert die Einträge der Energetischen Aufwände aus der Datenbank an.
+    ///
+    /// - Parameter type: Der angeforderte CaptureType
+    /// - Returns: Ein ResultSet von Energetischen Aufwänden
     func getEnergyObjects(type: String) -> Results<EnergyEntry> {
         
         return realm.objects(EnergyEntry.self).filter("captureType = '" + type + "'")
     }
     
+    /// Erstellt die Einträge der Energetischen Aufwände und gibt diese zurück.
+    ///
+    /// - Parameter results: Das ResultSet der Energetischen Aufwände aus der Datenbank
+    /// - Returns: Das Array der Einträge der Energetischen Aufwände
     func getEnergyEntries(results: Results<EnergyEntry>) -> [Entry] {
         var entries: [Entry] = []
         
@@ -281,11 +382,19 @@ class RealmHelper {
         return entries
     }
     
+    /// Fordert die Einträge der Traubenlese aus der Datenbank an.
+    ///
+    /// - Parameter type: Der angeforderte CaptureType
+    /// - Returns: Ein ResultSet von Traubenlese Einträgen
     func getTraubenleseObjects(type: String) -> Results<TraubenleseEntry> {
         
         return realm.objects(TraubenleseEntry.self).filter("captureType = '" + type + "'")
     }
     
+    /// Erstellt die Einträge der Traubenlese und gibt diese zurück.
+    ///
+    /// - Parameter results: Das ResultSet der Traubenlese aus der Datenbank
+    /// - Returns: Das Array der Einträge der Traubenlese
     func getTraubenleseEntries(results: Results<TraubenleseEntry>) -> [Entry] {
         var entries: [Entry] = []
         
@@ -321,11 +430,19 @@ class RealmHelper {
         return entries
     }
     
+    /// Fordert die Einträge der Felder aus der Datenbank an.
+    ///
+    /// - Parameter type: Der angeforderte CaptureType
+    /// - Returns: Ein ResultSet von Feld Einträgen
     func getAreaObjects(type: String) -> Results<AreaEntry> {
         
         return realm.objects(AreaEntry.self).filter("captureType = '" + type + "'")
     }
     
+    /// Erstellt die Einträge der Felder und gibt diese zurück.
+    ///
+    /// - Parameter results: Das ResultSet der Felder aus der Datenbank
+    /// - Returns: Das Array der Einträge der Felder
     func getAreaEntries(results: Results<AreaEntry>) -> [Entry] {
         var entries: [Entry] = []
         
@@ -361,11 +478,19 @@ class RealmHelper {
         return entries
     }
     
+    /// Fordert die Einträge der Duengung aus der Datenbank an.
+    ///
+    /// - Parameter type: Der angeforderte CaptureType
+    /// - Returns: Ein ResultSet von Duengung Einträgen
     func getDuengungObjects(type: String) -> Results<DuengungEntry> {
         
         return realm.objects(DuengungEntry.self).filter("captureType = '" + type + "'")
     }
     
+    /// Erstellt die Einträge der Duengung und gibt diese zurück.
+    ///
+    /// - Parameter results: Das ResultSet der Duengung aus der Datenbank
+    /// - Returns: Das Array der Einträge der Duengung
     func getDuengungEntries(results: Results<DuengungEntry>) -> [Entry] {
         var entries: [Entry] = []
         
@@ -401,11 +526,19 @@ class RealmHelper {
         return entries
     }
     
+    /// Fordert die Einträge des Pflanzenschutzes aus der Datenbank an.
+    ///
+    /// - Parameter type: Der angeforderte CaptureType
+    /// - Returns: Ein ResultSet von Pflanzenschutz Einträgen
     func getPflanzenschutzObjects(type: String) -> Results<PflanzenschutzEntry> {
         
         return realm.objects(PflanzenschutzEntry.self).filter("captureType = '" + type + "'")
     }
     
+    /// Erstellt die Einträge des Pflanzenschutzes und gibt diese zurück.
+    ///
+    /// - Parameter results: Das ResultSet des Pflanzenschutzes aus der Datenbank
+    /// - Returns: Das Array der Einträge des Pflanzenschutzes
     func getPflanzenschutzEntries(results: Results<PflanzenschutzEntry>) -> [Entry] {
         var entries: [Entry] = []
         
@@ -441,11 +574,19 @@ class RealmHelper {
         return entries
     }
     
+    /// Fordert die generellen Einträge aus der Datenbank an.
+    ///
+    /// - Parameter type: Der angeforderte CaptureType
+    /// - Returns: Ein ResultSet von generellen Einträgen
     func getGeneralObjects(type: String) -> Results<GeneralEntry> {
         
         return realm.objects(GeneralEntry.self).filter("captureType = '" + type + "'")
     }
     
+    /// Erstellt die generellen Einträge und gibt diese zurück.
+    ///
+    /// - Parameter results: Das ResultSet aus der Datenbank
+    /// - Returns: Das Array der generellen Einträge
     func getGeneralEntries(results: Results<GeneralEntry>) -> [Entry] {
         var entries: [Entry] = []
         
@@ -481,6 +622,9 @@ class RealmHelper {
         return entries
     }
     
+    /// Löscht einen generellen Eintrag aus der Datenbank, falls dieser gefunden wird.
+    ///
+    /// - Parameter entry: Der zu löschende Eintrag
     func deleteGeneral(entry: Entry) {
         let typeBenutzer = "captureType = '" + entry.getCaptureType() + "' AND Benutzer = '" + entry.getUser() + "'"
         let feldArbeitszeit = "Feld = '" + entry.getField() + "' AND Arbeitszeit = '" + String(entry.getHours()) + "'"
@@ -495,6 +639,9 @@ class RealmHelper {
         }
     }
     
+    /// Löscht einen Eintrag zu Thermischem Aufwand aus der Datenbank, falls dieser gefunden wird.
+    ///
+    /// - Parameter entry: Der zu löschende Eintrag
     func deleteThermal(entry: Entry) {
         let typeBenutzer = "captureType = '" + entry.getCaptureType() + "' AND Year = '" + entry.getYear() + "'"
         let feldArbeitszeit = "Description = '" + entry.getDescription() + "' AND Consumption = '" + entry.getConsumption() + "'"
@@ -509,6 +656,9 @@ class RealmHelper {
         }
     }
     
+    /// Löscht einen Eintrag zu Stoffströmen aus der Datenbank, falls dieser gefunden wird.
+    ///
+    /// - Parameter entry: Der zu löschende Eintrag
     func deleteMaterial(entry: Entry) {
         let typeBenutzer = "captureType = '" + entry.getCaptureType() + "' AND Year = '" + entry.getYear() + "'"
         let feldArbeitszeit = "Description = '" + entry.getDescription() + "' AND Consumption = '" + entry.getConsumption() + "'"
@@ -523,6 +673,9 @@ class RealmHelper {
         }
     }
     
+    /// Löscht einen Eintrag zu Energetischem Aufwand aus der Datenbank, falls dieser gefunden wird.
+    ///
+    /// - Parameter entry: Der zu löschende Eintrag
     func deleteEnergy(entry: Entry) {
         let typeBenutzer = "captureType = '" + entry.getCaptureType() + "' AND Year = '" + entry.getYear() + "'"
         let feldArbeitszeit = "Consumptioner = '" + entry.getConsumptioner() + "' AND Aspekt = '" + entry.getAspekt() + "'"
@@ -538,6 +691,9 @@ class RealmHelper {
         }
     }
     
+    /// Löscht einen Eintrag zu Traubenlese aus der Datenbank, falls dieser gefunden wird.
+    ///
+    /// - Parameter entry: Der zu löschende Eintrag
     func deleteTraubenlese(entry: Entry) {
         let typeBenutzer = "captureType = '" + entry.getCaptureType() + "' AND Benutzer = '" + entry.getUser() + "'"
         let feldArbeitszeit = "Feld = '" + entry.getField() + "' AND Arbeitszeit = '" + String(entry.getHours()) + "'"
@@ -552,6 +708,9 @@ class RealmHelper {
         }
     }
     
+    /// Löscht einen Eintrag zu Duengung aus der Datenbank, falls dieser gefunden wird.
+    ///
+    /// - Parameter entry: Der zu löschende Eintrag
     func deleteDuengung(entry: Entry) {
         let typeBenutzer = "captureType = '" + entry.getCaptureType() + "' AND Benutzer = '" + entry.getUser() + "'"
         let feldArbeitszeit = "Feld = '" + entry.getField() + "' AND Arbeitszeit = '" + String(entry.getHours()) + "'"
@@ -567,6 +726,9 @@ class RealmHelper {
         }
     }
     
+    /// Löscht einen Eintrag eines Feldes aus der Datenbank, falls dieser gefunden wird.
+    ///
+    /// - Parameter entry: Der zu löschende Eintrag
     func deleteArea(entry: Entry) {
         let typeName = "captureType = '" + entry.getCaptureType() + "' AND areaName = '" + entry.getAreaName() + "'"
         let points = "points = '" + entry.getAreaPoints() + "'"
@@ -580,6 +742,9 @@ class RealmHelper {
         }
     }
     
+    /// Löscht einen Eintrag zu Pflanzenschutz aus der Datenbank, falls dieser gefunden wird.
+    ///
+    /// - Parameter entry: Der zu löschende Eintrag
     func deletePflanzenschutz(entry: Entry) {
         let typeBenutzer = "captureType = '" + entry.getCaptureType() + "' AND Benutzer = '" + entry.getUser() + "'"
         let feldArbeitszeit = "Feld = '" + entry.getField() + "' AND Arbeitszeit = '" + String(entry.getHours()) + "'"

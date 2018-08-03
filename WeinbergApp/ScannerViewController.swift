@@ -14,6 +14,7 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
     var captureSession: AVCaptureSession!
     var previewLayer: AVCaptureVideoPreviewLayer!
     
+    /// Lädt den QRCode-Scanner, falls das Gerät eine Kamera besitzt.
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -56,6 +57,7 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
         captureSession.startRunning()
     }
     
+    /// Gibt eine Fehlermeldung aus, falls das Gerät keine kamera besitzt.
     func failed() {
         let ac = UIAlertController(title: "Scanning not supported", message: "Your device does not support scanning a code from an item. Please use a device with a camera.", preferredStyle: .alert)
         ac.addAction(UIAlertAction(title: "OK", style: .default))
@@ -63,6 +65,9 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
         captureSession = nil
     }
     
+    /// Startet die Aufnahme der Kamera.
+    ///
+    /// - Parameter animated: true, für animierte Anzeige der View; false sonst
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
@@ -71,6 +76,9 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
         }
     }
     
+    /// Beendet die Aufnahme der Kamera.
+    ///
+    /// - Parameter animated: true, für animiertes Ausblenden der View; false sonst
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         
@@ -79,6 +87,12 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
         }
     }
     
+    /// <#Description#>
+    ///
+    /// - Parameters:
+    ///   - output: <#output description#>
+    ///   - metadataObjects: <#metadataObjects description#>
+    ///   - connection: <#connection description#>
     func metadataOutput(_ output: AVCaptureMetadataOutput, didOutput metadataObjects: [AVMetadataObject], from connection: AVCaptureConnection) {
         captureSession.stopRunning()
         
@@ -92,6 +106,9 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
         dismiss(animated: true)
     }
     
+    /// <#Description#>
+    ///
+    /// - Parameter code: <#code description#>
     func found(code: String) {
         print(code)
     }
