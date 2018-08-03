@@ -1837,12 +1837,10 @@
         <image name="work" width="24" height="24"/>
     </resources>
     <inferredMetricsTieBreakers>
-<<<<<<< HEAD
         <segue reference="Qlf-9S-pV7"/>
         <segue reference="n5A-dJ-Kxq"/>
-=======
         <segue reference="uPz-Fn-yU9"/>
->>>>>>> e3c2588da8bed59a165edd8dd0373d8676864f1c
+
         <segue reference="ym3-nN-BRJ"/>
         <segue reference="vVE-hR-lil"/>
     </inferredMetricsTieBreakers>

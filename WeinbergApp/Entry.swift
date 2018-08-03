@@ -229,6 +229,23 @@ struct Entry{
         }
     }
     
+    public func getAll() -> [String] {
+        let array = [String](arrayLiteral: getAreaName(),
+                             getConsumption(),
+                             getConsumptioner(),
+                             getDate(),
+                             getInfo(),
+                             getkwh(),
+                             getUser(),
+                             getYear(),
+                             getField(),
+                             getHours(),
+                             getMittel(),
+                             getDescription(),
+                             getDuengemittel())
+        return array
+    }
+    
     public func getMengePflanzenschutzmittel() -> String {
         if let returnValue = self.mengePflanzenschutzmittel {
             return returnValue

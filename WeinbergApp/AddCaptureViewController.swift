@@ -24,53 +24,32 @@ class AddCaptureViewController: UIViewController, UITableViewDataSource, UITable
         super.viewDidLoad()
         tableView.dataSource = self
         tableView.delegate = self
+        searchBarView.delegate = self
         loadEntries()
     }
     
-<<<<<<< HEAD
-    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
-        guard let input = searchBar.text else {return}
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String){
         entryListFilter = []
-        entryList.forEach { (e) in
-            if((e.date?.contains(input))! ||
-                (e.areaName?.contains(input))!) ||
-                (e.aspekt?.contains(input))! ||
-                (e.consumer?.contains(input))! ||
-                (e.consumption?.contains(input))! ||
-                (e.description?.contains(input))!{
-                entryListFilter.append(e)
-            }
-        }
-        tableView.reloadData()
         
-    }
-    
-    func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
-        guard let input = searchBar.text else {return}
-        entryListFilter = []
         entryList.forEach { (e) in
-            if((e.date?.contains(input))! ||
-                (e.areaName?.contains(input))!) ||
-                (e.aspekt?.contains(input))! ||
-                (e.consumer?.contains(input))! ||
-                (e.consumption?.contains(input))! ||
-                (e.description?.contains(input))!{
-                entryListFilter.append(e)
-            }
+            e.getAll().forEach({ (arg) in
+                if(arg.contains(searchText)){
+                    entryListFilter.append(e)
+                }
+            })
         }
         tableView.reloadData()
     }
-    
-    
-    
-=======
+
+   
+
     /// Gibt die Anzahl der Einträge zurück.
     ///
     /// - Parameters:
     ///   - tableView: Die aufrufende TableView
     ///   - section: Der aufgerufene Abschnitt
     /// - Returns: Die Anzahl der Einträge der TableView
->>>>>>> e3c2588da8bed59a165edd8dd0373d8676864f1c
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return entryListFilter.count
     }
@@ -220,14 +199,12 @@ class AddCaptureViewController: UIViewController, UITableViewDataSource, UITable
         }
     }
     
-<<<<<<< HEAD
     
     
-=======
+
     /// Leitet den Nutzer zur Oberfläche für eine neue Eintragung des entsprechenden Arbeitsgangs oder Aufwands weiter.
     ///
     /// - Parameter sender: Der gedrückte Button
->>>>>>> e3c2588da8bed59a165edd8dd0373d8676864f1c
     @IBAction func addEntryBtn(_ sender: Any) {
         if(element == "Düngung"){
             performSegue(withIdentifier: "segueToDuengungAddEntryView", sender: self)
