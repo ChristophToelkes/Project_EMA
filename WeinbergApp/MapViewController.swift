@@ -349,6 +349,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, UITableViewDelegat
     ///
     /// - Parameter points: Die Eckpunkte des Areals
     /// - Returns: Die Größe des Areals
+    
     private func areaSize(points: [CLLocationCoordinate2D]) -> Int{
         var temp: Double = 0
         var temp2: Double = 0
@@ -373,6 +374,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, UITableViewDelegat
      
         return abs(Int(result / 2))
     }
+    
     
     
     

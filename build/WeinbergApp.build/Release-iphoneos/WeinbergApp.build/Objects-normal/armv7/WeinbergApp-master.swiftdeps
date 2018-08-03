@@ -1,0 +1,22 @@
+version: "Apple Swift version 4.1 (swiftlang-902.0.48 clang-902.0.37.1)"
+options: "a394bee0ee207596e5f2af32a63f1967"
+build_time: [1533316125, 818717000]
+inputs:
+  "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/LoginViewController.swift": [9223372036, 854775807]
+  "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/ShakeAnimationHelper.swift": [9223372036, 854775807]
+  "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/UIInputChecker.swift": [9223372036, 854775807]
+  "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/AddEntryViewController.swift": [9223372036, 854775807]
+  "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/AddMaterialFlowsORThermalViewController.swift": [9223372036, 854775807]
+  "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/DuengungAddEntryViewController.swift": [9223372036, 854775807]
+  "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/ViewFader.swift": [9223372036, 854775807]
+  "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/AppDelegate.swift": [9223372036, 854775807]
+  "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/PflanzenschutzAddEntryViewController.swift": [9223372036, 854775807]
+  "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/AddCaptureViewController.swift": [9223372036, 854775807]
+  "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/Entry.swift": [9223372036, 854775807]
+  "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/Area.swift": [9223372036, 854775807]
+  "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/ScannerViewController.swift": [9223372036, 854775807]
+  "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/CustomPin.swift": [9223372036, 854775807]
+  "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/MapViewController.swift": [9223372036, 854775807]
+  "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/AddElectricalEquipmentViewController.swift": [9223372036, 854775807]
+  "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/CaptureViewController.swift": [9223372036, 854775807]
+  "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/RealmHelper.swift": [9223372036, 854775807]

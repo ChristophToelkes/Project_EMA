@@ -1,0 +1,1867 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/AddCaptureViewController.swift",
+      "line": 12,
+      "symbol": "AddCaptureViewController",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/AddCaptureViewController.swift",
+      "line": 13,
+      "symbol": "AddCaptureViewController.element",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/AddCaptureViewController.swift",
+      "line": 14,
+      "symbol": "AddCaptureViewController.entryList",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/AddCaptureViewController.swift",
+      "line": 15,
+      "symbol": "AddCaptureViewController.entryListFilter",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/AddCaptureViewController.swift",
+      "line": 18,
+      "symbol": "AddCaptureViewController.tableView",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/AddCaptureViewController.swift",
+      "line": 19,
+      "symbol": "AddCaptureViewController.searchBarView",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/AddCaptureViewController.swift",
+      "line": 33,
+      "symbol": "AddCaptureViewController.searchBar(_:textDidChange:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/AddElectricalEquipmentViewController.swift",
+      "line": 12,
+      "symbol": "AddElectricalEquipmentViewController",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/AddElectricalEquipmentViewController.swift",
+      "line": 13,
+      "symbol": "AddElectricalEquipmentViewController.optionPicker",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/AddElectricalEquipmentViewController.swift",
+      "line": 14,
+      "symbol": "AddElectricalEquipmentViewController.titleLabel",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/AddElectricalEquipmentViewController.swift",
+      "line": 15,
+      "symbol": "AddElectricalEquipmentViewController.yearTestField",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/AddElectricalEquipmentViewController.swift",
+      "line": 16,
+      "symbol": "AddElectricalEquipmentViewController.kwhLabel",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/AddElectricalEquipmentViewController.swift",
+      "line": 17,
+      "symbol": "AddElectricalEquipmentViewController.kwhTestField",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/AddElectricalEquipmentViewController.swift",
+      "line": 18,
+      "symbol": "AddElectricalEquipmentViewController.consumerTextField",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/AddElectricalEquipmentViewController.swift",
+      "line": 19,
+      "symbol": "AddElectricalEquipmentViewController.timeLabel",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/AddElectricalEquipmentViewController.swift",
+      "line": 20,
+      "symbol": "AddElectricalEquipmentViewController.timeTestField",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/AddElectricalEquipmentViewController.swift",
+      "line": 21,
+      "symbol": "AddElectricalEquipmentViewController.powerLabel",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/AddElectricalEquipmentViewController.swift",
+      "line": 22,
+      "symbol": "AddElectricalEquipmentViewController.powerTestField",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/AddElectricalEquipmentViewController.swift",
+      "line": 24,
+      "symbol": "AddElectricalEquipmentViewController.entry",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/AddElectricalEquipmentViewController.swift",
+      "line": 25,
+      "symbol": "AddElectricalEquipmentViewController.captureType",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/AddElectricalEquipmentViewController.swift",
+      "line": 26,
+      "symbol": "AddElectricalEquipmentViewController.options",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/AddEntryViewController.swift",
+      "line": 12,
+      "symbol": "AddEntryViewController",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/AddEntryViewController.swift",
+      "line": 15,
+      "symbol": "AddEntryViewController.entry",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/AddEntryViewController.swift",
+      "line": 16,
+      "symbol": "AddEntryViewController.captureType",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/AddEntryViewController.swift",
+      "line": 17,
+      "symbol": "AddEntryViewController.areas",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/AddEntryViewController.swift",
+      "line": 18,
+      "symbol": "AddEntryViewController.headCaptureLabel",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/AddEntryViewController.swift",
+      "line": 19,
+      "symbol": "AddEntryViewController.traubenleseDurchfuehrungView",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/AddEntryViewController.swift",
+      "line": 20,
+      "symbol": "AddEntryViewController.datePicker",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/AddEntryViewController.swift",
+      "line": 22,
+      "symbol": "AddEntryViewController.safeButton",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/AddEntryViewController.swift",
+      "line": 23,
+      "symbol": "AddEntryViewController.areaPicker",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/AddEntryViewController.swift",
+      "line": 24,
+      "symbol": "AddEntryViewController.benutzerText",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/AddEntryViewController.swift",
+      "line": 25,
+      "symbol": "AddEntryViewController.arbeitszeitText",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/AddEntryViewController.swift",
+      "line": 26,
+      "symbol": "AddEntryViewController.durchfuehrungText",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/AddMaterialFlowsORThermalViewController.swift",
+      "line": 12,
+      "symbol": "AddMaterialFlowsORThermalViewController",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/AddMaterialFlowsORThermalViewController.swift",
+      "line": 15,
+      "symbol": "AddMaterialFlowsORThermalViewController.dateTextField",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/AddMaterialFlowsORThermalViewController.swift",
+      "line": 16,
+      "symbol": "AddMaterialFlowsORThermalViewController.optionPicker",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/AddMaterialFlowsORThermalViewController.swift",
+      "line": 18,
+      "symbol": "AddMaterialFlowsORThermalViewController.amountTextField",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/AddMaterialFlowsORThermalViewController.swift",
+      "line": 19,
+      "symbol": "AddMaterialFlowsORThermalViewController.titleLabel",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/AddMaterialFlowsORThermalViewController.swift",
+      "line": 21,
+      "symbol": "AddMaterialFlowsORThermalViewController.entry",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/AddMaterialFlowsORThermalViewController.swift",
+      "line": 22,
+      "symbol": "AddMaterialFlowsORThermalViewController.captureType",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/AddMaterialFlowsORThermalViewController.swift",
+      "line": 23,
+      "symbol": "AddMaterialFlowsORThermalViewController.optionsMaterial",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/AppDelegate.swift",
+      "line": 12,
+      "symbol": "AppDelegate",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/AppDelegate.swift",
+      "line": 14,
+      "symbol": "AppDelegate.window",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/AppDelegate.swift",
+      "line": 17,
+      "symbol": "AppDelegate.application(_:didFinishLaunchingWithOptions:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/AppDelegate.swift",
+      "line": 22,
+      "symbol": "AppDelegate.applicationWillResignActive(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/AppDelegate.swift",
+      "line": 27,
+      "symbol": "AppDelegate.applicationDidEnterBackground(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/AppDelegate.swift",
+      "line": 32,
+      "symbol": "AppDelegate.applicationWillEnterForeground(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/AppDelegate.swift",
+      "line": 36,
+      "symbol": "AppDelegate.applicationDidBecomeActive(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/AppDelegate.swift",
+      "line": 40,
+      "symbol": "AppDelegate.applicationWillTerminate(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/Area.swift",
+      "line": 13,
+      "symbol": "Area",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/Area.swift",
+      "line": 15,
+      "symbol": "Area.name",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/Area.swift",
+      "line": 16,
+      "symbol": "Area.points",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/Area.swift",
+      "line": 19,
+      "symbol": "Area.init(name:points:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/CaptureViewController.swift",
+      "line": 12,
+      "symbol": "CaptureViewController",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/CaptureViewController.swift",
+      "line": 13,
+      "symbol": "CaptureViewController.tableView",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/CustomPin.swift",
+      "line": 14,
+      "symbol": "CustomPin",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/CustomPin.swift",
+      "line": 15,
+      "symbol": "CustomPin.title",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/CustomPin.swift",
+      "line": 17,
+      "symbol": "CustomPin.coordinate",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/CustomPin.swift",
+      "line": 19,
+      "symbol": "CustomPin.init(title:coordinate:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/DuengungAddEntryViewController.swift",
+      "line": 12,
+      "symbol": "DuengungAddEntryViewController",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/DuengungAddEntryViewController.swift",
+      "line": 14,
+      "symbol": "DuengungAddEntryViewController.entry",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/DuengungAddEntryViewController.swift",
+      "line": 15,
+      "symbol": "DuengungAddEntryViewController.captureType",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/DuengungAddEntryViewController.swift",
+      "line": 16,
+      "symbol": "DuengungAddEntryViewController.areas",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/DuengungAddEntryViewController.swift",
+      "line": 17,
+      "symbol": "DuengungAddEntryViewController.category",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/DuengungAddEntryViewController.swift",
+      "line": 18,
+      "symbol": "DuengungAddEntryViewController.headCaptureLabel",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/DuengungAddEntryViewController.swift",
+      "line": 19,
+      "symbol": "DuengungAddEntryViewController.datePicker",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/DuengungAddEntryViewController.swift",
+      "line": 21,
+      "symbol": "DuengungAddEntryViewController.organicButton",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/DuengungAddEntryViewController.swift",
+      "line": 22,
+      "symbol": "DuengungAddEntryViewController.mineralButton",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/DuengungAddEntryViewController.swift",
+      "line": 23,
+      "symbol": "DuengungAddEntryViewController.areaPicker",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/DuengungAddEntryViewController.swift",
+      "line": 24,
+      "symbol": "DuengungAddEntryViewController.benutzerText",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/DuengungAddEntryViewController.swift",
+      "line": 25,
+      "symbol": "DuengungAddEntryViewController.arbeitszeitText",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/DuengungAddEntryViewController.swift",
+      "line": 26,
+      "symbol": "DuengungAddEntryViewController.duengemittelText",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/DuengungAddEntryViewController.swift",
+      "line": 27,
+      "symbol": "DuengungAddEntryViewController.mengeDuengemittelText",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/Entry.swift",
+      "line": 12,
+      "symbol": "Entry",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/Entry.swift",
+      "line": 15,
+      "symbol": "Entry.areaName",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/Entry.swift",
+      "line": 16,
+      "symbol": "Entry.points",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/Entry.swift",
+      "line": 17,
+      "symbol": "Entry.areaSize",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/Entry.swift",
+      "line": 20,
+      "symbol": "Entry.consumer",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/Entry.swift",
+      "line": 21,
+      "symbol": "Entry.consumption",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/Entry.swift",
+      "line": 22,
+      "symbol": "Entry.year",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/Entry.swift",
+      "line": 23,
+      "symbol": "Entry.aspekt",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/Entry.swift",
+      "line": 24,
+      "symbol": "Entry.kwh",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/Entry.swift",
+      "line": 25,
+      "symbol": "Entry.power",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/Entry.swift",
+      "line": 26,
+      "symbol": "Entry.runtime",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/Entry.swift",
+      "line": 27,
+      "symbol": "Entry.description",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/Entry.swift",
+      "line": 30,
+      "symbol": "Entry.user",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/Entry.swift",
+      "line": 31,
+      "symbol": "Entry.date",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/Entry.swift",
+      "line": 32,
+      "symbol": "Entry.field",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/Entry.swift",
+      "line": 33,
+      "symbol": "Entry.hours",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/Entry.swift",
+      "line": 34,
+      "symbol": "Entry.captureType",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/Entry.swift",
+      "line": 36,
+      "symbol": "Entry.durchfuehrung",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/Entry.swift",
+      "line": 38,
+      "symbol": "Entry.duengemittel",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/Entry.swift",
+      "line": 39,
+      "symbol": "Entry.mengeDuengemittel",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/Entry.swift",
+      "line": 40,
+      "symbol": "Entry.category",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/Entry.swift",
+      "line": 42,
+      "symbol": "Entry.gegen",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/Entry.swift",
+      "line": 43,
+      "symbol": "Entry.mittel",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/Entry.swift",
+      "line": 44,
+      "symbol": "Entry.termin",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/Entry.swift",
+      "line": 45,
+      "symbol": "Entry.info",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/Entry.swift",
+      "line": 46,
+      "symbol": "Entry.mengePflanzenschutzmittel",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/Entry.swift",
+      "line": 48,
+      "symbol": "Entry.getConsumptioner()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/Entry.swift",
+      "line": 56,
+      "symbol": "Entry.getConsumption()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/Entry.swift",
+      "line": 64,
+      "symbol": "Entry.getYear()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/Entry.swift",
+      "line": 72,
+      "symbol": "Entry.getkwh()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/Entry.swift",
+      "line": 80,
+      "symbol": "Entry.getLeistung()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/Entry.swift",
+      "line": 88,
+      "symbol": "Entry.getLaufzeit()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/Entry.swift",
+      "line": 96,
+      "symbol": "Entry.getAspekt()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/Entry.swift",
+      "line": 104,
+      "symbol": "Entry.getDescription()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/Entry.swift",
+      "line": 112,
+      "symbol": "Entry.getAreaName()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/Entry.swift",
+      "line": 120,
+      "symbol": "Entry.getAreaPoints()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/Entry.swift",
+      "line": 128,
+      "symbol": "Entry.getUser()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/Entry.swift",
+      "line": 136,
+      "symbol": "Entry.getDate()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/Entry.swift",
+      "line": 144,
+      "symbol": "Entry.getField()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/Entry.swift",
+      "line": 152,
+      "symbol": "Entry.getHours()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/Entry.swift",
+      "line": 160,
+      "symbol": "Entry.getCaptureType()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/Entry.swift",
+      "line": 168,
+      "symbol": "Entry.getDurchfuehrung()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/Entry.swift",
+      "line": 176,
+      "symbol": "Entry.getDuengemittel()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/Entry.swift",
+      "line": 184,
+      "symbol": "Entry.getMengeDuengemittel()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/Entry.swift",
+      "line": 192,
+      "symbol": "Entry.getCategory()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/Entry.swift",
+      "line": 200,
+      "symbol": "Entry.getGegen()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/Entry.swift",
+      "line": 208,
+      "symbol": "Entry.getMittel()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/Entry.swift",
+      "line": 216,
+      "symbol": "Entry.getTermin()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/Entry.swift",
+      "line": 224,
+      "symbol": "Entry.getInfo()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/Entry.swift",
+      "line": 232,
+      "symbol": "Entry.getAll()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/Entry.swift",
+      "line": 249,
+      "symbol": "Entry.getMengePflanzenschutzmittel()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/Entry.swift",
+      "line": 257,
+      "symbol": "Entry.setLeistung(power:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/Entry.swift",
+      "line": 261,
+      "symbol": "Entry.setLaufzeit(runtime:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/Entry.swift",
+      "line": 265,
+      "symbol": "Entry.setConsumptioner(consumer:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/Entry.swift",
+      "line": 269,
+      "symbol": "Entry.setConsumption(consumption:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/Entry.swift",
+      "line": 273,
+      "symbol": "Entry.setYear(year:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/Entry.swift",
+      "line": 277,
+      "symbol": "Entry.setKwf(kwh:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/Entry.swift",
+      "line": 281,
+      "symbol": "Entry.setDescription(description:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/Entry.swift",
+      "line": 285,
+      "symbol": "Entry.setAspekt(aspekt:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/Entry.swift",
+      "line": 289,
+      "symbol": "Entry.setAreaName(areaName:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/Entry.swift",
+      "line": 293,
+      "symbol": "Entry.setAreaPoints(points:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/Entry.swift",
+      "line": 297,
+      "symbol": "Entry.setUser(user:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/Entry.swift",
+      "line": 301,
+      "symbol": "Entry.setDate(date:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/Entry.swift",
+      "line": 305,
+      "symbol": "Entry.setField(field:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/Entry.swift",
+      "line": 309,
+      "symbol": "Entry.setHours(hours:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/Entry.swift",
+      "line": 313,
+      "symbol": "Entry.setCaptureType(captureType:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/Entry.swift",
+      "line": 317,
+      "symbol": "Entry.setDurchfuehrung(durchfuehrung:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/Entry.swift",
+      "line": 321,
+      "symbol": "Entry.setDuengemittel(duengemittel:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/Entry.swift",
+      "line": 325,
+      "symbol": "Entry.setMengeDuengemittel(mengeDuengemittel:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/Entry.swift",
+      "line": 329,
+      "symbol": "Entry.setCategory(category:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/Entry.swift",
+      "line": 333,
+      "symbol": "Entry.setGegen(gegen:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/Entry.swift",
+      "line": 337,
+      "symbol": "Entry.setMittel(mittel:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/Entry.swift",
+      "line": 341,
+      "symbol": "Entry.setTermin(termin:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/Entry.swift",
+      "line": 345,
+      "symbol": "Entry.setInfo(info:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/Entry.swift",
+      "line": 349,
+      "symbol": "Entry.setMengePflanzenschutzmittel(mengePflanzenschutzmittel:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/LoginViewController.swift",
+      "line": 15,
+      "symbol": "LoginViewController",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/LoginViewController.swift",
+      "line": 16,
+      "symbol": "LoginViewController.userNameTextField",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/LoginViewController.swift",
+      "line": 17,
+      "symbol": "LoginViewController.userPasswordtextField",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/LoginViewController.swift",
+      "line": 21,
+      "symbol": "LoginViewController.backgroundImage",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/LoginViewController.swift",
+      "line": 24,
+      "symbol": "LoginViewController.captureSession",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/LoginViewController.swift",
+      "line": 25,
+      "symbol": "LoginViewController.videoPreviewLayer",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/LoginViewController.swift",
+      "line": 26,
+      "symbol": "LoginViewController.qrCodeFrameView",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/LoginViewController.swift",
+      "line": 28,
+      "symbol": "LoginViewController.testName",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/LoginViewController.swift",
+      "line": 29,
+      "symbol": "LoginViewController.testPassword",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/LoginViewController.swift",
+      "line": 32,
+      "symbol": "LoginViewController.viewDidLoad()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/MapViewController.swift",
+      "line": 15,
+      "symbol": "MapViewController",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/MapViewController.swift",
+      "line": 17,
+      "symbol": "MapViewController.mapView",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/MapViewController.swift",
+      "line": 18,
+      "symbol": "MapViewController.addAreaOptionsStackView",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/MapViewController.swift",
+      "line": 19,
+      "symbol": "MapViewController.addAreaOptionsStackView2",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/MapViewController.swift",
+      "line": 21,
+      "symbol": "MapViewController.tableViewAreas",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/MapViewController.swift",
+      "line": 22,
+      "symbol": "MapViewController.addAreaTextField",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/MapViewController.swift",
+      "line": 23,
+      "symbol": "MapViewController.addNewArea",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/MapViewController.swift",
+      "line": 24,
+      "symbol": "MapViewController.showAllAreasBtn",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/MapViewController.swift",
+      "line": 25,
+      "symbol": "MapViewController.removerPinBtn",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/MapViewController.swift",
+      "line": 27,
+      "symbol": "MapViewController.sizeAreaTextField",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/MapViewController.swift",
+      "line": 37,
+      "symbol": "MapViewController.mapLoaded",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/MapViewController.swift",
+      "line": 283,
+      "symbol": "MapViewController.tableView(_:numberOfRowsInSection:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/MapViewController.swift",
+      "line": 287,
+      "symbol": "MapViewController.tableView(_:cellForRowAt:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/MapViewController.swift",
+      "line": 295,
+      "symbol": "MapViewController.tableView(_:didSelectRowAt:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/PflanzenschutzAddEntryViewController.swift",
+      "line": 12,
+      "symbol": "PflanzenschutzAddEntryViewController",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/PflanzenschutzAddEntryViewController.swift",
+      "line": 14,
+      "symbol": "PflanzenschutzAddEntryViewController.entry",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/PflanzenschutzAddEntryViewController.swift",
+      "line": 15,
+      "symbol": "PflanzenschutzAddEntryViewController.captureType",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/PflanzenschutzAddEntryViewController.swift",
+      "line": 16,
+      "symbol": "PflanzenschutzAddEntryViewController.areas",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/PflanzenschutzAddEntryViewController.swift",
+      "line": 17,
+      "symbol": "PflanzenschutzAddEntryViewController.category",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/PflanzenschutzAddEntryViewController.swift",
+      "line": 18,
+      "symbol": "PflanzenschutzAddEntryViewController.headCaptureLabel",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/PflanzenschutzAddEntryViewController.swift",
+      "line": 19,
+      "symbol": "PflanzenschutzAddEntryViewController.datePicker",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/PflanzenschutzAddEntryViewController.swift",
+      "line": 21,
+      "symbol": "PflanzenschutzAddEntryViewController.contentView",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/PflanzenschutzAddEntryViewController.swift",
+      "line": 23,
+      "symbol": "PflanzenschutzAddEntryViewController.fungicideButton",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/PflanzenschutzAddEntryViewController.swift",
+      "line": 24,
+      "symbol": "PflanzenschutzAddEntryViewController.herbicideButton",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/PflanzenschutzAddEntryViewController.swift",
+      "line": 25,
+      "symbol": "PflanzenschutzAddEntryViewController.insecticideButton",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/PflanzenschutzAddEntryViewController.swift",
+      "line": 26,
+      "symbol": "PflanzenschutzAddEntryViewController.areaPicker",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/PflanzenschutzAddEntryViewController.swift",
+      "line": 27,
+      "symbol": "PflanzenschutzAddEntryViewController.benutzerText",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/PflanzenschutzAddEntryViewController.swift",
+      "line": 28,
+      "symbol": "PflanzenschutzAddEntryViewController.arbeitszeitText",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/PflanzenschutzAddEntryViewController.swift",
+      "line": 29,
+      "symbol": "PflanzenschutzAddEntryViewController.gegenText",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/PflanzenschutzAddEntryViewController.swift",
+      "line": 30,
+      "symbol": "PflanzenschutzAddEntryViewController.mittelText",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/PflanzenschutzAddEntryViewController.swift",
+      "line": 31,
+      "symbol": "PflanzenschutzAddEntryViewController.terminText",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/PflanzenschutzAddEntryViewController.swift",
+      "line": 32,
+      "symbol": "PflanzenschutzAddEntryViewController.infoText",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/PflanzenschutzAddEntryViewController.swift",
+      "line": 33,
+      "symbol": "PflanzenschutzAddEntryViewController.mengePflanzenschutzmittelText",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/PflanzenschutzAddEntryViewController.swift",
+      "line": 34,
+      "symbol": "PflanzenschutzAddEntryViewController.scrollView",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/RealmHelper.swift",
+      "line": 13,
+      "symbol": "RealmHelper",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/RealmHelper.swift",
+      "line": 15,
+      "symbol": "RealmHelper.realm",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/RealmHelper.swift",
+      "line": 766,
+      "symbol": "MaterialEntry",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/RealmHelper.swift",
+      "line": 767,
+      "symbol": "MaterialEntry.captureType",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/RealmHelper.swift",
+      "line": 768,
+      "symbol": "MaterialEntry.Year",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/RealmHelper.swift",
+      "line": 769,
+      "symbol": "MaterialEntry.Consumption",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/RealmHelper.swift",
+      "line": 770,
+      "symbol": "MaterialEntry.Description",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/RealmHelper.swift",
+      "line": 773,
+      "symbol": "ThermalEntry",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/RealmHelper.swift",
+      "line": 774,
+      "symbol": "ThermalEntry.captureType",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/RealmHelper.swift",
+      "line": 775,
+      "symbol": "ThermalEntry.Year",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/RealmHelper.swift",
+      "line": 776,
+      "symbol": "ThermalEntry.Consumption",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/RealmHelper.swift",
+      "line": 777,
+      "symbol": "ThermalEntry.Description",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/RealmHelper.swift",
+      "line": 780,
+      "symbol": "EnergyEntry",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/RealmHelper.swift",
+      "line": 781,
+      "symbol": "EnergyEntry.captureType",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/RealmHelper.swift",
+      "line": 782,
+      "symbol": "EnergyEntry.Year",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/RealmHelper.swift",
+      "line": 783,
+      "symbol": "EnergyEntry.Consumptioner",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/RealmHelper.swift",
+      "line": 784,
+      "symbol": "EnergyEntry.Aspekt",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/RealmHelper.swift",
+      "line": 785,
+      "symbol": "EnergyEntry.kwh",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/RealmHelper.swift",
+      "line": 786,
+      "symbol": "EnergyEntry.Leistung",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/RealmHelper.swift",
+      "line": 787,
+      "symbol": "EnergyEntry.Laufzeit",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/RealmHelper.swift",
+      "line": 790,
+      "symbol": "AreaEntry",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/RealmHelper.swift",
+      "line": 791,
+      "symbol": "AreaEntry.captureType",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/RealmHelper.swift",
+      "line": 792,
+      "symbol": "AreaEntry.areaName",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/RealmHelper.swift",
+      "line": 793,
+      "symbol": "AreaEntry.points",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/RealmHelper.swift",
+      "line": 794,
+      "symbol": "AreaEntry.areaSize",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/RealmHelper.swift",
+      "line": 797,
+      "symbol": "GeneralEntry",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/RealmHelper.swift",
+      "line": 798,
+      "symbol": "GeneralEntry.captureType",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/RealmHelper.swift",
+      "line": 799,
+      "symbol": "GeneralEntry.Benutzer",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/RealmHelper.swift",
+      "line": 800,
+      "symbol": "GeneralEntry.Feld",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/RealmHelper.swift",
+      "line": 801,
+      "symbol": "GeneralEntry.Arbeitszeit",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/RealmHelper.swift",
+      "line": 802,
+      "symbol": "GeneralEntry.Datum",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/RealmHelper.swift",
+      "line": 805,
+      "symbol": "TraubenleseEntry",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/RealmHelper.swift",
+      "line": 806,
+      "symbol": "TraubenleseEntry.captureType",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/RealmHelper.swift",
+      "line": 807,
+      "symbol": "TraubenleseEntry.Benutzer",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/RealmHelper.swift",
+      "line": 808,
+      "symbol": "TraubenleseEntry.Feld",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/RealmHelper.swift",
+      "line": 809,
+      "symbol": "TraubenleseEntry.Arbeitszeit",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/RealmHelper.swift",
+      "line": 810,
+      "symbol": "TraubenleseEntry.Datum",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/RealmHelper.swift",
+      "line": 811,
+      "symbol": "TraubenleseEntry.durchfuehrung",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/RealmHelper.swift",
+      "line": 814,
+      "symbol": "DuengungEntry",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/RealmHelper.swift",
+      "line": 815,
+      "symbol": "DuengungEntry.captureType",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/RealmHelper.swift",
+      "line": 816,
+      "symbol": "DuengungEntry.Benutzer",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/RealmHelper.swift",
+      "line": 817,
+      "symbol": "DuengungEntry.Feld",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/RealmHelper.swift",
+      "line": 818,
+      "symbol": "DuengungEntry.Arbeitszeit",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/RealmHelper.swift",
+      "line": 819,
+      "symbol": "DuengungEntry.Datum",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/RealmHelper.swift",
+      "line": 820,
+      "symbol": "DuengungEntry.duengemittel",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/RealmHelper.swift",
+      "line": 821,
+      "symbol": "DuengungEntry.mengeDuengemittel",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/RealmHelper.swift",
+      "line": 822,
+      "symbol": "DuengungEntry.category",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/RealmHelper.swift",
+      "line": 825,
+      "symbol": "PflanzenschutzEntry",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/RealmHelper.swift",
+      "line": 826,
+      "symbol": "PflanzenschutzEntry.captureType",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/RealmHelper.swift",
+      "line": 827,
+      "symbol": "PflanzenschutzEntry.Benutzer",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/RealmHelper.swift",
+      "line": 828,
+      "symbol": "PflanzenschutzEntry.Feld",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/RealmHelper.swift",
+      "line": 829,
+      "symbol": "PflanzenschutzEntry.Arbeitszeit",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/RealmHelper.swift",
+      "line": 830,
+      "symbol": "PflanzenschutzEntry.Datum",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/RealmHelper.swift",
+      "line": 831,
+      "symbol": "PflanzenschutzEntry.gegen",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/RealmHelper.swift",
+      "line": 832,
+      "symbol": "PflanzenschutzEntry.mittel",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/RealmHelper.swift",
+      "line": 833,
+      "symbol": "PflanzenschutzEntry.termin",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/RealmHelper.swift",
+      "line": 834,
+      "symbol": "PflanzenschutzEntry.info",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/RealmHelper.swift",
+      "line": 835,
+      "symbol": "PflanzenschutzEntry.mengePflanzenschutzmittel",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/RealmHelper.swift",
+      "line": 836,
+      "symbol": "PflanzenschutzEntry.category",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/ScannerViewController.swift",
+      "line": 13,
+      "symbol": "ScannerViewController",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/ScannerViewController.swift",
+      "line": 14,
+      "symbol": "ScannerViewController.captureSession",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/ScannerViewController.swift",
+      "line": 15,
+      "symbol": "ScannerViewController.previewLayer",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/ScannerViewController.swift",
+      "line": 116,
+      "symbol": "ScannerViewController.prefersStatusBarHidden",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/ScannerViewController.swift",
+      "line": 120,
+      "symbol": "ScannerViewController.supportedInterfaceOrientations",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/ShakeAnimationHelper.swift",
+      "line": 11,
+      "symbol": "ShakeAnimationHelper",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/UIInputChecker.swift",
+      "line": 11,
+      "symbol": "UIInputChecker",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/UIInputChecker.swift",
+      "line": 13,
+      "symbol": "UIInputChecker.UIInputType",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/UIInputChecker.swift",
+      "line": 14,
+      "symbol": "UIInputChecker.UIInputType.text",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/UIInputChecker.swift",
+      "line": 15,
+      "symbol": "UIInputChecker.UIInputType.numer",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/UIInputChecker.swift",
+      "line": 18,
+      "symbol": "UIInputChecker.init()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/ViewFader.swift",
+      "line": 11,
+      "symbol": "ViewFader",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/ViewFader.swift",
+      "line": 13,
+      "symbol": "ViewFader.FadeMode",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/ViewFader.swift",
+      "line": 14,
+      "symbol": "ViewFader.FadeMode.IN",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/elenagorgen/Desktop/WeinbergApp/WeinbergApp/ViewFader.swift",
+      "line": 15,
+      "symbol": "ViewFader.FadeMode.OUT",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/elenagorgen/Desktop/WeinbergApp"
+}
