@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="e3E-UC-7yd">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="e3E-UC-7yd">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -486,7 +486,7 @@
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <accessibility key="accessibilityConfiguration" identifier="AddElectricalView">
+                        <accessibility key="accessibilityConfiguration" identifier="AddElectricalView" label="AddElectricalView">
                             <bool key="isElement" value="NO"/>
                         </accessibility>
                         <constraints>
@@ -742,7 +742,7 @@
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <accessibility key="accessibilityConfiguration" identifier="AddMaterialView">
+                        <accessibility key="accessibilityConfiguration" identifier="AddMaterialView" label="AddMaterialView">
                             <bool key="isElement" value="NO"/>
                         </accessibility>
                         <constraints>
@@ -924,7 +924,7 @@
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <accessibility key="accessibilityConfiguration" identifier="AddEntryView">
+                        <accessibility key="accessibilityConfiguration" identifier="AddEntryView" label="AddEntryView">
                             <bool key="isElement" value="NO"/>
                         </accessibility>
                         <constraints>
@@ -1444,7 +1444,7 @@
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <accessibility key="accessibilityConfiguration" identifier="DuengungView">
+                        <accessibility key="accessibilityConfiguration" identifier="DuengungView" label="DuengungView">
                             <bool key="isElement" value="NO"/>
                         </accessibility>
                         <constraints>
@@ -1791,7 +1791,7 @@
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <accessibility key="accessibilityConfiguration" identifier="PflanzenschutzView">
+                        <accessibility key="accessibilityConfiguration" identifier="PflanzenschutzView" label="PflanzenschutzView">
                             <bool key="isElement" value="NO"/>
                         </accessibility>
                         <constraints>
@@ -1837,11 +1837,8 @@
         <image name="work" width="24" height="24"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Qlf-9S-pV7"/>
-        <segue reference="n5A-dJ-Kxq"/>
         <segue reference="uPz-Fn-yU9"/>
-
-        <segue reference="ym3-nN-BRJ"/>
+        <segue reference="Ph4-md-d3c"/>
         <segue reference="vVE-hR-lil"/>
     </inferredMetricsTieBreakers>
 </document>

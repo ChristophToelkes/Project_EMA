@@ -30,6 +30,11 @@
 		46E50EED20D545FE00F93167 /* ShakeAnimationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E50EEC20D545FE00F93167 /* ShakeAnimationHelper.swift */; };
 		85168A1A20EBA99F00CB2AB5 /* RealmHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85168A1920EBA99F00CB2AB5 /* RealmHelper.swift */; };
 		8546333121130557007F8704 /* LoginViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8546333021130557007F8704 /* LoginViewControllerTests.swift */; };
+		854721852114753800870B38 /* AddEntryViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854721842114753800870B38 /* AddEntryViewControllerTests.swift */; };
+		8547218921147ACD00870B38 /* DuengungAddEntryViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8547218821147ACD00870B38 /* DuengungAddEntryViewControllerTests.swift */; };
+		8547218B21147B1E00870B38 /* PflanzenschutzAddEntryViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8547218A21147B1E00870B38 /* PflanzenschutzAddEntryViewControllerTests.swift */; };
+		8547218D21147B6400870B38 /* AddElectricalEquipmentViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8547218C21147B6400870B38 /* AddElectricalEquipmentViewControllerTests.swift */; };
+		8547218F21147BDB00870B38 /* AddMaterialFlowORThermalViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8547218E21147BDB00870B38 /* AddMaterialFlowORThermalViewControllerTests.swift */; };
 		85554A702111B7D600C8ADEE /* ScannerViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85554A6F2111B7D600C8ADEE /* ScannerViewControllerTests.swift */; };
 		85554A722111B81100C8ADEE /* MockScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85554A712111B81100C8ADEE /* MockScannerViewController.swift */; };
 		85AA53F92111D079007A49AC /* AddCaptureViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AA53F82111D079007A49AC /* AddCaptureViewControllerTests.swift */; };
@@ -111,6 +116,11 @@
 		828CD16D962216C8070E3347 /* Pods_WeinbergAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WeinbergAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		85168A1920EBA99F00CB2AB5 /* RealmHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmHelper.swift; sourceTree = "<group>"; };
 		8546333021130557007F8704 /* LoginViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewControllerTests.swift; sourceTree = "<group>"; };
+		854721842114753800870B38 /* AddEntryViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEntryViewControllerTests.swift; sourceTree = "<group>"; };
+		8547218821147ACD00870B38 /* DuengungAddEntryViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DuengungAddEntryViewControllerTests.swift; sourceTree = "<group>"; };
+		8547218A21147B1E00870B38 /* PflanzenschutzAddEntryViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PflanzenschutzAddEntryViewControllerTests.swift; sourceTree = "<group>"; };
+		8547218C21147B6400870B38 /* AddElectricalEquipmentViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddElectricalEquipmentViewControllerTests.swift; sourceTree = "<group>"; };
+		8547218E21147BDB00870B38 /* AddMaterialFlowORThermalViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMaterialFlowORThermalViewControllerTests.swift; sourceTree = "<group>"; };
 		85554A6F2111B7D600C8ADEE /* ScannerViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerViewControllerTests.swift; sourceTree = "<group>"; };
 		85554A712111B81100C8ADEE /* MockScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockScannerViewController.swift; sourceTree = "<group>"; };
 		85AA53F82111D079007A49AC /* AddCaptureViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCaptureViewControllerTests.swift; sourceTree = "<group>"; };
@@ -216,6 +226,11 @@
 				85AA53F82111D079007A49AC /* AddCaptureViewControllerTests.swift */,
 				85AA53FE2111D27D007A49AC /* CaptureViewControllerTests.swift */,
 				85AA54022111D4B1007A49AC /* MapViewControllerTests.swift */,
+				854721842114753800870B38 /* AddEntryViewControllerTests.swift */,
+				8547218821147ACD00870B38 /* DuengungAddEntryViewControllerTests.swift */,
+				8547218A21147B1E00870B38 /* PflanzenschutzAddEntryViewControllerTests.swift */,
+				8547218C21147B6400870B38 /* AddElectricalEquipmentViewControllerTests.swift */,
+				8547218E21147BDB00870B38 /* AddMaterialFlowORThermalViewControllerTests.swift */,
 			);
 			path = WeinbergAppTests;
 			sourceTree = "<group>";
@@ -548,12 +563,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8547218F21147BDB00870B38 /* AddMaterialFlowORThermalViewControllerTests.swift in Sources */,
 				85AA53F92111D079007A49AC /* AddCaptureViewControllerTests.swift in Sources */,
 				85AA53FF2111D27D007A49AC /* CaptureViewControllerTests.swift in Sources */,
 				4694C98D20D5261E005C5F97 /* WeinbergAppTests.swift in Sources */,
+				8547218D21147B6400870B38 /* AddElectricalEquipmentViewControllerTests.swift in Sources */,
+				854721852114753800870B38 /* AddEntryViewControllerTests.swift in Sources */,
 				85554A722111B81100C8ADEE /* MockScannerViewController.swift in Sources */,
 				85AA54032111D4B1007A49AC /* MapViewControllerTests.swift in Sources */,
+				8547218921147ACD00870B38 /* DuengungAddEntryViewControllerTests.swift in Sources */,
 				85CCB7C92110824F00469922 /* RealmHelperTests.swift in Sources */,
+				8547218B21147B1E00870B38 /* PflanzenschutzAddEntryViewControllerTests.swift in Sources */,
 				85554A702111B7D600C8ADEE /* ScannerViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

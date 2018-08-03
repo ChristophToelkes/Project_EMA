@@ -26,7 +26,7 @@ class RealmHelperTests: XCTestCase {
     
     func testAddGeneral() {
         //given
-        let entry = Entry(areaName: "test", points: "test", areaSize: "test", consumer: "test", consumption: "test", year: "test", aspekt: "test", kwh: "test", power: "test", runtime: "test", description: "test", user: "test", date: "test", field: "test", hours: "test", captureType: "test", durchfuehrung: "test", duengemittel: "test", mengeDuengemittel: "test", gegen: "test", mittel: "test", termin: "test", info: "test", mengePflanzenschutzmittel: "test")
+        let entry = Entry(areaName: "test", points: "test", areaSize: "test", consumer: "test", consumption: "test", year: "test", aspekt: "test", kwh: "test", power: "test", runtime: "test", description: "test", user: "test", date: "test", field: "test", hours: "test", captureType: "test", durchfuehrung: "test", duengemittel: "test", mengeDuengemittel: "test", category: "test", gegen: "test", mittel: "test", termin: "test", info: "test", mengePflanzenschutzmittel: "test")
         var entries = db.getGeneralEntries(results: db.getGeneralObjects(type: "test"))
         while !entries.isEmpty {
             db.deleteGeneral(entry: entry)
@@ -42,7 +42,7 @@ class RealmHelperTests: XCTestCase {
     
     func testAddArea() {
         //given
-        let entry = Entry(areaName: "test", points: "test", areaSize: "test", consumer: "test", consumption: "test", year: "test", aspekt: "test", kwh: "test", power: "test", runtime: "test", description: "test", user: "test", date: "test", field: "test", hours: "test", captureType: "testArea", durchfuehrung: "test", duengemittel: "test", mengeDuengemittel: "test", gegen: "test", mittel: "test", termin: "test", info: "test", mengePflanzenschutzmittel: "test")
+        let entry = Entry(areaName: "test", points: "test", areaSize: "test", consumer: "test", consumption: "test", year: "test", aspekt: "test", kwh: "test", power: "test", runtime: "test", description: "test", user: "test", date: "test", field: "test", hours: "test", captureType: "testArea", durchfuehrung: "test", duengemittel: "test", mengeDuengemittel: "test", category: "test", gegen: "test", mittel: "test", termin: "test", info: "test", mengePflanzenschutzmittel: "test")
         var entries = db.getAreaEntries(results: db.getAreaObjects(type: "testArea"))
         while !entries.isEmpty {
             db.deleteArea(entry: entry)
@@ -58,7 +58,7 @@ class RealmHelperTests: XCTestCase {
     
     func testAddThermal() {
         //given
-        let entry = Entry(areaName: "test", points: "test", areaSize: "test", consumer: "test", consumption: "test", year: "test", aspekt: "test", kwh: "test", power: "test", runtime: "test", description: "test", user: "test", date: "test", field: "test", hours: "test", captureType: "testThermal", durchfuehrung: "test", duengemittel: "test", mengeDuengemittel: "test", gegen: "test", mittel: "test", termin: "test", info: "test", mengePflanzenschutzmittel: "test")
+        let entry = Entry(areaName: "test", points: "test", areaSize: "test", consumer: "test", consumption: "test", year: "test", aspekt: "test", kwh: "test", power: "test", runtime: "test", description: "test", user: "test", date: "test", field: "test", hours: "test", captureType: "testThermal", durchfuehrung: "test", duengemittel: "test", mengeDuengemittel: "test", category: "test", gegen: "test", mittel: "test", termin: "test", info: "test", mengePflanzenschutzmittel: "test")
         var entries = db.getThermalEntries(results: db.getThermalObjects(type: "testThermal"))
         while !entries.isEmpty {
             db.deleteThermal(entry: entry)
@@ -74,7 +74,7 @@ class RealmHelperTests: XCTestCase {
     
     func testAddMaterial() {
         //given
-        let entry = Entry(areaName: "test", points: "test", areaSize: "test", consumer: "test", consumption: "test", year: "test", aspekt: "test", kwh: "test", power: "test", runtime: "test", description: "test", user: "test", date: "test", field: "test", hours: "test", captureType: "testMaterial", durchfuehrung: "test", duengemittel: "test", mengeDuengemittel: "test", gegen: "test", mittel: "test", termin: "test", info: "test", mengePflanzenschutzmittel: "test")
+        let entry = Entry(areaName: "test", points: "test", areaSize: "test", consumer: "test", consumption: "test", year: "test", aspekt: "test", kwh: "test", power: "test", runtime: "test", description: "test", user: "test", date: "test", field: "test", hours: "test", captureType: "testMaterial", durchfuehrung: "test", duengemittel: "test", mengeDuengemittel: "test", category: "test", gegen: "test", mittel: "test", termin: "test", info: "test", mengePflanzenschutzmittel: "test")
         var entries = db.getMaterialEntries(results: db.getMaterialObjects(type: "testMaterial"))
         while !entries.isEmpty {
             db.deleteMaterial(entry: entry)
@@ -90,7 +90,7 @@ class RealmHelperTests: XCTestCase {
     
     func testAddEnergy() {
         //given
-        let entry = Entry(areaName: "test", points: "test", areaSize: "test", consumer: "test", consumption: "test", year: "test", aspekt: "test", kwh: "test", power: "test", runtime: "test", description: "test", user: "test", date: "test", field: "test", hours: "test", captureType: "testEnergy", durchfuehrung: "test", duengemittel: "test", mengeDuengemittel: "test", gegen: "test", mittel: "test", termin: "test", info: "test", mengePflanzenschutzmittel: "test")
+        let entry = Entry(areaName: "test", points: "test", areaSize: "test", consumer: "test", consumption: "test", year: "test", aspekt: "test", kwh: "test", power: "test", runtime: "test", description: "test", user: "test", date: "test", field: "test", hours: "test", captureType: "testEnergy", durchfuehrung: "test", duengemittel: "test", mengeDuengemittel: "test", category: "test", gegen: "test", mittel: "test", termin: "test", info: "test", mengePflanzenschutzmittel: "test")
         var entries = db.getEnergyEntries(results: db.getEnergyObjects(type: "testEnergy"))
         while !entries.isEmpty {
             db.deleteEnergy(entry: entry)
@@ -106,7 +106,7 @@ class RealmHelperTests: XCTestCase {
     
     func testAddTraubenlese() {
         //given
-        let entry = Entry(areaName: "test", points: "test", areaSize: "test", consumer: "test", consumption: "test", year: "test", aspekt: "test", kwh: "test", power: "test", runtime: "test", description: "test", user: "test", date: "test", field: "test", hours: "test", captureType: "testTraubenlese", durchfuehrung: "test", duengemittel: "test", mengeDuengemittel: "test", gegen: "test", mittel: "test", termin: "test", info: "test", mengePflanzenschutzmittel: "test")
+        let entry = Entry(areaName: "test", points: "test", areaSize: "test", consumer: "test", consumption: "test", year: "test", aspekt: "test", kwh: "test", power: "test", runtime: "test", description: "test", user: "test", date: "test", field: "test", hours: "test", captureType: "testTraubenlese", durchfuehrung: "test", duengemittel: "test", mengeDuengemittel: "test", category: "test", gegen: "test", mittel: "test", termin: "test", info: "test", mengePflanzenschutzmittel: "test")
         var entries = db.getTraubenleseEntries(results: db.getTraubenleseObjects(type: "testTraubenlese"))
         while !entries.isEmpty {
             db.deleteTraubenlese(entry: entry)
@@ -122,14 +122,14 @@ class RealmHelperTests: XCTestCase {
     
     func testAddDuengung() {
         //given
-        let entry = Entry(areaName: "test", points: "test", areaSize: "test", consumer: "test", consumption: "test", year: "test", aspekt: "test", kwh: "test", power: "test", runtime: "test", description: "test", user: "test", date: "test", field: "test", hours: "test", captureType: "testDuengung", durchfuehrung: "test", duengemittel: "test", mengeDuengemittel: "test", gegen: "test", mittel: "test", termin: "test", info: "test", mengePflanzenschutzmittel: "test")
+        let entry = Entry(areaName: "test", points: "test", areaSize: "test", consumer: "test", consumption: "test", year: "test", aspekt: "test", kwh: "test", power: "test", runtime: "test", description: "test", user: "test", date: "test", field: "test", hours: "test", captureType: "testDuengung", durchfuehrung: "test", duengemittel: "test", mengeDuengemittel: "test", category: "test", gegen: "test", mittel: "test", termin: "test", info: "test", mengePflanzenschutzmittel: "test")
         var entries = db.getDuengungEntries(results: db.getDuengungObjects(type: "testDuengung"))
         while !entries.isEmpty {
             db.deleteDuengung(entry: entry)
             entries = db.getDuengungEntries(results: db.getDuengungObjects(type: "testDuengung"))
         }
         //when
-        db.addDuengung(captureType: "testDuengung", benutzer: "test", feld: "test", arbeitszeit: "test", datum: "test", duengemittel: "test", mengeDuengemittel: "test")
+        db.addDuengung(captureType: "testDuengung", benutzer: "test", feld: "test", arbeitszeit: "test", datum: "test", duengemittel: "test", mengeDuengemittel: "test", category: "test")
         //then
         entries = db.getDuengungEntries(results: db.getDuengungObjects(type: "testDuengung"))
         db.deleteDuengung(entry: entry)
@@ -138,14 +138,14 @@ class RealmHelperTests: XCTestCase {
     
     func testAddPflanzenschutz() {
         //given
-        let entry = Entry(areaName: "test", points: "test", areaSize: "test", consumer: "test", consumption: "test", year: "test", aspekt: "test", kwh: "test", power: "test", runtime: "test", description: "test", user: "test", date: "test", field: "test", hours: "test", captureType: "testPflanzenschutz", durchfuehrung: "test", duengemittel: "test", mengeDuengemittel: "test", gegen: "test", mittel: "test", termin: "test", info: "test", mengePflanzenschutzmittel: "test")
+        let entry = Entry(areaName: "test", points: "test", areaSize: "test", consumer: "test", consumption: "test", year: "test", aspekt: "test", kwh: "test", power: "test", runtime: "test", description: "test", user: "test", date: "test", field: "test", hours: "test", captureType: "testPflanzenschutz", durchfuehrung: "test", duengemittel: "test", mengeDuengemittel: "test", category: "test", gegen: "test", mittel: "test", termin: "test", info: "test", mengePflanzenschutzmittel: "test")
         var entries = db.getPflanzenschutzEntries(results: db.getPflanzenschutzObjects(type: "testPflanzenschutz"))
         while !entries.isEmpty {
             db.deletePflanzenschutz(entry: entry)
             entries = db.getPflanzenschutzEntries(results: db.getPflanzenschutzObjects(type: "testPflanzenschutz"))
         }
         //when
-        db.addPflanzenschutz(captureType: "testPflanzenschutz", benutzer: "test", feld: "test", arbeitszeit: "test", datum: "test", gegen: "test", mittel: "test", termin: "test", info: "test", mengePflanzenschutzmittel: "test")
+        db.addPflanzenschutz(captureType: "testPflanzenschutz", benutzer: "test", feld: "test", arbeitszeit: "test", datum: "test", gegen: "test", mittel: "test", termin: "test", info: "test", mengePflanzenschutzmittel: "test", category: "test")
         //then
         entries = db.getPflanzenschutzEntries(results: db.getPflanzenschutzObjects(type: "testPflanzenschutz"))
         db.deletePflanzenschutz(entry: entry)
@@ -162,7 +162,7 @@ class RealmHelperTests: XCTestCase {
     
     func testLoadObjectsTraubenlese() {
         //given
-        let entry = Entry(areaName: "test", points: "test", areaSize: "test", consumer: "test", consumption: "test", year: "test", aspekt: "test", kwh: "test", power: "test", runtime: "test", description: "test", user: "test", date: "test", field: "test", hours: "test", captureType: "Traubenlese", durchfuehrung: "test", duengemittel: "test", mengeDuengemittel: "test", gegen: "test", mittel: "test", termin: "test", info: "test", mengePflanzenschutzmittel: "test")
+        let entry = Entry(areaName: "test", points: "test", areaSize: "test", consumer: "test", consumption: "test", year: "test", aspekt: "test", kwh: "test", power: "test", runtime: "test", description: "test", user: "test", date: "test", field: "test", hours: "test", captureType: "Traubenlese", durchfuehrung: "test", duengemittel: "test", mengeDuengemittel: "test", category: "test", gegen: "test", mittel: "test", termin: "test", info: "test", mengePflanzenschutzmittel: "test")
         db.addTraubenlese(captureType: "Traubenlese", benutzer: "test", feld: "test", arbeitszeit: "test", datum: "test", durchfuehrung: "test")
         //when
         let entries = db.loadObjects(type: "Traubenlese")
@@ -173,8 +173,8 @@ class RealmHelperTests: XCTestCase {
     
     func testLoadObjectsDuengung() {
         //given
-        let entry = Entry(areaName: "test", points: "test", areaSize: "test", consumer: "test", consumption: "test", year: "test", aspekt: "test", kwh: "test", power: "test", runtime: "test", description: "test", user: "test", date: "test", field: "test", hours: "test", captureType: "Düngung", durchfuehrung: "test", duengemittel: "test", mengeDuengemittel: "test", gegen: "test", mittel: "test", termin: "test", info: "test", mengePflanzenschutzmittel: "test")
-        db.addDuengung(captureType: "Düngung", benutzer: "test", feld: "test", arbeitszeit: "test", datum: "test", duengemittel: "test", mengeDuengemittel: "test")
+        let entry = Entry(areaName: "test", points: "test", areaSize: "test", consumer: "test", consumption: "test", year: "test", aspekt: "test", kwh: "test", power: "test", runtime: "test", description: "test", user: "test", date: "test", field: "test", hours: "test", captureType: "Düngung", durchfuehrung: "test", duengemittel: "test", mengeDuengemittel: "test", category: "test", gegen: "test", mittel: "test", termin: "test", info: "test", mengePflanzenschutzmittel: "test")
+        db.addDuengung(captureType: "Düngung", benutzer: "test", feld: "test", arbeitszeit: "test", datum: "test", duengemittel: "test", mengeDuengemittel: "test", category: "test")
         //when
         let entries = db.loadObjects(type: "Düngung")
         //then
@@ -184,8 +184,8 @@ class RealmHelperTests: XCTestCase {
     
     func testLoadObjectsPflanzenschutz() {
         //given
-        let entry = Entry(areaName: "test", points: "test", areaSize: "test", consumer: "test", consumption: "test", year: "test", aspekt: "test", kwh: "test", power: "test", runtime: "test", description: "test", user: "test", date: "test", field: "test", hours: "test", captureType: "Pflanzenschutz", durchfuehrung: "test", duengemittel: "test", mengeDuengemittel: "test", gegen: "test", mittel: "test", termin: "test", info: "test", mengePflanzenschutzmittel: "test")
-        db.addPflanzenschutz(captureType: "Pflanzenschutz", benutzer: "test", feld: "test", arbeitszeit: "test", datum: "test", gegen: "test", mittel: "test", termin: "test", info: "test", mengePflanzenschutzmittel: "test")
+        let entry = Entry(areaName: "test", points: "test", areaSize: "test", consumer: "test", consumption: "test", year: "test", aspekt: "test", kwh: "test", power: "test", runtime: "test", description: "test", user: "test", date: "test", field: "test", hours: "test", captureType: "Pflanzenschutz", durchfuehrung: "test", duengemittel: "test", mengeDuengemittel: "test", category: "test", gegen: "test", mittel: "test", termin: "test", info: "test", mengePflanzenschutzmittel: "test")
+        db.addPflanzenschutz(captureType: "Pflanzenschutz", benutzer: "test", feld: "test", arbeitszeit: "test", datum: "test", gegen: "test", mittel: "test", termin: "test", info: "test", mengePflanzenschutzmittel: "test", category: "test")
         //when
         let entries = db.loadObjects(type: "Pflanzenschutz")
         //then
@@ -195,7 +195,7 @@ class RealmHelperTests: XCTestCase {
     
     func testLoadObjectsArea() {
         //given
-        let entry = Entry(areaName: "test", points: "test", areaSize: "test", consumer: "test", consumption: "test", year: "test", aspekt: "test", kwh: "test", power: "test", runtime: "test", description: "test", user: "test", date: "test", field: "test", hours: "test", captureType: "Area", durchfuehrung: "test", duengemittel: "test", mengeDuengemittel: "test", gegen: "test", mittel: "test", termin: "test", info: "test", mengePflanzenschutzmittel: "test")
+        let entry = Entry(areaName: "test", points: "test", areaSize: "test", consumer: "test", consumption: "test", year: "test", aspekt: "test", kwh: "test", power: "test", runtime: "test", description: "test", user: "test", date: "test", field: "test", hours: "test", captureType: "Area", durchfuehrung: "test", duengemittel: "test", mengeDuengemittel: "test", category: "test", gegen: "test", mittel: "test", termin: "test", info: "test", mengePflanzenschutzmittel: "test")
         db.addArea(areaName: "test", points: "test", captureType: "Area", size: "test")
         //when
         let entries = db.loadObjects(type: "Area")
@@ -206,7 +206,7 @@ class RealmHelperTests: XCTestCase {
     
     func testLoadObjectsStoffströme() {
         //given
-        let entry = Entry(areaName: "test", points: "test", areaSize: "test", consumer: "test", consumption: "test", year: "test", aspekt: "test", kwh: "test", power: "test", runtime: "test", description: "test", user: "test", date: "test", field: "test", hours: "test", captureType: "Stoffströme", durchfuehrung: "test", duengemittel: "test", mengeDuengemittel: "test", gegen: "test", mittel: "test", termin: "test", info: "test", mengePflanzenschutzmittel: "test")
+        let entry = Entry(areaName: "test", points: "test", areaSize: "test", consumer: "test", consumption: "test", year: "test", aspekt: "test", kwh: "test", power: "test", runtime: "test", description: "test", user: "test", date: "test", field: "test", hours: "test", captureType: "Stoffströme", durchfuehrung: "test", duengemittel: "test", mengeDuengemittel: "test", category: "test", gegen: "test", mittel: "test", termin: "test", info: "test", mengePflanzenschutzmittel: "test")
         db.addMaterial(year: "test", description: "test", Consumption: "test", captureType: "Stoffströme")
         //when
         let entries = db.loadObjects(type: "Stoffströme")
@@ -217,7 +217,7 @@ class RealmHelperTests: XCTestCase {
     
     func testLoadObjectsElektrischerAufwand() {
         //given
-        let entry = Entry(areaName: "test", points: "test", areaSize: "test", consumer: "test", consumption: "test", year: "test", aspekt: "test", kwh: "test", power: "test", runtime: "test", description: "test", user: "test", date: "test", field: "test", hours: "test", captureType: "Elektrischer Aufwand", durchfuehrung: "test", duengemittel: "test", mengeDuengemittel: "test", gegen: "test", mittel: "test", termin: "test", info: "test", mengePflanzenschutzmittel: "test")
+        let entry = Entry(areaName: "test", points: "test", areaSize: "test", consumer: "test", consumption: "test", year: "test", aspekt: "test", kwh: "test", power: "test", runtime: "test", description: "test", user: "test", date: "test", field: "test", hours: "test", captureType: "Elektrischer Aufwand", durchfuehrung: "test", duengemittel: "test", mengeDuengemittel: "test", category: "test", gegen: "test", mittel: "test", termin: "test", info: "test", mengePflanzenschutzmittel: "test")
         db.addEnergy(year: "test", Consumptioner: "test", aspekt: "test", captureType: "Elektrischer Aufwand", kwh: "test", power: "test", runtime: "test")
         //when
         let entries = db.loadObjects(type: "Elektrischer Aufwand")
@@ -228,7 +228,7 @@ class RealmHelperTests: XCTestCase {
     
     func testLoadObjectsThermischerAufwand() {
         //given
-        let entry = Entry(areaName: "test", points: "test", areaSize: "test", consumer: "test", consumption: "test", year: "test", aspekt: "test", kwh: "test", power: "test", runtime: "test", description: "test", user: "test", date: "test", field: "test", hours: "test", captureType: "Thermischer Aufwand", durchfuehrung: "test", duengemittel: "test", mengeDuengemittel: "test", gegen: "test", mittel: "test", termin: "test", info: "test", mengePflanzenschutzmittel: "test")
+        let entry = Entry(areaName: "test", points: "test", areaSize: "test", consumer: "test", consumption: "test", year: "test", aspekt: "test", kwh: "test", power: "test", runtime: "test", description: "test", user: "test", date: "test", field: "test", hours: "test", captureType: "Thermischer Aufwand", durchfuehrung: "test", duengemittel: "test", mengeDuengemittel: "test", category: "test", gegen: "test", mittel: "test", termin: "test", info: "test", mengePflanzenschutzmittel: "test")
         db.addThermal(year: "test", description: "test", Consumption: "test", captureType: "Thermischer Aufwand")
         //when
         let entries = db.loadObjects(type: "Thermischer Aufwand")
@@ -239,7 +239,7 @@ class RealmHelperTests: XCTestCase {
     
     func testDeleteGeneral() {
         //given
-        let entry = Entry(areaName: "test", points: "test", areaSize: "test", consumer: "test", consumption: "test", year: "test", aspekt: "test", kwh: "test", power: "test", runtime: "test", description: "test", user: "test", date: "test", field: "test", hours: "test", captureType: "test", durchfuehrung: "test", duengemittel: "test", mengeDuengemittel: "test", gegen: "test", mittel: "test", termin: "test", info: "test", mengePflanzenschutzmittel: "test")
+        let entry = Entry(areaName: "test", points: "test", areaSize: "test", consumer: "test", consumption: "test", year: "test", aspekt: "test", kwh: "test", power: "test", runtime: "test", description: "test", user: "test", date: "test", field: "test", hours: "test", captureType: "test", durchfuehrung: "test", duengemittel: "test", mengeDuengemittel: "test", category: "test", gegen: "test", mittel: "test", termin: "test", info: "test", mengePflanzenschutzmittel: "test")
         db.addGeneral(captureType: "test", benutzer: "test", feld: "test", arbeitszeit: "test", datum: "test")
         var entries = db.getGeneralEntries(results: db.getGeneralObjects(type: "test"))
         //when
@@ -253,7 +253,7 @@ class RealmHelperTests: XCTestCase {
     
     func testDeleteThermal() {
         //given
-        let entry = Entry(areaName: "test", points: "test", areaSize: "test", consumer: "test", consumption: "test", year: "test", aspekt: "test", kwh: "test", power: "test", runtime: "test", description: "test", user: "test", date: "test", field: "test", hours: "test", captureType: "testThermal", durchfuehrung: "test", duengemittel: "test", mengeDuengemittel: "test", gegen: "test", mittel: "test", termin: "test", info: "test", mengePflanzenschutzmittel: "test")
+        let entry = Entry(areaName: "test", points: "test", areaSize: "test", consumer: "test", consumption: "test", year: "test", aspekt: "test", kwh: "test", power: "test", runtime: "test", description: "test", user: "test", date: "test", field: "test", hours: "test", captureType: "testThermal", durchfuehrung: "test", duengemittel: "test", mengeDuengemittel: "test", category: "test", gegen: "test", mittel: "test", termin: "test", info: "test", mengePflanzenschutzmittel: "test")
         db.addThermal(year: "test", description: "test", Consumption: "test", captureType: "testThermal")
         var entries = db.getThermalEntries(results: db.getThermalObjects(type: "testThermal"))
         //when
@@ -267,7 +267,7 @@ class RealmHelperTests: XCTestCase {
     
     func testDeleteMaterial() {
         //given
-        let entry = Entry(areaName: "test", points: "test", areaSize: "test", consumer: "test", consumption: "test", year: "test", aspekt: "test", kwh: "test", power: "test", runtime: "test", description: "test", user: "test", date: "test", field: "test", hours: "test", captureType: "testMaterial", durchfuehrung: "test", duengemittel: "test", mengeDuengemittel: "test", gegen: "test", mittel: "test", termin: "test", info: "test", mengePflanzenschutzmittel: "test")
+        let entry = Entry(areaName: "test", points: "test", areaSize: "test", consumer: "test", consumption: "test", year: "test", aspekt: "test", kwh: "test", power: "test", runtime: "test", description: "test", user: "test", date: "test", field: "test", hours: "test", captureType: "testMaterial", durchfuehrung: "test", duengemittel: "test", mengeDuengemittel: "test", category: "test", gegen: "test", mittel: "test", termin: "test", info: "test", mengePflanzenschutzmittel: "test")
         db.addMaterial(year: "test", description: "test", Consumption: "test", captureType: "testMaterial")
         var entries = db.getMaterialEntries(results: db.getMaterialObjects(type: "testMaterial"))
         //when
@@ -281,7 +281,7 @@ class RealmHelperTests: XCTestCase {
     
     func testDeleteEnergy() {
         //given
-        let entry = Entry(areaName: "test", points: "test", areaSize: "test", consumer: "test", consumption: "test", year: "test", aspekt: "test", kwh: "test", power: "test", runtime: "test", description: "test", user: "test", date: "test", field: "test", hours: "test", captureType: "testEnergy", durchfuehrung: "test", duengemittel: "test", mengeDuengemittel: "test", gegen: "test", mittel: "test", termin: "test", info: "test", mengePflanzenschutzmittel: "test")
+        let entry = Entry(areaName: "test", points: "test", areaSize: "test", consumer: "test", consumption: "test", year: "test", aspekt: "test", kwh: "test", power: "test", runtime: "test", description: "test", user: "test", date: "test", field: "test", hours: "test", captureType: "testEnergy", durchfuehrung: "test", duengemittel: "test", mengeDuengemittel: "test", category: "test", gegen: "test", mittel: "test", termin: "test", info: "test", mengePflanzenschutzmittel: "test")
         db.addEnergy(year: "test", Consumptioner: "test", aspekt: "test", captureType: "testEnergy", kwh: "test", power: "test", runtime: "test")
         var entries = db.getEnergyEntries(results: db.getEnergyObjects(type: "testEnergy"))
         //when
@@ -295,7 +295,7 @@ class RealmHelperTests: XCTestCase {
     
     func testDeleteTraubenlese() {
         //given
-        let entry = Entry(areaName: "test", points: "test", areaSize: "test", consumer: "test", consumption: "test", year: "test", aspekt: "test", kwh: "test", power: "test", runtime: "test", description: "test", user: "test", date: "test", field: "test", hours: "test", captureType: "testTraubenlese", durchfuehrung: "test", duengemittel: "test", mengeDuengemittel: "test", gegen: "test", mittel: "test", termin: "test", info: "test", mengePflanzenschutzmittel: "test")
+        let entry = Entry(areaName: "test", points: "test", areaSize: "test", consumer: "test", consumption: "test", year: "test", aspekt: "test", kwh: "test", power: "test", runtime: "test", description: "test", user: "test", date: "test", field: "test", hours: "test", captureType: "testTraubenlese", durchfuehrung: "test", duengemittel: "test", mengeDuengemittel: "test", category: "test", gegen: "test", mittel: "test", termin: "test", info: "test", mengePflanzenschutzmittel: "test")
         db.addTraubenlese(captureType: "testTraubenlese", benutzer: "test", feld: "test", arbeitszeit: "test", datum: "test", durchfuehrung: "test")
         var entries = db.getTraubenleseEntries(results: db.getTraubenleseObjects(type: "testTraubenlese"))
         //when
@@ -309,8 +309,8 @@ class RealmHelperTests: XCTestCase {
     
     func testDeleteDuengung() {
         //given
-        let entry = Entry(areaName: "test", points: "test", areaSize: "test", consumer: "test", consumption: "test", year: "test", aspekt: "test", kwh: "test", power: "test", runtime: "test", description: "test", user: "test", date: "test", field: "test", hours: "test", captureType: "testDuengung", durchfuehrung: "test", duengemittel: "test", mengeDuengemittel: "test", gegen: "test", mittel: "test", termin: "test", info: "test", mengePflanzenschutzmittel: "test")
-        db.addDuengung(captureType: "testDuengung", benutzer: "test", feld: "test", arbeitszeit: "test", datum: "test", duengemittel: "test", mengeDuengemittel: "test")
+        let entry = Entry(areaName: "test", points: "test", areaSize: "test", consumer: "test", consumption: "test", year: "test", aspekt: "test", kwh: "test", power: "test", runtime: "test", description: "test", user: "test", date: "test", field: "test", hours: "test", captureType: "testDuengung", durchfuehrung: "test", duengemittel: "test", mengeDuengemittel: "test", category: "test", gegen: "test", mittel: "test", termin: "test", info: "test", mengePflanzenschutzmittel: "test")
+        db.addDuengung(captureType: "testDuengung", benutzer: "test", feld: "test", arbeitszeit: "test", datum: "test", duengemittel: "test", mengeDuengemittel: "test", category: "test")
         var entries = db.getDuengungEntries(results: db.getDuengungObjects(type: "testDuengung"))
         //when
         while !entries.isEmpty {
@@ -323,7 +323,7 @@ class RealmHelperTests: XCTestCase {
     
     func testDeleteArea() {
         //given
-        let entry = Entry(areaName: "test", points: "test", areaSize: "test", consumer: "test", consumption: "test", year: "test", aspekt: "test", kwh: "test", power: "test", runtime: "test", description: "test", user: "test", date: "test", field: "test", hours: "test", captureType: "testArea", durchfuehrung: "test", duengemittel: "test", mengeDuengemittel: "test", gegen: "test", mittel: "test", termin: "test", info: "test", mengePflanzenschutzmittel: "test")
+        let entry = Entry(areaName: "test", points: "test", areaSize: "test", consumer: "test", consumption: "test", year: "test", aspekt: "test", kwh: "test", power: "test", runtime: "test", description: "test", user: "test", date: "test", field: "test", hours: "test", captureType: "testArea", durchfuehrung: "test", duengemittel: "test", mengeDuengemittel: "test", category: "test", gegen: "test", mittel: "test", termin: "test", info: "test", mengePflanzenschutzmittel: "test")
         db.addArea(areaName: "test", points: "test", captureType: "testArea", size: "test")
         var entries = db.getAreaEntries(results: db.getAreaObjects(type: "testArea"))
         //when
@@ -337,8 +337,8 @@ class RealmHelperTests: XCTestCase {
     
     func testDeletePflanzenschutz() {
         //given
-        let entry = Entry(areaName: "test", points: "test", areaSize: "test", consumer: "test", consumption: "test", year: "test", aspekt: "test", kwh: "test", power: "test", runtime: "test", description: "test", user: "test", date: "test", field: "test", hours: "test", captureType: "testPflanzenschutz", durchfuehrung: "test", duengemittel: "test", mengeDuengemittel: "test", gegen: "test", mittel: "test", termin: "test", info: "test", mengePflanzenschutzmittel: "test")
-        db.addPflanzenschutz(captureType: "testPflanzenschutz", benutzer: "test", feld: "test", arbeitszeit: "test", datum: "test", gegen: "test", mittel: "test", termin: "test", info: "test", mengePflanzenschutzmittel: "test")
+        let entry = Entry(areaName: "test", points: "test", areaSize: "test", consumer: "test", consumption: "test", year: "test", aspekt: "test", kwh: "test", power: "test", runtime: "test", description: "test", user: "test", date: "test", field: "test", hours: "test", captureType: "testPflanzenschutz", durchfuehrung: "test", duengemittel: "test", mengeDuengemittel: "test", category: "test", gegen: "test", mittel: "test", termin: "test", info: "test", mengePflanzenschutzmittel: "test")
+        db.addPflanzenschutz(captureType: "testPflanzenschutz", benutzer: "test", feld: "test", arbeitszeit: "test", datum: "test", gegen: "test", mittel: "test", termin: "test", info: "test", mengePflanzenschutzmittel: "test", category: "test")
         var entries = db.getPflanzenschutzEntries(results: db.getPflanzenschutzObjects(type: "testPflanzenschutz"))
         //when
         while !entries.isEmpty {
