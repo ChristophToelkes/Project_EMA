@@ -14,9 +14,12 @@ class DuengungAddEntryViewController: UIViewController, UIPickerViewDelegate, UI
     var entry: Entry?
     var captureType: String?
     var areas = [String]()
+    var category = ""
     @IBOutlet weak var headCaptureLabel: UILabel!
     @IBOutlet weak var datePicker: UIDatePicker!
 
+    @IBOutlet weak var organicButton: UIButton!
+    @IBOutlet weak var mineralButton: UIButton!
     @IBOutlet weak var areaPicker: UIPickerView!
     @IBOutlet weak var benutzerText: UITextField!
     @IBOutlet weak var arbeitszeitText: UITextField!
@@ -39,6 +42,16 @@ class DuengungAddEntryViewController: UIViewController, UIPickerViewDelegate, UI
             arbeitszeitText.text = String(entry.getHours())
             duengemittelText.text = entry.getDuengemittel()
             mengeDuengemittelText.text = String(entry.getMengeDuengemittel())
+            category = entry.getCategory()
+            
+            if(category == "Organisch"){
+                mineralButton.backgroundColor = UIColor.white
+                organicButton.backgroundColor = UIColor.gray
+            }
+            if(category == "Mineralisch"){
+                mineralButton.backgroundColor = UIColor.gray
+                organicButton.backgroundColor = UIColor.white
+            }
             
             let formatter = DateFormatter()
             formatter.dateFormat = "yyyy-MM-dd"
@@ -59,7 +72,7 @@ class DuengungAddEntryViewController: UIViewController, UIPickerViewDelegate, UI
         let date = formatter.string(from: datePicker.date)
         
         if captureType != nil && benutzerText.text != nil && arbeitszeitText.text != nil && duengemittelText.text != nil && mengeDuengemittelText.text != nil && arbeitszeitText.text != nil && mengeDuengemittelText.text != nil && areas.count > 0{
-            db.addDuengung(captureType: captureType!, benutzer: benutzerText.text!, feld: areas[areaPicker.selectedRow(inComponent: 0)], arbeitszeit: arbeitszeitText.text!, datum: date, duengemittel: duengemittelText.text!, mengeDuengemittel: mengeDuengemittelText.text!)
+            db.addDuengung(captureType: captureType!, benutzer: benutzerText.text!, feld: areas[areaPicker.selectedRow(inComponent: 0)], arbeitszeit: arbeitszeitText.text!, datum: date, duengemittel: duengemittelText.text!, mengeDuengemittel: mengeDuengemittelText.text!, category: category)
 
         }
     }
@@ -77,6 +90,22 @@ class DuengungAddEntryViewController: UIViewController, UIPickerViewDelegate, UI
         }))
         alert.addAction(UIAlertAction(title: "Nein", style: .default, handler: nil))
         self.present(alert, animated: true)
+    }
+    
+    @IBAction func pressMineral(_ sender: Any) {
+        if category != "Mineralisch" {
+            category = "Mineralisch"
+            mineralButton.backgroundColor = UIColor.gray
+            organicButton.backgroundColor = UIColor.white
+        }
+    }
+    
+    @IBAction func pressOrganic(_ sender: Any) {
+        if category != "Organisch" {
+            category = "Organisch"
+            mineralButton.backgroundColor = UIColor.white
+            organicButton.backgroundColor = UIColor.gray
+        }
     }
     
     func deleteEntry() {

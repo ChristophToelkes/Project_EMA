@@ -14,11 +14,15 @@ class PflanzenschutzAddEntryViewController: UIViewController, UIPickerViewDelega
     var entry: Entry?
     var captureType: String?
     var areas = [String]()
+    var category = ""
     @IBOutlet weak var headCaptureLabel: UILabel!
     @IBOutlet weak var datePicker: UIDatePicker!
  
     @IBOutlet weak var contentView: UIView!
  
+    @IBOutlet weak var fungicideButton: UIButton!
+    @IBOutlet weak var herbicideButton: UIButton!
+    @IBOutlet weak var insecticideButton: UIButton!
     @IBOutlet weak var areaPicker: UIPickerView!
     @IBOutlet weak var benutzerText: UITextField!
     @IBOutlet weak var arbeitszeitText: UITextField!
@@ -51,6 +55,24 @@ class PflanzenschutzAddEntryViewController: UIViewController, UIPickerViewDelega
             terminText.text = entry.getTermin()
             infoText.text = entry.getInfo()
             mengePflanzenschutzmittelText.text = entry.getMengePflanzenschutzmittel()
+            category = entry.getCategory()
+            
+            if(category == "Fungizid"){
+                fungicideButton.backgroundColor = UIColor.gray
+                herbicideButton.backgroundColor = UIColor.white
+                insecticideButton.backgroundColor = UIColor.white
+            }
+            if(category == "Herbizid"){
+                fungicideButton.backgroundColor = UIColor.white
+                herbicideButton.backgroundColor = UIColor.gray
+                insecticideButton.backgroundColor = UIColor.white
+            }
+            if(category == "Insektizid/Akarizid"){
+                fungicideButton.backgroundColor = UIColor.white
+                herbicideButton.backgroundColor = UIColor.white
+                insecticideButton.backgroundColor = UIColor.gray
+                
+            }
             
             let formatter = DateFormatter()
             formatter.dateFormat = "yyyy-MM-dd"
@@ -71,7 +93,7 @@ class PflanzenschutzAddEntryViewController: UIViewController, UIPickerViewDelega
         let date = formatter.string(from: datePicker.date)
         
         if captureType != nil && areas.count > 0 && benutzerText.text != nil && arbeitszeitText.text != nil && gegenText.text != nil && mittelText.text != nil && terminText.text != nil && infoText.text != nil && mengePflanzenschutzmittelText.text != nil && arbeitszeitText.text != nil && mengePflanzenschutzmittelText.text != nil{
-                db.addPflanzenschutz(captureType: captureType!, benutzer: benutzerText.text!, feld: areas[areaPicker.selectedRow(inComponent: 0)], arbeitszeit: arbeitszeitText.text!, datum: date, gegen: gegenText.text!, mittel: mittelText.text!, termin: terminText.text!, info: infoText.text!, mengePflanzenschutzmittel: mengePflanzenschutzmittelText.text!)
+            db.addPflanzenschutz(captureType: captureType!, benutzer: benutzerText.text!, feld: areas[areaPicker.selectedRow(inComponent: 0)], arbeitszeit: arbeitszeitText.text!, datum: date, gegen: gegenText.text!, mittel: mittelText.text!, termin: terminText.text!, info: infoText.text!, mengePflanzenschutzmittel: mengePflanzenschutzmittelText.text!, category: category)
         }
     }
     
@@ -87,6 +109,33 @@ class PflanzenschutzAddEntryViewController: UIViewController, UIPickerViewDelega
         }))
         alert.addAction(UIAlertAction(title: "Nein", style: .default, handler: nil))
         self.present(alert, animated: true)
+    }
+    
+    @IBAction func pressFungicide(_ sender: Any) {
+        if category != "Fungizid" {
+            category = "Fungizid"
+            fungicideButton.backgroundColor = UIColor.gray
+            herbicideButton.backgroundColor = UIColor.white
+            insecticideButton.backgroundColor = UIColor.white
+        }
+    }
+    
+    @IBAction func pressHerbicide(_ sender: Any) {
+        if category != "Herbizid" {
+            category = "Herbizid"
+            fungicideButton.backgroundColor = UIColor.white
+            herbicideButton.backgroundColor = UIColor.gray
+            insecticideButton.backgroundColor = UIColor.white
+        }
+    }
+    
+    @IBAction func pressInsecticide(_ sender: Any) {
+        if category != "Insektizid/Akarizid" {
+            category = "Insektizid/Akarizid"
+            fungicideButton.backgroundColor = UIColor.white
+            herbicideButton.backgroundColor = UIColor.white
+            insecticideButton.backgroundColor = UIColor.gray
+        }
     }
     
     func deleteEntry() {

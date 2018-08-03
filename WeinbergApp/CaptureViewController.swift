@@ -26,12 +26,16 @@ class CaptureViewController: UIViewController, UITableViewDelegate, UITableViewD
     
   
     
+    /// Leitet den Nutzer zum Login Bildschirm.
+    ///
+    /// - Parameter sender: Der gedrückte Button
     @IBAction func logoutBtn(_ sender: Any) {
         performSegue(withIdentifier: "segueLogout2", sender: self)
     }
     
     
     
+    /// Setzt die Delegates der TableView
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
@@ -39,14 +43,30 @@ class CaptureViewController: UIViewController, UITableViewDelegate, UITableViewD
 
     }
     
+    /// Gibt die Anzahl der Einträge der Arbeitsgänge oder Aufwände zurück.
+    ///
+    /// - Parameters:
+    ///   - tableView: Die Aufrufende TableView
+    ///   - section: Der Index des aufgerufenen Unterarrays
+    /// - Returns: Die Anzahl der Einträge des Unterarrays (Arbeitsgänge oder Aufwände)
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return listElements[section].count
     }
     
+    /// Gibt die Anzahl der Abschnitte der Table View zurück.
+    ///
+    /// - Parameter tableView: Die aufrufende TableView
+    /// - Returns: Anzahl der Abschnitte
     func numberOfSections(in tableView: UITableView) -> Int {
         return 2
     }
     
+    /// Gibt die Zellen der TableView mit Beschriftung und Icon zurück.
+    ///
+    /// - Parameters:
+    ///   - tableView: Die aufrufende TableView
+    ///   - indexPath: Die Zeile der Zelle
+    /// - Returns: Die Zelle der TableView
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell")
         cell?.textLabel?.text = listElements[indexPath.section][indexPath.row]
@@ -56,10 +76,20 @@ class CaptureViewController: UIViewController, UITableViewDelegate, UITableViewD
         return cell!
     }
     
+    /// Leitet den Nutzer zur AddCaptureView des entsprechenden Arbeitsgangs oder Aufwands weiter
+    ///
+    /// - Parameters:
+    ///   - tableView: Die aufrufende TableView
+    ///   - indexPath: Index der aufgerufenen Zelle
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
         performSegue(withIdentifier: "segueToAddCaptureView", sender: self)
     }
     
+    /// Bereitet die AddCaptureView des ausgewählten Arbeitsgangs oder Aufwands vor.
+    ///
+    /// - Parameters:
+    ///   - segue: Der aufgerufene UIStoryboardSegue
+    ///   - sender: Die aufrufende Zelle
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destination = segue.destination as? AddCaptureViewController{
             destination.element = listElements[(tableView.indexPathForSelectedRow?.section)!][(tableView.indexPathForSelectedRow?.row)!]
@@ -67,6 +97,12 @@ class CaptureViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
 
+    /// Gibt den Titel des Abschnitts zurück.
+    ///
+    /// - Parameters:
+    ///   - tableView: Die aufrufende TableView
+    ///   - section: Der gewünschte Abschnitt
+    /// - Returns: Der Titel des Abschnitts
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return sectionTitle[section]
     }

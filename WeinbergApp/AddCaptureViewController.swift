@@ -19,6 +19,7 @@ class AddCaptureViewController: UIViewController, UITableViewDataSource, UITable
     @IBOutlet weak var searchBarView: UISearchBar!
     
     
+    /// Lädt die View und deren Einträge.
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
@@ -26,6 +27,7 @@ class AddCaptureViewController: UIViewController, UITableViewDataSource, UITable
         loadEntries()
     }
     
+<<<<<<< HEAD
     func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
         guard let input = searchBar.text else {return}
         entryListFilter = []
@@ -61,10 +63,24 @@ class AddCaptureViewController: UIViewController, UITableViewDataSource, UITable
     
     
     
+=======
+    /// Gibt die Anzahl der Einträge zurück.
+    ///
+    /// - Parameters:
+    ///   - tableView: Die aufrufende TableView
+    ///   - section: Der aufgerufene Abschnitt
+    /// - Returns: Die Anzahl der Einträge der TableView
+>>>>>>> e3c2588da8bed59a165edd8dd0373d8676864f1c
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return entryListFilter.count
     }
     
+    /// Erstellt die Zellen der TableView und gibt sie zurück.
+    ///
+    /// - Parameters:
+    ///   - tableView: Die aufrufende TableView
+    ///   - indexPath: Die Zeile der Zelle
+    /// - Returns: Die angeforderte Zelle
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell")
         
@@ -74,6 +90,12 @@ class AddCaptureViewController: UIViewController, UITableViewDataSource, UITable
         return cell!
     }
     
+    /// Leitet den Nutzer, in Abhängigkeit des gewählten Arbeitsgangs oder Aufwandes, zur entsprechenden
+    /// Eintragungsoberfläche weiter.
+    ///
+    /// - Parameters:
+    ///   - tableView: Die aufrufende TableView
+    ///   - indexPath: Die Zeile der gewählten Zelle
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
         if(element == "Düngung"){
             changeEntry = true
@@ -97,6 +119,11 @@ class AddCaptureViewController: UIViewController, UITableViewDataSource, UITable
         
     }
     
+    /// Ruft die, je nach Arbeitsgang oder Aufwand, entsprechende Vorbereitungsroutine auf.
+    ///
+    /// - Parameters:
+    ///   - segue: Der entsprechende Segue der folgenden Oberfläche
+    ///   - sender: Die aufrufende Zelle
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         super.prepare(for: segue, sender: sender)
         
@@ -113,6 +140,11 @@ class AddCaptureViewController: UIViewController, UITableViewDataSource, UITable
         }
     }
     
+    /// Bereitet die Oberfläche für generelle Eintragungen vor.
+    ///
+    /// - Parameters:
+    ///   - segue: Der Segue zur generellen Oberfläche
+    ///   - sender: Die aufrufende Zelle
     func prepareGeneral(for segue: UIStoryboardSegue, sender: Any?) {
         if let destination = segue.destination as? AddEntryViewController{
             if changeEntry {
@@ -124,6 +156,11 @@ class AddCaptureViewController: UIViewController, UITableViewDataSource, UITable
         }
     }
     
+    /// Bereitet die Oberfläche für Eintragungen für elektrischen Aufwand vor.
+    ///
+    /// - Parameters:
+    ///   - segue: Der Segue zur Oberfläche für elektrischen Aufwand
+    ///   - sender: Die aufrufende Zelle
     func prepareElectricalEquipment(for segue: UIStoryboardSegue, sender: Any?) {
         if let destination = segue.destination as? AddElectricalEquipmentViewController{
             if changeEntry {
@@ -135,6 +172,11 @@ class AddCaptureViewController: UIViewController, UITableViewDataSource, UITable
         }
     }
     
+    /// Bereitet die Oberfläche für Eintragungen für Stoffströme und Thermische Aufwände vor.
+    ///
+    /// - Parameters:
+    ///   - segue: Der Segue zur Oberfläche für Stoffströme und Thermische Aufwände
+    ///   - sender: Die aufrufende Zelle
     func prepareMaterialFlows(for segue: UIStoryboardSegue, sender: Any?) {
         if let destination = segue.destination as? AddMaterialFlowsORThermalViewController{
             if changeEntry {
@@ -146,6 +188,11 @@ class AddCaptureViewController: UIViewController, UITableViewDataSource, UITable
         }
     }
     
+    /// Bereitet die Oberfläche für Eintragungen für Düngung vor.
+    ///
+    /// - Parameters:
+    ///   - segue: Der Segue zur Oberfläche für Düngung
+    ///   - sender: Die aufrufende Zelle
     func prepareDuengung(for segue: UIStoryboardSegue, sender: Any?) {
         if let destination = segue.destination as? DuengungAddEntryViewController{
             if changeEntry {
@@ -157,6 +204,11 @@ class AddCaptureViewController: UIViewController, UITableViewDataSource, UITable
         }
     }
     
+    /// Bereitet die Oberfläche für Eintragungen für Pflanzenschutz vor.
+    ///
+    /// - Parameters:
+    ///   - segue: Der Segue zur Oberfläche für Pflanzenschutz
+    ///   - sender: Die aufrufende Zelle
     func preparePflanzenschutz(for segue: UIStoryboardSegue, sender: Any?) {
         if let destination = segue.destination as? PflanzenschutzAddEntryViewController{
             if changeEntry {
@@ -168,8 +220,14 @@ class AddCaptureViewController: UIViewController, UITableViewDataSource, UITable
         }
     }
     
+<<<<<<< HEAD
     
     
+=======
+    /// Leitet den Nutzer zur Oberfläche für eine neue Eintragung des entsprechenden Arbeitsgangs oder Aufwands weiter.
+    ///
+    /// - Parameter sender: Der gedrückte Button
+>>>>>>> e3c2588da8bed59a165edd8dd0373d8676864f1c
     @IBAction func addEntryBtn(_ sender: Any) {
         if(element == "Düngung"){
             performSegue(withIdentifier: "segueToDuengungAddEntryView", sender: self)
@@ -184,6 +242,7 @@ class AddCaptureViewController: UIViewController, UITableViewDataSource, UITable
         }
     }
     
+    /// Lädt bereits bestehende Eintragungen aus der Datenbank.
     func loadEntries(){
         let db = RealmHelper()
         if let captureType = element {
