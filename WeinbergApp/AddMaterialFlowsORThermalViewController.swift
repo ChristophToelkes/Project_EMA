@@ -20,7 +20,7 @@ class AddMaterialFlowsORThermalViewController: UIViewController, UIPickerViewDel
     private var option = 0
     var entry: Entry?
     var captureType: String?
-    private let optionsMaterial = [[String]](arrayLiteral: ["Heizöl",
+    public let optionsMaterial = [[String]](arrayLiteral: ["Heizöl",
                                   "Holz",
                                   "Fernwärme",
                                   "Erdwärme",

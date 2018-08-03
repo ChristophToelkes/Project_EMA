@@ -944,6 +944,7 @@
                         <outlet property="datePicker" destination="hON-y5-gcu" id="kcZ-Qd-UbR"/>
                         <outlet property="durchfuehrungText" destination="irI-kJ-Z5c" id="ng4-c7-Bu7"/>
                         <outlet property="headCaptureLabel" destination="mwY-o0-ayS" id="YLA-EV-n3g"/>
+                        <outlet property="safeButton" destination="FBx-xe-69S" id="eoF-r3-3ka"/>
                         <outlet property="traubenleseDurchfuehrungView" destination="9om-hq-yMP" id="CzY-n9-u9B"/>
                         <segue destination="OkD-cb-Ojc" kind="show" identifier="segueToAddCaptureView" id="cHW-Y0-2uo"/>
                     </connections>
@@ -1838,7 +1839,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="uPz-Fn-yU9"/>
-        <segue reference="Ph4-md-d3c"/>
+        <segue reference="cHW-Y0-2uo"/>
         <segue reference="vVE-hR-lil"/>
     </inferredMetricsTieBreakers>
 </document>

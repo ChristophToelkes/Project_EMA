@@ -19,6 +19,7 @@ class AddEntryViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     @IBOutlet weak var traubenleseDurchfuehrungView: UIStackView!
     @IBOutlet weak var datePicker: UIDatePicker!
     
+    @IBOutlet weak var safeButton: UIButton!
     @IBOutlet weak var areaPicker: UIPickerView!
     @IBOutlet weak var benutzerText: UITextField!
     @IBOutlet weak var arbeitszeitText: UITextField!
@@ -67,11 +68,11 @@ class AddEntryViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         let date = formatter.string(from: datePicker.date)
         
         if captureType == "Traubenlese"{
-            if durchfuehrungText.text != nil && benutzerText.text != nil && arbeitszeitText.text != nil && arbeitszeitText.text != nil{
+            if durchfuehrungText.text != nil && benutzerText.text != nil && arbeitszeitText.text != nil && areas.count > 0{
                 db.addTraubenlese(captureType: captureType!, benutzer: benutzerText.text!, feld: areas[areaPicker.selectedRow(inComponent: 0)], arbeitszeit: arbeitszeitText.text!, datum: date, durchfuehrung: durchfuehrungText.text!)
             }
         } else {
-            if captureType != nil && benutzerText.text != nil && arbeitszeitText != nil && arbeitszeitText.text != nil && areas.count > 0{
+            if captureType != nil && benutzerText.text != nil && arbeitszeitText.text != nil && areas.count > 0{
                 db.addGeneral(captureType: captureType!, benutzer: benutzerText.text!, feld: areas[areaPicker.selectedRow(inComponent: 0)], arbeitszeit: arbeitszeitText.text!, datum: date)
             }
         }
@@ -169,7 +170,7 @@ class AddEntryViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     }
     
     /// Lädt die Felder aus der Datenbank.
-    private func loadAreasFromRealm(){
+    func loadAreasFromRealm(){
         var entryList = [Entry]()
         let db = RealmHelper()
         entryList = db.loadObjects(type: "Area")

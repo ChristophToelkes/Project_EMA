@@ -233,7 +233,7 @@ class RealmHelper {
         case "Thermischer Aufwand":
             entries = getThermalEntries(results: getThermalObjects(type: type))
         default:
-            entries = []
+            entries = getGeneralEntries(results: getGeneralObjects(type: type))
         }
         return entries
     }

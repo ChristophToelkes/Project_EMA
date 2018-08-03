@@ -23,7 +23,7 @@ class AddElectricalEquipmentViewController: UIViewController, UIPickerViewDataSo
     private var inputKWH = true
     public var entry: Entry?
     public var captureType: String?
-    private let options = ["Abfüllung",
+    public let options = ["Abfüllung",
                            "Filtration",
                            "Kühlung",
                            "Lagerung",
