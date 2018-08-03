@@ -28,6 +28,8 @@ class AddCaptureViewController: UIViewController, UITableViewDataSource, UITable
         loadEntries()
     }
     
+    
+    
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String){
         entryListFilter = []
         
