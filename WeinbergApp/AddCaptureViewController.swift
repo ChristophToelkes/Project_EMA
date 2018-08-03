@@ -9,9 +9,10 @@
 import Foundation
 import UIKit
 
-class AddCaptureViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class AddCaptureViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate {
     var element: String?
     var entryList =  [Entry]()
+    var entryListFilter =  [Entry]()
     private var changeEntry = false
     
     @IBOutlet weak var tableView: UITableView!
@@ -25,15 +26,50 @@ class AddCaptureViewController: UIViewController, UITableViewDataSource, UITable
         loadEntries()
     }
     
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        guard let input = searchBar.text else {return}
+        entryListFilter = []
+        entryList.forEach { (e) in
+            if((e.date?.contains(input))! ||
+                (e.areaName?.contains(input))!) ||
+                (e.aspekt?.contains(input))! ||
+                (e.consumer?.contains(input))! ||
+                (e.consumption?.contains(input))! ||
+                (e.description?.contains(input))!{
+                entryListFilter.append(e)
+            }
+        }
+        tableView.reloadData()
+        
+    }
+    
+    func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
+        guard let input = searchBar.text else {return}
+        entryListFilter = []
+        entryList.forEach { (e) in
+            if((e.date?.contains(input))! ||
+                (e.areaName?.contains(input))!) ||
+                (e.aspekt?.contains(input))! ||
+                (e.consumer?.contains(input))! ||
+                (e.consumption?.contains(input))! ||
+                (e.description?.contains(input))!{
+                entryListFilter.append(e)
+            }
+        }
+        tableView.reloadData()
+    }
+    
+    
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return entryList.count
+        return entryListFilter.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell")
         
-        cell?.textLabel?.text = entryList[indexPath.row].getCaptureType()
-        cell?.detailTextLabel?.text = entryList[indexPath.row].getDate()
+        cell?.textLabel?.text = entryListFilter[indexPath.row].getCaptureType()
+        cell?.detailTextLabel?.text = entryListFilter[indexPath.row].getDate()
         
         return cell!
     }
@@ -80,7 +116,7 @@ class AddCaptureViewController: UIViewController, UITableViewDataSource, UITable
     func prepareGeneral(for segue: UIStoryboardSegue, sender: Any?) {
         if let destination = segue.destination as? AddEntryViewController{
             if changeEntry {
-                destination.entry = entryList[(tableView.indexPathForSelectedRow?.row)!]
+                destination.entry = entryListFilter[(tableView.indexPathForSelectedRow?.row)!]
                 changeEntry = false
             } else {
                 destination.captureType = element
@@ -91,7 +127,7 @@ class AddCaptureViewController: UIViewController, UITableViewDataSource, UITable
     func prepareElectricalEquipment(for segue: UIStoryboardSegue, sender: Any?) {
         if let destination = segue.destination as? AddElectricalEquipmentViewController{
             if changeEntry {
-                destination.entry = entryList[(tableView.indexPathForSelectedRow?.row)!]
+                destination.entry = entryListFilter[(tableView.indexPathForSelectedRow?.row)!]
                 changeEntry = false
             } else {
                 destination.captureType = element
@@ -102,7 +138,7 @@ class AddCaptureViewController: UIViewController, UITableViewDataSource, UITable
     func prepareMaterialFlows(for segue: UIStoryboardSegue, sender: Any?) {
         if let destination = segue.destination as? AddMaterialFlowsORThermalViewController{
             if changeEntry {
-                destination.entry = entryList[(tableView.indexPathForSelectedRow?.row)!]
+                destination.entry = entryListFilter[(tableView.indexPathForSelectedRow?.row)!]
                 changeEntry = false
             } else {
                 destination.captureType = element
@@ -113,7 +149,7 @@ class AddCaptureViewController: UIViewController, UITableViewDataSource, UITable
     func prepareDuengung(for segue: UIStoryboardSegue, sender: Any?) {
         if let destination = segue.destination as? DuengungAddEntryViewController{
             if changeEntry {
-                destination.entry = entryList[(tableView.indexPathForSelectedRow?.row)!]
+                destination.entry = entryListFilter[(tableView.indexPathForSelectedRow?.row)!]
                 changeEntry = false
             } else {
                 destination.captureType = element
@@ -124,13 +160,15 @@ class AddCaptureViewController: UIViewController, UITableViewDataSource, UITable
     func preparePflanzenschutz(for segue: UIStoryboardSegue, sender: Any?) {
         if let destination = segue.destination as? PflanzenschutzAddEntryViewController{
             if changeEntry {
-                destination.entry = entryList[(tableView.indexPathForSelectedRow?.row)!]
+                destination.entry = entryListFilter[(tableView.indexPathForSelectedRow?.row)!]
                 changeEntry = false
             } else {
                 destination.captureType = element
             }
         }
     }
+    
+    
     
     @IBAction func addEntryBtn(_ sender: Any) {
         if(element == "Düngung"){
@@ -150,6 +188,7 @@ class AddCaptureViewController: UIViewController, UITableViewDataSource, UITable
         let db = RealmHelper()
         if let captureType = element {
             entryList = db.loadObjects(type: captureType)
+            entryListFilter = entryList
         }
     }
 }

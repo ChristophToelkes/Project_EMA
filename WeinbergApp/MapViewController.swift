@@ -78,7 +78,10 @@ class MapViewController: UIViewController, MKMapViewDelegate, UITableViewDelegat
     ///   - locations: Der Punkt, auf dem zentralisiert wird
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard let locValue: CLLocationCoordinate2D = manager.location?.coordinate else { return }
-        centerMapOnLocation(location: CLLocation(latitude: locValue.latitude, longitude: locValue.longitude), dist: 1000)
+        centerMapOnLocation(location: CLLocation(latitude: locValue.latitude, longitude: locValue.longitude), dist: 500)
+        let pin = CustomPin(title: "Standort", coordinate: locValue)
+        mapView.addAnnotation(pin)
+        
     }
     
     
